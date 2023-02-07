@@ -6,9 +6,10 @@
 
 # Nome do Projeto
 
-## Nome do Grupo
+## ORION
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://github.com/BrenoSantoS2">Breno Santos</a>, <a href="https://github.com/eduardoferrari135">Eduardo Ferrari</a>, <a href="https://github.com/KayVasconcelos">Kaylane Vasconcelos</a>, <a href="https://github.com/lucasnn718">Lucas Nogueira</a>, <a href="https://github.com/pedroauler12">Pedro Auler</a>, <a href="https://github.com/rafaelarojas">Rafaela Rojas</a>, <a href="https://github.com/raulszpak
+">Raul Szpak</a>
 
 ## Descrição
 
