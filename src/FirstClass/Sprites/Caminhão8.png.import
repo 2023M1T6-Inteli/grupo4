@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Caminhão6.png-3e218dcfc5a9f38bea2358dfa4674563.stex"
+path="res://.import/Caminhão8.png-ab0c453f50b7af7fd4f4f9741920abd4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Caminhão6.png"
-dest_files=[ "res://.import/Caminhão6.png-3e218dcfc5a9f38bea2358dfa4674563.stex" ]
+source_file="res://Sprites/Caminhão8.png"
+dest_files=[ "res://.import/Caminhão8.png-ab0c453f50b7af7fd4f4f9741920abd4.stex" ]
 
 [params]
 
