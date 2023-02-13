@@ -24,7 +24,6 @@ region_rect = Rect2( 22, 35, 453, 428 )
 position = Vector2( 340, 254 )
 scale = Vector2( 3, 3 )
 current = true
-zoom = Vector2( 2, 3 )
 smoothing_enabled = true
 
 [node name="YSort" type="YSort" parent="."]
