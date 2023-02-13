@@ -11,8 +11,7 @@ config_version=4
 [application]
 
 config/name="Projeto MyTruck"
-run/main_scene="res://World.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Cenas/World.tscn"
 
 [display]
 
