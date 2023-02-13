@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/background.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 432, 280, 432, 1024, 448, 1040, 464, 1064, 1224, 1552, 1248, 1560, 1288, 1568, 1344, 1552, 1384, 1520, 1384, 1248, 1392, 1208, 1424, 1152, 1464, 1112, 1512, 1072, 1584, 1040, 1640, 1016, 1728, 992, 1800, 992, 1872, 992, 1960, 992, 2064, 1008, 2184, 1056, 2256, 1112, 2304, 1168, 2336, 1232, 2336, 1504, 2352, 1536, 2400, 1560, 2456, 1560, 2512, 1552, 2552, 1520, 2560, 1504, 2560, 944, 2544, 920, 2512, 904, 1656, 904, 1584, 896, 1512, 872, 1448, 832, 1400, 792, 1376, 736, 1368, 688, 1392, 616, 1432, 568, 1496, 528, 1584, 504, 1632, 496, 2512, 496, 2544, 480, 2560, 464, 2560, 280, 2536, 256, 2496, 248, 1264, 248, 1232, 256, 1216, 272, 1208, 304, 1208, 816, 1192, 872, 1144, 928, 1080, 976, 992, 1000, 896, 1008, 824, 1008, 760, 992, 696, 968, 616, 912, 584, 872, 568, 832, 568, 280, 536, 256, 496, 248, 456, 256 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 160, 256, 160, 1000, 176, 1072, 216, 1136, 240, 1160, 1064, 1696, 1168, 1728, 1264, 1744, 1360, 1736, 1448, 1712, 1552, 1672, 1624, 1600, 1656, 1528, 1656, 1264, 1704, 1200, 1808, 1168, 1912, 1168, 2016, 1200, 2064, 1248, 2064, 1528, 2096, 1608, 2176, 1680, 2288, 1720, 2432, 1736, 2560, 1736, 2664, 1712, 2736, 1688, 2816, 1616, 2840, 1552, 2832, 920, 2784, 832, 2720, 784, 2640, 752, 2552, 728, 1688, 728, 1656, 720, 1648, 704, 1656, 680, 1680, 672, 1696, 664, 2544, 664, 2624, 648, 2712, 624, 2760, 584, 2800, 536, 2832, 488, 2832, 256, 2800, 200, 2736, 136, 2632, 96, 2568, 80, 2520, 72, 1224, 72, 1144, 88, 1056, 128, 1000, 168, 952, 232, 936, 272, 936, 808, 928, 832, 928, 832, 896, 840, 856, 832, 832, 808, 832, 248, 792, 184, 736, 128, 656, 96, 560, 72, 480, 72, 400, 80, 240, 152, 240, 0, 2944, 0, 2936, 1792, 0, 1792, -8, 8, 232, 152 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+scale = Vector2( 6.56291, 4.20794 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 22, 35, 453, 428 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 340, 254 )
+scale = Vector2( 3, 3 )
+current = true
+zoom = Vector2( 2, 3 )
+smoothing_enabled = true
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 340, 254 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+remote_path = NodePath("../../../Camera2D")
