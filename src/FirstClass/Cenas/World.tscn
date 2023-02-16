@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/background.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Scripts/World.gd" type="Script" id=3]
 
 [node name="World" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -20,20 +22,6 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 22, 35, 453, 428 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 340, 254 )
-scale = Vector2( 3, 3 )
-current = true
-zoom = Vector2( 2, 3 )
-smoothing_enabled = true
-
-[node name="YSort" type="YSort" parent="."]
-
-[node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 340, 254 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
-remote_path = NodePath("../../../Camera2D")
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 329, 280 )
+scale = Vector2( 1, 1 )
