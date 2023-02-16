@@ -3,7 +3,7 @@ extends KinematicBody2D # Herda as características da classe KinematicBody2D.
 
 var angular_speed = PI / 2 # Variável que guarda o valor da velocidade de rotação do objeto (afeta as curvas).
 
-var max_speed = 290.0 # Variável que guarda o valor da velocidade máxima ou limite do deslocamento do objeto.
+var max_speed = 250.0 # Variável que guarda o valor da velocidade máxima ou limite do deslocamento do objeto.
 
 var acceleration = 10 # Variável que guarda o valor da velocidade de aceleração do deslocamento do objeto.
 

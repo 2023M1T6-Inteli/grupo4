@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fundo_preto.jpeg-6606eb707d13908883d8bc0104b93bc1.stex"
+path="res://.import/bola.png-60e3e58a7cd5f46307cfb625b2a2955f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/fundo_preto.jpeg"
-dest_files=[ "res://.import/fundo_preto.jpeg-6606eb707d13908883d8bc0104b93bc1.stex" ]
+source_file="res://Sprites/bola.png"
+dest_files=[ "res://.import/bola.png-60e3e58a7cd5f46307cfb625b2a2955f.stex" ]
 
 [params]
 
