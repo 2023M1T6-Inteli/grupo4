@@ -10,5 +10,5 @@ func _ready():
 	#Essencial para que o player não veja fora do mapa e que o minimapa fique "Estático" e não se movendo
 	#Com o jogador
 	
-	$Player.max_speed = 200
+	$Player.max_speed = 150
 	#Controle da velocidade máxima que o Player pode ter nesse mapa
