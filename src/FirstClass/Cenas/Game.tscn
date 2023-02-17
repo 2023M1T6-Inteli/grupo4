@@ -10,7 +10,8 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Minimap" parent="CanvasLayer" instance=ExtResource( 1 )]
-margin_left = -364.0
-margin_top = 0.0
-margin_right = -314.0
-margin_bottom = 30.0
+margin_left = -1271.0
+margin_top = 7.0
+margin_right = -1221.0
+margin_bottom = 37.0
+rect_scale = Vector2( 4.04063, 6.14268 )
