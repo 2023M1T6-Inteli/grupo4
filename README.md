@@ -6,7 +6,7 @@
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=77cb4b&height=120&section=header"/>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=77cb4b&size=40&center=true&vCenter=true&width=1000&lines=Olá,+Nós+somos+o+grupo+ORION;Nosso+projeto+é+o;My+Truck;)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=77cb4b&size=40&center=true&vCenter=true&width=1000&lines=Olá,+Nós+somos+o+grupo+ORION;Nosso+projeto+é+o;My+Truck+🚛;)](https://git.io/typing-svg)
 
 # My Truck <img align="left" alt="My_Truck" height="40" width="40" src="https://cdn.discordapp.com/attachments/1060017395864965271/1077412580131340298/Camihnao_boladooo.jpg">
 
