@@ -4,9 +4,9 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# My Truck 👨🚚
+# My Truck <img align="left" alt="My_Truck" height="40" width="40" src="https://cdn.discordapp.com/attachments/1060017395864965271/1077412580131340298/Camihnao_boladooo.jpg">
 
-## ORION 💫
+## 💫 ORION
 
 ## Integrantes: <a href="https://github.com/BrenoSantoS2">Breno Santos</a>, <a href="https://github.com/eduardoferrari135">Eduardo Ferrari</a>, <a href="https://github.com/KayVasconcelos">Kaylane Vasconcelos</a>, <a href="https://github.com/lucasnn718">Lucas Nogueira</a>, <a href="https://github.com/pedroauler12">Pedro Auler</a>, <a href="https://github.com/rafaelarojas">Rafaela Rojas</a>, <a href="https://github.com/raulszpak">Raul Szpak</a>
 
