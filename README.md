@@ -12,12 +12,11 @@
 
 ## Descrição
 
-📜 Descrição curta sobre o que seu projeto faz.
+📜| Projeto feito por alunos do Inteli - Instituto de Tecnologia e liderança - em parceria com a Unipar Carbocloro. O projeto se trata de um jogo que tem o objetivo de influenciar o público alvo do nosso cliente - os motoristas de caminhões que transportam os produtos produzidos pela Unipar -, a terem boas práticas no transporte das cargas químicas, visando a diminuição de acidentes no transito.
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
 <br><br>
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
+<img src="https://cdn.discordapp.com/attachments/1057797408244912201/1077398116845752381/mytruck_gif.gif" alt="My Truck" border="0">
   Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
 </p>
 
