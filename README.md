@@ -21,7 +21,7 @@
 <br><br>
 <p align="center">
 <img src="https://cdn.discordapp.com/attachments/1057797408244912201/1077398116845752381/mytruck_gif.gif" alt="My Truck" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+  My Truck by ORION
 </p>
 
 
