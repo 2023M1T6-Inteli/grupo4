@@ -1,6 +1,9 @@
 extends Node2D
 
-#função de animação da entrada da tela
-func _ready():
-	$AnimationPlayer.play("Fade In")
-	yield(get_tree().create_timer(6), "timeout")
+#botão para jogar
+func _on_BotoJogar_pressed():
+	get_tree().change_scene("res://Cenas/Instrutores.tscn") #mudança de cena
+	
+#botão para ir para as intruções do jogo
+func _on_BotoInstrues_pressed():
+	get_tree().change_scene("res://Cenas/Instruções.tscn") #mudança de cena

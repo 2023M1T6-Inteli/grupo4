@@ -1,16 +1,12 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Sprites/botão_verde1.png" type="BitMap" id=1]
 [ext_resource path="res://Telas/fundo tela 1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/botão_verde2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/botão_verde_normal.png" type="Texture" id=4]
 [ext_resource path="res://Cenas/Scripts/tela_gameover.gd" type="Script" id=5]
-[ext_resource path="res://assets_mytruck/face/tonhão_bravo.png" type="Texture" id=6]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=7]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://assets_mytruck/face/nina_brava.png" type="Texture" id=9]
-[ext_resource path="res://assets_mytruck/face/seujorge_bravo.png" type="Texture" id=10]
-[ext_resource path="res://assets_mytruck/face/gina_brava.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 8 )
@@ -92,26 +88,6 @@ rect_scale = Vector2( 7.2472, 8.18669 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "FIM"
-
-[node name="TonhãoBravo" type="Sprite" parent="."]
-position = Vector2( 130.753, 297.609 )
-scale = Vector2( 2.3314, 2.1977 )
-texture = ExtResource( 6 )
-
-[node name="NinaBrava" type="Sprite" parent="."]
-position = Vector2( 266.813, 98.1875 )
-scale = Vector2( 2.10815, 1.89927 )
-texture = ExtResource( 9 )
-
-[node name="SeujorgeBravo" type="Sprite" parent="."]
-position = Vector2( 956, 113 )
-scale = Vector2( 2.11905, 2.0102 )
-texture = ExtResource( 10 )
-
-[node name="GinaBrava" type="Sprite" parent="."]
-position = Vector2( 1159, 240 )
-scale = Vector2( 1.9557, 1.94444 )
-texture = ExtResource( 11 )
 
 [connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
