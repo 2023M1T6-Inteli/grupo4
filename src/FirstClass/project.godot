@@ -13,6 +13,11 @@ config_version=4
 config/name="Projeto MyTruck"
 run/main_scene="res://Cenas/World.tscn"
 
+[autoload]
+
+Player="*res://Cenas/Scripts/Player.gd"
+Camera2d="*res://Cenas/Scripts/Camera2D.gd"
+
 [display]
 
 window/size/width=1280
