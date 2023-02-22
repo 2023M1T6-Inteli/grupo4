@@ -48,9 +48,12 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	# gradativamente de acordo com o valor armazenado na variável "friction", como uma freagem. Além disso, a
 	# velocidade de rotação do objeto é diminuída enquanto ocorre essa freagem. 
 
-	velocity = move_and_slide(velocity) # Método que controla o movimento do objeto de acordo com vetores.
 
-	var collide = move_and_collide(velocity*delta)
+	var collide = move_and_collide(velocity * delta)
+	
 	if collide: 
-		get_tree().change_scene("res://Cenas/tela_gameover.tscn")
+		get_tree().change_scene("res://Cenas/Tela_Gameover.tscn")
+	
+	# Método que controla o movimento do objeto de acordo com vetores e identifica quando o player
+	# sofre alguma colisão.
 
