@@ -12,9 +12,6 @@
 [ext_resource path="res://Sprites/Caminhão9.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/Caminhão11.png" type="Texture" id=11]
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 5, 8.58333 )
-
 [sub_resource type="CapsuleShape2D" id=4]
 radius = 4.0
 height = 2.0
@@ -27,18 +24,18 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5, 8.58333 )
+
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 557, 322 )
 scale = Vector2( 3, 3 )
 script = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.666667, 11.9167 )
-scale = Vector2( 3, 3 )
-shape = SubResource( 3 )
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -0.333, -26.333 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( -0.333333, -26.3333 )
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2( 3, 3 )
 shape = SubResource( 4 )
 
@@ -46,7 +43,7 @@ shape = SubResource( 4 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 2 )
 animation = "caminhao"
-frame = 7
+frame = 4
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -58,3 +55,13 @@ limit_left = 0
 limit_top = 0
 limit_right = 2890
 limit_bottom = 1790
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.666672, 11.9167 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -0.333328, -26.3333 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 4 )

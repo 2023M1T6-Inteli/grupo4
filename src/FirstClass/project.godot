@@ -11,7 +11,12 @@ config_version=4
 [application]
 
 config/name="Projeto MyTruck"
-run/main_scene="res://Cenas/World.tscn"
+run/main_scene="res://Cenas/Game.tscn"
+
+[autoload]
+
+GlobalTimer="*res://Cenas/Scripts/Timer.gd"
+Global="*res://Global.gd"
 
 [display]
 
