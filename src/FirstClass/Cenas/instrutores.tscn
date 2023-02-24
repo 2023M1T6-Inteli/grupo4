@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets_mytruck/face/seujorge_rindo.png" type="Texture" id=1]
 [ext_resource path="res://assets_mytruck/face/nina_rindo.png" type="Texture" id=2]
@@ -12,8 +12,9 @@
 [ext_resource path="res://Sprites/botão_verde_normal.png" type="Texture" id=10]
 [ext_resource path="res://Telas/fundo tela 1.png" type="Texture" id=11]
 [ext_resource path="res://assets_mytruck/face/seujorge_sorrindo.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/bola.png" type="Texture" id=13]
+[ext_resource path="res://assets_mytruck/icons e ui/seta_left_verde.png" type="Texture" id=13]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=14]
+[ext_resource path="res://assets_mytruck/icons e ui/seta_left_verde_sombra.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 14 )
@@ -149,17 +150,7 @@ margin_right = 69.0
 margin_bottom = 638.0
 rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 13 )
-
-[node name="VOLTAR" type="Label" parent="."]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 54.0
-margin_top = 630.0
-margin_right = 99.0
-margin_bottom = 646.0
-rect_scale = Vector2( 4, 4 )
-custom_fonts/font = SubResource( 1 )
-text = "<-"
+texture_hover = ExtResource( 15 )
 
 [connection signal="pressed" from="botãoTonhão" to="." method="_on_botoTonho_pressed"]
 [connection signal="pressed" from="botãoSeuJorge" to="." method="_on_botoSeuJorge_pressed"]

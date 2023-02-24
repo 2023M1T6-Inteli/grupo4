@@ -18,4 +18,4 @@ func _on_botoNina_pressed():
 
 #botão para voltar para a tela anterior 
 func _on_botoVoltar_pressed():
-	get_tree().change_scene("res://Cenas/Menu.tscn")
+	get_tree().change_scene("res://Cenas/nome.tscn")
