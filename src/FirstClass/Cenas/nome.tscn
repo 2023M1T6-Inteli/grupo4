@@ -1,12 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets_mytruck/icons e ui/faixa_bege-removebg-preview.png" type="Texture" id=2]
 [ext_resource path="res://Telas/fundo tela 1.png" type="Texture" id=3]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=4]
-[ext_resource path="res://Cenas/nome.gd" type="Script" id=5]
+[ext_resource path="res://Cenas/Scripts/nome.gd" type="Script" id=5]
 [ext_resource path="res://assets_mytruck/icons e ui/seta_left_verde_sombra.png" type="Texture" id=6]
 [ext_resource path="res://assets_mytruck/icons e ui/seta_left_verde.png" type="Texture" id=7]
+[ext_resource path="res://Sons/confirmação.wav" type="AudioStream" id=8]
+[ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -82,5 +84,12 @@ rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 6 )
 
+[node name="SomConfirmar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="SomVoltar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
 [connection signal="pressed" from="botãoOk" to="." method="_on_botoOk_pressed"]
 [connection signal="pressed" from="botãoVoltar" to="." method="_on_botoVoltar_pressed"]

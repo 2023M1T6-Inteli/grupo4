@@ -9,9 +9,12 @@ var acceleration = 10 # Variável que guarda o valor da velocidade de aceleraç�
 
 var velocity = Vector2.ZERO # Variável de velocidade do objeto em relação aos vetores nos eixos x e y.
 
-var friction = 7.0  # Variável que guarda o valor da fricção do objeto com o chão (afeta a freagem).
+var friction = 5.0  # Variável que guarda o valor da fricção do objeto com o chão (afeta a freagem).
+
 
 func _physics_process(delta): # Nessa função declaro as verificações executadas a cada frame pelo programa.
+	
+	sounds() # executa a função "sounds"
 	
 	var directionX = 0 # Variável que guarda o valor da direção de rotação do objeto (1 = direita; -1 = esquerda;
 	# 0 = sem rotação).
@@ -98,3 +101,13 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	# Método que controla o movimento do objeto de acordo com vetores e identifica quando o player
 	# sofre alguma colisão.
 
+func sounds(): # função que controla os sons relativos ao jogador e sua movimentação
+	if !$SomIdle.playing:
+		$SomIdle.play()
+
+	if Input.is_action_just_pressed("spacebar"):
+		$SomAcelerando.play("acelerar")
+	if Input.is_action_just_released("spacebar") and Global.debuf2 == false:
+		$SomAcelerando.play("acelerar", -1, -2.5, true)
+	elif Input.is_action_just_released("spacebar") and Global.debuf2 == true:
+		$SomAcelerando.play("acelerar", -1, -1, true)
