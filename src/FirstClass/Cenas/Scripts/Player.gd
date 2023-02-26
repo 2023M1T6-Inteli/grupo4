@@ -46,6 +46,8 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	if Input.is_action_pressed("ui_down"):
 		directionY = -1
 		maxSpeed = 70
+		velocity += Vector2.UP.rotated(rotation) * (acceleration * directionY)
+		velocity = velocity.clamped(maxSpeed)
 	else:
 		directionY = 1
 		maxSpeed = 150
@@ -54,7 +56,7 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	# o caminhão inverterá seu movimento, começando a andar para trás (Dando ré), e que
 	# se o botão deixar de ser precionado o caminhãovolta ao movimento normal.
 	
-	if Input.is_action_pressed("spacebar"):
+	if Input.is_action_pressed("ui_up"):
 		velocity += Vector2.UP.rotated(rotation) * (acceleration * directionY)
 		velocity = velocity.clamped(maxSpeed)
 	
@@ -105,9 +107,13 @@ func sounds(): # função que controla os sons relativos ao jogador e sua movime
 	if !$SomIdle.playing:
 		$SomIdle.play()
 
-	if Input.is_action_just_pressed("spacebar"):
+	if Input.is_action_just_pressed("ui_up"):
 		$SomAcelerando.play("acelerar")
-	if Input.is_action_just_released("spacebar") and Global.debuf2 == false:
+	if Input.is_action_just_released("ui_up") and Global.debuf2 == false:
 		$SomAcelerando.play("acelerar", -1, -2.5, true)
-	elif Input.is_action_just_released("spacebar") and Global.debuf2 == true:
+	elif Input.is_action_just_released("ui_up") and Global.debuf2 == true:
 		$SomAcelerando.play("acelerar", -1, -1, true)
+	if Input.is_action_just_pressed("ui_down"):
+		$"SomRé".play()
+	if Input.is_action_just_released("ui_down"):
+		$"SomRé".stop()
