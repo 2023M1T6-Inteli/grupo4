@@ -85,7 +85,7 @@ anims/RESET = SubResource( 3 )
 position = Vector2( 646, 368 )
 scale = Vector2( 1.682, 1.626 )
 frames = SubResource( 1 )
-frame = 9
+frame = 1
 playing = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
