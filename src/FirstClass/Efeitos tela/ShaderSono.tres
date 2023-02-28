@@ -2,12 +2,12 @@
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
-
 uniform vec4 Color: hint_color;
 uniform float Opacity: hint_range(0.0, 1.0) = 0.0;
 
 void fragment(){
 	vec4 colorPixel = texture(TEXTURE,UV);
+
 	COLOR.rgb = mix(colorPixel,Color,Opacity).rgb;
 }"
 
