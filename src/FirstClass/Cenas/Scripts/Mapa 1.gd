@@ -4,9 +4,10 @@ extends Node2D
 func _ready():
 	
 	$Player/Camera2D.zoom = Vector2(0.5,0.5)
+	$Player/Camera2D.zoom = Vector2(0.5,0.5)
 	
-	$Player/Camera2D.limit_bottom = 2048
-	$Player/Camera2D.limit_right = 2960
+	$Player/Camera2D.limit_bottom = 2688
+	$Player/Camera2D.limit_right = 3840
 	$Player/Camera2D.limit_left = 0
 	$Player/Camera2D.limit_top = -160
 	#Comandos resposáveis por definir limites em pixeis de até onde a camera pode ir em cada direção

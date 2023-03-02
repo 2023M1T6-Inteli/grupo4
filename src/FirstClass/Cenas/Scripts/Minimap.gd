@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	$"ViewportContainer/Viewport/Mapa 1/Player/Camera2D".zoom = Vector2(60,70)
+	$"ViewportContainer/Viewport/Mapa 1/Player/Camera2D".zoom = Vector2(90,100)
 	# Comando responsável por pegar a camera do Player e dar um zoom inverso, para que seja possível
 	# ver o mapa inteiro dentro no minimapa
 
