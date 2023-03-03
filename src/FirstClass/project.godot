@@ -10,8 +10,8 @@ config_version=4
 
 [application]
 
-config/name="Projeto MyTruck"
-run/main_scene="res://Cenas/Mapa 1.tscn"
+config/name="MyTruck Testes"
+run/main_scene="res://Cenas/carregamento.tscn"
 
 [autoload]
 

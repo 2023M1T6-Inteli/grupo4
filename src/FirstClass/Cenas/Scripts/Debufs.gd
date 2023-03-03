@@ -69,7 +69,7 @@ func _ready():
 onready var timer = $Timer as Timer
 
 func _on_Bebida_area_entered(area):
-	get_parent().get_parent().get_parent().material = preload("res://Efeitos tela/ShaderBebida.tres")
+	get_parent().get_parent().get_parent().get_parent().material = preload("res://Efeitos tela/ShaderBebida.tres")
 	timer.start()
 	
 	# Função responsável por aplicar o efeito espécial de Bebida a tela do jogador
@@ -91,7 +91,7 @@ func _on_Carga_Pesada_area_entered(area):
 	# Função responsável por aplicar as diferenças causadas pela Carga pesada ao jogador
 	
 func _on_Sono_area_entered(area):
-	get_parent().get_parent().get_parent().material = preload("res://Efeitos tela/ShaderSono.tres")
+	get_parent().get_parent().get_parent().get_parent().material = preload("res://Efeitos tela/ShaderSono.tres")
 	timer.start()
 	
 	# Função responsável por aplicar o efeito espécial do sono a tela do jogador
@@ -100,9 +100,9 @@ func _on_Sono_area_entered(area):
 func _on_Timer_timeout() -> void:
 	Global.debuf = false
 	Global.debuf2 = false
-	if get_parent().get_parent().get_parent().material == null:
+	if get_parent().get_parent().get_parent().get_parent().material == null:
 		return
 	else:
-		get_parent().get_parent().get_parent().material = null
+		get_parent().get_parent().get_parent().get_parent().material = null
 	
 	#Função responsável reverter as mudanças aplicados ao jogador após o tempo de efeito dos Debufs
