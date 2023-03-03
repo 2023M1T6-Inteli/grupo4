@@ -66,43 +66,55 @@ func _ready():
 		# a condição de cima fica responsável por esconder as caixas com outros sprites
 		# sem ser o sono pesada e desabilitar a colisão das outras caixas também
 
-onready var timer = $Timer as Timer
+onready var timerBebida = $TimerBebida as Timer
+onready var timerSono = $TimerSono as Timer
+onready var timerCarga = $TimerCarga as Timer
+onready var timerCelular = $TimerCelular as Timer
 
 func _on_Bebida_area_entered(area):
 	get_parent().get_parent().get_parent().get_parent().material = preload("res://Efeitos tela/ShaderBebida.tres")
-	timer.start()
+	timerBebida.start()
 	
 	# Função responsável por aplicar o efeito espécial de Bebida a tela do jogador
 	
 func _on_Celular_area_entered(area):
 	Global.debuf = true
-	
-	timer.set_wait_time(1.2)
-	timer.start()
+	timerCelular.start()
 	
 	# Função responsável por aplicar as diferenças causadas pelo Celular ao jogador
 
 
 func _on_Carga_Pesada_area_entered(area):
 	Global.debuf2 = true
-	timer.set_wait_time(8)
-	timer.start()
+	timerCarga.start()
 	
 	# Função responsável por aplicar as diferenças causadas pela Carga pesada ao jogador
 	
 func _on_Sono_area_entered(area):
 	get_parent().get_parent().get_parent().get_parent().material = preload("res://Efeitos tela/ShaderSono.tres")
-	timer.start()
+	timerSono.start()
 	
 	# Função responsável por aplicar o efeito espécial do sono a tela do jogador
 	
 
-func _on_Timer_timeout() -> void:
-	Global.debuf = false
-	Global.debuf2 = false
+func _on_TimerBebida_timeout():
 	if get_parent().get_parent().get_parent().get_parent().material == null:
 		return
 	else:
 		get_parent().get_parent().get_parent().get_parent().material = null
 	
-	#Função responsável reverter as mudanças aplicados ao jogador após o tempo de efeito dos Debufs
+
+
+func _on_TimerSono_timeout():
+	if get_parent().get_parent().get_parent().get_parent().material == null:
+		return
+	else:
+		get_parent().get_parent().get_parent().get_parent().material = null
+
+
+func _on_TimerCarga_timeout():
+	Global.debuf2 = false
+
+
+func _on_TimerCelular_timeout():
+	Global.debuf = false

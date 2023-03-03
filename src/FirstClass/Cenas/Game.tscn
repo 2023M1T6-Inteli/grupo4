@@ -1,10 +1,42 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Cenas/Minimap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Mapa 1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/Timer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/Scripts/ViewportContainer.gd" type="Script" id=5]
 [ext_resource path="res://Efeitos tela/CenasSono.tres" type="Animation" id=6]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Bebida"
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/Distorcion")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 3.5, 4.9, 6.5, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.5, 3.0, 3.0, 1.5, 0.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/Distorcion")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -55,7 +87,11 @@ margin_right = 1280.0
 margin_bottom = 720.0
 script = ExtResource( 5 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ViewportContainer"]
+[node name="AnimaçãoBebida" type="AnimationPlayer" parent="ViewportContainer"]
+anims/Bebida = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="AnimaçãoSono" type="AnimationPlayer" parent="ViewportContainer"]
 anims/CenasSono = ExtResource( 6 )
 anims/RESET = SubResource( 1 )
 
