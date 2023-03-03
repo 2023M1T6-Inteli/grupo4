@@ -75,6 +75,7 @@ shape = SubResource( 4 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 2 )
 animation = "caminhao"
+frame = 6
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
