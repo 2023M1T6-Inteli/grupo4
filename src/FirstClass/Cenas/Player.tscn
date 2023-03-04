@@ -45,8 +45,8 @@
 [ext_resource path="res://Sprites/Caminhão Soda/Soda9.png" type="Texture" id=43]
 
 [sub_resource type="CapsuleShape2D" id=4]
-radius = 4.0
-height = 2.0
+radius = 4.88889
+height = 2.88891
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -67,7 +67,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 5, 8.58333 )
+extents = Vector2( 5.27778, 10.8333 )
 
 [sub_resource type="Animation" id=5]
 length = 0.001
@@ -108,14 +108,15 @@ script = ExtResource( 2 )
 position = Vector2( -0.333, -26.333 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0.333008, -4.33366 )
 scale = Vector2( 3, 3 )
 shape = SubResource( 4 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 3, 3 )
+scale = Vector2( 2, 2 )
 frames = SubResource( 2 )
 animation = "Caminhão Soda"
-frame = 7
+frame = 3
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -129,12 +130,12 @@ limit_right = 2890
 limit_bottom = 1790
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.666672, 11.9167 )
+position = Vector2( -0.166672, 16.8333 )
 scale = Vector2( 3, 3 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( -0.333328, -26.3333 )
+position = Vector2( 0, -31.3333 )
 scale = Vector2( 3, 3 )
 shape = SubResource( 4 )
 
