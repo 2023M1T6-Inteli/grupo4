@@ -4,4 +4,6 @@
 
 [resource]
 shader = ExtResource( 1 )
-shader_param/Distorcion = 0.0
+shader_param/ColorChange = null
+shader_param/Opacity = 0.0
+shader_param/Distorcion = 0.562707

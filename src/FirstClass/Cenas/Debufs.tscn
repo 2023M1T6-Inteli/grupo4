@@ -116,7 +116,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bebida"]
 frames = SubResource( 9 )
-frame = 4
+frame = 13
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bebida"]
@@ -127,7 +127,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Celular"]
 frames = SubResource( 10 )
-frame = 3
+frame = 12
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Celular"]
@@ -138,7 +138,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Carga Pesada"]
 frames = SubResource( 5 )
-frame = 14
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carga Pesada"]
@@ -149,33 +149,34 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Sono"]
 frames = SubResource( 7 )
-frame = 3
+frame = 13
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sono"]
 shape = SubResource( 8 )
 
 [node name="TimerBebida" type="Timer" parent="."]
-wait_time = 9.5
+wait_time = 7.0
+one_shot = true
+
+[node name="TimerSono" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+
+[node name="TimerCarga" type="Timer" parent="."]
+wait_time = 8.0
 one_shot = true
 
 [node name="TimerCelular" type="Timer" parent="."]
 wait_time = 1.2
 one_shot = true
 
-[node name="TimerCargaPesada" type="Timer" parent="."]
-wait_time = 7.0
-one_shot = true
-
-[node name="TimerSono" type="Timer" parent="."]
-wait_time = 8.9
-one_shot = true
-
 [connection signal="area_entered" from="Bebida" to="." method="_on_Bebida_area_entered"]
 [connection signal="area_entered" from="Celular" to="." method="_on_Celular_area_entered"]
 [connection signal="area_entered" from="Carga Pesada" to="." method="_on_Carga_Pesada_area_entered"]
 [connection signal="area_entered" from="Sono" to="." method="_on_Sono_area_entered"]
+[connection signal="timeout" from="TimerBebida" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="TimerBebida" to="." method="_on_TimerBebida_timeout"]
-[connection signal="timeout" from="TimerCelular" to="." method="_on_TimerCelular_timeout"]
-[connection signal="timeout" from="TimerCargaPesada" to="." method="_on_TimerCargaPesada_timeout"]
 [connection signal="timeout" from="TimerSono" to="." method="_on_TimerSono_timeout"]
+[connection signal="timeout" from="TimerCarga" to="." method="_on_TimerCarga_timeout"]
+[connection signal="timeout" from="TimerCelular" to="." method="_on_TimerCelular_timeout"]

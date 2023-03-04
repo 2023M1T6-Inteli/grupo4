@@ -1,12 +1,14 @@
 extends ViewportContainer
 
-
-func _on_AnimaoBebida_animation_finished(anim_name):
-	if anim_name == "BebidaOut":
-		self.material = null
-# Função que retira o efeito da tela relacionado ao Debuff de Bebida
-
-func _on_AnimaoSono_animation_finished(anim_name):
-	if anim_name == "SonoOut":
-		self.material = null
-# Função que retira o efeito da tela relacionado ao Debuff de Sono
+func _process(delta):
+	if self.material == null:
+		$"AnimaçãoBebida".stop(true)
+		$"AnimaçãoSono".stop(true)
+	
+	elif self.material == preload("res://Efeitos tela/ShaderSono.tres"):
+		#$"AnimaçãoBebida".stop(false)
+		$"AnimaçãoSono".play("CenasSono")
+	elif self.material == preload("res://Efeitos tela/ShaderBebida.tres"):
+		#$"AnimaçãoBebida"
+		$"AnimaçãoBebida".play("Bebida")
+	
