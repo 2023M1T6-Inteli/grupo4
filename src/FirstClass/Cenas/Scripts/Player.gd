@@ -1,6 +1,5 @@
 extends KinematicBody2D # Herda as características da classe KinematicBody2D.
 
-
 var angularSpeed = PI / 2 # Variável que guarda o valor da velocidade de rotação do objeto (afeta as curvas).
 
 var maxSpeed = 150.0 # Variável que guarda o valor da velocidade máxima ou limite do deslocamento do objeto.
@@ -102,6 +101,7 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 		
 	# Método que controla o movimento do objeto de acordo com vetores e identifica quando o player
 	# sofre alguma colisão.
+	
 
 func sounds(): # função que controla os sons relativos ao jogador e sua movimentação
 	if !$SomIdle.playing:
