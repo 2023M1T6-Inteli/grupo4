@@ -6,6 +6,7 @@ func _on_botoCloro_pressed():
 	$"botãoCloro".texture_normal = preload("res://assets_mytruck/face/sombra_caminhão_cloro.png")
 	$"botãoSoda".texture_hover = null
 	$"botãoPvc".texture_hover = null
+	Global.cargaDoCaminhao = 1
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 	
 	if !$SomConfirmar.playing:
@@ -18,6 +19,7 @@ func _on_botoSoda_pressed():
 	$"botãoSoda".texture_normal = preload("res://assets_mytruck/face/sombra_caminhão_soda.png")
 	$"botãoPvc".texture_hover = null
 	$"botãoCloro".texture_hover = null
+	Global.cargaDoCaminhao = 2
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 		
 	if !$SomConfirmar.playing:
@@ -30,6 +32,7 @@ func _on_botoPvc_pressed():
 	$"botãoPvc".texture_normal = preload("res://assets_mytruck/face/sombra_caminhão_pvc.png")
 	$"botãoSoda".texture_hover = null
 	$"botãoCloro".texture_hover = null
+	Global.cargaDoCaminhao = 3
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 	
 	if !$SomConfirmar.playing:
