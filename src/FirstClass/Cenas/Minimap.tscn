@@ -19,10 +19,10 @@ radius = 41.0488
 [node name="Minimap" type="Control"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -378.0
-margin_top = 1.0
-margin_right = -328.0
-margin_bottom = 31.0
+margin_left = -1276.0
+margin_top = 4.0
+margin_right = -1226.0
+margin_bottom = 34.0
 script = ExtResource( 2 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
@@ -37,18 +37,24 @@ world = SubResource( 1 )
 handle_input_locally = false
 render_target_update_mode = 3
 
-[node name="Mapa 1" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
-
 [node name="cursor" type="KinematicBody2D" parent="ViewportContainer/Viewport"]
-position = Vector2( 240, 368 )
+light_mask = 2
+position = Vector2( 399, 1235 )
+z_index = 2
+z_as_relative = false
 
 [node name="Bolinha" type="Sprite" parent="ViewportContainer/Viewport/cursor"]
-scale = Vector2( 7, 7 )
+light_mask = 2
+scale = Vector2( 8, 8 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ViewportContainer/Viewport/cursor"]
-position = Vector2( 131, -7 )
+light_mask = 2
 shape = SubResource( 4 )
+
+[node name="Mapa 1" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
+z_index = 1
+z_as_relative = false
 
 [node name="Borda" type="Sprite" parent="."]
 position = Vector2( 26, 17 )

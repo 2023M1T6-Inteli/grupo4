@@ -102,15 +102,6 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	# Método que controla o movimento do objeto de acordo com vetores e identifica quando o player
 	# sofre alguma colisão.
 	
-	if Global.cargaDoCaminhao == 1:
-		$"Sprite".animation = "Caminhão Cloro"
-	
-	elif Global.cargaDoCaminhao == 2:
-		$"Sprite".animation = "Caminhão Soda"
-	
-	elif Global.cargaDoCaminhao == 3:
-		$"Sprite".animation = "Caminhão PVC"
-	
 
 func sounds(): # função que controla os sons relativos ao jogador e sua movimentação
 	if !$SomIdle.playing:

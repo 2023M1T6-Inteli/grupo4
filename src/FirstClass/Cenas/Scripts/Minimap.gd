@@ -7,7 +7,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	var playerPosition = $"ViewportContainer/Viewport/Mapa 1/Player".position
+	var playerPosition = $"ViewportContainer/Viewport/Mapa 1/Player".position 
 	var cursorPosition = $ViewportContainer/Viewport/cursor.position
 	
 	if $"ViewportContainer/Viewport/Mapa 1/Player".maxSpeed > 0:
@@ -16,6 +16,8 @@ func _physics_process(delta):
 		tween.interpolate_property($ViewportContainer/Viewport/cursor, 
 		"position",cursorPosition, playerPosition, 0.1, Tween.TRANS_BACK, Tween.EASE_OUT)
 		tween.start()
+	
+	$ViewportContainer/Viewport/cursor/CollisionShape2D.set_disabled(true)
 	#Comando que faz a bolinha vermelha no minimapa, seguir o pesonagem pricipal e assim ser possível
 	# saber onde o caminhão esta no mapa.
 	
