@@ -116,18 +116,18 @@ shape = SubResource( 4 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 2 )
 animation = "Caminhão Soda"
-frame = 3
+frame = 8
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -0.666672, 0.666656 )
 scale = Vector2( 3, 3 )
 current = true
-zoom = Vector2( 2, 3 )
-limit_left = 0
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 64
 limit_top = 0
-limit_right = 2890
-limit_bottom = 1790
+limit_right = 3584
+limit_bottom = 2688
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.166672, 16.8333 )

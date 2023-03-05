@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/botão_verde1.png" type="BitMap" id=1]
 [ext_resource path="res://Telas/fundo tela 1.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Sons/confirmação.wav" type="AudioStream" id=6]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=7]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Sons/hover.wav" type="AudioStream" id=9]
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 8 )
@@ -92,6 +93,13 @@ text = "FIM"
 
 [node name="SomConfirmar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = -10.0
 
+[node name="SomHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -10.0
+
+[connection signal="mouse_entered" from="restart" to="." method="_on_restart_mouse_entered"]
 [connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="mouse_entered" from="menu" to="." method="_on_menu_mouse_entered"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

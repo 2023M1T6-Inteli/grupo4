@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Telas/fundo tela 1.png" type="Texture" id=1]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets_mytruck/icons e ui/espaço.png" type="Texture" id=13]
 [ext_resource path="res://Cenas/Scripts/instruções.gd" type="Script" id=14]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=15]
+[ext_resource path="res://Sons/hover.wav" type="AudioStream" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -184,5 +185,11 @@ ocasiona fechamento dos olhos
 
 [node name="SomVoltar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
+volume_db = -10.0
 
+[node name="SomHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -10.0
+
+[connection signal="mouse_entered" from="botãoVoltar" to="." method="_on_botoVoltar_mouse_entered"]
 [connection signal="pressed" from="botãoVoltar" to="." method="_on_botoVoltar_pressed"]
