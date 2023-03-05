@@ -46,11 +46,23 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 1.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("SomIdle:pitch_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "acelerar"
 tracks/0/type = "value"
-tracks/0/path = NodePath("../SomIdle:pitch_scale")
+tracks/0/path = NodePath("SomIdle:pitch_scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -80,7 +92,7 @@ position = Vector2( 0, 6.33334 )
 space_override = 1
 gravity_point = true
 gravity_distance_scale = 1.0
-gravity = 2000.0
+gravity = 4096.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 shape = SubResource( 7 )
@@ -95,6 +107,10 @@ shape = SubResource( 4 )
 scale = Vector2( 3, 3 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+limit_right = 3650
+limit_bottom = 2750
 
 [node name="SomIdle" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )

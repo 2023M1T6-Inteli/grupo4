@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://Sprites/Bebidas/Bebidas3.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Bebidas/Bebidas6.png" type="Texture" id=2]
@@ -108,6 +108,38 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 13, 13 )
 
+[sub_resource type="Gradient" id=11]
+colors = PoolColorArray( 0.614522, 0.614522, 0.614522, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=12]
+gradient = SubResource( 11 )
+width = 100
+
+[sub_resource type="Curve" id=13]
+max_value = 100.0
+_data = [ Vector2( 0.011236, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 100 ), 809.212, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=14]
+curve = SubResource( 13 )
+
+[sub_resource type="ParticlesMaterial" id=15]
+emission_shape = 1
+emission_sphere_radius = 0.01
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+tangential_accel = 10.0
+tangential_accel_random = 1.0
+damping = 100.0
+damping_random = 0.5
+damping_curve = SubResource( 14 )
+scale = 2.0
+scale_random = 0.5
+color_ramp = SubResource( 12 )
+
 [node name="Debufs" type="Node2D"]
 script = ExtResource( 63 )
 
@@ -116,7 +148,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bebida"]
 frames = SubResource( 9 )
-frame = 2
+frame = 12
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bebida"]
@@ -127,7 +159,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Celular"]
 frames = SubResource( 10 )
-frame = 1
+frame = 11
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Celular"]
@@ -138,7 +170,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Carga Pesada"]
 frames = SubResource( 5 )
-frame = 11
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carga Pesada"]
@@ -149,6 +181,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Sono"]
 frames = SubResource( 7 )
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sono"]
@@ -169,6 +202,15 @@ one_shot = true
 [node name="TimerCelular" type="Timer" parent="."]
 wait_time = 1.2
 one_shot = true
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 16, 16 )
+emitting = false
+amount = 150
+lifetime = 0.6
+one_shot = true
+explosiveness = 0.6
+process_material = SubResource( 15 )
 
 [connection signal="area_entered" from="Bebida" to="." method="_on_Bebida_area_entered"]
 [connection signal="area_entered" from="Celular" to="." method="_on_Celular_area_entered"]

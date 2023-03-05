@@ -73,3 +73,5 @@ animation = "Soda"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 18 )
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Caamba_do_Caminho_body_entered"]

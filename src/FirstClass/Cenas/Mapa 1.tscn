@@ -1,17 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/TilesMaps/Chão.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/TilesMaps/Arvore.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/TilesMaps/Casas.tres" type="TileSet" id=3]
 [ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Cenas/Mapa 1.gd" type="Script" id=5]
 [ext_resource path="res://Assets/TilesMaps/chão_8bit.tres" type="TileSet" id=6]
 [ext_resource path="res://Assets/TilesMaps/Pedras.tres" type="TileSet" id=7]
 [ext_resource path="res://Assets/TilesMaps/Postes_e_placas.tres" type="TileSet" id=8]
 [ext_resource path="res://Cenas/Caçamba do Caminhão.tscn" type="PackedScene" id=9]
 
 [node name="Mapa 1" type="Node2D"]
-script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 400, 1232 )

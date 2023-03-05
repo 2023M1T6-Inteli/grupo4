@@ -1,6 +1,8 @@
 extends RigidBody2D
 
 func _ready():
+	set_max_contacts_reported(3)
+	set_contact_monitor(true)
 	if Global.cargaDoCaminhao == 1:
 		$AnimatedSprite.animation = "Cloro"
 	
@@ -11,3 +13,9 @@ func _ready():
 		$AnimatedSprite.animation = "PVC"
 	
 
+
+func _on_Caamba_do_Caminho_body_entered(body):
+	if body.name =="Player" or body.name =="Debufs":
+		pass
+	else:
+		get_tree().change_scene("res://Cenas/tela_gameover.tscn")
