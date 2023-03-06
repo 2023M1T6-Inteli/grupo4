@@ -1,21 +1,21 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://assets_mytruck/face/seujorge_rindo.png" type="Texture" id=1]
-[ext_resource path="res://assets_mytruck/face/nina_rindo.png" type="Texture" id=2]
-[ext_resource path="res://assets_mytruck/face/gina_rindo.png" type="Texture" id=3]
-[ext_resource path="res://assets_mytruck/face/tonhão_rindo.png" type="Texture" id=4]
+[ext_resource path="res://assets_mytruck/face/SeuJorgeRindo.png" type="Texture" id=1]
+[ext_resource path="res://assets_mytruck/face/NinaRindo.png" type="Texture" id=2]
+[ext_resource path="res://assets_mytruck/face/GinaRindo.png" type="Texture" id=3]
+[ext_resource path="res://assets_mytruck/face/TonhaoRindo.png" type="Texture" id=4]
 [ext_resource path="res://Cenas/Scripts/instrutores.gd" type="Script" id=5]
-[ext_resource path="res://assets_mytruck/face/gina_sorrindo.png" type="Texture" id=6]
-[ext_resource path="res://assets_mytruck/face/tonhão_sorrindo.png" type="Texture" id=7]
+[ext_resource path="res://assets_mytruck/face/GinaSorrindo.png" type="Texture" id=6]
+[ext_resource path="res://assets_mytruck/face/TonhaoSorrindo.png" type="Texture" id=7]
 [ext_resource path="res://assets_mytruck/icons e ui/contorno.png" type="Texture" id=8]
-[ext_resource path="res://assets_mytruck/face/nina_sorrindo.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/botão_verde_normal.png" type="Texture" id=10]
-[ext_resource path="res://Telas/fundo tela 1.png" type="Texture" id=11]
-[ext_resource path="res://assets_mytruck/face/seujorge_sorrindo.png" type="Texture" id=12]
+[ext_resource path="res://assets_mytruck/face/NinaSorrindo.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/botao_verde_normal.png" type="Texture" id=10]
+[ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=11]
+[ext_resource path="res://assets_mytruck/face/SeuJorgeSorrindo.png" type="Texture" id=12]
 [ext_resource path="res://assets_mytruck/icons e ui/seta_left_verde.png" type="Texture" id=13]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=14]
 [ext_resource path="res://assets_mytruck/icons e ui/seta_left_verde_sombra.png" type="Texture" id=15]
-[ext_resource path="res://Sons/confirmação.wav" type="AudioStream" id=16]
+[ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=16]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=17]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=18]
 
@@ -66,7 +66,7 @@ rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 1 )
 text = "Escolha seu instrutor"
 
-[node name="botãoTonhão" type="TextureButton" parent="."]
+[node name="BotaoTonhao" type="TextureButton" parent="."]
 margin_left = 38.0
 margin_top = 280.0
 margin_right = 120.0
@@ -86,7 +86,7 @@ rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 1 )
 text = "Tonhão"
 
-[node name="botãoSeuJorge" type="TextureButton" parent="."]
+[node name="BotaoSeuJorge" type="TextureButton" parent="."]
 margin_left = 361.0
 margin_top = 280.0
 margin_right = 443.0
@@ -106,7 +106,7 @@ rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 1 )
 text = "Seu Jorge"
 
-[node name="botãoGina" type="TextureButton" parent="."]
+[node name="BotaoGina" type="TextureButton" parent="."]
 margin_left = 702.0
 margin_top = 319.0
 margin_right = 770.0
@@ -126,7 +126,7 @@ rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 1 )
 text = "Gina"
 
-[node name="botãoNina" type="TextureButton" parent="."]
+[node name="BotaoNina" type="TextureButton" parent="."]
 margin_left = 987.0
 margin_top = 274.0
 margin_right = 1072.0
@@ -146,7 +146,7 @@ rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 1 )
 text = "Nina"
 
-[node name="botãoVoltar" type="TextureButton" parent="."]
+[node name="BotaoVoltar" type="TextureButton" parent="."]
 margin_left = 37.0
 margin_top = 606.0
 margin_right = 69.0
@@ -155,7 +155,7 @@ rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 13 )
 texture_hover = ExtResource( 15 )
 
-[node name="SomConfirmação" type="AudioStreamPlayer" parent="."]
+[node name="SomConfirmacao" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
 volume_db = -10.0
 
@@ -167,12 +167,13 @@ volume_db = -10.0
 stream = ExtResource( 18 )
 volume_db = -10.0
 
-[connection signal="mouse_entered" from="botãoTonhão" to="." method="_on_botoTonho_mouse_entered"]
-[connection signal="pressed" from="botãoTonhão" to="." method="_on_botoTonho_pressed"]
-[connection signal="mouse_entered" from="botãoSeuJorge" to="." method="_on_botoSeuJorge_mouse_entered"]
-[connection signal="pressed" from="botãoSeuJorge" to="." method="_on_botoSeuJorge_pressed"]
-[connection signal="mouse_entered" from="botãoGina" to="." method="_on_botoGina_mouse_entered"]
-[connection signal="pressed" from="botãoGina" to="." method="_on_botoGina_pressed"]
-[connection signal="mouse_entered" from="botãoNina" to="." method="_on_botoNina_mouse_entered"]
-[connection signal="pressed" from="botãoNina" to="." method="_on_botoNina_pressed"]
-[connection signal="pressed" from="botãoVoltar" to="." method="_on_botoVoltar_pressed"]
+[connection signal="mouse_entered" from="BotaoTonhao" to="." method="_on_BotaoTonhao_mouse_entered"]
+[connection signal="pressed" from="BotaoTonhao" to="." method="_on_BotaoTonhao_pressed"]
+[connection signal="mouse_entered" from="BotaoSeuJorge" to="." method="_on_BotaoSeuJorge_mouse_entered"]
+[connection signal="pressed" from="BotaoSeuJorge" to="." method="_on_BotaoSeuJorge_pressed"]
+[connection signal="mouse_entered" from="BotaoGina" to="." method="_on_BotaoGina_mouse_entered"]
+[connection signal="pressed" from="BotaoGina" to="." method="_on_BotaoGina_pressed"]
+[connection signal="mouse_entered" from="BotaoNina" to="." method="_on_BotaoNina_mouse_entered"]
+[connection signal="pressed" from="BotaoNina" to="." method="_on_BotaoNina_pressed"]
+[connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_BotaoVoltar_mouse_entered"]
+[connection signal="pressed" from="BotaoVoltar" to="." method="_on_BotaoVoltar_pressed"]

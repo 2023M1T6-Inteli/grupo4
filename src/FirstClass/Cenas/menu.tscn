@@ -1,22 +1,22 @@
 [gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Telas/fundo tela 1.png" type="Texture" id=1]
-[ext_resource path="res://Telas/Camihnão bolado12.png" type="Texture" id=2]
-[ext_resource path="res://Telas/Camihnão bolado1.png" type="Texture" id=3]
-[ext_resource path="res://Telas/Camihnão bolado3.png" type="Texture" id=4]
-[ext_resource path="res://Telas/Camihnão bolado4.png" type="Texture" id=5]
-[ext_resource path="res://Telas/Camihnão bolado5.png" type="Texture" id=6]
-[ext_resource path="res://Telas/Camihnão bolado13.png" type="Texture" id=7]
-[ext_resource path="res://Telas/Camihnão bolado2.png" type="Texture" id=8]
-[ext_resource path="res://Telas/Camihnão bolado7.png" type="Texture" id=9]
-[ext_resource path="res://Telas/Camihnão bolado8.png" type="Texture" id=10]
-[ext_resource path="res://Telas/Camihnão bolado6.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/botão_verde_normal.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/botão_verde2.png" type="Texture" id=13]
+[ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=1]
+[ext_resource path="res://Telas/CaminhaoBolado12.png" type="Texture" id=2]
+[ext_resource path="res://Telas/CaminhaoBolado1.png" type="Texture" id=3]
+[ext_resource path="res://Telas/CaminhaoBolado3.png" type="Texture" id=4]
+[ext_resource path="res://Telas/CaminhaoBolado4.png" type="Texture" id=5]
+[ext_resource path="res://Telas/CaminhaoBolado5.png" type="Texture" id=6]
+[ext_resource path="res://Telas/CaminhaoBolado13.png" type="Texture" id=7]
+[ext_resource path="res://Telas/CaminhaoBolado2.png" type="Texture" id=8]
+[ext_resource path="res://Telas/CaminhaoBolado7.png" type="Texture" id=9]
+[ext_resource path="res://Telas/CaminhaoBolado8.png" type="Texture" id=10]
+[ext_resource path="res://Telas/CaminhaoBolado6.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/botao_verde_normal.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/botao_verde2.png" type="Texture" id=13]
 [ext_resource path="res://Cenas/Scripts/menu.gd" type="Script" id=14]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=15]
-[ext_resource path="res://Sprites/botão_verde1.png" type="BitMap" id=16]
-[ext_resource path="res://Sons/confirmação.wav" type="AudioStream" id=17]
+[ext_resource path="res://Sprites/botao_verde1.png" type="BitMap" id=16]
+[ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=17]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=18]
 
 [sub_resource type="SpriteFrames" id=4]
@@ -50,14 +50,14 @@ texture = ExtResource( 1 )
 position = Vector2( 681, 207 )
 scale = Vector2( 1.49937, 1.27887 )
 frames = SubResource( 4 )
-frame = 9
+frame = 5
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Fade In" = SubResource( 2 )
 anims/RESET = SubResource( 3 )
 
-[node name="BotãoJogar" type="TextureButton" parent="."]
+[node name="BotaoJogar" type="TextureButton" parent="."]
 margin_left = 320.0
 margin_top = 240.0
 margin_right = 1404.0
@@ -76,7 +76,7 @@ margin_bottom = 484.0
 custom_fonts/font = SubResource( 5 )
 text = "Jogar"
 
-[node name="BotãoInstruções" type="TextureButton" parent="."]
+[node name="BotaoInstrucoes" type="TextureButton" parent="."]
 margin_left = 320.0
 margin_top = 392.0
 margin_right = 986.0
@@ -85,7 +85,7 @@ texture_normal = ExtResource( 12 )
 texture_hover = ExtResource( 13 )
 texture_click_mask = ExtResource( 16 )
 
-[node name="INSTRUÇÕES" type="Label" parent="."]
+[node name="INSTRUCOES" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 328.0
@@ -105,7 +105,7 @@ volume_db = -10.0
 stream = ExtResource( 18 )
 volume_db = -10.0
 
-[connection signal="mouse_entered" from="BotãoJogar" to="." method="_on_BotoJogar_mouse_entered"]
-[connection signal="pressed" from="BotãoJogar" to="." method="_on_BotoJogar_pressed"]
-[connection signal="mouse_entered" from="BotãoInstruções" to="." method="_on_BotoInstrues_mouse_entered"]
-[connection signal="pressed" from="BotãoInstruções" to="." method="_on_BotoInstrues_pressed"]
+[connection signal="mouse_entered" from="BotaoJogar" to="." method="_on_BotaoJogar_mouse_entered"]
+[connection signal="pressed" from="BotaoJogar" to="." method="_on_BotaoJogar_pressed"]
+[connection signal="mouse_entered" from="BotaoInstrucoes" to="." method="_on_BotaoInstrucoes_mouse_entered"]
+[connection signal="pressed" from="BotaoInstrucoes" to="." method="_on_BotaoInstrucoes_pressed"]

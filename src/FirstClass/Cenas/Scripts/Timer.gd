@@ -37,7 +37,7 @@ func _process(delta):
 	
 	if minutes == -1:
 		$Timer.stop()
-		get_tree().change_scene("res://Cenas/Tela_Gameover.tscn")
+		get_tree().change_scene("res://Cenas/tela_gameover.tscn")
 		
 	set_text(str(minutesDisplay)+":"+str(secondsDisplay))
 	

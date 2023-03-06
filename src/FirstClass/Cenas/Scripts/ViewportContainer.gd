@@ -2,12 +2,12 @@ extends ViewportContainer
 
 func _process(delta):
 	if self.material == null:
-		$"AnimaçãoBebida".stop()
-		$"AnimaçãoSono".stop()
+		$AnimacaoBebida.stop()
+		$AnimacaoSono.stop()
 	
 	elif self.material == preload("res://Efeitos tela/ShaderSono.tres"):
-		$"AnimaçãoSono".play("CenasSono")
+		$AnimacaoSono.play("CenasSono")
 		
 	elif self.material == preload("res://Efeitos tela/ShaderBebida.tres"):
-		$"AnimaçãoBebida".play("Bebida")
+		$AnimacaoBebida.play("Bebida")
 		

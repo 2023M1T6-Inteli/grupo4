@@ -14,18 +14,18 @@ func som_hover():
 
 func _on_menu_pressed():
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
-	$menu.texture_normal = preload("res://Sprites/botão_verde2.png")
+	$menu.texture_normal = $menu.texture_hover
 	$restart.texture_hover = null
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
 		yield(get_tree().create_timer(0.25), "timeout")
-		get_tree().change_scene("res://Cenas/Menu.tscn")
+		get_tree().change_scene("res://Cenas/menu.tscn")
 	#mudança de cena e efeito sonoro
 	
 func _on_restart_pressed():
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
-	$restart.texture_normal = preload("res://Sprites/botão_verde2.png")
+	$restart.texture_normal = $restart.texture_hover
 	$menu.texture_hover = null
 	hover = 1
 	if !$SomConfirmar.playing:
