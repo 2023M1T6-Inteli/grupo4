@@ -78,10 +78,6 @@ margin_bottom = 37.0
 rect_scale = Vector2( 4.04063, 6.14268 )
 
 [node name="Timer" parent="CanvasLayer" instance=ExtResource( 4 )]
-margin_left = 1072.0
-margin_top = 16.0
-margin_right = 1183.0
-margin_bottom = 88.0
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 margin_right = 1280.0
