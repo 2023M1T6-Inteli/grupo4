@@ -95,8 +95,8 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	var collide = move_and_collide(velocity * delta)
 
 	if collide: 
-		Global.debuf2 = false
 		Global.debuf = false
+		Global.debuf2 = false
 		get_tree().change_scene("res://Cenas/Tela_Gameover.tscn")
 		
 	# Método que controla o movimento do objeto de acordo com vetores e identifica quando o player
