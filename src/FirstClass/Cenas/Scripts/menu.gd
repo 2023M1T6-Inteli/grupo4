@@ -9,11 +9,11 @@ func som_hover():
 		
 
 #botão para jogar
-func _on_BotoJogar_pressed():
+func _on_BotaoJogar_pressed():
 	hover = 1
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
-	$"BotãoJogar".texture_normal = preload("res://Sprites/botão_verde2.png")
-	$"BotãoInstruções".texture_hover = null
+	$BotaoJogar.texture_normal = $BotaoJogar.texture_hover
+	$BotaoInstrucoes.texture_hover = null
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
 		yield(get_tree().create_timer(0.25), "timeout")
@@ -21,21 +21,25 @@ func _on_BotoJogar_pressed():
 		#mudança de cena e efeito sonoro
 	
 #botão para ir para as intruções do jogo
-func _on_BotoInstrues_pressed():
+func _on_BotaoInstrucoes_pressed():
 	hover = 1
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
-	$"BotãoInstruções".texture_normal = preload("res://Sprites/botão_verde2.png")
-	$"BotãoJogar".texture_hover = null
+	$BotaoInstrucoes.texture_normal = $BotaoInstrucoes.texture_hover
+	$BotaoJogar.texture_hover = null
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
 		yield(get_tree().create_timer(0.25), "timeout")
-		get_tree().change_scene("res://Cenas/instruções.tscn")
+		get_tree().change_scene("res://Cenas/instrucoes.tscn")
 		#mudança de cena e efeito sonoro
 
+#funções de efeito sonoro
+func _on_BotaoJogar_mouse_entered():
+	som_hover()
 
-func _on_BotoJogar_mouse_entered():
+func _on_BotaoInstrucoes_mouse_entered():
 	som_hover()
 
 
-func _on_BotoInstrues_mouse_entered():
-	som_hover()
+
+
+

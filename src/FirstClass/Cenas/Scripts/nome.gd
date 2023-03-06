@@ -17,7 +17,7 @@ func confirmar():
 
 
 #mudança de tela para prosseguir 
-func _on_botoOk_pressed():
+func _on_BotaoOk_pressed():
 	#garantindo que algum texto será inserido para prosseguir
 	if $LineEdit.text == "":
 		pass
@@ -25,7 +25,7 @@ func _on_botoOk_pressed():
 		confirmar()
 		
 #mudança de tela para voltar
-func _on_botoVoltar_pressed():
+func _on_BotaoVoltar_pressed():
 	if !$SomVoltar.playing:
 		$SomVoltar.play()
 		yield(get_tree().create_timer(0.35), "timeout")
@@ -41,9 +41,11 @@ func _on_LineEdit_text_entered(new_text):
 		confirmar()
 
 
-func _on_botoOk_mouse_entered():
+func _on_BotaoOk_mouse_entered():
 	som_hover()
 
 
-func _on_botoVoltar_mouse_entered():
+func _on_BotaoVoltar_mouse_entered():
 	som_hover()
+
+

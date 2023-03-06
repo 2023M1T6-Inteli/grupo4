@@ -97,7 +97,7 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	if collide: 
 		Global.debuf = false
 		Global.debuf2 = false
-		get_tree().change_scene("res://Cenas/Tela_Gameover.tscn")
+		get_tree().change_scene("res://Cenas/tela_gameover.tscn")
 		
 	# Método que controla o movimento do objeto de acordo com vetores e identifica quando o player
 	# sofre alguma colisão.
@@ -114,6 +114,6 @@ func sounds(): # função que controla os sons relativos ao jogador e sua movime
 	elif Input.is_action_just_released("ui_up") and Global.debuf2 == true:
 		$SomAcelerando.play("acelerar", -1, -1, true)
 	if Input.is_action_just_pressed("ui_down"):
-		$"SomRé".play()
+		$SomRe.play()
 	if Input.is_action_just_released("ui_down"):
-		$"SomRé".stop()
+		$SomRe.stop()

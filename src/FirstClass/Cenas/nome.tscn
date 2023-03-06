@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets_mytruck/icons e ui/faixa_bege-removebg-preview.png" type="Texture" id=2]
-[ext_resource path="res://Telas/fundo tela 1.png" type="Texture" id=3]
+[ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=3]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://Cenas/Scripts/nome.gd" type="Script" id=5]
 [ext_resource path="res://assets_mytruck/icons e ui/seta_left_verde_sombra.png" type="Texture" id=6]
 [ext_resource path="res://assets_mytruck/icons e ui/seta_left_verde.png" type="Texture" id=7]
-[ext_resource path="res://Sons/confirmação.wav" type="AudioStream" id=8]
+[ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=8]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=9]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=10]
 
@@ -46,7 +46,7 @@ custom_styles/normal = SubResource( 3 )
 align = 1
 placeholder_text = "Digite aqui"
 
-[node name="botãoOk" type="TextureButton" parent="."]
+[node name="BotaoOk" type="TextureButton" parent="."]
 margin_left = 880.0
 margin_top = 240.0
 margin_right = 1546.0
@@ -76,7 +76,7 @@ rect_scale = Vector2( 6, 6 )
 custom_fonts/font = SubResource( 4 )
 text = "Digite seu nome"
 
-[node name="botãoVoltar" type="TextureButton" parent="."]
+[node name="BotaoVoltar" type="TextureButton" parent="."]
 margin_left = 24.0
 margin_top = 616.0
 margin_right = 56.0
@@ -98,7 +98,7 @@ stream = ExtResource( 10 )
 volume_db = -10.0
 
 [connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
-[connection signal="mouse_entered" from="botãoOk" to="." method="_on_botoOk_mouse_entered"]
-[connection signal="pressed" from="botãoOk" to="." method="_on_botoOk_pressed"]
-[connection signal="mouse_entered" from="botãoVoltar" to="." method="_on_botoVoltar_mouse_entered"]
-[connection signal="pressed" from="botãoVoltar" to="." method="_on_botoVoltar_pressed"]
+[connection signal="mouse_entered" from="BotaoOk" to="." method="_on_BotaoOk_mouse_entered"]
+[connection signal="pressed" from="BotaoOk" to="." method="_on_BotaoOk_pressed"]
+[connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_BotaoVoltar_mouse_entered"]
+[connection signal="pressed" from="BotaoVoltar" to="." method="_on_BotaoVoltar_pressed"]

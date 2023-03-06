@@ -1,16 +1,16 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Telas/fundo tela 1.png" type="Texture" id=1]
-[ext_resource path="res://Telas/Camihnão bolado12.png" type="Texture" id=2]
-[ext_resource path="res://Telas/Camihnão bolado1.png" type="Texture" id=3]
-[ext_resource path="res://Telas/Camihnão bolado3.png" type="Texture" id=4]
-[ext_resource path="res://Telas/Camihnão bolado4.png" type="Texture" id=5]
-[ext_resource path="res://Telas/Camihnão bolado5.png" type="Texture" id=6]
-[ext_resource path="res://Telas/Camihnão bolado13.png" type="Texture" id=7]
-[ext_resource path="res://Telas/Camihnão bolado2.png" type="Texture" id=8]
-[ext_resource path="res://Telas/Camihnão bolado7.png" type="Texture" id=9]
-[ext_resource path="res://Telas/Camihnão bolado8.png" type="Texture" id=10]
-[ext_resource path="res://Telas/Camihnão bolado6.png" type="Texture" id=11]
+[ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=1]
+[ext_resource path="res://Telas/CaminhaoBolado12.png" type="Texture" id=2]
+[ext_resource path="res://Telas/CaminhaoBolado1.png" type="Texture" id=3]
+[ext_resource path="res://Telas/CaminhaoBolado3.png" type="Texture" id=4]
+[ext_resource path="res://Telas/CaminhaoBolado4.png" type="Texture" id=5]
+[ext_resource path="res://Telas/CaminhaoBolado5.png" type="Texture" id=6]
+[ext_resource path="res://Telas/CaminhaoBolado13.png" type="Texture" id=7]
+[ext_resource path="res://Telas/CaminhaoBolado2.png" type="Texture" id=8]
+[ext_resource path="res://Telas/CaminhaoBolado7.png" type="Texture" id=9]
+[ext_resource path="res://Telas/CaminhaoBolado8.png" type="Texture" id=10]
+[ext_resource path="res://Telas/CaminhaoBolado6.png" type="Texture" id=11]
 [ext_resource path="res://Cenas/Scripts/carregamento.gd" type="Script" id=12]
 
 [sub_resource type="Animation" id=2]
@@ -85,7 +85,7 @@ anims/RESET = SubResource( 3 )
 position = Vector2( 646, 368 )
 scale = Vector2( 1.682, 1.626 )
 frames = SubResource( 1 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
