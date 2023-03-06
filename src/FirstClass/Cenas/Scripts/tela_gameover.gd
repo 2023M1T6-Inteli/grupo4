@@ -3,6 +3,11 @@ extends Node2D
 var hover = 0
 #guarda o valor que define se o efeito sonoro de hover deve tocar ou não
 
+func _ready():
+	Global.debuf = false
+	Global.debuf2 = false
+	#garantindo que os debuffs são reiniciados
+	
 func som_hover():
 	if hover == 0:
 		$SomHover.play()
