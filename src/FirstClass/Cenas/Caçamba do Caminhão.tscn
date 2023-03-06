@@ -63,6 +63,7 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=2]
 
 [node name="Caçamba do Caminhão" type="RigidBody2D"]
+mass = 1.55
 script = ExtResource( 41 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

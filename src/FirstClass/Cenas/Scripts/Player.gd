@@ -2,7 +2,7 @@ extends KinematicBody2D # Herda as características da classe KinematicBody2D.
 
 var angularSpeed = PI / 2 # Variável que guarda o valor da velocidade de rotação do objeto (afeta as curvas).
 
-var maxSpeed = 150.0 # Variável que guarda o valor da velocidade máxima ou limite do deslocamento do objeto.
+var maxSpeed : float # Variável que guarda o valor da velocidade máxima ou limite do deslocamento do objeto.
 
 var acceleration = 10 # Variável que guarda o valor da velocidade de aceleração do deslocamento do objeto.
 
@@ -49,7 +49,7 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 		velocity = velocity.clamped(maxSpeed)
 	else:
 		directionY = 1
-		maxSpeed = 150
+		maxSpeed = 120
 	
 	# As duas condicionais acima determinam que, se o jogador precionar a setinha para baixo,
 	# o caminhão inverterá seu movimento, começando a andar para trás (Dando ré), e que

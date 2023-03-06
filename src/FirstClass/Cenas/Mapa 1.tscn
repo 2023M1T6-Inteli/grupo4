@@ -21,7 +21,7 @@ position = Vector2( 400, 1237 )
 z_index = 2
 z_as_relative = false
 mass = 0.00102041
-gravity_scale = 13.76
+gravity_scale = 9.0
 can_sleep = false
 
 [node name="Mapa" type="Node2D" parent="."]
