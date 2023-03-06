@@ -1,0 +1,150 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets_mytruck/icons e ui/GUI.png" type="Texture" id=4]
+[ext_resource path="res://assets_mytruck/icons e ui/ui_up.png" type="Texture" id=5]
+[ext_resource path="res://assets_mytruck/icons e ui/ui_right.png" type="Texture" id=6]
+[ext_resource path="res://assets_mytruck/icons e ui/ui_left.png" type="Texture" id=7]
+[ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=8]
+[ext_resource path="res://assets_mytruck/icons e ui/ui_down.png" type="Texture" id=9]
+[ext_resource path="res://Cenas/Scripts/interacao.gd" type="Script" id=10]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+func _on_Timer_timeout():
+	pass # Replace with function body.
+"
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = SubResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="FundoTela1" type="Sprite" parent="."]
+position = Vector2( 641.5, 358 )
+scale = Vector2( 0.673437, 0.67963 )
+texture = ExtResource( 8 )
+
+[node name="UiUp" type="Sprite" parent="."]
+position = Vector2( 1118, 590 )
+scale = Vector2( 2.125, 2 )
+texture = ExtResource( 5 )
+
+[node name="UiLeft" type="Sprite" parent="."]
+position = Vector2( 1036, 663 )
+scale = Vector2( 2.5, 2.25 )
+texture = ExtResource( 7 )
+
+[node name="UiRight" type="Sprite" parent="."]
+position = Vector2( 1198, 670 )
+scale = Vector2( 2.25001, 2.25 )
+texture = ExtResource( 6 )
+
+[node name="UiDown" type="Sprite" parent="."]
+position = Vector2( 1119, 667 )
+scale = Vector2( 2.25, 2.25 )
+texture = ExtResource( 9 )
+
+[node name="caixaFala" type="Sprite" parent="."]
+position = Vector2( 679, 297 )
+scale = Vector2( 36.375, 13.3722 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 48.4697, 95.3713, 32.0583, 33.9441 )
+
+[node name="caixaFala2" type="Sprite" parent="caixaFala"]
+position = Vector2( -13.7732, -0.81793 )
+scale = Vector2( 0.148031, 0.994182 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 48.7462, 95.8458, 26.1129, 31.493 )
+
+[node name="caixaFala3" type="Sprite" parent="caixaFala"]
+position = Vector2( 12.976, -0.186958 )
+scale = Vector2( 0.123183, 0.997872 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 53.4256, 95.8773, 26.9469, 32.5812 )
+
+[node name="caixaPersonagem" type="Sprite" parent="."]
+position = Vector2( 185, 515 )
+scale = Vector2( 5.79167, 8.8592 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( -2.70123, 95.9958, 51.4656, 33.2591 )
+
+[node name="nomeIntrustor" type="Sprite" parent="."]
+position = Vector2( 195, 608 )
+scale = Vector2( 7.84375, 1.59186 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 48.2636, 95.4908, 32.2173, 33.0329 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 10 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect"]
+modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
+self_modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
+margin_left = 166.0
+margin_top = 174.0
+margin_right = 500.0
+margin_bottom = 264.0
+rect_scale = Vector2( 3, 3 )
+custom_fonts/mono_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="NinePatchRect"]
+wait_time = 0.1
+
+[node name="enter" type="Label" parent="."]
+modulate = Color( 0.894118, 0.65098, 0.447059, 0.756863 )
+self_modulate = Color( 0.894118, 0.65098, 0.447059, 1 )
+margin_left = 1074.0
+margin_top = 436.0
+margin_right = 1149.0
+margin_bottom = 453.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 3 )
+text = "ENTER "
+
+[node name="seta" type="Sprite" parent="."]
+modulate = Color( 0.827451, 0.521569, 0.313726, 0.611765 )
+position = Vector2( 1174, 450 )
+scale = Vector2( 5.31818, 4.13636 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 146.026, 33.5853, 11.9716, 11.6796 )
+
+[connection signal="timeout" from="NinePatchRect/Timer" to="NinePatchRect" method="_on_Timer_timeout"]
