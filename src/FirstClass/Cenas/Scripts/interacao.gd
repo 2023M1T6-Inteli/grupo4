@@ -6,8 +6,10 @@ var instrutor = "nina"
 onready var text := $RichTextLabel
 #referência para o tempo
 onready var timer := $Timer	
-
 #guarda a fila de mensagens que será exibida
+
+var cont = 0
+
 var msg_queue: Array = [
 	"Olá, " + Global.nome + "!" + " Eu sou o " + instrutor + ", seu instrutor nessa jornada.",
 	"Trabalho com transporte de carga química há 10 anos e vou te ajudar a seguir seu percurso com segurança."
@@ -15,9 +17,11 @@ var msg_queue: Array = [
 	
 #ao dar enter no teclado é mostrado o próximo elemento da fila de mensagens
 func _input(event):
-	if event is InputEventKey and event.is_action_pressed("ui_accept"):
+	if event is InputEventKey and event.is_action_pressed("ui_accept") and cont < len(msg_queue):
 		show_menssage() #comando para mostrar a mensagem
-
+		cont += 1
+	else:
+		get_tree().change_scene("res://Cena/Game.tscn")
 
 func show_menssage() -> void:
 	if not timer.is_stopped(): 
@@ -25,7 +29,6 @@ func show_menssage() -> void:
 		return
 		
 	if msg_queue.size() == 0: #quando o tamanho da mensagem é 0, a fila de mensagens acaba
-		hide()
 		return
 	
 	var _msg: String = msg_queue.pop_front() #remove o primeiro elemento e retorna o valor dele

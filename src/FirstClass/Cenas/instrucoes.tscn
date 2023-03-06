@@ -12,7 +12,7 @@
 [ext_resource path="res://assets_mytruck/icons e ui/keyboard_71.png" type="Texture" id=10]
 [ext_resource path="res://assets_mytruck/icons e ui/keyboard_72.png" type="Texture" id=11]
 [ext_resource path="res://assets_mytruck/icons e ui/keyboard_73.png" type="Texture" id=12]
-[ext_resource path="res://assets_mytruck/icons e ui/espaco.png" type="Texture" id=13]
+[ext_resource path="res://assets_mytruck/icons e ui/ui_up.png" type="Texture" id=13]
 [ext_resource path="res://Cenas/Scripts/instrucoes.gd" type="Script" id=14]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=15]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=16]
@@ -56,58 +56,36 @@ rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 8 )
 
+[node name="UiUp" type="Sprite" parent="."]
+position = Vector2( 579, 500 )
+scale = Vector2( 2.1237, 1.85547 )
+texture = ExtResource( 13 )
+
 [node name="Keyboard71" type="Sprite" parent="."]
-position = Vector2( 910, 531 )
+position = Vector2( 580, 574 )
 scale = Vector2( 2.1224, 1.77344 )
 texture = ExtResource( 10 )
 
 [node name="Keyboard72" type="Sprite" parent="."]
-position = Vector2( 996, 531 )
+position = Vector2( 672, 574 )
 scale = Vector2( 2.1237, 1.85547 )
 texture = ExtResource( 11 )
 
-[node name="Espaço" type="Sprite" parent="."]
-position = Vector2( 442, 531 )
-scale = Vector2( 4.18229, 2.04687 )
-texture = ExtResource( 13 )
-
 [node name="Keyboard73" type="Sprite" parent="."]
-position = Vector2( 829, 533 )
+position = Vector2( 495, 572 )
 scale = Vector2( 2.15625, 1.875 )
 texture = ExtResource( 12 )
 
-[node name="ESPAÇO" type="Label" parent="."]
-modulate = Color( 0.14902, 0.14902, 0.215686, 1 )
-self_modulate = Color( 0.117647, 0.117647, 0.223529, 1 )
-margin_left = 350.0
-margin_top = 501.0
+[node name="BOTOES" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 171.0
+margin_top = 403.0
 margin_right = 409.0
-margin_bottom = 517.0
-rect_scale = Vector2( 3, 3 )
-custom_fonts/font = SubResource( 2 )
-text = "espaço"
-
-[node name="ACELERAR" type="Label" parent="."]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 300.0
-margin_top = 419.0
-margin_right = 377.0
-margin_bottom = 435.0
+margin_bottom = 419.0
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 2 )
-text = "acelerar:"
-
-[node name="MOVER" type="Label" parent="."]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 807.0
-margin_top = 435.0
-margin_right = 865.0
-margin_bottom = 451.0
-rect_scale = Vector2( 4, 4 )
-custom_fonts/font = SubResource( 2 )
-text = "mover:"
+text = "Botões que serão utilizados:"
 
 [node name="Celular1" type="Sprite" parent="."]
 position = Vector2( 688, 152 )
@@ -191,6 +169,6 @@ volume_db = -10.0
 stream = ExtResource( 16 )
 volume_db = -10.0
 
-[connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_BotaoVoltar_mouse_entered"]
 [connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_botoVoltar_mouse_entered"]
+[connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_BotaoVoltar_mouse_entered"]
 [connection signal="pressed" from="BotaoVoltar" to="." method="_on_BotaoVoltar_pressed"]
