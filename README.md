@@ -46,6 +46,30 @@ May the force be with you!
   &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
+  &emsp;|-->.import<br>
+  &emsp;|-->Assets<br>
+    &emsp;&emsp;|-->TilesMaps<br>
+  &emsp;|-->Assets2<br>
+    &emsp;&emsp;|-->Logo<br>
+    &emsp;&emsp;|-->face<br>
+    &emsp;&emsp;|-->icons e ui<br>
+    &emsp;&emsp;|-->sprites_personagens e ui<br>
+  &emsp;|-->Cenas<br>
+    &emsp;&emsp;|-->Scripts<br>
+  &emsp;|-->Efeitos tela<br>
+  &emsp;|-->Fonte<br>
+  &emsp;|-->Sons<br>
+  &emsp;|-->Sprites<br>
+    &emsp;&emsp;|-->Bebidas<br>
+    &emsp;&emsp;|-->Cabeca do Caminhao<br>
+    &emsp;&emsp;|-->Caixa Pesada<br>
+    &emsp;&emsp;|-->Caminhao PVC<br>
+    &emsp;&emsp;|-->Caminhao Soda<br>
+    &emsp;&emsp;|-->Caminhao de cloro<br>
+    &emsp;&emsp;|-->Celular<br>
+    &emsp;&emsp;|-->Soninho PVC<br>
+  &emsp;|-->Telas<br>
+  
 |readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
