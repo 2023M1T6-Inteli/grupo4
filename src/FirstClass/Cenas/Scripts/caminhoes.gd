@@ -8,6 +8,7 @@ func confirmar():
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
 		yield(get_tree().create_timer(0.5), "timeout")
+		MusicController.play_game_music()
 		get_tree().change_scene("res://Cenas/Game.tscn")
 		#mudança de cena e efeito sonoro
 		

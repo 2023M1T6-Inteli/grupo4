@@ -82,6 +82,7 @@ func _on_Bebida_area_entered(area):
 		sumir($Bebida)
 	else:
 		get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderBebida.tres")
+		MusicController.debuff_bebida_sound()
 		$TimerBebida.start()
 		sumir($Bebida)
 	
@@ -90,12 +91,14 @@ func _on_Bebida_area_entered(area):
 func _on_Celular_area_entered(area):
 	Global.debuf = true
 	$TimerCelular.start()
+	MusicController.debuff_celular_sound()
 	sumir($Celular)
 	# Função responsável por aplicar as diferenças causadas pelo Celular ao jogador
 
 
 func _on_Carga_Pesada_area_entered(area):
 	Global.debuf2 = true
+	MusicController.debuff_carga_pesada_sound()
 	$TimerCarga.start()
 	sumir($"Carga Pesada")
 	
@@ -108,6 +111,7 @@ func _on_Sono_area_entered(area):
 		sumir($Sono)
 	else:
 		get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderSono.tres")
+		MusicController.debuff_sono_sound()
 		$TimerSono.start()
 		sumir($Sono)
 	# Função responsável por aplicar o efeito espécial do sono a tela do jogador
@@ -118,6 +122,7 @@ func _on_TimerBebida_timeout():
 		return
 	else:
 		get_parent().get_parent().get_parent().material = null
+		MusicController.debuffs2_sound_off()
 	
 
 
@@ -126,11 +131,12 @@ func _on_TimerSono_timeout():
 		return
 	else:
 		get_parent().get_parent().get_parent().material = null
-
+		MusicController.debuffs2_sound_off()
 
 func _on_TimerCarga_timeout():
 	Global.debuf2 = false
-
+	MusicController.debuffs1_sound_off()
 
 func _on_TimerCelular_timeout():
 	Global.debuf = false
+	MusicController.debuffs1_sound_off()

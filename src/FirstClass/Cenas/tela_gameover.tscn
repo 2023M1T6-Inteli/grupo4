@@ -97,11 +97,11 @@ text = "FIM"
 
 [node name="SomConfirmar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -10.0
+volume_db = -13.0
 
 [node name="SomHover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
-volume_db = -10.0
+volume_db = -13.0
 
 [node name="Pontos" type="Label" parent="."]
 margin_left = 152.0

@@ -9,7 +9,9 @@ func _ready():
 	Global.gasolina = 8000
 	Global.permissao = false
 	#garantindo que os debuffs, a gasolina e a variável "permissao" são reiniciados
-	$Pontos.text = "Parabéns " + str(Global.nome) + ", você fez " + str(Global.points) + " pontos!"
+	$Pontos.text = "Parabéns " + str(Global.nome) + ", você fez " + str(Global.points / 12) + " pontos!"
+	MusicController.play_game_over_music()
+	
 func som_hover():
 	if hover == 0:
 		$SomHover.play()
@@ -26,6 +28,7 @@ func _on_menu_pressed():
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
 		yield(get_tree().create_timer(0.25), "timeout")
+		MusicController.play_menu_music()
 		get_tree().change_scene("res://Cenas/menu.tscn")
 	#mudança de cena e efeito sonoro
 	
@@ -41,6 +44,7 @@ func _on_restart_pressed():
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
 		yield(get_tree().create_timer(0.25), "timeout")
+		MusicController.play_game_music()
 		get_tree().change_scene("res://Cenas/Game.tscn")
 #mudança de cena e efeito sonoro
 
