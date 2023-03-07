@@ -3,13 +3,14 @@
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=3]
-[ext_resource path="res://assets_mytruck/icons e ui/GUI.png" type="Texture" id=4]
-[ext_resource path="res://Assets2/icons e ui/ui_up.png" type="Texture" id=5]
-[ext_resource path="res://Assets2/icons e ui/ui_right.png" type="Texture" id=6]
-[ext_resource path="res://Assets2/icons e ui/ui_left.png" type="Texture" id=7]
+[ext_resource path="res://Assets2/IconsUI/UI_objetos.png" type="Texture" id=4]
+[ext_resource path="res://Assets2/IconsUI/ui_up.png" type="Texture" id=5]
+[ext_resource path="res://Assets2/IconsUI/ui_right.png" type="Texture" id=6]
+[ext_resource path="res://Assets2/IconsUI/ui_left.png" type="Texture" id=7]
 [ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=8]
-[ext_resource path="res://Assets2/icons e ui/ui_down.png" type="Texture" id=9]
+[ext_resource path="res://Assets2/IconsUI/ui_down.png" type="Texture" id=9]
 [ext_resource path="res://Cenas/Scripts/interacao.gd" type="Script" id=10]
+
 
 
 [sub_resource type="GDScript" id=4]

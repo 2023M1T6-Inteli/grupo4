@@ -5,8 +5,9 @@
 [ext_resource path="res://Assets/Well.png" type="Texture" id=3]
 [ext_resource path="res://Assets/House2.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Fences.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Wood Bridge.png" type="Texture" id=6]
+[ext_resource path="res://Assets/WoodBridge.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Paths.png" type="Texture" id=7]
+
 
 [resource]
 0/name = "House1.png 0"
