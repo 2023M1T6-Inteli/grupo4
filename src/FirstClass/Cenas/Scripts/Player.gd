@@ -10,7 +10,6 @@ var velocity = Vector2.ZERO # Variável de velocidade do objeto em relação aos
 
 var friction = 5.0  # Variável que guarda o valor da fricção do objeto com o chão (afeta a freagem).
 
-
 func _physics_process(delta): # Nessa função declaro as verificações executadas a cada frame pelo programa.
 	
 	sounds() # executa a função "sounds"
@@ -58,10 +57,9 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	if Input.is_action_pressed("ui_up"):
 		velocity += Vector2.UP.rotated(rotation) * (acceleration * directionY)
 		velocity = velocity.clamped(maxSpeed)
-	
+		Global.points += 1 
 	# A condicional acima determina que o objeto ganha velocidade de deslocamento quando a tecla "espaço"
-	# é pressionada, que a velocidade não pode ultrapassar o valor guardado na variável "max_speed" e que a
-	# velocidade de rotação do objeto enquanto ele acelera é igual à armazenada no topo do código.
+	# é pressionada, que a velocidade não pode ultrapassar o valor guardado na variável "max_speed" e aumenta a pontuação
 		
 		if Global.debuf2 == true:
 			angularSpeed = PI/5

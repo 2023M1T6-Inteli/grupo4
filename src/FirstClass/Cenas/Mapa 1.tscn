@@ -1,15 +1,37 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/TilesMaps/Chão.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/TilesMaps/Arvore.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/TilesMaps/Casas.tres" type="TileSet" id=3]
 [ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cenas/Scripts/Chegada.gd" type="Script" id=5]
 [ext_resource path="res://Assets/TilesMaps/chão_8bit.tres" type="TileSet" id=6]
 [ext_resource path="res://Assets/TilesMaps/Pedras.tres" type="TileSet" id=7]
 [ext_resource path="res://Assets/TilesMaps/Postes_e_placas.tres" type="TileSet" id=8]
 [ext_resource path="res://Cenas/Cacamba do Caminhao.tscn" type="PackedScene" id=9]
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 65.5, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 71, 2.5 )
+
 [node name="Mapa 1" type="Node2D"]
+
+[node name="Metade" type="Area2D" parent="."]
+position = Vector2( 3408, 1691 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Metade"]
+position = Vector2( 65.5, -4.5 )
+shape = SubResource( 2 )
+
+[node name="Chegada" type="Area2D" parent="."]
+position = Vector2( 300, 1182 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chegada"]
+position = Vector2( 72, 16.5 )
+shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 400, 1232 )
@@ -128,3 +150,6 @@ tile_set = ExtResource( 8 )
 cell_size = Vector2( 8, 8 )
 format = 1
 tile_data = PoolIntArray( 1835276, 4, 0, 2949279, 4, 0, 2949333, 2, 0, 3080387, 20, 0, 3080389, 20, 0, 3080391, 20, 0, 3080393, 20, 0, 3080395, 20, 0, 3080397, 20, 0, 3080399, 20, 0, 3080401, 20, 0, 3408093, -1610612730, 0, 3408097, -1610612720, 0, 3408100, -1610612721, 0, 3473631, -1610612717, 0, 3473632, -1610612720, 0, 3473633, -1610612720, 0, 3473634, -1610612720, 0, 3473635, -1610612720, 0, 3473636, -1610612721, 0, 3539050, 536870917, 0, 3539165, -1610612730, 0, 3539170, -1610612720, 0, 3539171, -1610612721, 0, 3539172, -1610612721, 0, 3604703, -1610612717, 0, 3604704, -1610612717, 0, 3604706, -1610612717, 0, 3670237, -1610612730, 0, 3670240, -1610612720, 0, 3670241, -1610612721, 0, 3670244, -1610612721, 0, 3735775, -1610612717, 0, 3735777, -1610612720, 0, 3735778, -1610612721, 0, 3735780, -1610612721, 0, 3801309, -1610612730, 0, 3801314, -1610612720, 0, 3801316, -1610612720, 0, 7078203, 536870917, 0, 7536696, 536870917, 0, 8388664, 4, 0, 9043989, 22, 0, 9306124, 16, 0, 9306125, 14, 0, 9306144, 14, 0, 9306145, 14, 0, 9306146, 14, 0, 9306147, 14, 0, 9371660, 16, 0, 9371661, 14, 0, 9371662, 16, 0, 9371663, 14, 0, 9371666, 14, 0, 9371668, 14, 0, 9371679, 14, 0, 9371680, 14, 0, 9371681, 14, 0, 9371682, 14, 0, 9371683, 15, 0, 9437197, 16, 0, 9437198, 16, 0, 9437199, 16, 0, 9437201, 16, 0, 9437205, 16, 0, 9437214, 15, 0, 9437215, 15, 0, 9437216, 15, 0, 9437217, 15, 0, 9437218, 15, 0, 9437219, 16, 0, 9502750, 16, 0, 9502751, 15, 0, 9502752, 15, 0, 9502753, 15, 0, 9502754, 15, 0, 9502755, 15, 0, 9568287, 16, 0, 9568288, 16, 0, 9568289, 16, 0, 9568290, 16, 0, 9568291, 16, 0, 9633825, 16, 0, 9633826, 16, 0, 9830413, 10, 0, 9830419, 11, 0, 9830422, 11, 0, 9830425, 11, 0, 9961507, -1073741817, 0, 10092557, 13, 0, 10092579, -1073741817, 0, 10223651, -1073741817, 0, 10289165, 13, 0, 10289185, 2, 0, 11469239, 3, 0, 11665782, 536870917, 0, 12124360, 5, 0, 16122287, 5, 0, 17695039, 4, 0, 18809042, 5, 0, 19005838, 4, 0, 19333354, 4, 0, 20513118, 3, 0, 20775058, 4, 0, 21561697, 5, 0 )
+
+[connection signal="area_entered" from="Metade" to="Chegada" method="_on_Metade_area_entered"]
+[connection signal="body_entered" from="Chegada" to="Chegada" method="_on_Chegada_body_entered"]
