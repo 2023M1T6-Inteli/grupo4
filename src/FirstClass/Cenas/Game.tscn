@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Cenas/Minimap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Mapa 1.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Cenas/Timer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/Scripts/ViewportContainer.gd" type="Script" id=5]
 [ext_resource path="res://Efeitos tela/CenasSono.tres" type="Animation" id=6]
+[ext_resource path="res://Cenas/Pontuação.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Bebida"
@@ -78,6 +79,9 @@ margin_bottom = 37.0
 rect_scale = Vector2( 4.04063, 6.14268 )
 
 [node name="Timer" parent="CanvasLayer" instance=ExtResource( 4 )]
+
+[node name="Pontuação" parent="CanvasLayer" instance=ExtResource( 7 )]
+position = Vector2( 472, 24 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 margin_right = 1280.0
