@@ -22,6 +22,7 @@ func _on_BotaoOk_pressed():
 	if $LineEdit.text == "":
 		pass
 	else:
+		Global.nome = $LineEdit.text
 		confirmar()
 		
 #mudança de tela para voltar
@@ -38,6 +39,7 @@ func _on_LineEdit_text_entered(new_text):
 	if new_text == "":
 		pass
 	else:
+		Global.nome = new_text
 		confirmar()
 
 
