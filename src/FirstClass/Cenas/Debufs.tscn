@@ -148,7 +148,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bebida"]
 frames = SubResource( 9 )
-frame = 10
+frame = 11
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bebida"]
@@ -159,7 +159,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Celular"]
 frames = SubResource( 10 )
-frame = 9
+frame = 10
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Celular"]
@@ -170,7 +170,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Carga Pesada"]
 frames = SubResource( 5 )
-frame = 10
+frame = 15
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carga Pesada"]
@@ -181,7 +181,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Sono"]
 frames = SubResource( 7 )
-frame = 15
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sono"]
