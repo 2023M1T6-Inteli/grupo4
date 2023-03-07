@@ -92,7 +92,7 @@ position = Vector2( 0, 6.33334 )
 space_override = 1
 gravity_point = true
 gravity_distance_scale = 1.0
-gravity = 4096.0
+gravity = 2000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 shape = SubResource( 7 )
