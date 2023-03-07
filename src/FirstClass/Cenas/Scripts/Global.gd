@@ -1,8 +1,8 @@
 extends Node
 
-var gasolina = 8000 #armazena o valor da gasolina
+var gasolina = 150 #armazena o valor da gasolina
 var permissao = false #permite o reabastecimento da gasolina de acordo com a distância percorrida pelo jogador no percurso
-
+var reset = false #permite o reabastecimento da gasolina ao fim do percurso
 var points = 0 #armazena a pontuação do jogador
 
 var debuf = false
