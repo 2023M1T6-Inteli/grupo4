@@ -19,7 +19,6 @@
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=17]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=18]
 
-
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 14 )
 
@@ -158,15 +157,15 @@ texture_hover = ExtResource( 15 )
 
 [node name="SomConfirmacao" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
-volume_db = -10.0
+volume_db = -13.0
 
 [node name="SomVoltar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )
-volume_db = -10.0
+volume_db = -13.0
 
 [node name="SomHover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
-volume_db = -10.0
+volume_db = -13.0
 
 [connection signal="mouse_entered" from="BotaoTonhao" to="." method="_on_BotaoTonhao_mouse_entered"]
 [connection signal="pressed" from="BotaoTonhao" to="." method="_on_BotaoTonhao_pressed"]

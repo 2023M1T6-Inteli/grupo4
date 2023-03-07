@@ -55,7 +55,7 @@ position = Vector2( 656, 224 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 animation = "Logo"
-frame = 1
+frame = 13
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

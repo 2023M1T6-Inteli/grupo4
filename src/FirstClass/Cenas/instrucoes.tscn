@@ -9,14 +9,13 @@
 [ext_resource path="res://Sprites/Celular/Celular1.png" type="Texture" id=7]
 [ext_resource path="res://Assets2/icons e ui/seta_left_verde_sombra.png" type="Texture" id=8]
 [ext_resource path="res://Assets2/icons e ui/seta_left_verde.png" type="Texture" id=9]
-[ext_resource path="res://assets_mytruck/icons e ui/keyboard_71.png" type="Texture" id=10]
-[ext_resource path="res://assets_mytruck/icons e ui/keyboard_72.png" type="Texture" id=11]
-[ext_resource path="res://assets_mytruck/icons e ui/keyboard_73.png" type="Texture" id=12]
+[ext_resource path="res://Assets2/icons e ui/ui_left.png" type="Texture" id=10]
+[ext_resource path="res://Assets2/icons e ui/ui_down.png" type="Texture" id=11]
+[ext_resource path="res://Assets2/icons e ui/ui_right.png" type="Texture" id=12]
 [ext_resource path="res://Assets2/icons e ui/ui_up.png" type="Texture" id=13]
 [ext_resource path="res://Cenas/Scripts/instrucoes.gd" type="Script" id=14]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=15]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=16]
-
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -65,17 +64,17 @@ texture = ExtResource( 13 )
 [node name="Keyboard71" type="Sprite" parent="."]
 position = Vector2( 580, 574 )
 scale = Vector2( 2.1224, 1.77344 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Keyboard72" type="Sprite" parent="."]
 position = Vector2( 672, 574 )
 scale = Vector2( 2.1237, 1.85547 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Keyboard73" type="Sprite" parent="."]
 position = Vector2( 495, 572 )
 scale = Vector2( 2.15625, 1.875 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 
 [node name="BOTOES" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
@@ -164,12 +163,12 @@ ocasiona fechamento dos olhos
 
 [node name="SomVoltar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
-volume_db = -10.0
+volume_db = -13.0
 
 [node name="SomHover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
-volume_db = -10.0
+volume_db = -13.0
 
-[connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_botoVoltar_mouse_entered"]
 [connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_BotaoVoltar_mouse_entered"]
+[connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_botoVoltar_mouse_entered"]
 [connection signal="pressed" from="BotaoVoltar" to="." method="_on_BotaoVoltar_pressed"]

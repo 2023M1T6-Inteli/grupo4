@@ -16,8 +16,8 @@ config/icon="res://Telas/CaminhaoBolado1.png"
 
 [autoload]
 
-GlobalTimer="*res://Cenas/Scripts/Timer.gd"
 Global="*res://Cenas/Scripts/Global.gd"
+MusicController="*res://Cenas/MusicController.tscn"
 
 [display]
 
