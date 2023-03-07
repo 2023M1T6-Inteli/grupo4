@@ -6,7 +6,7 @@
 [ext_resource path="res://Cenas/Timer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/Scripts/ViewportContainer.gd" type="Script" id=5]
 [ext_resource path="res://Efeitos tela/CenasSono.tres" type="Animation" id=6]
-[ext_resource path="res://Cenas/Pontuação.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Cenas/Pontuacao.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Bebida"

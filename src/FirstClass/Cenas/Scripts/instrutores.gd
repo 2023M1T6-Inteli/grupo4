@@ -67,6 +67,7 @@ func _on_BotaoVoltar_pressed():
 
 #funções de efeito sonoro
 func _on_BotaoTonhao_mouse_entered():
+	$BotaoTonhao.set_position(Vector2(38, 290))
 	som_hover()
 
 func _on_BotaoSeuJorge_mouse_entered():
@@ -80,3 +81,7 @@ func _on_BotaoNina_mouse_entered():
 
 func _on_BotaoVoltar_mouse_entered():
 	som_hover()
+
+
+func _on_BotaoTonhao_mouse_exited():
+	$BotaoTonhao.set_position(Vector2(38, 280))

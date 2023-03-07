@@ -20,30 +20,31 @@ func play_game_over_music():
 
 func debuff_sono_sound():
 	$Effects2.stream = load("res://Sons/debuff_sono.wav")
-	$Music.volume_db = -40
+	$Music.volume_db = -35
 	$Effects2.play()
 
 func debuff_bebida_sound():
 	$Effects2.stream = load("res://Sons/debuff_bebida .wav")
-	$Music.volume_db = -40
+	$Music.volume_db = -35
 	$Effects2.play()
 
 func debuff_carga_pesada_sound():
 	$Effects1.stream = load("res://Sons/debuff_carga_pesada.wav")
+	$Effects1.volume_db = 0
 	$Effects1.play()
 
 func debuff_celular_sound():
 	$Effects1.stream = load("res://Sons/debuff_celular .wav")
-	$Music.volume_db = -40
+	$Music.volume_db = -35
 	$Effects1.play()
 
 func debuffs1_sound_off():
 	$Effects1.stop()
+	$Effects1.volume_db = -17
 	if $Effects2.playing == false:
-		$Music.volume_db = -23
+		$Music.volume_db = -17
 
 func debuffs2_sound_off():
 	$Effects2.stop()
-	$Music.volume_db = -23
-
+	$Music.volume_db = -17
 
