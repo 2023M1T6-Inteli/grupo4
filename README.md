@@ -67,7 +67,7 @@ May the force be with you!
     &emsp;&emsp;|-->Caminhao Soda<br>
     &emsp;&emsp;|-->Caminhao de cloro<br>
     &emsp;&emsp;|-->Celular<br>
-    &emsp;&emsp;|-->Soninho PVC<br>
+    &emsp;&emsp;|-->Soninho<br>
   &emsp;|-->Telas<br>
   
 |readme.md<br>
