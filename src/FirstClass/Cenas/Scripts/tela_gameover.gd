@@ -9,8 +9,14 @@ func _ready():
 	Global.gasolina = 8000
 	Global.permissao = false
 	#garantindo que os debuffs, a gasolina e a variável "permissao" são reiniciados
+	
 	$Pontos.text = "Parabéns " + str(Global.nome) + ", você fez " + str(Global.points / 12) + " pontos!"
+	#mostrando os pontos com uma mensagem
+
+	MusicController.debuffs1_sound_off()
+	MusicController.debuffs2_sound_off()
 	MusicController.play_game_over_music()
+	#tocando a música certa
 	
 func som_hover():
 	if hover == 0:
