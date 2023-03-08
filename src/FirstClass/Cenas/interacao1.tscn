@@ -1,40 +1,79 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets2/IconsUI/UI_objetos.png" type="Texture" id=4]
-[ext_resource path="res://Assets2/IconsUI/ui_up.png" type="Texture" id=5]
-[ext_resource path="res://Assets2/IconsUI/ui_right.png" type="Texture" id=6]
-[ext_resource path="res://Assets2/IconsUI/ui_left.png" type="Texture" id=7]
 [ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=8]
-[ext_resource path="res://Assets2/IconsUI/ui_down.png" type="Texture" id=9]
-[ext_resource path="res://Cenas/Scripts/interacao.gd" type="Script" id=10]
-
-
 
 [sub_resource type="GDScript" id=4]
 script/source = "extends Node2D
 
+var texto = [\"Eai \" + str(Global.nome) + \", tudo beleza?\" + \" Sou \" + str(Global.nomeInstrutor) + \" e serei seu guia nessa jornada.\" + \" Fico feliz por ter me escolhido nesse momento de ajuda.\" , 
+\"Trabalho com cargas químicas há 15 anos, darei as devidas instruções para que nenhum acidente aconteça com você\", 
+\"Estou de olho, viu! Não faça nenhuma bobagem\",
+\"Aqui vão algumas instruções:\" + \" Proibido o uso do celular no volante, nada de bebidas, descanse bem para não cochilar no volante e confira o peso da carga.\" ,
+\"Aqui está a checklist, verifique todos os itens com atenção e bora para o trajeto!\"
+ ]
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
+#Array que contém o texto
+var index = 0 #variável que itera os elementos na lista
+var input = 0 #variável que conta quantas vezes apertou \"Enter\"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$Texto.text = texto[index] # texto do label = primeiro elemento da lista
+	
+	if Global.rostoInstrutor == 'tonhao':
+		$rosto.texture = load(\"res://Assets2/face/TonhaoSorrindo.png\")
+	elif Global.rostoInstrutor == 'seujorge':
+		$rosto.texture = load(\"res://Assets2/face/SeuJorgeSorrindo.png\")
+	elif Global.rostoInstrutor == 'gina':
+		$rosto.texture = load(\"res://Assets2/face/GinaSorrindo.png\")
+		$rosto.position.y = 500
+	elif Global.rostoInstrutor == 'nina':
+		$rosto.texture = load(\"res://Assets2/face/NinaSorrindo.png\")
+		
+	if Global.nomeInstrutor == 'Tonhão':
+		$instrutor.text = 'Tonhão'
+	elif Global.nomeInstrutor == 'Seu Jorge':
+		$instrutor.text = 'Seu Jorge'
+	elif Global.nomeInstrutor == 'Gina':
+		$instrutor.text ='Gina'
+	elif Global.nomeInstrutor == 'Nina':
+		$instrutor.text = 'Nina'
+	
+func _process(delta):
+	if $Texto.visible_characters < $Texto.get_total_character_count(): # se caracteres visíveis < total de caracteres
+		$Texto.visible_characters += 1 # adicionando caracteres visíveis
+	else: # se caracteres visíveis = total de caracteres
+		if index + 1 < texto.size() and Input.is_action_just_pressed(\"ui_accept\"):
+			$Texto.text = texto[index + 1]
+			$Texto.visible_characters = 0
+			index += 1 #adicionando (se possível) mais texto ao label ao apertar \"Enter\" e aumentando o index para iterar
+					   # o próximo elemento da lista
+		else:
+			if input >= texto.size()*2: #se pressionou \"Enter\" mais vezes do que elementos presentes na lista
+				get_tree().change_scene(\"res://Cenas/Game.tscn\")
+			elif input == texto.size() - 1:  #se pressionou \"Enter\" o suficiente para chegar ao fim mas não pressionou o último
+				yield(get_tree().create_timer(5.0), \"timeout\")
+				get_tree().change_scene(\"res://Cenas/Game.tscn\") 
+			elif input == (texto.size() * 2)-1:
+				yield(get_tree().create_timer(2.0), \"timeout\")
+				get_tree().change_scene(\"res://Cenas/Game.tscn\")
+				
+	if Input.is_action_just_pressed(\"ui_accept\"):
+		input += 1 #contabilizando os \"Enter\"
+		$Texto.visible_characters = $Texto.get_total_character_count() #mostrando texto inteiro
+		#if index + 1 < texto.size():
+		#	$Texto.text = texto[index + 1]
+		#	index += 1 #adicionando mais texto
+		
+	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_Timer_timeout():
-	pass # Replace with function body.
 "
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -42,8 +81,8 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 2 )
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
 script = SubResource( 4 )
@@ -52,29 +91,11 @@ __meta__ = {
 }
 
 [node name="FundoTela1" type="Sprite" parent="."]
-position = Vector2( 641.5, 358 )
-scale = Vector2( 0.673437, 0.67963 )
+position = Vector2( 632, 360 )
+scale = Vector2( 2.03727, 2.75556 )
 texture = ExtResource( 8 )
-
-[node name="UiUp" type="Sprite" parent="."]
-position = Vector2( 1118, 590 )
-scale = Vector2( 2.125, 2 )
-texture = ExtResource( 5 )
-
-[node name="UiLeft" type="Sprite" parent="."]
-position = Vector2( 1036, 663 )
-scale = Vector2( 2.5, 2.25 )
-texture = ExtResource( 7 )
-
-[node name="UiRight" type="Sprite" parent="."]
-position = Vector2( 1198, 670 )
-scale = Vector2( 2.25001, 2.25 )
-texture = ExtResource( 6 )
-
-[node name="UiDown" type="Sprite" parent="."]
-position = Vector2( 1119, 667 )
-scale = Vector2( 2.25, 2.25 )
-texture = ExtResource( 9 )
+region_enabled = true
+region_rect = Rect2( 218, 142, 644, 270 )
 
 [node name="caixaFala" type="Sprite" parent="."]
 position = Vector2( 679, 297 )
@@ -105,30 +126,11 @@ region_enabled = true
 region_rect = Rect2( -2.70123, 95.9958, 51.4656, 33.2591 )
 
 [node name="nomeIntrustor" type="Sprite" parent="."]
-position = Vector2( 195, 608 )
-scale = Vector2( 7.84375, 1.59186 )
+position = Vector2( 192, 615.434 )
+scale = Vector2( 8.07813, 1.97372 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 48.2636, 95.4908, 32.2173, 33.0329 )
-
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 10 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect"]
-modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
-self_modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
-margin_left = 166.0
-margin_top = 174.0
-margin_right = 500.0
-margin_bottom = 264.0
-rect_scale = Vector2( 3, 3 )
-custom_fonts/mono_font = SubResource( 1 )
-custom_fonts/normal_font = SubResource( 2 )
-
-[node name="Timer" type="Timer" parent="NinePatchRect"]
-wait_time = 0.1
 
 [node name="enter" type="Label" parent="."]
 modulate = Color( 0.894118, 0.65098, 0.447059, 0.756863 )
@@ -149,4 +151,38 @@ texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 146.026, 33.5853, 11.9716, 11.6796 )
 
-[connection signal="timeout" from="NinePatchRect/Timer" to="NinePatchRect" method="_on_Timer_timeout"]
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Texto" type="RichTextLabel" parent="."]
+modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
+self_modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 491.0
+margin_bottom = 226.0
+rect_scale = Vector2( 3, 3 )
+custom_fonts/mono_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+
+[node name="rosto" type="Sprite" parent="."]
+position = Vector2( 184, 480 )
+scale = Vector2( 2.5, 2.5 )
+
+[node name="instrutor" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 88.0
+margin_top = 600.0
+margin_right = 171.0
+margin_bottom = 616.0
+rect_scale = Vector2( 2.5, 2.5 )
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 832.0
+margin_top = 488.0
+margin_right = 984.0
+margin_bottom = 584.0
