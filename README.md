@@ -46,26 +46,29 @@ May the force be with you!
   &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
-  &emsp;|-->.import<br>
   &emsp;|-->Assets<br>
     &emsp;&emsp;|-->TilesMaps<br>
   &emsp;|-->Assets2<br>
-    &emsp;&emsp;|-->Logo<br>
+    &emsp;&emsp;|-->caixas de dialogo<br>
+    &emsp;&emsp;|-->cursor<br>
     &emsp;&emsp;|-->face<br>
-    &emsp;&emsp;|-->icons e ui<br>
-    &emsp;&emsp;|-->sprites_personagens e ui<br>
+    &emsp;&emsp;|-->Icones<br>
+    &emsp;&emsp;|-->IconsUI<br>
+    &emsp;&emsp;|-->Logo<br>
+    &emsp;&emsp;|-->sprites_personagens<br>
   &emsp;|-->Cenas<br>
     &emsp;&emsp;|-->Scripts<br>
   &emsp;|-->Efeitos tela<br>
   &emsp;|-->Fonte<br>
+    &emsp;&emsp;|-->NicoBold<br>
   &emsp;|-->Sons<br>
   &emsp;|-->Sprites<br>
     &emsp;&emsp;|-->Bebidas<br>
-    &emsp;&emsp;|-->Cabeca do Caminhao<br>
-    &emsp;&emsp;|-->Caixa Pesada<br>
-    &emsp;&emsp;|-->Caminhao PVC<br>
-    &emsp;&emsp;|-->Caminhao Soda<br>
-    &emsp;&emsp;|-->Caminhao de cloro<br>
+    &emsp;&emsp;|-->CabecadoCaminhao<br>
+    &emsp;&emsp;|-->CaixaPesada<br>
+    &emsp;&emsp;|-->CaminhaoPVC<br>
+    &emsp;&emsp;|-->CaminhaoSoda<br>
+    &emsp;&emsp;|-->CaminhaoDeCloro<br>
     &emsp;&emsp;|-->Celular<br>
     &emsp;&emsp;|-->Soninho<br>
   &emsp;|-->Telas<br>
