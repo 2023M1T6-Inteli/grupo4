@@ -6,7 +6,7 @@ var hover = 0
 func _ready():
 	Global.debuf = false
 	Global.debuf2 = false
-	Global.gasolina = 4000
+	Global.gasolina = 70
 	Global.permissao = false
 	#garantindo que os debuffs, a gasolina e a variável "permissao" são reiniciados
 	

@@ -42,7 +42,7 @@ margin_right = 1197.0
 margin_bottom = 104.0
 custom_styles/fg = SubResource( 3 )
 custom_styles/bg = SubResource( 2 )
-max_value = 4000.0
+max_value = 70.0
 percent_visible = false
 
 [node name="Gasolina" type="Label" parent="ProgressBar"]
@@ -56,3 +56,7 @@ custom_fonts/font = SubResource( 1 )
 text = "Gasolina"
 align = 1
 valign = 1
+
+[node name="TempoGasolina" type="Timer" parent="."]
+
+[connection signal="timeout" from="TempoGasolina" to="." method="_on_TempoGasolina_timeout"]
