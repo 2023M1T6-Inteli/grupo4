@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets2/face/SeuJorgeRindo.png" type="Texture" id=1]
 [ext_resource path="res://Assets2/face/NinaRindo.png" type="Texture" id=2]
@@ -7,9 +7,8 @@
 [ext_resource path="res://Cenas/Scripts/instrutores.gd" type="Script" id=5]
 [ext_resource path="res://Assets2/face/GinaSorrindo.png" type="Texture" id=6]
 [ext_resource path="res://Assets2/face/TonhaoSorrindo.png" type="Texture" id=7]
-[ext_resource path="res://Assets2/IconsUI/contorno.png" type="Texture" id=8]
+[ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=8]
 [ext_resource path="res://Assets2/face/NinaSorrindo.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/botao_verde_normal.png" type="Texture" id=10]
 [ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=11]
 [ext_resource path="res://Assets2/face/SeuJorgeSorrindo.png" type="Texture" id=12]
 [ext_resource path="res://Assets2/IconsUI/seta_left_verde.png" type="Texture" id=13]
@@ -26,34 +25,44 @@ font_data = ExtResource( 14 )
 script = ExtResource( 5 )
 
 [node name="FundoTela1" type="Sprite" parent="."]
-position = Vector2( 644, 363 )
+position = Vector2( 629, 361 )
 scale = Vector2( 0.68125, 0.684259 )
 texture = ExtResource( 11 )
 
-[node name="Contorno" type="Sprite" parent="."]
-position = Vector2( 171, 424 )
-scale = Vector2( 13.7227, 12.4855 )
+[node name="IconesGerais" type="Sprite" parent="."]
+position = Vector2( 803, 432 )
+scale = Vector2( 10.8866, 10.2932 )
 texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 54.7459, 55.9456, 34.4593, 32.3799 )
 
-[node name="Contorno2" type="Sprite" parent="."]
-position = Vector2( 486, 420 )
-scale = Vector2( 13.1, 12.45 )
+[node name="IconesGerais4" type="Sprite" parent="."]
+position = Vector2( 1111, 433 )
+scale = Vector2( 10.9375, 10 )
 texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 55.34, 57.4309, 32.974, 29.7063 )
 
-[node name="Contorno3" type="Sprite" parent="."]
-position = Vector2( 806, 419 )
-scale = Vector2( 13.15, 12.15 )
+[node name="IconesGerais3" type="Sprite" parent="."]
+position = Vector2( 490, 441.75 )
+scale = Vector2( 10.7333, 10.1452 )
 texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 56.5282, 56.8368, 30.5975, 31.4887 )
 
-[node name="Contorno4" type="Sprite" parent="."]
-position = Vector2( 1115, 418 )
-scale = Vector2( 13.25, 12.3 )
+[node name="IconesGerais2" type="Sprite" parent="."]
+position = Vector2( 167, 437 )
+scale = Vector2( 10.8866, 10.2932 )
 texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 54.7459, 55.9456, 34.4593, 32.3799 )
 
-[node name="FaixaVerde" type="Sprite" parent="."]
-position = Vector2( 638, 90 )
-scale = Vector2( 1.27477, 0.950667 )
-texture = ExtResource( 10 )
+[node name="IconesGerais5" type="Sprite" parent="."]
+position = Vector2( 638, 101 )
+scale = Vector2( 8.65691, 4.11667 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 160.548, 176.85, 94.4661, 30.0034 )
 
 [node name="Instrutor" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
@@ -78,10 +87,10 @@ texture_hover = ExtResource( 4 )
 [node name="TONHÃO" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 47.0
-margin_top = 219.0
-margin_right = 108.0
-margin_bottom = 235.0
+margin_left = 37.0
+margin_top = 236.0
+margin_right = 98.0
+margin_bottom = 252.0
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 1 )
 text = "Tonhão"
@@ -99,9 +108,9 @@ texture_hover = ExtResource( 1 )
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 325.0
-margin_top = 222.0
+margin_top = 238.0
 margin_right = 408.0
-margin_bottom = 238.0
+margin_bottom = 254.0
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 1 )
 text = "Seu Jorge"
@@ -118,9 +127,9 @@ texture_hover = ExtResource( 3 )
 [node name="GINA" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 717.0
+margin_left = 727.0
 margin_top = 233.0
-margin_right = 762.0
+margin_right = 772.0
 margin_bottom = 249.0
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 1 )

@@ -9,6 +9,7 @@ func _ready():
 	for i in range(26):
 		alfabeto.append(char(ord("a") + i))
 	alfabeto.append_array(caracteres_latinos)
+	$LineEdit.max_length = 20
 func som_hover():
 	if hover == 0:
 		$SomHover.play()
@@ -21,9 +22,12 @@ func confirmar():
 		#mudança para a tela de instrutores e efeito sonoro
 #mudança de tela para prosseguir
 func _on_BotaoOk_pressed():
+	for letter in alfabeto:
+		if $LineEdit.text.count(" ", 0, $LineEdit.text.find(letter)) > 0:
+			$LineEdit.erase(0, $LineEdit.find(letter))
 	#garantindo que algum texto será inserido para prosseguir
 	for letter in alfabeto:
-		if $LineEdit.text.find(letter) > 0:
+		if letter in $LineEdit.text:
 			Global.nome = $LineEdit.text
 			confirmar()
 		
@@ -38,7 +42,10 @@ func _on_BotaoVoltar_pressed():
 func _on_LineEdit_text_entered(new_text):
 	#garantindo que algum texto será inserido para prosseguir
 	for letter in alfabeto:
-		if new_text.find(letter) > 0:
+		if new_text.count(" ", 0, new_text.find(letter)) > 0:
+			new_text.erase(0, new_text.find(letter))
+	for letter in alfabeto:
+		if letter in new_text:
 			Global.nome = new_text
 			confirmar()
 		else:
