@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Assets2/IconsUI/faixa_bege.png" type="Texture" id=2]
+[ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=2]
 [ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=3]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://Cenas/Scripts/nome.gd" type="Script" id=5]
@@ -19,6 +19,9 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
+[sub_resource type="StreamTexture" id=6]
+load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
+
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 4 )
 
@@ -30,10 +33,12 @@ position = Vector2( 632, 368 )
 scale = Vector2( 0.675, 0.688889 )
 texture = ExtResource( 3 )
 
-[node name="FaixaBege" type="Sprite" parent="."]
-position = Vector2( 512, 368 )
-scale = Vector2( 1.08859, 0.990667 )
+[node name="faixaBege" type="Sprite" parent="."]
+position = Vector2( 537, 379.5 )
+scale = Vector2( 7.64583, 4.78125 )
 texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 160.034, 174.838, 96.9877, 32.7751 )
 
 [node name="LineEdit" type="LineEdit" parent="."]
 margin_left = 240.0
@@ -47,23 +52,18 @@ align = 1
 placeholder_text = "Digite aqui"
 
 [node name="BotaoOk" type="TextureButton" parent="."]
-margin_left = 880.0
-margin_top = 240.0
-margin_right = 1546.0
-margin_bottom = 615.0
+margin_left = 896.0
+margin_top = 328.0
+margin_right = 1376.0
+margin_bottom = 454.0
 rect_scale = Vector2( 0.2, 0.7 )
-texture_normal = ExtResource( 2 )
 
-[node name="OK" type="Label" parent="."]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 904.0
-margin_top = 360.0
-margin_right = 931.0
-margin_bottom = 376.0
-rect_scale = Vector2( 3, 3 )
-custom_fonts/font = SubResource( 4 )
-text = "OK"
+[node name="IconesGerais" type="Sprite" parent="."]
+position = Vector2( 944, 376 )
+scale = Vector2( 5.47954, 4.81477 )
+texture = SubResource( 6 )
+region_enabled = true
+region_rect = Rect2( 773.138, 4.14055, 22.1604, 22.1604 )
 
 [node name="DIGITE" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )

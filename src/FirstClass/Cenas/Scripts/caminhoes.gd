@@ -9,7 +9,7 @@ func confirmar():
 		$SomConfirmar.play()
 		yield(get_tree().create_timer(0.5), "timeout")
 		MusicController.play_game_music()
-		get_tree().change_scene("res://Cenas/Game.tscn")
+		get_tree().change_scene("res://Cenas/interacao1.tscn")
 		#mudança de cena e efeito sonoro
 		
 func hover_sound():

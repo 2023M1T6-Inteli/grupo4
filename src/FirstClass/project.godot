@@ -25,6 +25,9 @@ window/size/width=1280
 window/size/height=720
 window/size/test_width=1280
 window/size/test_height=720
+mouse_cursor/custom_image="res://Assets2/cursor/Cursor.png"
+mouse_cursor/custom_image_hotspot=Vector2( 10, 10 )
+mouse_cursor/tooltip_position_offset=Vector2( 20, 20 )
 window/stretch/mode="2d"
 
 [gui]
