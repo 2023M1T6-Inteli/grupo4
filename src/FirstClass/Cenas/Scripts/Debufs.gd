@@ -71,7 +71,7 @@ func debuff_generator():
 func sumir(node):
 	node.hide()
 	$Particles2D.emitting = true
-	yield(get_tree().create_timer(2.0), "timeout")
+	yield(get_tree().create_timer(5.0), "timeout")
 	debuff_generator()
 	#Função que muda os debuffs depois de coletados
 

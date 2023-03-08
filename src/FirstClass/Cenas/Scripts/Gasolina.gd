@@ -7,5 +7,5 @@ func _process(delta):
 	$ProgressBar.value = Global.gasolina #Definindo o valor da barra de progresso para o valor atual da variável "gasolina"
 	
 	#Condição que leva para tela de Game Over caso a gasolina chegue a 0
-	if Global.gasolina==0:
+	if Global.gasolina == 0:
 		get_tree().change_scene("res://Cenas/tela_gameover.tscn")

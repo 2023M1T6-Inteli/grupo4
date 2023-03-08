@@ -1,7 +1,7 @@
 extends Label
 
 var seconds = 0
-var minutes = 2
+var minutes = 0
 
 # As 2 variáveis acima são responsáveis por ditar em quantos minutos e segundos
 # o jogador deve completar uma volta, para que ele não perca
@@ -15,9 +15,9 @@ var minutesDisplay = ""
 
 func _process(delta):
 	
-	if seconds == -1:
-		seconds = 59
-		minutes -= 1
+	if seconds == 59:
+		seconds = 0
+		minutes += 1
 	
 	# Condição que transforma os minutos que se passam em segundos
 		
@@ -35,16 +35,13 @@ func _process(delta):
 	# localizado na tela do jogador, fique mais agradável. Por exemplo: 02:09 ao
 	# invés de 2:9
 	
-	if minutes == -1:
-		$Timer.stop()
-		get_tree().change_scene("res://Cenas/tela_gameover.tscn")
 		
 	set_text(str(minutesDisplay)+":"+str(secondsDisplay))
 	
 	# Condição que leva para tela de Game Over caso o temporizador chegue a 0
 	
 func _on_Timer_timeout():
-	seconds -= 1
+	seconds += 1
 	
 # Função que conta os segundos que se passam na vida real e desconta do tempo
 # proporcionado ao jogador

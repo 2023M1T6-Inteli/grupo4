@@ -5,7 +5,6 @@
 [ext_resource path="res://Cenas/Mapa 1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprites/bola.png" type="Texture" id=4]
 
-
 [sub_resource type="Environment" id=2]
 
 [sub_resource type="Environment" id=3]
@@ -27,9 +26,10 @@ margin_bottom = 34.0
 script = ExtResource( 2 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
-margin_top = 2.0
-margin_right = 50.0
-margin_bottom = 32.0
+margin_left = -1.0
+margin_top = 3.0
+margin_right = 49.0
+margin_bottom = 33.0
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
 size = Vector2( 50, 30 )
@@ -58,8 +58,8 @@ z_index = 1
 z_as_relative = false
 
 [node name="Borda" type="Sprite" parent="."]
-position = Vector2( 26, 17 )
-scale = Vector2( 0.25, 0.15 )
+position = Vector2( 24.625, 21 )
+scale = Vector2( 0.246739, 0.15 )
 z_index = 2
 texture = ExtResource( 1 )
 
