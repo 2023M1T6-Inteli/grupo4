@@ -8,8 +8,9 @@
 [ext_resource path="res://Assets/TilesMaps/chao_8bit.tres" type="TileSet" id=6]
 [ext_resource path="res://Assets/TilesMaps/Pedras.tres" type="TileSet" id=7]
 [ext_resource path="res://Assets/TilesMaps/Postes_e_placas.tres" type="TileSet" id=8]
-[ext_resource path="res://Cenas/Cacamba do Caminhao.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Cenas/CacambadoCaminhao.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Sons/dinheiro.wav" type="AudioStream" id=10]
+
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 65.5, 5.5 )
