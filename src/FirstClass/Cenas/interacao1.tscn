@@ -290,7 +290,7 @@ custom_fonts/mono_font = SubResource( 1 )
 custom_fonts/normal_font = SubResource( 2 )
 
 [node name="rosto" type="Sprite" parent="."]
-position = Vector2( 184, 472 )
+position = Vector2( 184, 480 )
 scale = Vector2( 2.5, 2.5 )
 
 [node name="instrutor" type="Label" parent="."]
@@ -315,7 +315,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 15
+frame = 6
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
