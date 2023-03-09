@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=2]
-[ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=3]
+[ext_resource path="res://Telas/FundoTela2.png" type="Texture" id=3]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://Cenas/Scripts/nome.gd" type="Script" id=5]
 [ext_resource path="res://Assets2/IconsUI/seta_left_verde_sombra.png" type="Texture" id=6]
@@ -30,7 +30,7 @@ script = ExtResource( 5 )
 
 [node name="FundoTela1" type="Sprite" parent="."]
 position = Vector2( 632, 368 )
-scale = Vector2( 0.675, 0.688889 )
+scale = Vector2( 6.666, 6.666 )
 texture = ExtResource( 3 )
 
 [node name="faixaBege" type="Sprite" parent="."]
