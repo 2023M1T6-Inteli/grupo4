@@ -1,11 +1,31 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets2/IconsUI/UI_objetos.png" type="Texture" id=4]
 [ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=5]
+[ext_resource path="res://Assets2/checklist/carta1.png" type="Texture" id=6]
+[ext_resource path="res://Assets2/checklist/carta2.png" type="Texture" id=7]
 [ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=8]
+[ext_resource path="res://Assets2/checklist/carta3.png" type="Texture" id=9]
+[ext_resource path="res://Assets2/checklist/carta5.png" type="Texture" id=10]
+[ext_resource path="res://Assets2/checklist/carta6.png" type="Texture" id=11]
+[ext_resource path="res://Assets2/checklist/carta4.png" type="Texture" id=12]
+[ext_resource path="res://Assets2/checklist/carta7.png" type="Texture" id=13]
+[ext_resource path="res://Assets2/checklist/folha.png" type="Texture" id=14]
+[ext_resource path="res://Assets2/checklist/carta9.png" type="Texture" id=15]
+[ext_resource path="res://Assets2/checklist/carta12.png" type="Texture" id=16]
+[ext_resource path="res://Assets2/checklist/carta10.png" type="Texture" id=17]
+[ext_resource path="res://Assets2/checklist/carta14.png" type="Texture" id=18]
+[ext_resource path="res://Assets2/checklist/carta11.png" type="Texture" id=19]
+[ext_resource path="res://Assets2/checklist/carta13.png" type="Texture" id=20]
+[ext_resource path="res://Assets2/checklist/carta15.png" type="Texture" id=21]
+[ext_resource path="res://Assets2/checklist/carta8.png" type="Texture" id=22]
+[ext_resource path="res://Assets2/IconsUI/ui_up.png" type="Texture" id=23]
+[ext_resource path="res://Assets2/IconsUI/ui_down.png" type="Texture" id=24]
+[ext_resource path="res://Assets2/IconsUI/ui_right.png" type="Texture" id=25]
+[ext_resource path="res://Assets2/IconsUI/ui_left.png" type="Texture" id=26]
 
 [sub_resource type="GDScript" id=4]
 script/source = "extends Node2D
@@ -14,15 +34,40 @@ var texto = [\"Eai \" + str(Global.nome) + \", tudo beleza?\" + \" Sou \" + str(
 \"Trabalho com cargas químicas há 15 anos, darei as devidas instruções para que nenhum acidente aconteça com você\", 
 \"Estou de olho, viu! Não faça nenhuma bobagem\",
 \"Aqui vão algumas instruções:\" + \" Proibido o uso do celular no volante, nada de bebidas, descanse bem para não cochilar no volante e confira o peso da carga.\" ,
-\"Aqui está a checklist, verifique todos os itens com atenção e bora para o trajeto!\"
+\"Aqui está a checklist, verifique todos os itens com atenção e bora para o trajeto!\",
+\"Esses são os botões usados para jogar, boa sorte \" + str(Global.nome) + \"!\"
  ]
+
+var running = true
 
 #Array que contém o texto
 var index = 0 #variável que itera os elementos na lista
-var input = 0 #variável que conta quantas vezes apertou \"Enter\"
-
+#var input = 0 #variável que conta quantas vezes apertou \"Enter\"
+func tamanho_elemento(array_element):
+	var cont = 0
+	for elem in array_element:
+		cont += 1
+	return(cont)
 func _ready():
 	$Texto.text = texto[index] # texto do label = primeiro elemento da lista
+	$checklist.playing = false
+	$checklist.hide()
+	$folha.hide()
+	$titulo.hide()
+	$titulo2.hide()
+	$titulo3.hide()
+	$titulo4.hide()
+	$titulo5.hide()
+	$titulo6.hide()
+	$CheckBox.hide()
+	$CheckBox2.hide()
+	$CheckBox3.hide()
+	$CheckBox4.hide()
+	$CheckBox5.hide()
+	$UiUp.hide()
+	$UiDown.hide()
+	$UiRight.hide()
+	$UiLeft.hide()
 	
 	if Global.rostoInstrutor == 'tonhao':
 		$rosto.texture = load(\"res://Assets2/face/TonhaoSorrindo.png\")
@@ -42,35 +87,113 @@ func _ready():
 		$instrutor.text ='Gina'
 	elif Global.nomeInstrutor == 'Nina':
 		$instrutor.text = 'Nina'
-	
-func _process(delta):
-	if $Texto.visible_characters < $Texto.get_total_character_count(): # se caracteres visíveis < total de caracteres
-		$Texto.visible_characters += 1 # adicionando caracteres visíveis
-	else: # se caracteres visíveis = total de caracteres
-		if index + 1 < texto.size() and Input.is_action_just_pressed(\"ui_accept\"):
-			$Texto.text = texto[index + 1]
-			$Texto.visible_characters = 0
-			index += 1 #adicionando (se possível) mais texto ao label ao apertar \"Enter\" e aumentando o index para iterar
-					   # o próximo elemento da lista
-		else:
-			if input >= texto.size()*2: #se pressionou \"Enter\" mais vezes do que elementos presentes na lista
-				get_tree().change_scene(\"res://Cenas/Game.tscn\")
-			elif input == texto.size() - 1:  #se pressionou \"Enter\" o suficiente para chegar ao fim mas não pressionou o último
-				yield(get_tree().create_timer(5.0), \"timeout\")
-				get_tree().change_scene(\"res://Cenas/Game.tscn\") 
-			elif input == (texto.size() * 2)-1:
-				yield(get_tree().create_timer(2.0), \"timeout\")
-				get_tree().change_scene(\"res://Cenas/Game.tscn\")
-				
-	if Input.is_action_just_pressed(\"ui_accept\"):
-		input += 1 #contabilizando os \"Enter\"
-		$Texto.visible_characters = $Texto.get_total_character_count() #mostrando texto inteiro
-		#if index + 1 < texto.size():
-		#	$Texto.text = texto[index + 1]
-		#	index += 1 #adicionando mais texto
 		
 	
+func _process(delta):
+	print(running)
+	if running:
+		if $Texto.visible_characters < $Texto.get_total_character_count(): # se caracteres visíveis < total de caracteres
+			$Texto.visible_characters += 1 # adicionando caracteres visíveis
+		else: # se caracteres visíveis = total de caracteres
+			if index == 4 and Input.is_action_just_pressed(\"ui_accept\") and $Texto.visible_characters == tamanho_elemento(texto[index]):
+				$checklist.show()
+				$checklist.playing = true
+				index += 1
+				running = false
+			
+			elif index + 1 < texto.size() and Input.is_action_just_pressed(\"ui_accept\"):
+				$Texto.text = texto[index + 1]
+				$Texto.visible_characters = 0
+				index += 1 #adicionando (se possível) mais texto ao label ao apertar \"Enter\" e aumentando o index para iterar
+						   # o próximo elemento da lista
+						
+			elif index < texto.size() and Input.is_action_just_pressed(\"ui_accept\") and $Texto.text != texto[index]:
+				$Texto.text = texto[index]
+				$Texto.visible_characters = 0
+				index += 1
+				$UiDown.show()
+				$UiUp.show()
+				$UiRight.show()
+				$UiLeft.show()
+				yield(get_tree().create_timer(1.0), \"timeout\")
+				
+			else:
+				if Input.is_action_just_pressed(\"ui_accept\"):
+					
+					get_tree().change_scene(\"res://Cenas/Game.tscn\")
+					
+		if Input.is_action_just_pressed(\"ui_accept\"):
+	#		input += 1 #contabilizando os \"Enter\"
+			$Texto.visible_characters = $Texto.get_total_character_count() #mostrando texto inteiro
+			
 
+			
+
+
+func _on_checklist_animation_finished():
+	$checklist.queue_free()
+	$folha.show()
+	$titulo.show()
+	$titulo2.show()
+	$titulo3.show()
+	$titulo4.show()
+	$titulo5.show()
+	$titulo6.show()
+	$CheckBox.show()
+	$CheckBox2.show()
+	$CheckBox3.show()
+	$CheckBox4.show()
+	$CheckBox5.show()
+	
+
+var box1 = 0
+var box2 = 0
+var box3 = 0
+var box4 = 0
+var box5 = 0
+
+
+func _on_CheckBox_pressed():
+	box1 = 1
+	verificacao()
+	
+func _on_CheckBox5_pressed():
+	box2 = 1
+	verificacao()
+	
+func _on_CheckBox4_pressed():
+	box3 = 1
+	verificacao()
+	
+func _on_CheckBox3_pressed():
+	box4 = 1
+	verificacao()
+	
+func _on_CheckBox2_pressed():
+	box5 = 1
+	verificacao()
+	
+func verificacao():
+	if box1 + box2 + box3 + box4 + box5 == 5:
+		running = true
+		yield(get_tree().create_timer(1.0), \"timeout\")
+		$folha.hide()
+		$titulo.hide()
+		$titulo2.hide()
+		$titulo3.hide()
+		$titulo4.hide()
+		$titulo5.hide()
+		$titulo6.hide()
+		$CheckBox.hide()
+		$CheckBox2.hide()
+		$CheckBox3.hide()
+		$CheckBox4.hide()
+		$CheckBox5.hide()
+		
+
+
+		
+	
 "
 
 [sub_resource type="StreamTexture" id=6]
@@ -88,6 +211,17 @@ font_data = ExtResource( 3 )
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 3 )
 
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 3 )
+
 [node name="Node2D" type="Node2D"]
 script = SubResource( 4 )
 __meta__ = {
@@ -102,7 +236,7 @@ region_enabled = true
 region_rect = Rect2( 218, 142, 644, 270 )
 
 [node name="caixa" type="Sprite" parent="."]
-position = Vector2( 648, 296 )
+position = Vector2( 640, 288 )
 scale = Vector2( 12.7312, 17.0323 )
 texture = SubResource( 6 )
 region_enabled = true
@@ -126,17 +260,17 @@ region_rect = Rect2( 257.054, 178.961, 94.9988, 27.9619 )
 modulate = Color( 0.894118, 0.65098, 0.447059, 0.756863 )
 self_modulate = Color( 0.894118, 0.65098, 0.447059, 1 )
 margin_left = 1056.0
-margin_top = 424.0
+margin_top = 416.0
 margin_right = 1117.0
-margin_bottom = 440.0
+margin_bottom = 432.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 3 )
 text = "ENTER "
 
 [node name="seta" type="Sprite" parent="."]
 modulate = Color( 0.827451, 0.521569, 0.313726, 0.611765 )
-position = Vector2( 1154.63, 435.375 )
-scale = Vector2( 4.84091, 3.52272 )
+position = Vector2( 1152, 425.688 )
+scale = Vector2( 4.84091, 3.21591 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 146.026, 33.5853, 11.9716, 11.6796 )
@@ -147,16 +281,16 @@ wait_time = 0.1
 [node name="Texto" type="RichTextLabel" parent="."]
 modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
 self_modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
-margin_left = 136.0
+margin_left = 120.0
 margin_top = 136.0
-margin_right = 491.0
+margin_right = 475.0
 margin_bottom = 226.0
 rect_scale = Vector2( 3, 3 )
 custom_fonts/mono_font = SubResource( 1 )
 custom_fonts/normal_font = SubResource( 2 )
 
 [node name="rosto" type="Sprite" parent="."]
-position = Vector2( 184, 480 )
+position = Vector2( 184, 584 )
 scale = Vector2( 2.5, 2.5 )
 
 [node name="instrutor" type="Label" parent="."]
@@ -176,3 +310,147 @@ margin_left = 832.0
 margin_top = 488.0
 margin_right = 984.0
 margin_bottom = 584.0
+
+[node name="checklist" type="AnimatedSprite" parent="."]
+position = Vector2( 632, 368 )
+scale = Vector2( 7.60938, 6.96667 )
+frames = SubResource( 7 )
+frame = 15
+playing = true
+
+[node name="folha" type="Sprite" parent="."]
+position = Vector2( 656, 376 )
+scale = Vector2( 13.7357, 11.8667 )
+texture = ExtResource( 14 )
+
+[node name="titulo" type="Label" parent="."]
+margin_left = 520.0
+margin_top = 32.0
+margin_right = 613.0
+margin_bottom = 48.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
+custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "CHECKLIST"
+
+[node name="titulo2" type="Label" parent="."]
+margin_left = 536.0
+margin_top = 120.0
+margin_right = 642.0
+margin_bottom = 136.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
+custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Pneus cheios"
+
+[node name="titulo3" type="Label" parent="."]
+margin_left = 536.0
+margin_top = 192.0
+margin_right = 649.0
+margin_bottom = 227.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
+custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Tanques sem 
+vazamento"
+
+[node name="titulo4" type="Label" parent="."]
+margin_left = 536.0
+margin_top = 312.0
+margin_right = 643.0
+margin_bottom = 347.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
+custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Peso correto
+da carga"
+
+[node name="titulo5" type="Label" parent="."]
+margin_left = 536.0
+margin_top = 424.0
+margin_right = 641.0
+margin_bottom = 459.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
+custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Extintor de 
+Incêndio"
+
+[node name="titulo6" type="Label" parent="."]
+margin_left = 536.0
+margin_top = 552.0
+margin_right = 626.0
+margin_bottom = 587.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
+custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Cinto de 
+Segurança"
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 456.0
+margin_top = 112.0
+margin_right = 480.0
+margin_bottom = 136.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="CheckBox2" type="CheckBox" parent="."]
+margin_left = 456.0
+margin_top = 552.0
+margin_right = 480.0
+margin_bottom = 576.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="CheckBox3" type="CheckBox" parent="."]
+margin_left = 456.0
+margin_top = 408.0
+margin_right = 480.0
+margin_bottom = 432.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="CheckBox4" type="CheckBox" parent="."]
+margin_left = 456.0
+margin_top = 304.0
+margin_right = 480.0
+margin_bottom = 328.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="CheckBox5" type="CheckBox" parent="."]
+margin_left = 456.0
+margin_top = 192.0
+margin_right = 480.0
+margin_bottom = 216.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="UiUp" type="Sprite" parent="."]
+position = Vector2( 664, 296 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 23 )
+
+[node name="UiDown" type="Sprite" parent="."]
+position = Vector2( 664, 384 )
+scale = Vector2( 2.5, 2.25 )
+texture = ExtResource( 24 )
+
+[node name="UiRight" type="Sprite" parent="."]
+position = Vector2( 760, 384 )
+scale = Vector2( 2.75, 2.5 )
+texture = ExtResource( 25 )
+
+[node name="UiLeft" type="Sprite" parent="."]
+position = Vector2( 568, 384 )
+scale = Vector2( 2.75, 2.5 )
+texture = ExtResource( 26 )
+
+[connection signal="animation_finished" from="checklist" to="." method="_on_checklist_animation_finished"]
+[connection signal="pressed" from="CheckBox" to="." method="_on_CheckBox_pressed"]
+[connection signal="pressed" from="CheckBox2" to="." method="_on_CheckBox2_pressed"]
+[connection signal="pressed" from="CheckBox3" to="." method="_on_CheckBox3_pressed"]
+[connection signal="pressed" from="CheckBox4" to="." method="_on_CheckBox4_pressed"]
+[connection signal="pressed" from="CheckBox5" to="." method="_on_CheckBox5_pressed"]

@@ -5,7 +5,7 @@ func _on_Chegada_body_entered(body):
 		if Global.permissao == true:
 			$DinheiroSFX.play()
 			Global.points += 12000
-			Global.gasolina = 90
+			Global.gasolina = 105
 			Global.notificacao = true
 			Global.permissao = false
 			
@@ -15,7 +15,7 @@ func _on_Chegada_body_entered(body):
 func _on_SegundoPonto_body_entered(body):
 	if body.name == "Player" or body.name == "Cacamba":
 		if Global.permissao == true:
-			Global.gasolina = 90
+			Global.gasolina = 105
 			Global.permissao = false
 	
 	# Função responsável por resetar o valor da gasolina para o valor original na metade da pista.

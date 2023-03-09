@@ -13,6 +13,7 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxEmpty" id=2]
@@ -45,6 +46,7 @@ margin_left = 240.0
 margin_top = 328.0
 margin_right = 792.0
 margin_bottom = 432.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 custom_styles/focus = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
