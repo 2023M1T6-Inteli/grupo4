@@ -39,7 +39,5 @@ func _on_BotaoJogar_mouse_entered():
 func _on_BotaoInstrucoes_mouse_entered():
 	som_hover()
 
-
-
-
-
+func _on_BotaoVolume_pressed():
+	get_tree().change_scene("res://Cenas/Volume.tscn")
