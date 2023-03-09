@@ -250,7 +250,7 @@ region_enabled = true
 region_rect = Rect2( 196.997, 102.523, 39.001, 33.9941 )
 
 [node name="nomeIstritor" type="Sprite" parent="."]
-position = Vector2( 184, 609.966 )
+position = Vector2( 184, 608 )
 scale = Vector2( 2.55319, 2.22471 )
 texture = ExtResource( 5 )
 region_enabled = true
@@ -290,7 +290,7 @@ custom_fonts/mono_font = SubResource( 1 )
 custom_fonts/normal_font = SubResource( 2 )
 
 [node name="rosto" type="Sprite" parent="."]
-position = Vector2( 184, 584 )
+position = Vector2( 184, 472 )
 scale = Vector2( 2.5, 2.5 )
 
 [node name="instrutor" type="Label" parent="."]
