@@ -22,3 +22,4 @@ func _physics_process(delta):
 	# saber onde o caminhão esta no mapa.
 	
 	$ViewportContainer.material = null
+	# Não permite que a tela do minimpa também tenha os efeitos causados pelos debufs

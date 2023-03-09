@@ -14,4 +14,5 @@ func _process(delta):
 
 func _on_TempoGasolina_timeout():
 	Global.gasolina -= 1
+	# Função que desconta a cada segundo um pouco da gasolina
 

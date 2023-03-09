@@ -140,3 +140,6 @@ func _on_TimerCarga_timeout():
 func _on_TimerCelular_timeout():
 	Global.debuf = false
 	MusicController.debuffs1_sound_off()
+	
+ # Funções responsáveis por retirar os efeitos dos Debufs após o tempo previamente determinado de 
+ # duração de tais efeitos.

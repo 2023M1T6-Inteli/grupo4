@@ -8,7 +8,10 @@ func _process(delta):
 		$Bonus.text = "+1000"
 		$Timer.start()
 		Global.notificacao = false
+	
+	#Função que mostra o valor do bônus logo após o adquirir
 
 
 func _on_Timer_timeout():
 	$Bonus.text = ""
+	#Função que some com o valor do bônus após o tempo pre-determinado
