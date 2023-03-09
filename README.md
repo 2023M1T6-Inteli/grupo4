@@ -120,19 +120,84 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
-
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.3.5 - 09/06/2023
+    * Implementação da tela de volume do jogo  
+* 0.3.4 - 08/06/2023
+    *  tela. de interação 
+    *  cursor
+    *  tela de nome
+    *  ajustes de design
+    *  refinação do hub
+    *  aumento do tempo de reespawn dos debuffs
+    *  aplicação do +1000 após uuma volta
+    *  debufs vermelhos
+    *  adaptação do sistema de gasolina com mais um ponto de recarga
+    *  correção da gasolina
+* 0.3.3 - 07/06/2023
+    * adição de uma logo nova
+    * adição da trilha sonora
+    * correção de bugs
+    * associando gasolina ao tempo
+    * estruturação de pastas
+* 0.3.2 - 06/03/2023
+    * correção do peso da carga 
+    * atualização geral
+    * insercao da primeira tela de interação 
+    * adição da gasolina
+    * adição da tela de instrução 
+    * adição da pontuação 
+* 0.3.1 - 05/03/2023
+    * correções concluidas
+    * adição de efeitos visuais 
+* 0.3.0 - 04/03/2023
+    * Caminhões desenhados
+    * funcionamento da tela do caminhão 
+    * tela dos caminhões concluida
+    * correção de bugs dos debuffs e adição do efeito sonoro "onload"
+* 0.2.9 - 03/03/2023
+    * finalização do mapa do jogo 
+* 0.2.8 - 28/02/2023
+    * atualização do sistema de debuffs
+    * adição  de animações e efeitos sonoros 
+* 0.2.7 - 26/02/2023
+    * mapeamento das setas no teclado com a movimentação 
+    * adição do som de ré 
+* 0.2.6 - 25/02/2023
+    * adição de efeitos sonoros nas telas anteriores e posteriores
+    * correção de script na tela de inserção de nome  
+* 0.2.5 - 24/02/2023
+    * Atualização da documentação 
+* 0.2.4 - 23/02/2023
+    * melhora dos debufs
+    * finalização de tela 
+* 0.2.3 - 22/02/2023
+    * Correções em:
+      * Erro das colisões 
+      * Erro da velocidade
+    * Organização dos scripts
+    * Adição dos debuffs:
+      * efeito do alcool 
+     * Timer
+     * direção de ré  
+* 0.2.2 - 20/02/2023
+    * adição de novas telas
+    * 
+* 0.2.1 - 17/02/2023
+    * justes do mapa e minimapa
+    * proporções de telas corrigidas
+    * correção da câmera
+* 0.2.0 - 16/02/2023
+    Inserção e teste do mapa e minimapa
+* 0.1.1 - 15/02/2023
+    * personalização dos botoes da tela
+    * atualização da tela de gameover
+* 0.1.0 - 14/02/2023
+    * Introdução da primeira tela do jogo
+    * inserção da tela de gameover
+* 0.0.1 - 10/02/2023 
+    * My truck versão  1.0
+    * inserção do codigo base de movimento do personagem
+    * insercao pasta documentos
 
 ## 📋 Licença/License
 
