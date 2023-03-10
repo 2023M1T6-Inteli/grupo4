@@ -25,7 +25,6 @@
 </p>
 
 
-💡
 <br><br>
 O projeto parte de princípios similares ao da conscientização subliminar Pode se dizer que o conceito de conscientização subliminar é a ideia de que podemos ser influenciados por estímulos que estão abaixo do nosso nível de consciência (DISTEFANO DE OLIVEIRA JUNIOR, Luiz Antônio, Comunicação Subliminar nas Estratégias de Marketing, 2004). Isso significa que, mesmo que não estejamos conscientes desses estímulos, eles ainda podem afetar nossas crenças, atitudes e comportamentos. Por isso, foi optado por uma jogabilidade agradável, sem interrupções, que busca engajar e desafiar os players de modo que aquelas boas práticas sejam transmitidas via vários estímulos por meio do jogo.
 
@@ -35,8 +34,7 @@ Os “Debuffs” são representações de hábitos que o motorista deve ao máxi
 
 Quanto maior o percurso percorrido pelo jogador, mais ele aumenta sua pontuação no jogo (representada por dinheiro) e, consequentemente, melhor rankeado ele fica em relação aos outros jogadores, tornando o jogo uma modalidade de competição.
 <br><br>
-May the force be with you!
-<br><br>
+
 
 ## 🛠 Estrutura de pastas
 
