@@ -49,7 +49,7 @@ font_data = ExtResource( 15 )
 script = ExtResource( 14 )
 
 [node name="FundoTela1" type="Sprite" parent="."]
-position = Vector2( 632, 360 )
+position = Vector2( 640, 360 )
 scale = Vector2( 6.666, 6.666 )
 texture = ExtResource( 1 )
 
@@ -58,7 +58,7 @@ position = Vector2( 656, 224 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 animation = "Logo"
-frame = 6
+frame = 11
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

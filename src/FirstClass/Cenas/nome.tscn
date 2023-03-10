@@ -24,28 +24,29 @@ font_data = ExtResource( 1 )
 load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
 
 [sub_resource type="DynamicFont" id=4]
+size = 70
 font_data = ExtResource( 4 )
 
 [node name="nome" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="FundoTela1" type="Sprite" parent="."]
-position = Vector2( 632, 368 )
+position = Vector2( 640, 360 )
 scale = Vector2( 6.666, 6.666 )
 texture = ExtResource( 3 )
 
 [node name="faixaBege" type="Sprite" parent="."]
-position = Vector2( 537, 379.5 )
+position = Vector2( 632, 336 )
 scale = Vector2( 7.64583, 4.78125 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 160.034, 174.838, 96.9877, 32.7751 )
 
 [node name="LineEdit" type="LineEdit" parent="."]
-margin_left = 240.0
-margin_top = 328.0
-margin_right = 792.0
-margin_bottom = 432.0
+margin_left = 360.0
+margin_top = 280.0
+margin_right = 912.0
+margin_bottom = 384.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 custom_styles/focus = SubResource( 2 )
@@ -61,7 +62,7 @@ margin_bottom = 454.0
 rect_scale = Vector2( 0.2, 0.7 )
 
 [node name="IconesGerais" type="Sprite" parent="."]
-position = Vector2( 944, 376 )
+position = Vector2( 1040, 336 )
 scale = Vector2( 5.47954, 4.81477 )
 texture = SubResource( 6 )
 region_enabled = true
@@ -70,13 +71,13 @@ region_rect = Rect2( 773.138, 4.14055, 22.1604, 22.1604 )
 [node name="DIGITE" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 192.0
+margin_left = 240.0
 margin_top = 160.0
-margin_right = 327.0
-margin_bottom = 176.0
-rect_scale = Vector2( 6, 6 )
+margin_right = 1024.0
+margin_bottom = 240.0
 custom_fonts/font = SubResource( 4 )
 text = "Digite seu nome"
+align = 1
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
 margin_left = 24.0
