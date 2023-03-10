@@ -119,7 +119,7 @@ func _process(delta):
 				
 			else:
 				if Input.is_action_just_pressed(\"ui_accept\"):
-					
+					MusicController.play_game_music()
 					get_tree().change_scene(\"res://Cenas/Game.tscn\")
 					
 		if Input.is_action_just_pressed(\"ui_accept\"):
@@ -315,7 +315,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 6
+frame = 13
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
