@@ -63,14 +63,14 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 8.0
 
-[node name="Cacamba do Caminhao" type="RigidBody2D"]
+[node name="CacambadoCaminhao" type="RigidBody2D"]
 script = ExtResource( 41 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 17 )
 frames = SubResource( 1 )
 animation = "Cloro"
-frame = 1
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
