@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Cenas/Scripts/Pontuação.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/Scripts/Pontuacao.gd" type="Script" id=1]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonte/04B_30__.TTF" type="DynamicFontData" id=3]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
