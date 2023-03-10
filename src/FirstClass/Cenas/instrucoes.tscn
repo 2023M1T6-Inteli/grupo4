@@ -169,6 +169,6 @@ volume_db = -13.0
 stream = ExtResource( 16 )
 volume_db = -13.0
 
-[connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_botoVoltar_mouse_entered"]
 [connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_BotaoVoltar_mouse_entered"]
+[connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_botoVoltar_mouse_entered"]
 [connection signal="pressed" from="BotaoVoltar" to="." method="_on_BotaoVoltar_pressed"]

@@ -90,7 +90,7 @@ func _ready():
 		
 	
 func _process(delta):
-	print(running)
+
 	if running:
 		if $Texto.visible_characters < $Texto.get_total_character_count(): # se caracteres visíveis < total de caracteres
 			$Texto.visible_characters += 1 # adicionando caracteres visíveis
@@ -175,8 +175,8 @@ func _on_CheckBox2_pressed():
 	
 func verificacao():
 	if box1 + box2 + box3 + box4 + box5 == 5:
-		running = true
 		yield(get_tree().create_timer(1.0), \"timeout\")
+		running = true
 		$folha.hide()
 		$titulo.hide()
 		$titulo2.hide()
@@ -315,7 +315,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 13
+frame = 1
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
