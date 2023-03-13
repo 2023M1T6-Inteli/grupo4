@@ -71,7 +71,7 @@ func debuff_generator():
 func sumir(node):
 	node.hide()
 	$Particles2D.emitting = true
-	yield(get_tree().create_timer(2.0), "timeout")
+	yield(get_tree().create_timer(5.0), "timeout")
 	debuff_generator()
 	#Função que muda os debuffs depois de coletados
 
@@ -140,3 +140,6 @@ func _on_TimerCarga_timeout():
 func _on_TimerCelular_timeout():
 	Global.debuf = false
 	MusicController.debuffs1_sound_off()
+	
+ # Funções responsáveis por retirar os efeitos dos Debufs após o tempo previamente determinado de 
+ # duração de tais efeitos.

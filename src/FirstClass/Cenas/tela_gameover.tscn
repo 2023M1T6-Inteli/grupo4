@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Sprites/botao_verde1.png" type="BitMap" id=1]
-[ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=2]
+[ext_resource path="res://Telas/FundoTela2.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/botao_verde2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/botao_verde_normal.png" type="Texture" id=4]
 [ext_resource path="res://Cenas/Scripts/tela_gameover.gd" type="Script" id=5]
@@ -28,14 +28,14 @@ script = ExtResource( 5 )
 
 [node name="fundo" type="Sprite" parent="."]
 position = Vector2( 640, 362 )
-scale = Vector2( 0.67, 0.669 )
+scale = Vector2( 6.666, 6.666 )
 texture = ExtResource( 2 )
 
 [node name="restart" type="TextureButton" parent="."]
-margin_left = 400.0
-margin_top = 312.0
-margin_right = 1066.0
-margin_bottom = 687.0
+margin_left = 416.0
+margin_top = 256.0
+margin_right = 1082.0
+margin_bottom = 631.0
 rect_scale = Vector2( 0.7, 0.7 )
 texture_normal = ExtResource( 4 )
 texture_hover = ExtResource( 3 )
@@ -44,19 +44,19 @@ texture_click_mask = ExtResource( 1 )
 [node name="RESTART" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 448.0
-margin_top = 424.0
-margin_right = 542.0
-margin_bottom = 440.0
+margin_left = 464.0
+margin_top = 368.0
+margin_right = 558.0
+margin_bottom = 384.0
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 2 )
 text = "Recomeçar"
 
 [node name="menu" type="TextureButton" parent="."]
-margin_left = 400.0
-margin_top = 440.0
-margin_right = 1066.0
-margin_bottom = 815.0
+margin_left = 416.0
+margin_top = 368.0
+margin_right = 1082.0
+margin_bottom = 743.0
 rect_scale = Vector2( 0.7, 0.7 )
 texture_normal = ExtResource( 4 )
 texture_hover = ExtResource( 3 )
@@ -65,10 +65,10 @@ texture_click_mask = ExtResource( 1 )
 [node name="MENU" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 544.0
-margin_top = 552.0
-margin_right = 589.0
-margin_bottom = 568.0
+margin_left = 560.0
+margin_top = 480.0
+margin_right = 605.0
+margin_bottom = 496.0
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 1 )
 text = "Menu"
@@ -104,10 +104,10 @@ stream = ExtResource( 9 )
 volume_db = -13.0
 
 [node name="Pontos" type="Label" parent="."]
-margin_left = 152.0
-margin_top = 280.0
-margin_right = 1136.0
-margin_bottom = 384.0
+margin_left = 160.0
+margin_top = 256.0
+margin_right = 1144.0
+margin_bottom = 360.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
 align = 1

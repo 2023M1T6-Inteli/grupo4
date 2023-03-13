@@ -25,12 +25,16 @@
 </p>
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 <br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
+O projeto parte de princípios similares ao da conscientização subliminar. Pode se dizer que o conceito de conscientização subliminar é a ideia de que podemos ser influenciados por estímulos que estão abaixo do nosso nível de consciência (DISTEFANO DE OLIVEIRA JUNIOR, Luiz Antônio, Comunicação Subliminar nas Estratégias de Marketing, 2004). Isso significa que, mesmo que não estejamos conscientes desses estímulos, eles ainda podem afetar nossas crenças, atitudes e comportamentos. Por isso, foi optado por uma jogabilidade agradável, sem interrupções, que busca engajar e desafiar os players de modo que aquelas boas práticas sejam transmitidas via vários estímulos por meio do jogo.
+
+O jogo simula o trajeto de um caminhão em uma estrada, com vista de cima, estilo autorama. O jogador controla o automóvel, e quanto mais longe sem bater nas barreiras da pista, maior a pontuação. Ao mesmo tempo, ele precisa desviar dos “Debuffs”, que prejudicam o desempenho da direção de alguma forma por um tempo determinado e, assim, criam um desafio para o jogador.
+
+Os “Debuffs” são representações de hábitos que o motorista deve ao máximo evitar na direção, como: direção com sono, direção após consumo de bebidas alcoólicas, direção com carga pesada, e utilizar o celular enquanto dirige.
+
+Quanto maior o percurso percorrido pelo jogador, mais ele aumenta sua pontuação no jogo (representada por dinheiro) e, consequentemente, melhor rankeado ele fica em relação aos outros jogadores, tornando o jogo uma modalidade de competição.
 <br><br>
-May the force be with you!
-<br><br>
+
 
 ## 🛠 Estrutura de pastas
 
@@ -120,19 +124,84 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
-
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.3.5 - 09/06/2023
+    * Implementação da tela de volume do jogo  
+* 0.3.4 - 08/06/2023
+    *  tela. de interação 
+    *  cursor
+    *  tela de nome
+    *  ajustes de design
+    *  refinação do hub
+    *  aumento do tempo de reespawn dos debuffs
+    *  aplicação do +1000 após uuma volta
+    *  debufs vermelhos
+    *  adaptação do sistema de gasolina com mais um ponto de recarga
+    *  correção da gasolina
+* 0.3.3 - 07/06/2023
+    * adição de uma logo nova
+    * adição da trilha sonora
+    * correção de bugs
+    * associando gasolina ao tempo
+    * estruturação de pastas
+* 0.3.2 - 06/03/2023
+    * correção do peso da carga 
+    * atualização geral
+    * insercao da primeira tela de interação 
+    * adição da gasolina
+    * adição da tela de instrução 
+    * adição da pontuação 
+* 0.3.1 - 05/03/2023
+    * correções concluidas
+    * adição de efeitos visuais 
+* 0.3.0 - 04/03/2023
+    * Caminhões desenhados
+    * funcionamento da tela do caminhão 
+    * tela dos caminhões concluida
+    * correção de bugs dos debuffs e adição do efeito sonoro "onload"
+* 0.2.9 - 03/03/2023
+    * finalização do mapa do jogo 
+* 0.2.8 - 28/02/2023
+    * atualização do sistema de debuffs
+    * adição  de animações e efeitos sonoros 
+* 0.2.7 - 26/02/2023
+    * mapeamento das setas no teclado com a movimentação 
+    * adição do som de ré 
+* 0.2.6 - 25/02/2023
+    * adição de efeitos sonoros nas telas anteriores e posteriores
+    * correção de script na tela de inserção de nome  
+* 0.2.5 - 24/02/2023
+    * Atualização da documentação 
+* 0.2.4 - 23/02/2023
+    * melhora dos debufs
+    * finalização de tela 
+* 0.2.3 - 22/02/2023
+    * Correções em:
+      * Erro das colisões 
+      * Erro da velocidade
+    * Organização dos scripts
+    * Adição dos debuffs:
+      * efeito do alcool 
+     * Timer
+     * direção de ré  
+* 0.2.2 - 20/02/2023
+    * adição de novas telas
+    * 
+* 0.2.1 - 17/02/2023
+    * justes do mapa e minimapa
+    * proporções de telas corrigidas
+    * correção da câmera
+* 0.2.0 - 16/02/2023
+    Inserção e teste do mapa e minimapa
+* 0.1.1 - 15/02/2023
+    * personalização dos botoes da tela
+    * atualização da tela de gameover
+* 0.1.0 - 14/02/2023
+    * Introdução da primeira tela do jogo
+    * inserção da tela de gameover
+* 0.0.1 - 10/02/2023 
+    * My truck versão  1.0
+    * inserção do codigo base de movimento do personagem
+    * insercao pasta documentos
 
 ## 📋 Licença/License
 
@@ -147,3 +216,21 @@ Aqui estão as referências usadas no projeto.
 3. <https://creativecommons.org/share-your-work/>
 4. <https://freesound.org/>
 5. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+6.  <https://www.unipar.com/relatorio-de-sustentabilidade/>
+7.  <https://www.poolpiscina.com/ozonio-para-piscinas-tudo-sobre-tratamento-de-piscina-com-ozonio/#:~:text=O%20oz%C3%B4nio%20%C3%A9%20100%20vezes>
+8.  <https://www.unipar.com/fornecedores/>
+9.  <https://panozon.com.br/>
+10.  <https://www.embrapa.br/>
+11.   <https://www.greenpeace.org/usa/toxics/pvc-free/>
+12.   <https://www.todamateria.com.br/cloro/>
+13.   <https://pvc.org.br/o-que-e-pvc/>
+14.   <https://brasil.pochteca.net/soda-caustica-o-que-e-e-para-que-serve/#:~:text=A%20soda%20c>
+15.   <https://drive.google.com/file/d/1B7MPDZ41hglwQ6CKfPET6oZP7vwGz9uk/view?usp=sharing>
+16.   <https://youtu.be/WMkQdbAmBzM>
+17.   <https://itch.io>
+18.   <https://www.mordorintelligence.com/pt/industry-reports/caustic-soda-market>
+19.   <https://www.bnamericas.com/pt/noticias/argentina-apresenta-plano-nacional-de-obras-publicas>‌
+20.   <https://exame.com/negocios/dow-chemical-anuncia-fusao-com-olin-no-setor-do-cloro/>
+21.   <https://www.abcam.org.br/index.php/pt/>
+22.   <https://investnews.com.br/financas/unipar-e-taesa-estao-entre-as-maiores-pagadoras-de-dividendos-em-5-anos/>
+23.   https://acervodigital.ufpr.br/bitstream/handle/1884/57956/Luiz%20Antonio%20Distefano%20de%20Oliveira%20Junior.pdf;jsessionid=BCFCE2A38A8BA7B0871846669DCC5B6C?sequence=1

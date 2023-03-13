@@ -2,9 +2,8 @@
 
 [ext_resource path="res://Sprites/BordaDoMinimapa.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/Scripts/Minimap.gd" type="Script" id=2]
-[ext_resource path="res://Cenas/Mapa 1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Mapa1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprites/bola.png" type="Texture" id=4]
-
 
 [sub_resource type="Environment" id=2]
 
@@ -27,9 +26,10 @@ margin_bottom = 34.0
 script = ExtResource( 2 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
-margin_top = 2.0
-margin_right = 50.0
-margin_bottom = 32.0
+margin_left = -1.0
+margin_top = 3.0
+margin_right = 49.0
+margin_bottom = 33.0
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
 size = Vector2( 50, 30 )
@@ -53,13 +53,13 @@ texture = ExtResource( 4 )
 light_mask = 2
 shape = SubResource( 4 )
 
-[node name="Mapa 1" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
+[node name="Mapa1" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
 z_index = 1
 z_as_relative = false
 
 [node name="Borda" type="Sprite" parent="."]
-position = Vector2( 26, 17 )
-scale = Vector2( 0.25, 0.15 )
+position = Vector2( 24.625, 21 )
+scale = Vector2( 0.246739, 0.15 )
 z_index = 2
 texture = ExtResource( 1 )
 

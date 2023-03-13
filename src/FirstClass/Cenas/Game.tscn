@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Cenas/Minimap.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Cenas/Mapa 1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/Mapa1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/Debufs.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/Timer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/Scripts/ViewportContainer.gd" type="Script" id=5]
 [ext_resource path="res://Efeitos tela/CenasSono.tres" type="Animation" id=6]
 [ext_resource path="res://Cenas/Pontuacao.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/HUD Gasolina e dinheiro.png" type="Texture" id=8]
+[ext_resource path="res://Cenas/Gasolina.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Bebida"
@@ -71,17 +73,30 @@ tracks/1/keys = {
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Timer" parent="CanvasLayer" instance=ExtResource( 4 )]
+position = Vector2( 32, 224 )
+z_index = 3
+z_as_relative = false
+
 [node name="Minimap" parent="CanvasLayer" instance=ExtResource( 1 )]
-margin_left = -1271.0
-margin_top = 7.0
-margin_right = -1221.0
-margin_bottom = 37.0
+margin_left = -1264.0
+margin_top = 0.0
+margin_right = -1214.0
+margin_bottom = 30.0
 rect_scale = Vector2( 4.04063, 6.14268 )
 
-[node name="Timer" parent="CanvasLayer" instance=ExtResource( 4 )]
+[node name="Gasolina" parent="CanvasLayer" instance=ExtResource( 9 )]
+position = Vector2( -16, -16 )
 
-[node name="Pontuação" parent="CanvasLayer" instance=ExtResource( 7 )]
-position = Vector2( 472, 24 )
+[node name="Pontuacao" parent="CanvasLayer" instance=ExtResource( 7 )]
+position = Vector2( 992, 128 )
+z_index = 1
+z_as_relative = false
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 1088, 94.875 )
+scale = Vector2( 5.73571, 4.525 )
+texture = ExtResource( 8 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 margin_right = 1280.0
@@ -101,43 +116,43 @@ size = Vector2( 1280, 720 )
 handle_input_locally = false
 render_target_update_mode = 3
 
-[node name="Mapa 1" parent="ViewportContainer/Viewport" instance=ExtResource( 2 )]
+[node name="Mapa1" parent="ViewportContainer/Viewport" instance=ExtResource( 2 )]
 
-[node name="Debufs" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 1149, 332 )
 
-[node name="Debufs2" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs2" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 1183, 285 )
 
-[node name="Debufs3" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs3" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 1721, 295 )
 
-[node name="Debufs4" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs4" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 1727, 335 )
 
-[node name="Debufs5" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs5" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 2452, 317 )
 
-[node name="Debufs6" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs6" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 3073, 1359 )
 
-[node name="Debufs7" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs7" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 3077, 2370 )
 
-[node name="Debufs8" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs8" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 3127, 2438 )
 
-[node name="Debufs9" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs9" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 2186, 2188 )
 
-[node name="Debufs10" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs10" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 1294, 1603 )
 
-[node name="Debufs11" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs11" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 881, 1263 )
 
-[node name="Debufs12" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs12" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 1721, 2234 )
 
-[node name="Debufs13" parent="ViewportContainer/Viewport/Mapa 1" instance=ExtResource( 3 )]
+[node name="Debufs13" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 480, 1496 )
