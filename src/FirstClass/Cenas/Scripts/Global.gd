@@ -6,6 +6,7 @@ var notificacao = false #permite o funcionamento da notificação de bonus de vo
 
 var points = 0 #armazena a pontuação do jogador
 
+var qualDebuf = ""
 var debuf = false
 var debuf2 = false
 # Variaveis globais responsáveis por guardar a informação se o jogador está com algum dos debufs de

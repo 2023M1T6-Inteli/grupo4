@@ -22,6 +22,9 @@ func debuff_generator():
 		$"Carga Pesada/CollisionShape2D".set_deferred("disabled", true)
 		$Celular/CollisionShape2D.set_deferred("disabled", true)
 		$Sono/CollisionShape2D.set_deferred("disabled", true)
+		
+		
+		Global.qualDebuf = "Bebida"
 
 		# Caso o número tenha sido o 1, a penalidade é a Bebida, portanto a condição de cima
 		# fica responsável desabilitar os outros debuffs
@@ -37,6 +40,8 @@ func debuff_generator():
 		$"Carga Pesada/CollisionShape2D".set_deferred("disabled", false)
 		$Celular/CollisionShape2D.set_deferred("disabled", true)
 		$Sono/CollisionShape2D.set_deferred("disabled", true)
+		
+		Global.qualDebuf = "Carga"
 
 		# Caso o número tenha sido o 2, a penalidade é a Carga pesada, portanto a condição de cima
 		# fica responsável desabilitar os outros debuffs
@@ -52,6 +57,8 @@ func debuff_generator():
 		$Celular/CollisionShape2D.set_deferred("disabled", false)
 		$Sono/CollisionShape2D.set_deferred("disabled", true)
 		
+		Global.qualDebuf = "Celular"
+		
 		# Caso o número tenha sido o 3, a penalidade é o Celular, portanto a condição de cima
 		# fica responsável desabilitar os outros debuffs
 		
@@ -65,6 +72,8 @@ func debuff_generator():
 		$"Carga Pesada/CollisionShape2D".set_deferred("disabled", true)
 		$Celular/CollisionShape2D.set_deferred("disabled", true)
 		$Sono/CollisionShape2D.set_deferred("disabled", false)
+		
+		Global.qualDebuf = "Sono"
 		# Caso o número tenha sido o 4, a penalidade é o Sono, portanto a condição de cima
 		# fica responsável desabilitar os outros debuffs
 

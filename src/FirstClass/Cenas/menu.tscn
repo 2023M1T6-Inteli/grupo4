@@ -24,6 +24,7 @@
 [ext_resource path="res://Assets2/Logo/44.png" type="Texture" id=22]
 [ext_resource path="res://Sprites/som.png" type="Texture" id=24]
 
+
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 8 ) ],
