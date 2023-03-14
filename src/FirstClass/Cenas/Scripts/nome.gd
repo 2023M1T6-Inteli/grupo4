@@ -4,6 +4,9 @@ var caracteres_latinos = ["Ã", "Õ", "Ñ", "Á", "É", "Í", "Ó", "Ú", "Â", 
 var hover = 0
 #guarda o valor que define se o efeito sonoro de hover deve tocar ou não
 func _ready():
+	if Global.lingua == "eng": #tradução
+		$DIGITE.text = "Type your name"
+		$LineEdit.placeholder_text = "Type here"
 	for i in range(26):
 		alfabeto.append(char(ord("A")+ i))
 	for i in range(26):

@@ -86,14 +86,14 @@ text = "DE JOGO"
 [node name="GAME" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 524.0
-margin_top = 42.0
-margin_right = 554.0
-margin_bottom = 58.0
+margin_left = 446.0
+margin_top = 38.0
+margin_right = 487.0
+margin_bottom = 54.0
 rect_scale = Vector2( 7.2472, 8.18669 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "FIM"
+text = "  FIM"
 
 [node name="SomConfirmar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )

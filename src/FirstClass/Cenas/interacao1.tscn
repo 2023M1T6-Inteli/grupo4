@@ -38,6 +38,8 @@ var texto = [\"Eai \" + str(Global.nome) + \", tudo beleza?\" + \" Sou \" + str(
 \"Esses são os botões usados para jogar, boa sorte \" + str(Global.nome) + \"!\"
  ]
 
+
+
 var running = true
 
 #Array que contém o texto
@@ -48,17 +50,32 @@ func tamanho_elemento(array_element):
 	for elem in array_element:
 		cont += 1
 	return(cont)
-func _ready():
+func _ready(): 
+	if Global.lingua == \"eng\": #tradução
+		texto = [\"Hey \"+str(Global.nome)+\" what's up? I'm \"+str(Global.nomeInstrutor)+\" and I'll guide you through your journey.\"+\" I'm glad for choosing me in this moment of need.\",
+\"I've been working with chemical transportation for 15 years and I'll teach you the ropes so that no accidents occur.\",
+\"I'll keep an eye on you ok? Don't mess it up!\",
+\"Here are some instructions: using your cellphone while driving is prohibited, no drunk driving, rest well so you don't fall asleep and check the weight of your load.\",
+\"Here's the checklist, check all items and let's deliver this load!\",
+\"Those are the buttons used to play, good luck \"+str(Global.nome)+\"!\"
+]
+		$Pneus_cheios.text = \"Calibrated tires\"
+		$Tanques_sem_vazamentos.text = \"Load with \\nno leakings\"
+		$Peso_correto.text = \"Correct \\nweight\"
+		$Extintor_de_incendio.text = \"Fire \\nextinguisher\"
+		$Cinto.text = \"Seat belt\"
+
+	
 	$Texto.text = texto[index] # texto do label = primeiro elemento da lista
 	$checklist.playing = false
 	$checklist.hide()
 	$folha.hide()
-	$titulo.hide()
-	$titulo2.hide()
-	$titulo3.hide()
-	$titulo4.hide()
-	$titulo5.hide()
-	$titulo6.hide()
+	$Checklist.hide()
+	$Pneus_cheios.hide()
+	$Tanques_sem_vazamentos.hide()
+	$Peso_correto.hide()
+	$Extintor_de_incendio.hide()
+	$Cinto.hide()
 	$CheckBox.hide()
 	$CheckBox2.hide()
 	$CheckBox3.hide()
@@ -90,6 +107,7 @@ func _ready():
 		
 	
 func _process(delta):
+
 	if running:
 		if $Texto.visible_characters < $Texto.get_total_character_count(): # se caracteres visíveis < total de caracteres
 			$Texto.visible_characters += 1 # adicionando caracteres visíveis
@@ -132,12 +150,12 @@ func _process(delta):
 func _on_checklist_animation_finished():
 	$checklist.queue_free()
 	$folha.show()
-	$titulo.show()
-	$titulo2.show()
-	$titulo3.show()
-	$titulo4.show()
-	$titulo5.show()
-	$titulo6.show()
+	$Checklist.show()
+	$Pneus_cheios.show()
+	$Tanques_sem_vazamentos.show()
+	$Peso_correto.show()
+	$Extintor_de_incendio.show()
+	$Cinto.show()
 	$CheckBox.show()
 	$CheckBox2.show()
 	$CheckBox3.show()
@@ -174,15 +192,15 @@ func _on_CheckBox2_pressed():
 	
 func verificacao():
 	if box1 + box2 + box3 + box4 + box5 == 5:
-		running = true
 		yield(get_tree().create_timer(1.0), \"timeout\")
+		running = true
 		$folha.hide()
-		$titulo.hide()
-		$titulo2.hide()
-		$titulo3.hide()
-		$titulo4.hide()
-		$titulo5.hide()
-		$titulo6.hide()
+		$Checklist.hide()
+		$Pneus_cheios.hide()
+		$Tanques_sem_vazamentos.hide()
+		$Peso_correto.hide()
+		$Extintor_de_incendio.hide()
+		$Cinto.hide()
 		$CheckBox.hide()
 		$CheckBox2.hide()
 		$CheckBox3.hide()
@@ -311,21 +329,18 @@ margin_right = 984.0
 margin_bottom = 584.0
 
 [node name="checklist" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 10
+frame = 12
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
-visible = false
 position = Vector2( 656, 376 )
 scale = Vector2( 13.7357, 11.8667 )
 texture = ExtResource( 14 )
 
-[node name="titulo" type="Label" parent="."]
-visible = false
+[node name="Checklist" type="Label" parent="."]
 margin_left = 520.0
 margin_top = 32.0
 margin_right = 613.0
@@ -336,8 +351,7 @@ custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "CHECKLIST"
 
-[node name="titulo2" type="Label" parent="."]
-visible = false
+[node name="Pneus_cheios" type="Label" parent="."]
 margin_left = 536.0
 margin_top = 120.0
 margin_right = 642.0
@@ -348,8 +362,7 @@ custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Pneus cheios"
 
-[node name="titulo3" type="Label" parent="."]
-visible = false
+[node name="Tanques_sem_vazamentos" type="Label" parent="."]
 margin_left = 536.0
 margin_top = 192.0
 margin_right = 649.0
@@ -361,8 +374,7 @@ custom_fonts/font = SubResource( 8 )
 text = "Tanques sem 
 vazamento"
 
-[node name="titulo4" type="Label" parent="."]
-visible = false
+[node name="Peso_correto" type="Label" parent="."]
 margin_left = 536.0
 margin_top = 312.0
 margin_right = 643.0
@@ -374,8 +386,7 @@ custom_fonts/font = SubResource( 8 )
 text = "Peso correto
 da carga"
 
-[node name="titulo5" type="Label" parent="."]
-visible = false
+[node name="Extintor_de_incendio" type="Label" parent="."]
 margin_left = 536.0
 margin_top = 424.0
 margin_right = 641.0
@@ -387,8 +398,7 @@ custom_fonts/font = SubResource( 8 )
 text = "Extintor de 
 Incêndio"
 
-[node name="titulo6" type="Label" parent="."]
-visible = false
+[node name="Cinto" type="Label" parent="."]
 margin_left = 536.0
 margin_top = 552.0
 margin_right = 626.0
@@ -401,7 +411,6 @@ text = "Cinto de
 Segurança"
 
 [node name="CheckBox" type="CheckBox" parent="."]
-visible = false
 margin_left = 456.0
 margin_top = 112.0
 margin_right = 480.0
@@ -409,7 +418,6 @@ margin_bottom = 136.0
 rect_scale = Vector2( 3, 3 )
 
 [node name="CheckBox2" type="CheckBox" parent="."]
-visible = false
 margin_left = 456.0
 margin_top = 552.0
 margin_right = 480.0
@@ -417,7 +425,6 @@ margin_bottom = 576.0
 rect_scale = Vector2( 3, 3 )
 
 [node name="CheckBox3" type="CheckBox" parent="."]
-visible = false
 margin_left = 456.0
 margin_top = 408.0
 margin_right = 480.0
@@ -425,7 +432,6 @@ margin_bottom = 432.0
 rect_scale = Vector2( 3, 3 )
 
 [node name="CheckBox4" type="CheckBox" parent="."]
-visible = false
 margin_left = 456.0
 margin_top = 304.0
 margin_right = 480.0
@@ -433,7 +439,6 @@ margin_bottom = 328.0
 rect_scale = Vector2( 3, 3 )
 
 [node name="CheckBox5" type="CheckBox" parent="."]
-visible = false
 margin_left = 456.0
 margin_top = 192.0
 margin_right = 480.0
@@ -441,25 +446,21 @@ margin_bottom = 216.0
 rect_scale = Vector2( 3, 3 )
 
 [node name="UiUp" type="Sprite" parent="."]
-visible = false
 position = Vector2( 664, 296 )
 scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 23 )
 
 [node name="UiDown" type="Sprite" parent="."]
-visible = false
 position = Vector2( 664, 384 )
 scale = Vector2( 2.5, 2.25 )
 texture = ExtResource( 24 )
 
 [node name="UiRight" type="Sprite" parent="."]
-visible = false
 position = Vector2( 760, 384 )
 scale = Vector2( 2.75, 2.5 )
 texture = ExtResource( 25 )
 
 [node name="UiLeft" type="Sprite" parent="."]
-visible = false
 position = Vector2( 568, 384 )
 scale = Vector2( 2.75, 2.5 )
 texture = ExtResource( 26 )

@@ -1,14 +1,13 @@
 [gd_resource type="TileSet" load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Novas_flores.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Basic Grass Biom things 1.png" type="Texture" id=2]
-[ext_resource path="res://Assets/atlas.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Basic Plants.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Arvores.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fazenda.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Plantinhas.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/FreeCowSprites.png" type="Texture" id=5]
 
-
 [resource]
-10/name = "Basic Grass Biom things 1.png 10"
+10/name = "arvere"
 10/texture = ExtResource( 2 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
@@ -22,7 +21,7 @@
 10/shape_one_way_margin = 0.0
 10/shapes = [  ]
 10/z_index = 0
-11/name = "Basic Grass Biom things 1.png 11"
+11/name = "arvores"
 11/texture = ExtResource( 2 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
@@ -36,7 +35,7 @@
 11/shape_one_way_margin = 0.0
 11/shapes = [  ]
 11/z_index = 0
-12/name = "Basic Grass Biom things 1.png 12"
+12/name = "avereee"
 12/texture = ExtResource( 2 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
@@ -50,7 +49,7 @@
 12/shape_one_way_margin = 0.0
 12/shapes = [  ]
 12/z_index = 0
-13/name = "Basic Grass Biom things 1.png 13"
+13/name = "ce"
 13/texture = ExtResource( 2 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
@@ -64,7 +63,7 @@
 13/shape_one_way_margin = 0.0
 13/shapes = [  ]
 13/z_index = 0
-14/name = "Basic Grass Biom things 1.png 14"
+14/name = "po"
 14/texture = ExtResource( 2 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
@@ -78,7 +77,7 @@
 14/shape_one_way_margin = 0.0
 14/shapes = [  ]
 14/z_index = 0
-15/name = "Basic Grass Biom things 1.png 15"
+15/name = "de"
 15/texture = ExtResource( 2 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
@@ -92,7 +91,7 @@
 15/shape_one_way_margin = 0.0
 15/shapes = [  ]
 15/z_index = 0
-16/name = "Basic Grass Biom things 1.png 16"
+16/name = "co"
 16/texture = ExtResource( 2 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
@@ -106,7 +105,7 @@
 16/shape_one_way_margin = 0.0
 16/shapes = [  ]
 16/z_index = 0
-17/name = "Basic Grass Biom things 1.png 17"
+17/name = "gu"
 17/texture = ExtResource( 2 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
@@ -120,7 +119,7 @@
 17/shape_one_way_margin = 0.0
 17/shapes = [  ]
 17/z_index = 0
-18/name = "Basic Grass Biom things 1.png 18"
+18/name = "toma"
 18/texture = ExtResource( 2 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
@@ -134,7 +133,7 @@
 18/shape_one_way_margin = 0.0
 18/shapes = [  ]
 18/z_index = 0
-19/name = "Basic Grass Biom things 1.png 19"
+19/name = "tapa"
 19/texture = ExtResource( 2 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
@@ -148,7 +147,7 @@
 19/shape_one_way_margin = 0.0
 19/shapes = [  ]
 19/z_index = 0
-20/name = "Basic Grass Biom things 1.png 20"
+20/name = "na"
 20/texture = ExtResource( 2 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
@@ -162,7 +161,7 @@
 20/shape_one_way_margin = 0.0
 20/shapes = [  ]
 20/z_index = 0
-21/name = "Basic Grass Biom things 1.png 21"
+21/name = "cara"
 21/texture = ExtResource( 2 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
@@ -176,7 +175,7 @@
 21/shape_one_way_margin = 0.0
 21/shapes = [  ]
 21/z_index = 0
-22/name = "Basic Grass Biom things 1.png 22"
+22/name = "baia"
 22/texture = ExtResource( 2 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
@@ -190,7 +189,7 @@
 22/shape_one_way_margin = 0.0
 22/shapes = [  ]
 22/z_index = 0
-23/name = "Basic Grass Biom things 1.png 23"
+23/name = "guanabara"
 23/texture = ExtResource( 2 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
@@ -204,7 +203,7 @@
 23/shape_one_way_margin = 0.0
 23/shapes = [  ]
 23/z_index = 0
-24/name = "Basic Grass Biom things 1.png 24"
+24/name = "sa"
 24/texture = ExtResource( 2 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
@@ -218,7 +217,7 @@
 24/shape_one_way_margin = 0.0
 24/shapes = [  ]
 24/z_index = 0
-25/name = "Basic Grass Biom things 1.png 25"
+25/name = "mam"
 25/texture = ExtResource( 2 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
@@ -232,7 +231,7 @@
 25/shape_one_way_margin = 0.0
 25/shapes = [  ]
 25/z_index = 0
-26/name = "Basic Grass Biom things 1.png 26"
+26/name = "mad"
 26/texture = ExtResource( 2 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
@@ -246,7 +245,7 @@
 26/shape_one_way_margin = 0.0
 26/shapes = [  ]
 26/z_index = 0
-27/name = "Basic Grass Biom things 1.png 27"
+27/name = "ei"
 27/texture = ExtResource( 2 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
@@ -260,7 +259,7 @@
 27/shape_one_way_margin = 0.0
 27/shapes = [  ]
 27/z_index = 0
-28/name = "Basic Grass Biom things 1.png 28"
+28/name = "me"
 28/texture = ExtResource( 2 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
@@ -274,7 +273,7 @@
 28/shape_one_way_margin = 0.0
 28/shapes = [  ]
 28/z_index = 0
-29/name = "Basic Grass Biom things 1.png 29"
+29/name = "lo"
 29/texture = ExtResource( 2 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
@@ -288,7 +287,7 @@
 29/shape_one_way_margin = 0.0
 29/shapes = [  ]
 29/z_index = 0
-30/name = "Basic Plants.png 30"
+30/name = "plantinha"
 30/texture = ExtResource( 4 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
@@ -302,7 +301,7 @@
 30/shape_one_way_margin = 0.0
 30/shapes = [  ]
 30/z_index = 0
-31/name = "Basic Plants.png 31"
+31/name = "plantona"
 31/texture = ExtResource( 4 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
@@ -316,7 +315,7 @@
 31/shape_one_way_margin = 0.0
 31/shapes = [  ]
 31/z_index = 0
-32/name = "Basic Plants.png 32"
+32/name = "plante"
 32/texture = ExtResource( 4 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
@@ -330,7 +329,7 @@
 32/shape_one_way_margin = 0.0
 32/shapes = [  ]
 32/z_index = 0
-33/name = "Basic Plants.png 33"
+33/name = "planta"
 33/texture = ExtResource( 4 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
@@ -540,7 +539,7 @@
 47/shape_one_way_margin = 0.0
 47/shapes = [  ]
 47/z_index = 0
-48/name = "Free Cow Sprites.png 48"
+48/name = "FreeCowSprites.png 48"
 48/texture = ExtResource( 5 )
 48/tex_offset = Vector2( 0, 0 )
 48/modulate = Color( 1, 1, 1, 1 )
@@ -554,7 +553,7 @@
 48/shape_one_way_margin = 0.0
 48/shapes = [  ]
 48/z_index = 0
-49/name = "Free Cow Sprites.png 49"
+49/name = "FreeCowSprites.png 49"
 49/texture = ExtResource( 5 )
 49/tex_offset = Vector2( 0, 0 )
 49/modulate = Color( 1, 1, 1, 1 )

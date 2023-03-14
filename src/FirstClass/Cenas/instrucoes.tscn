@@ -22,18 +22,19 @@
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 50
 font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 14 )
 
 [node name="FundoTela1" type="Sprite" parent="."]
-position = Vector2( 627, 349 )
+position = Vector2( 640, 360 )
 scale = Vector2( 6.666, 6.666 )
 texture = ExtResource( 1 )
 
 [node name="Contorno" type="Sprite" parent="."]
-position = Vector2( 635, 326 )
+position = Vector2( 632, 328 )
 scale = Vector2( 60.5, 30.5 )
 texture = ExtResource( 3 )
 
@@ -58,22 +59,22 @@ texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 8 )
 
 [node name="UiUp" type="Sprite" parent="."]
-position = Vector2( 579, 500 )
+position = Vector2( 624, 488 )
 scale = Vector2( 2.1237, 1.85547 )
 texture = ExtResource( 13 )
 
 [node name="Keyboard71" type="Sprite" parent="."]
-position = Vector2( 580, 574 )
+position = Vector2( 624, 568 )
 scale = Vector2( 2.1224, 1.77344 )
 texture = ExtResource( 11 )
 
 [node name="Keyboard72" type="Sprite" parent="."]
-position = Vector2( 672, 574 )
+position = Vector2( 712, 568 )
 scale = Vector2( 2.1237, 1.85547 )
 texture = ExtResource( 12 )
 
 [node name="Keyboard73" type="Sprite" parent="."]
-position = Vector2( 495, 572 )
+position = Vector2( 536, 568 )
 scale = Vector2( 2.15625, 1.875 )
 texture = ExtResource( 10 )
 
@@ -82,18 +83,18 @@ modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 171.0
 margin_top = 403.0
-margin_right = 409.0
-margin_bottom = 419.0
-rect_scale = Vector2( 4, 4 )
+margin_right = 1088.0
+margin_bottom = 456.0
 custom_fonts/font = SubResource( 2 )
 text = "Botões que serão utilizados:"
+align = 1
 
 [node name="Celular1" type="Sprite" parent="."]
 position = Vector2( 688, 152 )
 scale = Vector2( 4.125, 4.375 )
 texture = ExtResource( 7 )
 
-[node name="CELULAR" type="Label" parent="."]
+[node name="BEBIDAS" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 262.0
@@ -129,7 +130,7 @@ position = Vector2( 195, 157 )
 scale = Vector2( 4.125, 4.34375 )
 texture = ExtResource( 4 )
 
-[node name="BEBIDAS" type="Label" parent="."]
+[node name="CELULAR" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 749.0

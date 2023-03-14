@@ -2,6 +2,9 @@ extends Node2D
 
 var hover = 0
 #guarda o valor que define se o efeito sonoro de hover deve tocar ou não
+func _ready():
+	if Global.lingua == "eng": #tradução
+		$Instrutor.text = "Choose an instructor"
 
 func som_hover():
 	if hover == 0:

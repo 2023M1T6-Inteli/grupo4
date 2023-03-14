@@ -62,5 +62,6 @@ position = Vector2( 905.5, 366 )
 scale = Vector2( 2.4375, 2 )
 texture = ExtResource( 9 )
 
+[connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_BotaoVoltar_mouse_entered"]
 [connection signal="pressed" from="BotaoVoltar" to="." method="_on_BotaoVoltar_pressed"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]

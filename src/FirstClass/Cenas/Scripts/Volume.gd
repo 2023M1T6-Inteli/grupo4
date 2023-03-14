@@ -23,3 +23,8 @@ func _on_HSlider_value_changed(value):
 		AudioServer.set_bus_mute(master_bus,true)
 	else:
 		AudioServer.set_bus_mute(master_bus,false)
+
+
+func _on_BotaoVoltar_mouse_entered():
+	if hover==0:
+		$SomHover.play()
