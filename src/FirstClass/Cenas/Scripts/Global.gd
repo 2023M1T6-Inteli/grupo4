@@ -15,4 +15,9 @@ var cargaDoCaminhao = 0
 #armazena o valor que define o sprite utilizado de acordo com a seleção do usuário
 
 var nome #variável responsável por guardar o nome do usuário
-var nomeInstrutor #variável responsável por guardar o nome do instrutor
+var nomeInstrutor #variável responsável por guardar o nome do instritor
+var rostoInstrutor #variável responsável por guardar a animação do instrutor
+
+var lingua = "eng"
+
+

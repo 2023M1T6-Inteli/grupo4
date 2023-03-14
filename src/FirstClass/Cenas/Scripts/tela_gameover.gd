@@ -12,7 +12,13 @@ func _ready():
 	
 	$Pontos.text = "Parabéns " + str(Global.nome) + ", você fez " + str(Global.points / 12) + " reais!"
 	#mostrando os pontos com uma mensagem
-
+	
+	if Global.lingua == "eng":
+		$GAME.text = "GAME"
+		$OVER.text = "   OVER"
+		$RESTART.text = "   Restart"
+		$Pontos.text = "Congratulations " + str(Global.nome) + ", you made " + str(Global.points/12)+" dollars!"
+	
 	MusicController.debuffs1_sound_off()
 	MusicController.debuffs2_sound_off()
 	MusicController.play_game_over_music()

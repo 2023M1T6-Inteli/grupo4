@@ -29,57 +29,53 @@
 
 [sub_resource type="GDScript" id=4]
 script/source = "extends Node2D
-#Array que contém o texto
-var texto = [\"E aí, \" + str(Global.nome) + \", tudo beleza?\" + \" Sou \" + str(Global.nomeInstrutor) + \" e serei seu guia nessa jornada.\" + \" Fico feliz por ter me escolhido nesse momento de ajuda.\" , 
-\"Trabalho com cargas químicas há 15 anos, darei as devidas instruções para que nenhum acidente aconteça com você.\", 
-\"Estou de olho, viu! Não faça nenhuma bobagem!\",
+
+var texto = [\"Eai \" + str(Global.nome) + \", tudo beleza?\" + \" Sou \" + str(Global.nomeInstrutor) + \" e serei seu guia nessa jornada.\" + \" Fico feliz por ter me escolhido nesse momento de ajuda.\" , 
+\"Trabalho com cargas químicas há 15 anos, darei as devidas instruções para que nenhum acidente aconteça com você\", 
+\"Estou de olho, viu! Não faça nenhuma bobagem\",
 \"Aqui vão algumas instruções:\" + \" Proibido o uso do celular no volante, nada de bebidas, descanse bem para não cochilar no volante e confira o peso da carga.\" ,
-\"Ah, e não se esqueça de prestar atenção à gasolina! Não fique sem combustível no trajeto, reabasteça na sede e no ponto de entrega.\",
 \"Aqui está a checklist, verifique todos os itens com atenção e bora para o trajeto!\",
 \"Esses são os botões usados para jogar, boa sorte \" + str(Global.nome) + \"!\"
  ]
 
-#variável que ajuda a definir se deve ou não passar ao próximo elemento da lista
-var running = true 
 
+
+var running = true
+
+#Array que contém o texto
 var index = 0 #variável que itera os elementos na lista
-
-#função que conta as letras de uma string
+#var input = 0 #variável que conta quantas vezes apertou \"Enter\"
 func tamanho_elemento(array_element):
 	var cont = 0
-	for letter in array_element:
+	for elem in array_element:
 		cont += 1
 	return(cont)
+func _ready(): 
+	if Global.lingua == \"eng\": #tradução
+		texto = [\"Hey \"+str(Global.nome)+\" what's up? I'm \"+str(Global.nomeInstrutor)+\" and I'll guide you through your journey.\"+\" I'm glad for choosing me in this moment of need.\",
+\"I've been working with chemical transportation for 15 years and I'll teach you the ropes so that no accidents occur.\",
+\"I'll keep an eye on you ok? Don't mess it up!\",
+\"Here are some instructions: using your cellphone while driving is prohibited, no drunk driving, rest well so you don't fall asleep and check the weight of your load.\",
+\"Here's the checklist, check all items and let's deliver this load!\",
+\"Those are the buttons used to play, good luck \"+str(Global.nome)+\"!\"
+]
+		$Pneus_cheios.text = \"Calibrated tires\"
+		$Tanques_sem_vazamentos.text = \"Load with \\nno leakings\"
+		$Peso_correto.text = \"Correct \\nweight\"
+		$Extintor_de_incendio.text = \"Fire \\nextinguisher\"
+		$Cinto.text = \"Seat belt\"
+
 	
-func _ready():
-	if Global.nomeInstrutor == 'Tonhão':
-		$rosto.texture = load(\"res://Assets2/face/TonhaoSorrindo.png\")
-		$instrutor.text = 'Tonhão'
-	elif Global.nomeInstrutor == 'Seu Jorge':
-		$rosto.texture = load(\"res://Assets2/face/SeuJorgeSorrindo.png\")
-		$instrutor.text = 'Seu Jorge'
-	elif Global.nomeInstrutor == 'Gina':
-		$rosto.texture = load(\"res://Assets2/face/GinaSorrindo.png\")
-		$rosto.position.y = 500
-		$instrutor.text ='Gina'
-		texto[0] = \"E aí, \" + str(Global.nome) + \", tudo beleza?\" + \" Sou \" + str(Global.nomeInstrutor) + \" e serei sua guia nessa jornada.\" + \" Fico feliz por ter me escolhido nesse momento de ajuda.\"
-	elif Global.nomeInstrutor == 'Nina':
-		$rosto.texture = load(\"res://Assets2/face/NinaSorrindo.png\")
-		$instrutor.text = 'Nina'
-		texto[0] = \"E aí, \" + str(Global.nome) + \", tudo beleza?\" + \" Sou \" + str(Global.nomeInstrutor) + \" e serei sua guia nessa jornada.\" + \" Fico feliz por ter me escolhido nesse momento de ajuda.\"
-	# mostrando o instrutor e seu nome
-	
-	$Texto.visible_characters = 0 #escondendo o texto de início
 	$Texto.text = texto[index] # texto do label = primeiro elemento da lista
 	$checklist.playing = false
 	$checklist.hide()
 	$folha.hide()
-	$titulo.hide()
-	$titulo2.hide()
-	$titulo3.hide()
-	$titulo4.hide()
-	$titulo5.hide()
-	$titulo6.hide()
+	$Checklist.hide()
+	$Pneus_cheios.hide()
+	$Tanques_sem_vazamentos.hide()
+	$Peso_correto.hide()
+	$Extintor_de_incendio.hide()
+	$Cinto.hide()
 	$CheckBox.hide()
 	$CheckBox2.hide()
 	$CheckBox3.hide()
@@ -89,20 +85,38 @@ func _ready():
 	$UiDown.hide()
 	$UiRight.hide()
 	$UiLeft.hide()
-	#escondendo os elementos que aparecerão depois (achar jeito mais prático)
+	
+	if Global.rostoInstrutor == 'tonhao':
+		$rosto.texture = load(\"res://Assets2/face/TonhaoSorrindo.png\")
+	elif Global.rostoInstrutor == 'seujorge':
+		$rosto.texture = load(\"res://Assets2/face/SeuJorgeSorrindo.png\")
+	elif Global.rostoInstrutor == 'gina':
+		$rosto.texture = load(\"res://Assets2/face/GinaSorrindo.png\")
+		$rosto.position.y = 500
+	elif Global.rostoInstrutor == 'nina':
+		$rosto.texture = load(\"res://Assets2/face/NinaSorrindo.png\")
+		
+	if Global.nomeInstrutor == 'Tonhão':
+		$instrutor.text = 'Tonhão'
+	elif Global.nomeInstrutor == 'Seu Jorge':
+		$instrutor.text = 'Seu Jorge'
+	elif Global.nomeInstrutor == 'Gina':
+		$instrutor.text ='Gina'
+	elif Global.nomeInstrutor == 'Nina':
+		$instrutor.text = 'Nina'
+		
 	
 func _process(delta):
 
 	if running:
 		if $Texto.visible_characters < $Texto.get_total_character_count(): # se caracteres visíveis < total de caracteres
 			$Texto.visible_characters += 1 # adicionando caracteres visíveis
-		else:
-			if index == 5 and Input.is_action_just_pressed(\"ui_accept\") and $Texto.visible_characters == tamanho_elemento(texto[index]):
+		else: # se caracteres visíveis = total de caracteres
+			if index == 4 and Input.is_action_just_pressed(\"ui_accept\") and $Texto.visible_characters == tamanho_elemento(texto[index]):
 				$checklist.show()
 				$checklist.playing = true
 				index += 1
 				running = false
-				#mostrando a checklist após o quinto elemento da lista
 			
 			elif index + 1 < texto.size() and Input.is_action_just_pressed(\"ui_accept\"):
 				$Texto.text = texto[index + 1]
@@ -118,31 +132,30 @@ func _process(delta):
 				$UiUp.show()
 				$UiRight.show()
 				$UiLeft.show()
-				#mostrando os comandos na última parte do texto
+				yield(get_tree().create_timer(1.0), \"timeout\")
 				
 			else:
 				if Input.is_action_just_pressed(\"ui_accept\"):
 					MusicController.play_game_music()
 					get_tree().change_scene(\"res://Cenas/Game.tscn\")
-					#mudando de cena quando acaba o texto
 					
 		if Input.is_action_just_pressed(\"ui_accept\"):
-			$Texto.visible_characters = $Texto.get_total_character_count()
-			#mostrando texto inteiro ao pressionar \"Enter\" ou \"Space\"
+	#		input += 1 #contabilizando os \"Enter\"
+			$Texto.visible_characters = $Texto.get_total_character_count() #mostrando texto inteiro
 			
 
 			
 
-#mostrando a checklist após a animação
+
 func _on_checklist_animation_finished():
 	$checklist.queue_free()
 	$folha.show()
-	$titulo.show()
-	$titulo2.show()
-	$titulo3.show()
-	$titulo4.show()
-	$titulo5.show()
-	$titulo6.show()
+	$Checklist.show()
+	$Pneus_cheios.show()
+	$Tanques_sem_vazamentos.show()
+	$Peso_correto.show()
+	$Extintor_de_incendio.show()
+	$Cinto.show()
 	$CheckBox.show()
 	$CheckBox2.show()
 	$CheckBox3.show()
@@ -156,7 +169,7 @@ var box3 = 0
 var box4 = 0
 var box5 = 0
 
-#variáveis (acima) e funções (abaixo) relacionadas ao funcionamento das checkboxes
+
 func _on_CheckBox_pressed():
 	box1 = 1
 	verificacao()
@@ -177,24 +190,27 @@ func _on_CheckBox2_pressed():
 	box5 = 1
 	verificacao()
 	
-#função que verifica se todas as checkboxes foram marcadas e retoma o processo
 func verificacao():
 	if box1 + box2 + box3 + box4 + box5 == 5:
 		yield(get_tree().create_timer(1.0), \"timeout\")
 		running = true
 		$folha.hide()
-		$titulo.hide()
-		$titulo2.hide()
-		$titulo3.hide()
-		$titulo4.hide()
-		$titulo5.hide()
-		$titulo6.hide()
+		$Checklist.hide()
+		$Pneus_cheios.hide()
+		$Tanques_sem_vazamentos.hide()
+		$Peso_correto.hide()
+		$Extintor_de_incendio.hide()
+		$Cinto.hide()
 		$CheckBox.hide()
 		$CheckBox2.hide()
 		$CheckBox3.hide()
 		$CheckBox4.hide()
 		$CheckBox5.hide()
+		
 
+
+		
+	
 "
 
 [sub_resource type="StreamTexture" id=6]
@@ -316,7 +332,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 13
+frame = 12
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
@@ -324,7 +340,7 @@ position = Vector2( 656, 376 )
 scale = Vector2( 13.7357, 11.8667 )
 texture = ExtResource( 14 )
 
-[node name="titulo" type="Label" parent="."]
+[node name="Checklist" type="Label" parent="."]
 margin_left = 520.0
 margin_top = 32.0
 margin_right = 613.0
@@ -335,7 +351,7 @@ custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "CHECKLIST"
 
-[node name="titulo2" type="Label" parent="."]
+[node name="Pneus_cheios" type="Label" parent="."]
 margin_left = 536.0
 margin_top = 120.0
 margin_right = 642.0
@@ -346,7 +362,7 @@ custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Pneus cheios"
 
-[node name="titulo3" type="Label" parent="."]
+[node name="Tanques_sem_vazamentos" type="Label" parent="."]
 margin_left = 536.0
 margin_top = 192.0
 margin_right = 649.0
@@ -358,7 +374,7 @@ custom_fonts/font = SubResource( 8 )
 text = "Tanques sem 
 vazamento"
 
-[node name="titulo4" type="Label" parent="."]
+[node name="Peso_correto" type="Label" parent="."]
 margin_left = 536.0
 margin_top = 312.0
 margin_right = 643.0
@@ -370,7 +386,7 @@ custom_fonts/font = SubResource( 8 )
 text = "Peso correto
 da carga"
 
-[node name="titulo5" type="Label" parent="."]
+[node name="Extintor_de_incendio" type="Label" parent="."]
 margin_left = 536.0
 margin_top = 424.0
 margin_right = 641.0
@@ -382,7 +398,7 @@ custom_fonts/font = SubResource( 8 )
 text = "Extintor de 
 Incêndio"
 
-[node name="titulo6" type="Label" parent="."]
+[node name="Cinto" type="Label" parent="."]
 margin_left = 536.0
 margin_top = 552.0
 margin_right = 626.0
