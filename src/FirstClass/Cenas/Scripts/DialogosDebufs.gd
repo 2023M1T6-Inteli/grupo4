@@ -7,13 +7,13 @@ var textoCarga = "Cuidado meu amigo!! O seu caminhão está sobrecarregado! Sua 
 func _escolherInstrutor():
 	
 	if Global.rostoInstrutor == 'tonhao':
-		$rosto.texture = load("res://Assets2/face/TonhaoSorrindo.png")
+		$rosto.texture = load("res://Assets2/face/TonhaoBravo.png")
 	elif Global.rostoInstrutor == 'seujorge':
-		$rosto.texture = load("res://Assets2/face/SeuJorgeSorrindo.png")
+		$rosto.texture = load("res://Assets2/face/SeuJorgeBravo.png")
 	elif Global.rostoInstrutor == 'gina':
-		$rosto.texture = load("res://Assets2/face/GinaSorrindo.png")
+		$rosto.texture = load("res://Assets2/face/GinaBravo.png")
 	elif Global.rostoInstrutor == 'nina':
-		$rosto.texture = load("res://Assets2/face/NinaSorrindo.png")
+		$rosto.texture = load("res://Assets2/face/NinaBrava.png")
 		
 	if Global.nomeInstrutor == 'Tonhão':
 		$instrutor.text = 'Tonhão'
