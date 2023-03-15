@@ -2,6 +2,9 @@ extends Node2D
 
 var hover = 0
 #guarda o valor que define se o efeito sonoro de hover deve tocar ou não
+func _ready():
+	if Global.lingua == "eng": #tradução
+		$Instrutor.text = "Choose an instructor"
 
 func som_hover():
 	if hover == 0:
@@ -17,6 +20,7 @@ func confirmar():
 
 #selecionar o personagem Tonhão
 func _on_BotaoTonhao_pressed():
+	Global.rostoInstrutor = 'tonhao'
 	Global.nomeInstrutor = 'Tonhão'
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 	$BotaoTonhao.texture_normal = $BotaoTonhao.texture_hover
@@ -27,6 +31,7 @@ func _on_BotaoTonhao_pressed():
 
 #selecionar o personagem Seu Jorge
 func _on_BotaoSeuJorge_pressed():
+	Global.rostoInstrutor = 'seujorge'
 	Global.nomeInstrutor = 'Seu Jorge'
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 	$BotaoTonhao.texture_hover = null
@@ -37,6 +42,7 @@ func _on_BotaoSeuJorge_pressed():
 
 #selecionar a personagem Gina
 func _on_BotaoGina_pressed():
+	Global.rostoInstrutor = 'gina'
 	Global.nomeInstrutor = 'Gina'
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 	$BotaoTonhao.texture_hover = null
@@ -47,6 +53,7 @@ func _on_BotaoGina_pressed():
 
 #selecionar a personagem Nina
 func _on_BotaoNina_pressed():
+	Global.rostoInstrutor = 'nina'
 	Global.nomeInstrutor = 'Nina'
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 	$BotaoTonhao.texture_hover = null
@@ -71,7 +78,7 @@ func _on_BotaoVoltar_pressed():
 
 #funções de efeito sonoro
 func _on_BotaoTonhao_mouse_entered():
-	$BotaoTonhao.set_position(Vector2(32, 285))
+	$BotaoTonhao.set_position(Vector2(38, 290))
 	som_hover()
 
 func _on_BotaoSeuJorge_mouse_entered():
@@ -88,4 +95,4 @@ func _on_BotaoVoltar_mouse_entered():
 
 
 func _on_BotaoTonhao_mouse_exited():
-	$BotaoTonhao.set_position(Vector2(32, 280))
+	$BotaoTonhao.set_position(Vector2(38, 280))

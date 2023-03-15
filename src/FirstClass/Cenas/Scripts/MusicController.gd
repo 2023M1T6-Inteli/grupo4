@@ -1,5 +1,4 @@
 extends Node
-#funções de música e efeitos sonoros
 
 func play_menu_music():
 

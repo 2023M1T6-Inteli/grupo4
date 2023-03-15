@@ -148,7 +148,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bebida"]
 frames = SubResource( 9 )
-frame = 1
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bebida"]
@@ -159,6 +159,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Celular"]
 frames = SubResource( 10 )
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Celular"]
@@ -169,7 +170,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Carga Pesada"]
 frames = SubResource( 5 )
-frame = 14
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carga Pesada"]
@@ -180,7 +181,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Sono"]
 frames = SubResource( 7 )
-frame = 3
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sono"]
@@ -211,6 +212,10 @@ one_shot = true
 explosiveness = 0.6
 process_material = SubResource( 15 )
 
+[node name="TimerNecessario" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="area_entered" from="Bebida" to="." method="_on_Bebida_area_entered"]
 [connection signal="area_entered" from="Celular" to="." method="_on_Celular_area_entered"]
 [connection signal="area_entered" from="Carga Pesada" to="." method="_on_Carga_Pesada_area_entered"]
@@ -219,3 +224,4 @@ process_material = SubResource( 15 )
 [connection signal="timeout" from="TimerSono" to="." method="_on_TimerSono_timeout"]
 [connection signal="timeout" from="TimerCarga" to="." method="_on_TimerCarga_timeout"]
 [connection signal="timeout" from="TimerCelular" to="." method="_on_TimerCelular_timeout"]
+[connection signal="timeout" from="TimerNecessario" to="." method="_on_TimerNecessario_timeout"]

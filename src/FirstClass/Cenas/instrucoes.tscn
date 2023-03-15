@@ -17,6 +17,7 @@
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=15]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=16]
 
+
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
 
@@ -93,7 +94,7 @@ position = Vector2( 688, 152 )
 scale = Vector2( 4.125, 4.375 )
 texture = ExtResource( 7 )
 
-[node name="CELULAR" type="Label" parent="."]
+[node name="BEBIDAS" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 262.0
@@ -129,7 +130,7 @@ position = Vector2( 195, 157 )
 scale = Vector2( 4.125, 4.34375 )
 texture = ExtResource( 4 )
 
-[node name="BEBIDAS" type="Label" parent="."]
+[node name="CELULAR" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 749.0

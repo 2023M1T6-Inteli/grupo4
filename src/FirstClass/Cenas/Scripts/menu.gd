@@ -2,6 +2,16 @@ extends Node2D
 
 var hover = 0
 #guarda o valor que define se o efeito sonoro de hover deve tocar ou não
+func _ready():
+	if Global.lingua == "eng":
+		$JOGAR.text = "Play"
+		$INSTRUCOES.text = "Instructions"
+		$AnimatedSprite.play("LogoIngles")
+	if Global.lingua == "pt":
+		$AnimatedSprite.play("LogoPortugues")
+	if Global.lingua == "esp":
+		$AnimatedSprite.play("LogoEspanhol")
+		
 
 func som_hover():
 	if hover == 0:
@@ -41,3 +51,7 @@ func _on_BotaoInstrucoes_mouse_entered():
 
 func _on_BotaoVolume_pressed():
 	get_tree().change_scene("res://Cenas/Volume.tscn")
+
+
+func _on_BotaoIdiomas_pressed():
+	get_tree().change_scene("res://Cenas/Idiomas.tscn")
