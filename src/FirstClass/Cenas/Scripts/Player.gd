@@ -48,7 +48,15 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 		velocity = velocity.clamped(maxSpeed)
 	else:
 		directionY = 1
-		maxSpeed = 120
+		if Global.dificuldade == "Facil":
+			maxSpeed = 80
+		elif Global.dificuldade == "Medio":
+			maxSpeed = 120
+		elif Global.dificuldade == "Dificil":
+			maxSpeed = 170
+	#Define a velocidade máxima em função da dificuldade
+	
+	
 	
 	# As duas condicionais acima determinam que, se o jogador precionar a setinha para baixo,
 	# o caminhão inverterá seu movimento, começando a andar para trás (Dando ré), e que

@@ -1,6 +1,17 @@
 extends RigidBody2D
 
 func _ready():
+	
+	if Global.dificuldade == "Facil":
+		self.gravity_scale = 7
+		
+	if Global.dificuldade == "Medio":
+		self.gravity_scale = 9.5
+		
+	if Global.dificuldade == "Dificil":
+		self.gravity_scale = 16
+	
+	
 	set_max_contacts_reported(3)
 	set_contact_monitor(true)
 	if Global.cargaDoCaminhao == 1:

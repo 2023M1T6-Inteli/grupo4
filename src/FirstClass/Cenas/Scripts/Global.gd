@@ -21,4 +21,6 @@ var rostoInstrutor #variável responsável por guardar a animação do instrutor
 
 var lingua = "pt"
 
+var dificuldade = ""
+
 

@@ -17,7 +17,6 @@
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=15]
 [ext_resource path="res://Assets2/IconsUI/contorno.png" type="Texture" id=16]
 
-
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
 

@@ -14,7 +14,7 @@ func confirmar():
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
 		yield(get_tree().create_timer(0.5), "timeout")
-		get_tree().change_scene("res://Cenas/interacao1.tscn")
+		get_tree().change_scene("res://Cenas/Escolha.tscn")
 		#mudança de cena e efeito sonoro
 		
 func hover_sound():
