@@ -3,6 +3,7 @@ var textoBebida = "Você está bebado?! Assim vai acabar colocando a sua vida e 
 var textoSono = "Saiu de casa sem descansar?! Você sabia que essa é uma das principais causas de acidentes?!  "
 var textoCelular = "Ei Saia do celular! Assim você vai perder o controle do caminhão!!"
 var textoCarga = "Cuidado meu amigo!! O seu caminhão está sobrecarregado! Sua direção e freio Estão péssimos!!"
+# Textos que apareceram dependendo de qual debif ele pegar
 	
 func _escolherInstrutor():
 	
@@ -14,6 +15,7 @@ func _escolherInstrutor():
 		$rosto.texture = load("res://Assets2/face/GinaBravo.png")
 	elif Global.rostoInstrutor == 'nina':
 		$rosto.texture = load("res://Assets2/face/NinaBrava.png")
+		# Carrega a foto do instrutor escolhido
 		
 	if Global.nomeInstrutor == 'Tonhão':
 		$instrutor.text = 'Tonhão'
@@ -23,6 +25,9 @@ func _escolherInstrutor():
 		$instrutor.text ='Gina'
 	elif Global.nomeInstrutor == 'Nina':
 		$instrutor.text = 'Nina'
+		# Carrega o nome do instrutor escolhido
+	
+	# Condições que identificam qual o instrutor escolhido e mudam o nome e a foto nos diálogos
 
 func _interagirComDebuf():
 	if Global.qualDebuf != "Nada":
@@ -35,25 +40,35 @@ func _interagirComDebuf():
 		$nomeIstritor.show()
 		$rosto.show()
 		
+		# Faz com que quando algum debuf for pego os elementos do Diálogo apareçam na tela do jogador
+		
 		if Global.qualDebuf == "Bebida":
 			$Texto.text = textoBebida
 			$TimerLetras.start()
 			$Timer.start()
+			# Faz com que caso a bebida seja pega: O diálogo que aparece é o da bebida, além de sumir
+			# com o diálogo depois de um certo tempo.
 			
 		elif Global.qualDebuf == "Sono":
 			$Texto.text = textoSono
 			$TimerLetras.start()
 			$Timer.start()
+			# Faz com que caso o sono seja pego: O diálogo que aparece é o do sono, além de sumir
+			# com o diálogo depois de um certo tempo.
 			
 		elif Global.qualDebuf == "Celular":
 			$Texto.text = textoCelular
 			$TimerLetras.start()
 			$Timer.start()
+			# Faz com que caso o celular seja pego: O diálogo que aparece é o do celular, além de sumir
+			# com o diálogo depois de um certo tempo.
 			
 		elif Global.qualDebuf == "Carga":
 			$Texto.text = textoCarga
 			$TimerLetras.start()
-			$Timer.start()		
+			$Timer.start()
+			# Faz com que caso a carga pesada seja pega: O diálogo que aparece é o da carga pesada, além de sumir
+			# com o diálogo depois de um certo tempo.
 		
 func _on_Timer_timeout():
 	$caixa.hide()
@@ -62,10 +77,12 @@ func _on_Timer_timeout():
 	$caixaPersonagem.hide()
 	$nomeIstritor.hide()
 	$rosto.hide()
+	#faz com que quando o tempo termina, os elementos do dialogo desaparecem
 
 func _on_TimerLetras_timeout():
 	if $Texto.visible_characters != $Texto.text.length():
 		$Texto.visible_characters += 1
+	# Faz com que as letras apareceçam de pouquinho em pouquinho
 	
 
 func _ready():
@@ -76,6 +93,7 @@ func _ready():
 	$caixaPersonagem.hide()
 	$nomeIstritor.hide()
 	$rosto.hide()
+	# Começa o jogo com os elementos do diálogo escondidos
 
 func _process(delta):
 	_interagirComDebuf()
