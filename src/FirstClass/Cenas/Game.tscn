@@ -18,9 +18,11 @@
 load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
 
 [sub_resource type="DynamicFont" id=5]
+size = 25
 font_data = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=6]
+size = 25
 font_data = ExtResource( 11 )
 
 [sub_resource type="DynamicFont" id=7]
@@ -131,9 +133,8 @@ modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
 self_modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
 margin_left = 192.0
 margin_top = 592.0
-margin_right = 373.0
-margin_bottom = 618.0
-rect_scale = Vector2( 3, 3 )
+margin_right = 736.0
+margin_bottom = 672.0
 custom_fonts/mono_font = SubResource( 5 )
 custom_fonts/normal_font = SubResource( 6 )
 
@@ -166,6 +167,13 @@ margin_bottom = 698.0
 custom_fonts/font = SubResource( 7 )
 align = 1
 valign = 1
+
+[node name="Timer" type="Timer" parent="CanvasLayer/DialogosDebufs"]
+wait_time = 6.0
+one_shot = true
+
+[node name="TimerLetras" type="Timer" parent="CanvasLayer/DialogosDebufs"]
+wait_time = 0.02
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 margin_right = 1280.0
@@ -225,3 +233,6 @@ position = Vector2( 1721, 2234 )
 
 [node name="Debufs13" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
 position = Vector2( 480, 1496 )
+
+[connection signal="timeout" from="CanvasLayer/DialogosDebufs/Timer" to="CanvasLayer/DialogosDebufs" method="_on_Timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/DialogosDebufs/TimerLetras" to="CanvasLayer/DialogosDebufs" method="_on_TimerLetras_timeout"]

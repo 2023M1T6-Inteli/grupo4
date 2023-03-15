@@ -23,8 +23,6 @@ func debuff_generator():
 		$Celular/CollisionShape2D.set_deferred("disabled", true)
 		$Sono/CollisionShape2D.set_deferred("disabled", true)
 		
-		
-		Global.qualDebuf = "Bebida"
 
 		# Caso o número tenha sido o 1, a penalidade é a Bebida, portanto a condição de cima
 		# fica responsável desabilitar os outros debuffs
@@ -41,8 +39,6 @@ func debuff_generator():
 		$Celular/CollisionShape2D.set_deferred("disabled", true)
 		$Sono/CollisionShape2D.set_deferred("disabled", true)
 		
-		Global.qualDebuf = "Carga"
-
 		# Caso o número tenha sido o 2, a penalidade é a Carga pesada, portanto a condição de cima
 		# fica responsável desabilitar os outros debuffs
 	
@@ -57,7 +53,6 @@ func debuff_generator():
 		$Celular/CollisionShape2D.set_deferred("disabled", false)
 		$Sono/CollisionShape2D.set_deferred("disabled", true)
 		
-		Global.qualDebuf = "Celular"
 		
 		# Caso o número tenha sido o 3, a penalidade é o Celular, portanto a condição de cima
 		# fica responsável desabilitar os outros debuffs
@@ -73,7 +68,6 @@ func debuff_generator():
 		$Celular/CollisionShape2D.set_deferred("disabled", true)
 		$Sono/CollisionShape2D.set_deferred("disabled", false)
 		
-		Global.qualDebuf = "Sono"
 		# Caso o número tenha sido o 4, a penalidade é o Sono, portanto a condição de cima
 		# fica responsável desabilitar os outros debuffs
 
@@ -92,23 +86,29 @@ func _on_Bebida_area_entered(area):
 	else:
 		get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderBebida.tres")
 		MusicController.debuff_bebida_sound()
+		Global.qualDebuf = "Bebida"
 		$TimerBebida.start()
+		$TimerNecessario.start()
 		sumir($Bebida)
 	
 	# Função responsável por aplicar o efeito espécial de Bebida a tela do jogador
 	
 func _on_Celular_area_entered(area):
 	Global.debuf = true
+	Global.qualDebuf = "Celular"
 	$TimerCelular.start()
 	MusicController.debuff_celular_sound()
+	$TimerNecessario.start()
 	sumir($Celular)
 	# Função responsável por aplicar as diferenças causadas pelo Celular ao jogador
 
 
 func _on_Carga_Pesada_area_entered(area):
 	Global.debuf2 = true
+	Global.qualDebuf = "Carga"
 	MusicController.debuff_carga_pesada_sound()
 	$TimerCarga.start()
+	$TimerNecessario.start()
 	sumir($"Carga Pesada")
 	
 	# Função responsável por aplicar as diferenças causadas pela Carga pesada ao jogador
@@ -121,7 +121,9 @@ func _on_Sono_area_entered(area):
 	else:
 		get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderSono.tres")
 		MusicController.debuff_sono_sound()
+		Global.qualDebuf = "Sono"
 		$TimerSono.start()
+		$TimerNecessario.start()
 		sumir($Sono)
 	# Função responsável por aplicar o efeito espécial do sono a tela do jogador
 	
@@ -152,3 +154,6 @@ func _on_TimerCelular_timeout():
 	
  # Funções responsáveis por retirar os efeitos dos Debufs após o tempo previamente determinado de 
  # duração de tais efeitos.
+
+func _on_TimerNecessario_timeout():
+	Global.qualDebuf = "Nada"
