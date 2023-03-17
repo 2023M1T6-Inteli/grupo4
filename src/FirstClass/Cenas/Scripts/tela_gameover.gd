@@ -6,17 +6,24 @@ var hover = 0
 func _ready():
 	Global.debuf = false
 	Global.debuf2 = false
-	Global.gasolina = 105
 	Global.permissao = false
 	#garantindo que os debuffs, a gasolina e a variável "permissao" são reiniciados
+	if Global.dificuldade == "Facil":
+		Global.gasolina = 115.0
+		
+	if Global.dificuldade == "Medio":
+		Global.gasolina = 105.0
+		
+	if Global.dificuldade == "Dificil":
+		Global.gasolina = 50.0
 	
 	$Pontos.text = "Parabéns " + str(Global.nome) + ", você fez " + str(Global.points / 12) + " reais!"
 	#mostrando os pontos com uma mensagem
 	
 	if Global.lingua == "eng":
 		$GAME.text = "GAME"
-		$OVER.text = "   OVER"
-		$RESTART.text = "   Restart"
+		$OVER.text = "OVER"
+		$RESTART.text = "Restart"
 		$Pontos.text = "Congratulations " + str(Global.nome) + ", you made " + str(Global.points/12)+" dollars!"
 	
 	MusicController.debuffs1_sound_off()

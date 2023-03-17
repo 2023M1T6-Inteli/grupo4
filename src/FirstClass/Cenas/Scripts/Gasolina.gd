@@ -5,12 +5,16 @@ func _ready():
 	
 	if Global.dificuldade == "Facil":
 		$ProgressBar.max_value = 115.0
+		Global.gasolina = 115.0
 		
 	if Global.dificuldade == "Medio":
 		$ProgressBar.max_value = 105.0
+		Global.gasolina = 105.0
 		
 	if Global.dificuldade == "Dificil":
-		$ProgressBar.max_value = 40.0
+		$ProgressBar.max_value = 50.0
+		Global.gasolina = 50.0
+		
 		
 	
 func _process(delta):
