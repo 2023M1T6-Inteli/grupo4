@@ -48,3 +48,5 @@ func debuffs2_sound_off():
 	$Effects2.stop()
 	$Music.volume_db = -17
 
+func stop_music():
+	$Music.stop()
