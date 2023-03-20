@@ -28,15 +28,17 @@ func confirmar():
 		#mudança para a tela de instrutores e efeito sonoro
 #mudança de tela para prosseguir
 func _on_BotaoOk_pressed():
+	var texto = $LineEdit.text
 	for letter in alfabeto:
-		if $LineEdit.text.count(" ", 0, $LineEdit.text.find(letter)) > 0:
-			$LineEdit.erase(0, $LineEdit.find(letter))
+		if texto.count(" ", 0, texto.find(letter)) > 0:
+			texto.erase(0, texto.find(letter))
 	#garantindo que algum texto será inserido para prosseguir
 	for letter in alfabeto:
-		if letter in $LineEdit.text:
-			Global.nome = $LineEdit.text
+		if letter in texto:
+			Global.nome = texto
 			confirmar()
-		
+		else:
+			pass
 #mudança de tela para voltar
 func _on_BotaoVoltar_pressed():
 	if !$SomVoltar.playing:

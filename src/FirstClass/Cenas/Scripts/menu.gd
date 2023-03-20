@@ -7,6 +7,7 @@ func _ready():
 		$JOGAR.text = " Play"
 		$INSTRUCOES.text = "Instructions"
 		$AnimatedSprite.play("LogoIngles")
+		$IDIOMAS.text = " Idioms"
 	elif Global.lingua == "pt":
 		$AnimatedSprite.play("LogoPortugues")
 	elif Global.lingua == "esp":
@@ -54,5 +55,5 @@ func _on_BotaoVolume_pressed():
 	get_tree().change_scene("res://Cenas/Volume.tscn")
 
 
-func _on_BotaoIdiomas_pressed():
+func _on_BotaoIdioma_pressed():
 	get_tree().change_scene("res://Cenas/Idiomas.tscn")

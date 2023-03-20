@@ -55,10 +55,10 @@ align = 1
 placeholder_text = "Digite aqui"
 
 [node name="BotaoOk" type="TextureButton" parent="."]
-margin_left = 896.0
-margin_top = 328.0
-margin_right = 1376.0
-margin_bottom = 454.0
+margin_left = 988.0
+margin_top = 287.0
+margin_right = 1468.0
+margin_bottom = 413.0
 rect_scale = Vector2( 0.2, 0.7 )
 
 [node name="IconesGerais" type="Sprite" parent="."]
