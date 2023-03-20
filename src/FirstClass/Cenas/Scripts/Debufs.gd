@@ -79,12 +79,12 @@ func sumir(node):
 	#Função que muda os debuffs depois de coletados
 
 func _on_Bebida_area_entered(area):
-	if get_parent().get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderSono.tres"):
+	if .get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderSono.tres"):
 		sumir($Bebida)
-	elif get_parent().get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderBebida.tres"):
+	elif get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderBebida.tres"):
 		sumir($Bebida)
 	else:
-		get_parent().get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderBebida.tres")
+		get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderBebida.tres")
 		MusicController.debuff_bebida_sound()
 		Global.qualDebuf = "Bebida"
 		$TimerBebida.start()
@@ -114,12 +114,12 @@ func _on_Carga_Pesada_area_entered(area):
 	# Função responsável por aplicar as diferenças causadas pela Carga pesada ao jogador
 	
 func _on_Sono_area_entered(area):
-	if get_parent().get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderBebida.tres"):
+	if get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderBebida.tres"):
 		sumir($Sono)
-	elif get_parent().get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderSono.tres"):
+	elif get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderSono.tres"):
 		sumir($Sono)
 	else:
-		get_parent().get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderSono.tres")
+		get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderSono.tres")
 		MusicController.debuff_sono_sound()
 		Global.qualDebuf = "Sono"
 		$TimerSono.start()
@@ -129,19 +129,19 @@ func _on_Sono_area_entered(area):
 	
 
 func _on_TimerBebida_timeout():
-	if get_parent().get_parent().get_parent().get_parent().material == null:
+	if get_parent().get_parent().get_parent().material == null:
 		return
 	else:
-		get_parent().get_parent().get_parent().get_parent().material = null
+		get_parent().get_parent().get_parent().material = null
 		MusicController.debuffs2_sound_off()
 	
 
 
 func _on_TimerSono_timeout():
-	if get_parent().get_parent().get_parent().get_parent().material == null:
+	if get_parent().get_parent().get_parent().material == null:
 		return
 	else:
-		get_parent().get_parent().get_parent().get_parent().material = null
+		get_parent().get_parent().get_parent().material = null
 		MusicController.debuffs2_sound_off()
 
 func _on_TimerCarga_timeout():

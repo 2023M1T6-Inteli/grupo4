@@ -768,7 +768,6 @@ tile_data = PoolIntArray( 327830, 0, 0, 3670166, -1610612733, 0, 4980881, -16106
 position = Vector2( 39, 29 )
 scale = Vector2( 0.625, 0.645833 )
 frames = SubResource( 73 )
-frame = 8
 playing = true
 
 [node name="Pensamento" type="AnimationPlayer" parent="."]

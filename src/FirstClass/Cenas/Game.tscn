@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Cenas/Minimap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Mapa1.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=12]
 [ext_resource path="res://Cenas/Scripts/DialogosDebufs.gd" type="Script" id=13]
 [ext_resource path="res://Cenas/Scripts/Game.gd" type="Script" id=14]
+[ext_resource path="res://Cenas/Debufs.tscn" type="PackedScene" id=15]
 
 [sub_resource type="StreamTexture" id=4]
 load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
@@ -196,6 +197,50 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Mapa1" parent="ViewportContainer/Viewport" instance=ExtResource( 2 )]
+
+[node name="DebufsMapa1" type="Node2D" parent="ViewportContainer/Viewport"]
+
+[node name="Debufs2" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1136, 336 )
+
+[node name="Debufs3" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1248, 288 )
+
+[node name="Debufs4" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1952, 288 )
+
+[node name="Debufs5" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1856, 336 )
+
+[node name="Debufs6" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 2624, 816 )
+
+[node name="Debufs7" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 3456, 1584 )
+
+[node name="Debufs8" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 3136, 2336 )
+
+[node name="Debufs9" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 3088, 2416 )
+
+[node name="Debufs10" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 2304, 2032 )
+
+[node name="Debufs11" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1552, 2048 )
+
+[node name="Debufs12" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1136, 2480 )
+
+[node name="Debufs13" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1424, 1584 )
+
+[node name="Debufs14" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 512, 1472 )
+
+[node name="Debufs15" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 608, 1520 )
 
 [node name="Mapa2" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
 

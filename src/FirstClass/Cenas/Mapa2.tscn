@@ -1,11 +1,10 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://Cenas/CacambadoCaminhao.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/Cacamba.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/TilesMaps/Chao.tres" type="TileSet" id=3]
 [ext_resource path="res://Assets/TilesMaps/Arvore.tres" type="TileSet" id=4]
 [ext_resource path="res://Assets/TilesMaps/Casas.tres" type="TileSet" id=5]
-[ext_resource path="res://Cenas/Scripts/Mapa 2.gd" type="Script" id=6]
 [ext_resource path="res://Cenas/Scripts/Chegada.gd" type="Script" id=7]
 [ext_resource path="res://Sons/dinheiro.wav" type="AudioStream" id=8]
 [ext_resource path="res://Assets/TilesMaps/VegetacaoEPedrasSertao.tres" type="TileSet" id=9]
@@ -28,7 +27,6 @@ extents = Vector2( 16, 80 )
 extents = Vector2( 10, 80 )
 
 [node name="Mapa 2" type="Node2D"]
-script = ExtResource( 6 )
 
 [node name="Mapa" type="Node2D" parent="."]
 
