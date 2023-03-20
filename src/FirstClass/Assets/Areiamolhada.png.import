@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Atlas.png-3cdb8c5fbb53b3bc350d4f4e9d722079.stex"
+path="res://.import/Areiamolhada.png-b58d34b78c0abeff3eaf995bca607e9f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Atlas.png"
-dest_files=[ "res://.import/Atlas.png-3cdb8c5fbb53b3bc350d4f4e9d722079.stex" ]
+source_file="res://Assets/Areiamolhada.png"
+dest_files=[ "res://.import/Areiamolhada.png-b58d34b78c0abeff3eaf995bca607e9f.stex" ]
 
 [params]
 
