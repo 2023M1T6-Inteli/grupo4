@@ -1,8 +1,8 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Cenas/Minimap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Mapa1.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Cenas/Debufs.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Mapa2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/Timer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/Scripts/ViewportContainer.gd" type="Script" id=5]
 [ext_resource path="res://Efeitos tela/CenasSono.tres" type="Animation" id=6]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=11]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=12]
 [ext_resource path="res://Cenas/Scripts/DialogosDebufs.gd" type="Script" id=13]
+[ext_resource path="res://Cenas/Scripts/Game.gd" type="Script" id=14]
 
 [sub_resource type="StreamTexture" id=4]
 load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
@@ -89,6 +90,7 @@ tracks/1/keys = {
 }
 
 [node name="Game" type="Node2D"]
+script = ExtResource( 14 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -195,44 +197,7 @@ render_target_update_mode = 3
 
 [node name="Mapa1" parent="ViewportContainer/Viewport" instance=ExtResource( 2 )]
 
-[node name="Debufs" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 1149, 332 )
-
-[node name="Debufs2" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 1183, 285 )
-
-[node name="Debufs3" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 1721, 295 )
-
-[node name="Debufs4" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 1727, 335 )
-
-[node name="Debufs5" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 2452, 317 )
-
-[node name="Debufs6" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 3073, 1359 )
-
-[node name="Debufs7" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 3077, 2370 )
-
-[node name="Debufs8" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 3127, 2438 )
-
-[node name="Debufs9" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 2186, 2188 )
-
-[node name="Debufs10" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 1294, 1603 )
-
-[node name="Debufs11" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 881, 1263 )
-
-[node name="Debufs12" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 1721, 2234 )
-
-[node name="Debufs13" parent="ViewportContainer/Viewport/Mapa1" instance=ExtResource( 3 )]
-position = Vector2( 480, 1496 )
+[node name="Mapa2" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
 
 [connection signal="timeout" from="CanvasLayer/DialogosDebufs/Timer" to="CanvasLayer/DialogosDebufs" method="_on_Timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/DialogosDebufs/TimerLetras" to="CanvasLayer/DialogosDebufs" method="_on_TimerLetras_timeout"]
