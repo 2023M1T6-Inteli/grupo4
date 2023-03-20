@@ -57,13 +57,28 @@ func _ready():
 \"I'll keep an eye on you ok? Don't mess it up!\",
 \"Here are some instructions: using your cellphone while driving is prohibited, no drunk driving, rest well so you don't fall asleep and check the weight of your load.\",
 \"Here's the checklist, check all items and let's deliver this load!\",
-\"Those are the buttons used to play, good luck \"+str(Global.nome)+\"!\"
-]
+\"Those are the buttons used to play, good luck \"+str(Global.nome)+\"!\"]
+
 		$Pneus_cheios.text = \"Calibrated tires\"
 		$Tanques_sem_vazamentos.text = \"Load with \\nno leakings\"
 		$Peso_correto.text = \"Correct \\nweight\"
 		$Extintor_de_incendio.text = \"Fire \\nextinguisher\"
 		$Cinto.text = \"Seat belt\"
+
+	elif Global.lingua == \"esp\":
+		texto = [\"Qué pasa \"+str(Global.nome)+\"? Soy \"+str(Global.nomeInstrutor)+\" y seré tu guía en este viaje. Me alegro de que me hayas elegido en este momento de ayuda.\",
+\"Llevo 15 años trabajando con cargas químicas, te daré las indicaciones necesarias para que no te pase ningún accidente.\",
+\"Estoy mirando, mira!  no hagas nada tonto!\",
+\"Aquí algunas indicaciones: Prohibido usar celular mientras se conduce, no tomar bebidas, descansar bien para no dormirse al volante y revisar el peso de la carga.\",
+\"Aquí está la lista de verificación, verifique todos los elementos cuidadosamente y vámonos!\",
+\"Estos son botones que se usan para jugar, buena suerte \"+str(Global.nome)+\"!\"]
+
+		$Pneus_cheios.text = \"Llantas llenas\"
+		$Tanques_sem_vazamentos.text = \"Tanques \\nsin fugas\"
+		$Peso_correto.text = \"Peso de \\ncarga correcto\"
+		$Extintor_de_incendio.text = \"Extintor de \\nincendios\"
+		$Cinto.text = \"Cinturón de \\nseguridad\"
+
 
 	
 	$Texto.text = texto[index] # texto do label = primeiro elemento da lista
@@ -332,7 +347,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 14
+frame = 4
 playing = true
 
 [node name="folha" type="Sprite" parent="."]

@@ -5,6 +5,8 @@ var hover = 0
 func _ready():
 	if Global.lingua == "eng": #tradução
 		$Instrutor.text = "Choose an instructor"
+	if Global.lingua == "esp": #tradução
+		$Instrutor.text = "Elige a tu instructor"
 
 func som_hover():
 	if hover == 0:

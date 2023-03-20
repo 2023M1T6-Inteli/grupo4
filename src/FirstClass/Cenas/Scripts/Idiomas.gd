@@ -16,3 +16,7 @@ func _on_BotaoEsp_pressed():
 func _on_BotaoEng_pressed():
 	Global.lingua = "eng"
 	get_tree().change_scene("res://Cenas/menu.tscn")
+
+
+func _on_BotaoVoltar_pressed():
+	get_tree().change_scene("res://Cenas/menu.tscn")

@@ -7,6 +7,8 @@ func _ready():
 	if Global.lingua == "eng": #tradução
 		$ESCOLHA.text = "   Choose your truck"
 		$CLORO.text = "Chlorine"
+	if Global.lingua == "esp":
+		$ESCOLHA.text = "     Elige tu camion"
 
 
 func confirmar():

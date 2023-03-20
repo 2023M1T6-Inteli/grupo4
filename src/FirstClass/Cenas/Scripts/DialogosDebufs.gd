@@ -4,7 +4,7 @@ var textoSono = "Saiu de casa sem descansar?! Você sabia que essa é uma das pr
 var textoCelular = "Ei Saia do celular! Assim você vai perder o controle do caminhão!!"
 var textoCarga = "Cuidado meu amigo!! O seu caminhão está sobrecarregado! Sua direção e freio Estão péssimos!!"
 # Textos que apareceram dependendo de qual debif ele pegar
-	
+
 func _escolherInstrutor():
 	
 	if Global.rostoInstrutor == 'tonhao':
@@ -86,6 +86,16 @@ func _on_TimerLetras_timeout():
 	
 
 func _ready():
+	if Global.lingua == "eng":
+		textoBebida = "Are you drinking?! You are putting people's lives in danger that way!!"
+		textoSono = "Left home without resting?! Did you know that's one of the main accident causes?!"
+		textoCelular = "Hey get off the phone! You'll lose the truck's control that way!!"
+		textoCarga = "Careful my friend! Your truck is overloaded! Your brakes and turns are terrible!"
+	elif Global.lingua == "esp":
+		textoBebida = "Estás borracho?! Asi terminaras poniendo en riesgo tu vida y la de los demás!"
+		textoSono = "Salir de casa sin descansar? Esta es una de las principales causas de accidentes!"
+		textoCelular = "Oye bata tu telefono asi vas a perder el control del camion!!"
+		textoCarga = "Cuidado  amigo!! Tu camion esta sobrecargado! Tu direccion y freno son terribles!!"
 	_escolherInstrutor()
 	$caixa.hide()
 	$instrutor.hide()

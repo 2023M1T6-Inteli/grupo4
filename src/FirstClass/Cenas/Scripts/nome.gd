@@ -7,6 +7,9 @@ func _ready():
 	if Global.lingua == "eng": #tradução
 		$DIGITE.text = "Type your name"
 		$LineEdit.placeholder_text = "Type here"
+	if Global.lingua == "esp": #tradução
+		$DIGITE.text = "Escriba su nombre"
+		$LineEdit.placeholder_text = "Escriba aqui"
 	for i in range(26):
 		alfabeto.append(char(ord("A")+ i))
 	for i in range(26):
