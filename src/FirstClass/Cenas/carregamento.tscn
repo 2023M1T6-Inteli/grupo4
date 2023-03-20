@@ -90,7 +90,7 @@ position = Vector2( 646, 368 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "Logo Animada"
-frame = 3
+frame = 2
 playing = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
