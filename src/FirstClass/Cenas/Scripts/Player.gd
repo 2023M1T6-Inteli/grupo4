@@ -91,15 +91,24 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 
 
 	var collide = move_and_collide(velocity * delta)
-
-	if collide: 
-		Global.debuf = false
-		Global.debuf2 = false
-		get_tree().change_scene("res://Cenas/tela_gameover.tscn")
-		
 	# Método que controla o movimento do objeto de acordo com vetores e identifica quando o player
 	# sofre alguma colisão.
-	
+	if collide:
+		lose()
+
+
+func lose():
+	Global.debuf = false
+	Global.debuf2 = false
+	get_parent().get_node("Cacamba").get_node("Explosao").emitting = true
+	self.modulate = "413a3a"
+	get_parent().get_node("Cacamba").get_node("AnimatedSprite").modulate = "413a3a"
+	$SomIdle.stop()
+	$SomRe.stop()
+	set_physics_process(false)
+	get_parent().get_node("Cacamba").get_node("ExplosaoSFX").play()
+	MusicController.stop_music()
+
 
 func sounds(): # função que controla os sons relativos ao jogador e sua movimentação
 	if !$SomIdle.playing:

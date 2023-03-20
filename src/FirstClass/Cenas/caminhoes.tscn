@@ -24,7 +24,7 @@ font_data = ExtResource( 2 )
 script = ExtResource( 10 )
 
 [node name="FundoTela" type="Sprite" parent="."]
-position = Vector2( 634, 365 )
+position = Vector2( 640, 360 )
 scale = Vector2( 6.666, 6.666 )
 texture = ExtResource( 1 )
 

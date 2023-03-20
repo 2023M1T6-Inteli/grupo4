@@ -97,7 +97,7 @@ position = Vector2( 656, 224 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 animation = "LogoPortugues"
-frame = 9
+frame = 4
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -189,5 +189,5 @@ text = "Idiomas"
 [connection signal="pressed" from="BotaoInstrucoes" to="." method="_on_BotaoInstrucoes_pressed"]
 [connection signal="pressed" from="BotaoVolume" to="." method="_on_BotaoVolume_pressed"]
 [connection signal="mouse_entered" from="BotaoIdioma" to="." method="_on_BotaoInstrucoes_mouse_entered"]
-[connection signal="pressed" from="BotaoIdioma" to="." method="_on_BotaoIdioma_pressed"]
 [connection signal="pressed" from="BotaoIdioma" to="." method="_on_BotaoInstrucoes_pressed"]
+[connection signal="pressed" from="BotaoIdioma" to="." method="_on_BotaoIdioma_pressed"]
