@@ -26,6 +26,9 @@ func _on_Cacamba_do_Caminhao_body_entered(body):
 		$AnimatedSprite.modulate = "413a3a"
 		$ExplosaoSFX.play()
 		MusicController.stop_music()
+		MusicController.debuffs1_sound_off()
+		MusicController.debuffs2_sound_off()
+
 # Função que permite a caçamba contar como parte do player e causar a derrota do jogador caso ela
 # colida com a parede
 

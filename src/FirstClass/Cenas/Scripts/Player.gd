@@ -108,6 +108,8 @@ func lose():
 	set_physics_process(false)
 	get_parent().get_node("Cacamba").get_node("ExplosaoSFX").play()
 	MusicController.stop_music()
+	MusicController.debuffs1_sound_off()
+	MusicController.debuffs2_sound_off()
 
 
 func sounds(): # função que controla os sons relativos ao jogador e sua movimentação
