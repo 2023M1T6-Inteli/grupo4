@@ -1,6 +1,12 @@
 extends Node2D
 
-
+func _ready():
+	if Global.lingua == "eng":
+		$Mapa1.text = "  Florest Map"
+		$Mapa2.text = " Desert Map"
+	if Global.lingua == "esp":
+		$Mapa1.text = "Mapa Bosque"
+		$Mapa2.text = "Mapa Desierto"
 
 
 func _on_BotaoMapa1_pressed():
