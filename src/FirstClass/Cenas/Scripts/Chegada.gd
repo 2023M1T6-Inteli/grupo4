@@ -21,12 +21,14 @@ func _on_SegundoPonto_body_entered(body):
 	# Função responsável por resetar o valor da gasolina para o valor original na metade da pista.
 
 
-func _on_Metade2_area_entered(area):
-	Global.permissao = true
+func _on_Metade2_body_entered(body):
+	if body.name == "Player" or body.name == "Cacamba":
+		Global.permissao = true
 
 
-func _on_Metade1_area_entered(area):
-	Global.permissao = true
+func _on_Metade1_body_entered(body):
+	if body.name == "Player" or body.name == "Cacamba":
+		Global.permissao = true
  
 # Funções que não permitem o player burlar as funções anteriormente comentadas e assim não ganhar
 # bonûs infinito e gasolina infinita, pois eles precisam passar em partes da pista antes de conseguirem

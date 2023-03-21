@@ -78,54 +78,58 @@ func sumir(node):
 	debuff_generator()
 	#Função que muda os debuffs depois de coletados
 
-func _on_Bebida_area_entered(area):
-	if .get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderSono.tres"):
-		sumir($Bebida)
-	elif get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderBebida.tres"):
-		sumir($Bebida)
-	else:
-		get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderBebida.tres")
-		MusicController.debuff_bebida_sound()
-		Global.qualDebuf = "Bebida"
-		$TimerBebida.start()
-		$TimerNecessario.start()
-		sumir($Bebida)
+func _on_Bebida_body_entered(body):
+	if body.name == "Player" or body.name == "Cacamba":
+		if get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderSono.tres"):
+			sumir($Bebida)
+		elif get_parent().get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderBebida.tres"):
+			sumir($Bebida)
+		else:
+			get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderBebida.tres")
+			MusicController.debuff_bebida_sound()
+			Global.qualDebuf = "Bebida"
+			$TimerBebida.start()
+			$TimerNecessario.start()
+			sumir($Bebida)
 	
 	# Função responsável por aplicar o efeito espécial de Bebida a tela do jogador
 	
-func _on_Celular_area_entered(area):
-	Global.debuf = true
-	Global.qualDebuf = "Celular"
-	$TimerCelular.start()
-	MusicController.debuff_celular_sound()
-	$TimerNecessario.start()
-	sumir($Celular)
+func _on_Celular_body_entered(body):
+	if body.name == "Player" or body.name == "Cacamba":
+		Global.debuf = true
+		Global.qualDebuf = "Celular"
+		$TimerCelular.start()
+		MusicController.debuff_celular_sound()
+		$TimerNecessario.start()
+		sumir($Celular)
 	# Função responsável por aplicar as diferenças causadas pelo Celular ao jogador
 
 
-func _on_Carga_Pesada_area_entered(area):
-	Global.debuf2 = true
-	Global.qualDebuf = "Carga"
-	MusicController.debuff_carga_pesada_sound()
-	$TimerCarga.start()
-	$TimerNecessario.start()
-	sumir($"Carga Pesada")
+func _on_Carga_Pesada_body_entered(body):
+	if body.name == "Player" or body.name == "Cacamba":
+		Global.debuf2 = true
+		Global.qualDebuf = "Carga"
+		MusicController.debuff_carga_pesada_sound()
+		$TimerCarga.start()
+		$TimerNecessario.start()
+		sumir($"Carga Pesada")
 	
 	# Função responsável por aplicar as diferenças causadas pela Carga pesada ao jogador
 	
-func _on_Sono_area_entered(area):
-	if get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderBebida.tres"):
-		sumir($Sono)
-	elif get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderSono.tres"):
-		sumir($Sono)
-	else:
-		get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderSono.tres")
-		MusicController.debuff_sono_sound()
-		Global.qualDebuf = "Sono"
-		$TimerSono.start()
-		$TimerNecessario.start()
-		sumir($Sono)
-	# Função responsável por aplicar o efeito espécial do sono a tela do jogador
+func _on_Sono_body_entered(body):
+	if body.name == "Player" or body.name == "Cacamba":
+		if get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderBebida.tres"):
+			sumir($Sono)
+		elif get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderSono.tres"):
+			sumir($Sono)
+		else:
+			get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderSono.tres")
+			MusicController.debuff_sono_sound()
+			Global.qualDebuf = "Sono"
+			$TimerSono.start()
+			$TimerNecessario.start()
+			sumir($Sono)
+		# Função responsável por aplicar o efeito espécial do sono a tela do jogador
 	
 
 func _on_TimerBebida_timeout():

@@ -244,5 +244,49 @@ position = Vector2( 608, 1520 )
 
 [node name="Mapa2" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
 
+[node name="DebufsMapa2" type="Node2D" parent="ViewportContainer/Viewport"]
+
+[node name="Debufs" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 1304, 384 )
+
+[node name="Debufs2" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 1396, 446 )
+
+[node name="Debufs3" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 2135, 379 )
+
+[node name="Debufs4" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 2216, 441 )
+
+[node name="Debufs5" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 3460, 882 )
+
+[node name="Debufs6" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 3774, 2004 )
+
+[node name="Debufs7" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 2168, 2393 )
+
+[node name="Debufs8" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 2207, 2268 )
+
+[node name="Debufs9" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 1401, 2537 )
+
+[node name="Debufs10" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 1463, 3331 )
+
+[node name="Debufs11" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 1572, 3267 )
+
+[node name="Debufs12" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 480, 2997 )
+
+[node name="Debufs13" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 542, 2922 )
+
+[node name="Debufs14" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 592, 1768 )
+
 [connection signal="timeout" from="CanvasLayer/DialogosDebufs/Timer" to="CanvasLayer/DialogosDebufs" method="_on_Timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/DialogosDebufs/TimerLetras" to="CanvasLayer/DialogosDebufs" method="_on_TimerLetras_timeout"]
