@@ -7,7 +7,7 @@ func _ready():
 		$JOGAR.text = " Play"
 		$INSTRUCOES.text = "Instructions"
 		$AnimatedSprite.play("LogoIngles")
-		$IDIOMAS.text = " Idioms"
+		$IDIOMAS.text = "Languages"
 	elif Global.lingua == "pt":
 		$AnimatedSprite.play("LogoPortugues")
 	elif Global.lingua == "esp":

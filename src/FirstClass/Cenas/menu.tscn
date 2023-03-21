@@ -97,7 +97,7 @@ position = Vector2( 656, 224 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 animation = "LogoPortugues"
-frame = 13
+frame = 9
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -176,12 +176,12 @@ texture_click_mask = ExtResource( 16 )
 [node name="IDIOMAS" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 535.0
+margin_left = 505.0
 margin_top = 596.0
-margin_right = 1201.0
+margin_right = 1171.0
 margin_bottom = 672.0
 custom_fonts/font = SubResource( 5 )
-text = "Idiomas"
+text = "  Idiomas"
 
 [connection signal="mouse_entered" from="BotaoJogar" to="." method="_on_BotaoJogar_mouse_entered"]
 [connection signal="pressed" from="BotaoJogar" to="." method="_on_BotaoJogar_pressed"]

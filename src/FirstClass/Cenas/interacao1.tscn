@@ -32,7 +32,7 @@ script/source = "extends Node2D
 
 var texto = [\"Eai \" + str(Global.nome) + \", tudo beleza?\" + \" Sou \" + str(Global.nomeInstrutor) + \" e serei seu guia nessa jornada.\" + \" Fico feliz por ter me escolhido nesse momento de ajuda.\" , 
 \"Trabalho com cargas químicas há 15 anos, darei as devidas instruções para que nenhum acidente aconteça com você\", 
-\"Estou de olho, viu! Não faça nenhuma bobagem\",
+\"Estou de olho, viu! Não faça nenhuma bobagem! Também não se esqueça que sua gasolina é limitada. Chegue ao posto de entrega antes que ela acabe\",
 \"Aqui vão algumas instruções:\" + \" Proibido o uso do celular no volante, nada de bebidas, descanse bem para não cochilar no volante e confira o peso da carga.\" ,
 \"Aqui está a checklist, verifique todos os itens com atenção e bora para o trajeto!\",
 \"Esses são os botões usados para jogar, boa sorte \" + str(Global.nome) + \"!\"
@@ -54,7 +54,7 @@ func _ready():
 	if Global.lingua == \"eng\": #tradução
 		texto = [\"Hey \"+str(Global.nome)+\" what's up? I'm \"+str(Global.nomeInstrutor)+\" and I'll guide you through your journey.\"+\" I'm glad for choosing me in this moment of need.\",
 \"I've been working with chemical transportation for 15 years and I'll teach you the ropes so that no accidents occur.\",
-\"I'll keep an eye on you ok? Don't mess it up!\",
+\"I'll keep an eye on you ok? Don't mess it up! Keep in mind that your gas is limited. Get to your delivery point before it runs out\",
 \"Here are some instructions: using your cellphone while driving is prohibited, no drunk driving, rest well so you don't fall asleep and check the weight of your load.\",
 \"Here's the checklist, check all items and let's deliver this load!\",
 \"Those are the buttons used to play, good luck \"+str(Global.nome)+\"!\"]
@@ -68,7 +68,7 @@ func _ready():
 	elif Global.lingua == \"esp\":
 		texto = [\"Qué pasa \"+str(Global.nome)+\"? Soy \"+str(Global.nomeInstrutor)+\" y seré tu guía en este viaje. Me alegro de que me hayas elegido en este momento de ayuda.\",
 \"Llevo 15 años trabajando con cargas químicas, te daré las indicaciones necesarias para que no te pase ningún accidente.\",
-\"Estoy mirando, mira!  no hagas nada tonto!\",
+\"Estoy mirando, mira! No hagas nada tonto! Además, no olvide que su nafta es limitado. Llegue al punto de entrega antes que se acabe\",
 \"Aquí algunas indicaciones: Prohibido usar celular mientras se conduce, no tomar bebidas, descansar bien para no dormirse al volante y revisar el peso de la carga.\",
 \"Aquí está la lista de verificación, verifique todos los elementos cuidadosamente y vámonos!\",
 \"Estos son botones que se usan para jugar, buena suerte \"+str(Global.nome)+\"!\"]
@@ -363,7 +363,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 9
+frame = 11
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
