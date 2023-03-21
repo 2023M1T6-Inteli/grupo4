@@ -36,6 +36,7 @@ func _on_BotaoOk_pressed():
 	for letter in alfabeto:
 		if letter in texto:
 			Global.nome = texto
+			Global.nomes_ranking.append(Global.nome)
 			confirmar()
 		else:
 			pass
@@ -55,6 +56,7 @@ func _on_LineEdit_text_entered(new_text):
 	for letter in alfabeto:
 		if letter in new_text:
 			Global.nome = new_text
+			Global.nomes_ranking.append(Global.nome)
 			confirmar()
 		else:
 			pass
