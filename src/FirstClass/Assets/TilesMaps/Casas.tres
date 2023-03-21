@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" load_steps=8 format=2]
 
-[ext_resource path="res://Assets/House1.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Fazenda.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Well.png" type="Texture" id=3]
-[ext_resource path="res://Assets/House2.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Cercado.png" type="Texture" id=5]
-[ext_resource path="res://Assets/WoodBridge.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Paths.png" type="Texture" id=7]
+[ext_resource path="res://Assets/House1.png" type="Texture2D" id=1]
+[ext_resource path="res://Assets/Fazenda.png" type="Texture2D" id=2]
+[ext_resource path="res://Assets/Well.png" type="Texture2D" id=3]
+[ext_resource path="res://Assets/House2.png" type="Texture2D" id=4]
+[ext_resource path="res://Assets/Cercado.png" type="Texture2D" id=5]
+[ext_resource path="res://Assets/WoodBridge.png" type="Texture2D" id=6]
+[ext_resource path="res://Assets/Paths.png" type="Texture2D" id=7]
 
 [resource]
 0/name = "House1.png 0"

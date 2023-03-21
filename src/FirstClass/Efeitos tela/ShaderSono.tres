@@ -1,8 +1,8 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://byxvpjbhewss6"]
 
-[sub_resource type="Shader" id=1]
+[sub_resource type="Shader" id="1"]
 code = "shader_type canvas_item;
-uniform vec4 Color: hint_color;
+uniform vec4 Color: source_color;
 uniform float Opacity: hint_range(0.0, 1.0) = 0.0;
 
 void fragment(){
@@ -12,6 +12,6 @@ void fragment(){
 }"
 
 [resource]
-shader = SubResource( 1 )
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/Opacity = 0.0
+shader = SubResource("1")
+shader_parameter/Color = Color(0, 0, 0, 1)
+shader_parameter/Opacity = 0.0

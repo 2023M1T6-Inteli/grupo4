@@ -41,9 +41,9 @@ func _physics_process(delta):
 			tween.start()
 
 	
-	$ViewportContainer/Viewport/cursor/CollisionShape2D.set_disabled(true)
+	$SubViewportContainer/SubViewport/cursor/CollisionShape2D.set_disabled(true)
 	#Comando que faz a bolinha vermelha no minimapa, seguir o pesonagem pricipal e assim ser possível
 	# saber onde o caminhão esta no mapa.
 	
-	$ViewportContainer.material = null
+	$SubViewportContainer.material = null
 	# Não permite que a tela do minimpa também tenha os efeitos causados pelos debufs

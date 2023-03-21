@@ -56,8 +56,8 @@ func _on_BotaoVoltar_pressed():
 	hover = 1
 	if !$SomVoltar.playing:
 		$SomVoltar.play()
-		yield(get_tree().create_timer(0.35), "timeout")
-		get_tree().change_scene("res://Cenas/instrutores.tscn")
+		await get_tree().create_timer(0.35).timeout
+		get_tree().change_scene_to_file("res://Cenas/instrutores.tscn")
 	#mudança de cena e efeito sonoro
 
 #funções de efeito sonoro

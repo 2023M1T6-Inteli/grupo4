@@ -4,13 +4,13 @@ func _ready():
 	set_max_contacts_reported(3) #número máximo de corpos colidindo ao mesmo tempo
 	set_contact_monitor(true) #monitorando as colisões
 	if Global.cargaDoCaminhao == 1:
-		$AnimatedSprite.animation = "Cloro"
+		$AnimatedSprite2D.animation = "Cloro"
 	
 	elif Global.cargaDoCaminhao == 2:
-		$AnimatedSprite.animation = "Soda"
+		$AnimatedSprite2D.animation = "Soda"
 	
 	elif Global.cargaDoCaminhao == 3:
-		$AnimatedSprite.animation = "PVC"
+		$AnimatedSprite2D.animation = "PVC"
 
 # Função que efetua atroca do sprite das cargas, possibilitando diferentes cargas para o jogo
 

@@ -6,14 +6,14 @@ func _ready():
 	if Global.lingua == "eng":
 		$JOGAR.text = " Play"
 		$INSTRUCOES.text = "Instructions"
-		$AnimatedSprite.play("LogoIngles")
+		$AnimatedSprite2D.play("LogoIngles")
 		$IDIOMAS.text = " Idioms"
 	elif Global.lingua == "pt":
-		$AnimatedSprite.play("LogoPortugues")
+		$AnimatedSprite2D.play("LogoPortugues")
 	elif Global.lingua == "esp":
 		$JOGAR.text = "Jugar"
 		$INSTRUCOES.text = "Instrucciones"
-		$AnimatedSprite.play("LogoEspanhol")
+		$AnimatedSprite2D.play("LogoEspanhol")
 
 func som_hover():
 	if hover == 0:
@@ -28,8 +28,8 @@ func _on_BotaoJogar_pressed():
 	$BotaoInstrucoes.texture_hover = null
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
-		yield(get_tree().create_timer(0.25), "timeout")
-		get_tree().change_scene("res://Cenas/nome.tscn")
+		await get_tree().create_timer(0.25).timeout
+		get_tree().change_scene_to_file("res://Cenas/nome.tscn")
 		#mudança de cena e efeito sonoro
 	
 #botão para ir para as intruções do jogo
@@ -40,8 +40,8 @@ func _on_BotaoInstrucoes_pressed():
 	$BotaoJogar.texture_hover = null
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
-		yield(get_tree().create_timer(0.25), "timeout")
-		get_tree().change_scene("res://Cenas/instrucoes.tscn")
+		await get_tree().create_timer(0.25).timeout
+		get_tree().change_scene_to_file("res://Cenas/instrucoes.tscn")
 		#mudança de cena e efeito sonoro
 
 #funções de efeito sonoro
@@ -52,8 +52,8 @@ func _on_BotaoInstrucoes_mouse_entered():
 	som_hover()
 
 func _on_BotaoVolume_pressed():
-	get_tree().change_scene("res://Cenas/Volume.tscn")
+	get_tree().change_scene_to_file("res://Cenas/Volume.tscn")
 
 
 func _on_BotaoIdioma_pressed():
-	get_tree().change_scene("res://Cenas/Idiomas.tscn")
+	get_tree().change_scene_to_file("res://Cenas/Idiomas.tscn")

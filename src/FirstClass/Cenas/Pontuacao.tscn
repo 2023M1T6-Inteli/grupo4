@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Cenas/Scripts/Pontuacao.gd" type="Script" id=1]
-[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Fonte/04B_30__.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="FontFile" id=2]
+[ext_resource path="res://Fonte/04B_30__.TTF" type="FontFile" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -10,7 +10,7 @@ outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="FontFile" id=2]
 size = 22
 outline_size = 2
 font_data = ExtResource( 3 )
@@ -19,20 +19,20 @@ font_data = ExtResource( 3 )
 script = ExtResource( 1 )
 
 [node name="Pontos" type="Label" parent="."]
-margin_right = 256.0
-margin_bottom = 112.0
-custom_colors/font_color = Color( 0.196078, 0.733333, 0.027451, 1 )
-custom_fonts/font = SubResource( 1 )
+offset_right = 256.0
+offset_bottom = 112.0
+theme_override_colors/font_color = Color( 0.196078, 0.733333, 0.027451, 1 )
+theme_override_fonts/font = SubResource( 1 )
 align = 1
 
 [node name="Bonus" type="Label" parent="."]
-margin_left = 80.0
-margin_top = 48.0
-margin_right = 178.0
-margin_bottom = 71.0
-custom_colors/font_color = Color( 0.196078, 0.733333, 0.027451, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 2 )
+offset_left = 80.0
+offset_top = 48.0
+offset_right = 178.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color( 0.196078, 0.733333, 0.027451, 1 )
+theme_override_colors/font_outline_color = Color( 0, 0, 0, 1 )
+theme_override_fonts/font = SubResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

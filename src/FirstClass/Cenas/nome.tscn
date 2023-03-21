@@ -1,17 +1,17 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=2]
-[ext_resource path="res://Telas/FundoTela2.png" type="Texture" id=3]
-[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="FontFile" id=1]
+[ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture2D" id=2]
+[ext_resource path="res://Telas/FundoTela2.png" type="Texture2D" id=3]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="FontFile" id=4]
 [ext_resource path="res://Cenas/Scripts/nome.gd" type="Script" id=5]
-[ext_resource path="res://Assets2/IconsUI/seta_left_verde_sombra.png" type="Texture" id=6]
-[ext_resource path="res://Assets2/IconsUI/seta_left_verde.png" type="Texture" id=7]
+[ext_resource path="res://Assets2/IconsUI/seta_left_verde_sombra.png" type="Texture2D" id=6]
+[ext_resource path="res://Assets2/IconsUI/seta_left_verde.png" type="Texture2D" id=7]
 [ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=8]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=9]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=10]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 size = 40
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
@@ -20,22 +20,22 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
-[sub_resource type="StreamTexture" id=6]
+[sub_resource type="CompressedTexture2D" id=6]
 load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="FontFile" id=4]
 size = 70
 font_data = ExtResource( 4 )
 
 [node name="nome" type="Node2D"]
 script = ExtResource( 5 )
 
-[node name="FundoTela1" type="Sprite" parent="."]
+[node name="FundoTela1" type="Sprite2D" parent="."]
 position = Vector2( 640, 360 )
 scale = Vector2( 6.666, 6.666 )
 texture = ExtResource( 3 )
 
-[node name="faixaBege" type="Sprite" parent="."]
+[node name="faixaBege" type="Sprite2D" parent="."]
 position = Vector2( 632, 336 )
 scale = Vector2( 7.64583, 4.78125 )
 texture = ExtResource( 2 )
@@ -43,25 +43,25 @@ region_enabled = true
 region_rect = Rect2( 160.034, 174.838, 96.9877, 32.7751 )
 
 [node name="LineEdit" type="LineEdit" parent="."]
-margin_left = 360.0
-margin_top = 280.0
-margin_right = 912.0
-margin_bottom = 384.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-custom_styles/focus = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
+offset_left = 360.0
+offset_top = 280.0
+offset_right = 912.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_fonts/font = SubResource( 1 )
+theme_override_styles/focus = SubResource( 2 )
+theme_override_styles/normal = SubResource( 3 )
 align = 1
 placeholder_text = "Digite aqui"
 
 [node name="BotaoOk" type="TextureButton" parent="."]
-margin_left = 988.0
-margin_top = 287.0
-margin_right = 1468.0
-margin_bottom = 413.0
-rect_scale = Vector2( 0.2, 0.7 )
+offset_left = 988.0
+offset_top = 287.0
+offset_right = 1468.0
+offset_bottom = 413.0
+scale = Vector2( 0.2, 0.7 )
 
-[node name="IconesGerais" type="Sprite" parent="."]
+[node name="IconesGerais" type="Sprite2D" parent="."]
 position = Vector2( 1040, 336 )
 scale = Vector2( 5.47954, 4.81477 )
 texture = SubResource( 6 )
@@ -71,20 +71,20 @@ region_rect = Rect2( 773.138, 4.14055, 22.1604, 22.1604 )
 [node name="DIGITE" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 240.0
-margin_top = 160.0
-margin_right = 1024.0
-margin_bottom = 240.0
-custom_fonts/font = SubResource( 4 )
+offset_left = 240.0
+offset_top = 160.0
+offset_right = 1024.0
+offset_bottom = 240.0
+theme_override_fonts/font = SubResource( 4 )
 text = "Digite seu nome"
 align = 1
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 24.0
-margin_top = 616.0
-margin_right = 56.0
-margin_bottom = 648.0
-rect_scale = Vector2( 3, 3 )
+offset_left = 24.0
+offset_top = 616.0
+offset_right = 56.0
+offset_bottom = 648.0
+scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 6 )
 
@@ -100,7 +100,7 @@ volume_db = -13.0
 stream = ExtResource( 10 )
 volume_db = -13.0
 
-[connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
 [connection signal="mouse_entered" from="BotaoOk" to="." method="_on_BotaoOk_mouse_entered"]
 [connection signal="pressed" from="BotaoOk" to="." method="_on_BotaoOk_pressed"]
 [connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_BotaoVoltar_mouse_entered"]

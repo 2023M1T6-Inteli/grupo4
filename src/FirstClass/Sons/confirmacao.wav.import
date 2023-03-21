@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/confirmacao.wav-d41c7d2f8a6ff92e3e859af8d6db2f82.sample"
+type="AudioStreamWAV"
+uid="uid://bol7quhki31o3"
+path="res://.godot/imported/confirmacao.wav-d41c7d2f8a6ff92e3e859af8d6db2f82.sample"
 
 [deps]
 
 source_file="res://Sons/confirmacao.wav"
-dest_files=[ "res://.import/confirmacao.wav-d41c7d2f8a6ff92e3e859af8d6db2f82.sample" ]
+dest_files=["res://.godot/imported/confirmacao.wav-d41c7d2f8a6ff92e3e859af8d6db2f82.sample"]
 
 [params]
 

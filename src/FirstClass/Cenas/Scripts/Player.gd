@@ -1,4 +1,4 @@
-extends KinematicBody2D # Herda as características da classe KinematicBody2D.
+extends CharacterBody2D # Herda as características da classe CharacterBody2D.
 
 var angularSpeed = PI / 2 # Variável que guarda o valor da velocidade de rotação do objeto (afeta as curvas).
 
@@ -45,7 +45,7 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 		directionY = -1
 		maxSpeed = 70
 		velocity += Vector2.UP.rotated(rotation) * (acceleration * directionY)
-		velocity = velocity.clamped(maxSpeed)
+		velocity = velocity.limit_length(maxSpeed)
 	else:
 		directionY = 1
 		maxSpeed = 120
@@ -56,7 +56,7 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	
 	if Input.is_action_pressed("ui_up"):
 		velocity += Vector2.UP.rotated(rotation) * (acceleration * directionY)
-		velocity = velocity.clamped(maxSpeed)
+		velocity = velocity.limit_length(maxSpeed)
 		Global.points += 1 
 	# A condicional acima determina que o objeto ganha velocidade de deslocamento quando a tecla "espaço"
 	# é pressionada, que a velocidade não pode ultrapassar o valor guardado na variável "max_speed" e aumenta a pontuação

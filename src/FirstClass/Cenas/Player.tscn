@@ -1,21 +1,21 @@
 [gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca11.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca11.png" type="Texture2D" id=1]
 [ext_resource path="res://Cenas/Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Sons/re.wav" type="AudioStream" id=12]
 [ext_resource path="res://Sons/idle.wav" type="AudioStream" id=13]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca5.png" type="Texture" id=46]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca13.png" type="Texture" id=47]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca4.png" type="Texture" id=48]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca9.png" type="Texture" id=49]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca7.png" type="Texture" id=50]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca1.png" type="Texture" id=51]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca6.png" type="Texture" id=52]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca10.png" type="Texture" id=53]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca8.png" type="Texture" id=54]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca2.png" type="Texture" id=55]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca12.png" type="Texture" id=56]
-[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca3.png" type="Texture" id=57]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca5.png" type="Texture2D" id=46]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca13.png" type="Texture2D" id=47]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca4.png" type="Texture2D" id=48]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca9.png" type="Texture2D" id=49]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca7.png" type="Texture2D" id=50]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca1.png" type="Texture2D" id=51]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca6.png" type="Texture2D" id=52]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca10.png" type="Texture2D" id=53]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca8.png" type="Texture2D" id=54]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca2.png" type="Texture2D" id=55]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca12.png" type="Texture2D" id=56]
+[ext_resource path="res://Sprites/CabecadoCaminhao/Cabeca3.png" type="Texture2D" id=57]
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
@@ -41,8 +41,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
@@ -53,8 +53,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
@@ -68,8 +68,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 1.15 ]
 }
@@ -78,12 +78,12 @@ tracks/0/keys = {
 radius = 14.6667
 height = 1.33333
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2( 588, 337 )
 scale = Vector2( 3, 3 )
 script = ExtResource( 2 )
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2( 2, 2 )
 frames = SubResource( 11 )
 frame = 8
@@ -93,7 +93,7 @@ playing = true
 position = Vector2( 0, 6.33334 )
 space_override = 1
 gravity_point = true
-gravity_distance_scale = 1.0
+gravity_point_unit_distance = 1.0
 gravity = 2000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]

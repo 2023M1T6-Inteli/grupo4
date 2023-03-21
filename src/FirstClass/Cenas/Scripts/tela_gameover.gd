@@ -39,9 +39,9 @@ func _on_menu_pressed():
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
-		yield(get_tree().create_timer(0.25), "timeout")
+		await get_tree().create_timer(0.25).timeout
 		MusicController.play_menu_music()
-		get_tree().change_scene("res://Cenas/menu.tscn")
+		get_tree().change_scene_to_file("res://Cenas/menu.tscn")
 	#mudança de cena e efeito sonoro
 	
 func _on_restart_pressed():
@@ -55,9 +55,9 @@ func _on_restart_pressed():
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
-		yield(get_tree().create_timer(0.25), "timeout")
+		await get_tree().create_timer(0.25).timeout
 		MusicController.play_game_music()
-		get_tree().change_scene("res://Cenas/Game.tscn")
+		get_tree().change_scene_to_file("res://Cenas/Game.tscn")
 #mudança de cena e efeito sonoro
 
 func _on_restart_mouse_entered():

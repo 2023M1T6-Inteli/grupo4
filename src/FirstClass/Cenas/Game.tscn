@@ -7,28 +7,28 @@
 [ext_resource path="res://Cenas/Scripts/ViewportContainer.gd" type="Script" id=5]
 [ext_resource path="res://Efeitos tela/CenasSono.tres" type="Animation" id=6]
 [ext_resource path="res://Cenas/Pontuacao.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Sprites/HUD Gasolina e dinheiro.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/HUD Gasolina e dinheiro.png" type="Texture2D" id=8]
 [ext_resource path="res://Cenas/Gasolina.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=10]
-[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=11]
-[ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=12]
+[ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture2D" id=10]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="FontFile" id=11]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="FontFile" id=12]
 [ext_resource path="res://Cenas/Scripts/DialogosDebufs.gd" type="Script" id=13]
 [ext_resource path="res://Cenas/Scripts/Game.gd" type="Script" id=14]
 [ext_resource path="res://Cenas/Debufs.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Cenas/CargaEntregue.tscn" type="PackedScene" id=16]
 
-[sub_resource type="StreamTexture" id=4]
+[sub_resource type="CompressedTexture2D" id=4]
 load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="FontFile" id=5]
 size = 25
 font_data = ExtResource( 12 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="FontFile" id=6]
 size = 25
 font_data = ExtResource( 11 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="FontFile" id=7]
 size = 25
 font_data = ExtResource( 11 )
 
@@ -43,8 +43,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.3, 1.8, 10.5, 12 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0.3, 1.8, 10.5, 12 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0, 1.0, 0.0 ]
 }
@@ -58,8 +58,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -73,8 +73,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ) ]
 }
@@ -85,8 +85,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
@@ -102,11 +102,11 @@ z_index = 3
 z_as_relative = false
 
 [node name="Minimap" parent="CanvasLayer" instance=ExtResource( 1 )]
-margin_left = -1264.0
-margin_top = 0.0
-margin_right = -1214.0
-margin_bottom = 30.0
-rect_scale = Vector2( 4.04063, 6.14268 )
+offset_left = -1264.0
+offset_top = 0.0
+offset_right = -1214.0
+offset_bottom = 30.0
+scale = Vector2( 4.04063, 6.14268 )
 
 [node name="Gasolina" parent="CanvasLayer" instance=ExtResource( 9 )]
 position = Vector2( -16, -16 )
@@ -116,7 +116,7 @@ position = Vector2( 992, 128 )
 z_index = 1
 z_as_relative = false
 
-[node name="HudGasolina" type="Sprite" parent="CanvasLayer"]
+[node name="HudGasolina" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2( 1088, 94.875 )
 scale = Vector2( 5.73571, 4.525 )
 texture = ExtResource( 8 )
@@ -124,7 +124,7 @@ texture = ExtResource( 8 )
 [node name="DialogosDebufs" type="Node2D" parent="CanvasLayer"]
 script = ExtResource( 13 )
 
-[node name="caixa" type="Sprite" parent="CanvasLayer/DialogosDebufs"]
+[node name="caixa" type="Sprite2D" parent="CanvasLayer/DialogosDebufs"]
 position = Vector2( 2128, 688 )
 scale = Vector2( 6.88173, 4.45337 )
 texture = SubResource( 4 )
@@ -135,14 +135,14 @@ region_rect = Rect2( 161.379, 175.064, 93.3139, 31.6722 )
 [node name="Texto" type="RichTextLabel" parent="CanvasLayer/DialogosDebufs"]
 modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
 self_modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
-margin_left = 192.0
-margin_top = 592.0
-margin_right = 736.0
-margin_bottom = 672.0
-custom_fonts/mono_font = SubResource( 5 )
-custom_fonts/normal_font = SubResource( 6 )
+offset_left = 192.0
+offset_top = 592.0
+offset_right = 736.0
+offset_bottom = 672.0
+theme_override_fonts/mono_font = SubResource( 5 )
+theme_override_fonts/normal_font = SubResource( 6 )
 
-[node name="caixaPersonagem" type="Sprite" parent="CanvasLayer/DialogosDebufs"]
+[node name="caixaPersonagem" type="Sprite2D" parent="CanvasLayer/DialogosDebufs"]
 position = Vector2( 64, 448 )
 scale = Vector2( 5.54087, 5.28533 )
 texture = ExtResource( 10 )
@@ -150,25 +150,25 @@ offset = Vector2( 9.12981, 33.9347 )
 region_enabled = true
 region_rect = Rect2( 196.997, 102.523, 39.001, 33.9941 )
 
-[node name="nomeIstritor" type="Sprite" parent="CanvasLayer/DialogosDebufs"]
+[node name="nomeIstritor" type="Sprite2D" parent="CanvasLayer/DialogosDebufs"]
 position = Vector2( 112, 688 )
 scale = Vector2( 1.65957, 1.44506 )
 texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 257.054, 178.961, 94.9988, 27.9619 )
 
-[node name="rosto" type="Sprite" parent="CanvasLayer/DialogosDebufs"]
+[node name="rosto" type="Sprite2D" parent="CanvasLayer/DialogosDebufs"]
 position = Vector2( 112, 608 )
 scale = Vector2( 1.54217, 1.45238 )
 
 [node name="instrutor" type="Label" parent="CanvasLayer/DialogosDebufs"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 48.0
-margin_top = 672.0
-margin_right = 174.0
-margin_bottom = 698.0
-custom_fonts/font = SubResource( 7 )
+offset_left = 48.0
+offset_top = 672.0
+offset_right = 174.0
+offset_bottom = 698.0
+theme_override_fonts/font = SubResource( 7 )
 align = 1
 valign = 1
 
@@ -186,20 +186,20 @@ margin_right = 1280.0
 margin_bottom = 720.0
 script = ExtResource( 5 )
 
-[node name="AnimacaoBebida" type="AnimationPlayer" parent="ViewportContainer"]
+[node name="AnimacaoBebida" type="AnimationPlayer" parent="SubViewportContainer"]
 anims/Bebida = SubResource( 2 )
 anims/RESET = SubResource( 3 )
 
-[node name="AnimacaoSono" type="AnimationPlayer" parent="ViewportContainer"]
+[node name="AnimacaoSono" type="AnimationPlayer" parent="SubViewportContainer"]
 anims/CenasSono = ExtResource( 6 )
 anims/RESET = SubResource( 1 )
 
-[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 size = Vector2( 1280, 720 )
 handle_input_locally = false
 render_target_update_mode = 3
 
-[node name="Mapa1" parent="ViewportContainer/Viewport" instance=ExtResource( 2 )]
+[node name="Mapa1" parent="SubViewportContainer/SubViewport" instance=ExtResource( 2 )]
 
 [node name="DebufsMapa1" type="Node2D" parent="ViewportContainer/Viewport"]
 

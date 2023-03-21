@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/debuff_celular .wav-25402018def6f1d47eef5d475ff2a2c9.sample"
+type="AudioStreamWAV"
+uid="uid://dp1pf0epdfvxe"
+path="res://.godot/imported/debuff_celular .wav-25402018def6f1d47eef5d475ff2a2c9.sample"
 
 [deps]
 
 source_file="res://Sons/debuff_celular .wav"
-dest_files=[ "res://.import/debuff_celular .wav-25402018def6f1d47eef5d475ff2a2c9.sample" ]
+dest_files=["res://.godot/imported/debuff_celular .wav-25402018def6f1d47eef5d475ff2a2c9.sample"]
 
 [params]
 

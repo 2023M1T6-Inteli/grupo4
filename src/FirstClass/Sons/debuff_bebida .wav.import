@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/debuff_bebida .wav-43933c8b542b2a6dd3fda4cfece7ed90.sample"
+type="AudioStreamWAV"
+uid="uid://gs8s5oenu2ag"
+path="res://.godot/imported/debuff_bebida .wav-43933c8b542b2a6dd3fda4cfece7ed90.sample"
 
 [deps]
 
 source_file="res://Sons/debuff_bebida .wav"
-dest_files=[ "res://.import/debuff_bebida .wav-43933c8b542b2a6dd3fda4cfece7ed90.sample" ]
+dest_files=["res://.godot/imported/debuff_bebida .wav-43933c8b542b2a6dd3fda4cfece7ed90.sample"]
 
 [params]
 
