@@ -7,7 +7,7 @@ func _ready():
 		$ViewportContainer/Viewport/Mapa2/Player/Camera2D.current = false
 		$ViewportContainer/Viewport/Mapa2.queue_free()
 		$ViewportContainer/Viewport/DebufsMapa2.queue_free()
-		
+		#seleção do primeiro mapa
 		
 		
 	if Global.mapa == 2:
@@ -15,4 +15,4 @@ func _ready():
 		$ViewportContainer/Viewport/Mapa1/Player/Camera2D.current = false
 		$ViewportContainer/Viewport/Mapa1.queue_free()
 		$ViewportContainer/Viewport/DebufsMapa1.queue_free()
-		
+		#seleção do segundo mapa

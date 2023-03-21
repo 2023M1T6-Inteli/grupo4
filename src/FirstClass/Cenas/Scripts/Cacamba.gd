@@ -27,11 +27,12 @@ func _on_Cacamba_do_Caminhao_body_entered(body):
 		$ExplosaoSFX.play()
 		MusicController.stop_music()
 		MusicController.debuffs1_sound_off()
-		MusicController.debuffs2_sound_off()
+		MusicController.debuffs2_sound_off() 
+		#linhas acima controlam os efeitos visuais, sonoros e de jogabilidade do caminhão ao colidir a caçamba com o cenário
 
 # Função que permite a caçamba contar como parte do player e causar a derrota do jogador caso ela
 # colida com a parede
 
 
 func _on_ExplosaoSFX_finished():
-	get_tree().change_scene("res://Cenas/tela_gameover.tscn")
+	get_tree().change_scene("res://Cenas/tela_gameover.tscn") #trocando de cena quando a explosão termina para o game over

@@ -1,5 +1,7 @@
 extends Node
 
+#Cena de controle de efeitos sonoros e músicas
+
 func play_menu_music():
 
 	$Music.stream = load("res://Sons/MusicaMenu.wav")

@@ -161,3 +161,4 @@ func _on_TimerCelular_timeout():
 
 func _on_TimerNecessario_timeout():
 	Global.qualDebuf = "Nada"
+#Função que reseta a variável global que diz qual debuff está atualmente aplicado

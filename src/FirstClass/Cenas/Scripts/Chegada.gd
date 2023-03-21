@@ -17,6 +17,8 @@ func _on_SegundoPonto_body_entered(body):
 		if Global.permissao == true:
 			Global.gasolina = 105
 			Global.permissao = false
+			get_parent().get_parent().get_parent().get_parent().get_node("CanvasLayer").get_node("CargaEntregue").show()
+			#mostrando a mensagem de "Carga Entrege"
 	
 	# Função responsável por resetar o valor da gasolina para o valor original na metade da pista.
 
