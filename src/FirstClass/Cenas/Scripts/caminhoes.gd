@@ -15,8 +15,8 @@ func confirmar():
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
-		yield(get_tree().create_timer(0.5), "timeout")
-		get_tree().change_scene("res://Cenas/interacao1.tscn")
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file("res://Cenas/interacao1.tscn")
 		#mudança de cena e efeito sonoro
 		
 func hover_sound():
@@ -56,8 +56,8 @@ func _on_BotaoVoltar_pressed():
 	hover = 1
 	if !$SomVoltar.playing:
 		$SomVoltar.play()
-		yield(get_tree().create_timer(0.35), "timeout")
-		get_tree().change_scene("res://Cenas/instrutores.tscn")
+		await get_tree().create_timer(0.35).timeout
+		get_tree().change_scene_to_file("res://Cenas/instrutores.tscn")
 	#mudança de cena e efeito sonoro
 
 #funções de efeito sonoro

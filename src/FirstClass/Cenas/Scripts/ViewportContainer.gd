@@ -1,4 +1,4 @@
-extends ViewportContainer
+extends SubViewportContainer
 
 func _process(delta):
 	if self.material == null:

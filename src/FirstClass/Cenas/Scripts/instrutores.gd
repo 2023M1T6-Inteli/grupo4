@@ -17,8 +17,8 @@ func confirmar():
 	hover = 1
 	if !$SomConfirmacao.playing:
 		$SomConfirmacao.play()
-		yield(get_tree().create_timer(0.65), "timeout")
-		get_tree().change_scene("res://Cenas/caminhoes.tscn")
+		await get_tree().create_timer(0.65).timeout
+		get_tree().change_scene_to_file("res://Cenas/caminhoes.tscn")
 
 #selecionar o personagem Tonhão
 func _on_BotaoTonhao_pressed():
@@ -74,8 +74,8 @@ func _on_BotaoVoltar_pressed():
 	hover = 1
 	if !$SomVoltar.playing:
 		$SomVoltar.play()
-		yield(get_tree().create_timer(0.35), "timeout")
-		get_tree().change_scene("res://Cenas/nome.tscn")
+		await get_tree().create_timer(0.35).timeout
+		get_tree().change_scene_to_file("res://Cenas/nome.tscn")
 
 
 #funções de efeito sonoro

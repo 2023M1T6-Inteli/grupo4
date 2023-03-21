@@ -23,8 +23,8 @@ func confirmar():
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
-		yield(get_tree().create_timer(0.45), "timeout")
-		get_tree().change_scene("res://Cenas/instrutores.tscn")
+		await get_tree().create_timer(0.45).timeout
+		get_tree().change_scene_to_file("res://Cenas/instrutores.tscn")
 		#mudança para a tela de instrutores e efeito sonoro
 #mudança de tela para prosseguir
 func _on_BotaoOk_pressed():
@@ -43,8 +43,8 @@ func _on_BotaoOk_pressed():
 func _on_BotaoVoltar_pressed():
 	if !$SomVoltar.playing:
 		$SomVoltar.play()
-		yield(get_tree().create_timer(0.35), "timeout")
-		get_tree().change_scene("res://Cenas/menu.tscn")
+		await get_tree().create_timer(0.35).timeout
+		get_tree().change_scene_to_file("res://Cenas/menu.tscn")
 		#mudança para a tela de menu e efeito sonoro
 #permitindo o avanço para outra cena utilizando a tecla "Enter" também
 func _on_LineEdit_text_entered(new_text):

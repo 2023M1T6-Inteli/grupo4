@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/voltar.wav-93b408ce4e0b633430919239fffc8a18.sample"
+type="AudioStreamWAV"
+uid="uid://qg87lmkajib2"
+path="res://.godot/imported/voltar.wav-93b408ce4e0b633430919239fffc8a18.sample"
 
 [deps]
 
 source_file="res://Sons/voltar.wav"
-dest_files=[ "res://.import/voltar.wav-93b408ce4e0b633430919239fffc8a18.sample" ]
+dest_files=["res://.godot/imported/voltar.wav-93b408ce4e0b633430919239fffc8a18.sample"]
 
 [params]
 

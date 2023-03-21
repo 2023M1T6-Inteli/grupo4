@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/idle.wav-947c70a33f9951d7ea2f903f842ddae6.sample"
+type="AudioStreamWAV"
+uid="uid://cqlhctqqhtyki"
+path="res://.godot/imported/idle.wav-947c70a33f9951d7ea2f903f842ddae6.sample"
 
 [deps]
 
 source_file="res://Sons/idle.wav"
-dest_files=[ "res://.import/idle.wav-947c70a33f9951d7ea2f903f842ddae6.sample" ]
+dest_files=["res://.godot/imported/idle.wav-947c70a33f9951d7ea2f903f842ddae6.sample"]
 
 [params]
 

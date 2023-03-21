@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=6 format=2]
 
-[ext_resource path="res://Assets/Novas_flores.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Arvores.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Fazenda.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Plantinhas.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/FreeCowSprites.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Novas_flores.png" type="Texture2D" id=1]
+[ext_resource path="res://Assets/Arvores.png" type="Texture2D" id=2]
+[ext_resource path="res://Assets/Fazenda.png" type="Texture2D" id=3]
+[ext_resource path="res://Assets/Plantinhas.png" type="Texture2D" id=4]
+[ext_resource path="res://Sprites/FreeCowSprites.png" type="Texture2D" id=5]
 
 [resource]
 10/name = "arvere"

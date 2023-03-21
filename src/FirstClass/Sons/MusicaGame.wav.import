@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/MusicaGame.wav-7889b4936e7b3c4f7cce6a849d3e36cc.sample"
+type="AudioStreamWAV"
+uid="uid://b7p0m01g1w83b"
+path="res://.godot/imported/MusicaGame.wav-7889b4936e7b3c4f7cce6a849d3e36cc.sample"
 
 [deps]
 
 source_file="res://Sons/MusicaGame.wav"
-dest_files=[ "res://.import/MusicaGame.wav-7889b4936e7b3c4f7cce6a849d3e36cc.sample" ]
+dest_files=["res://.godot/imported/MusicaGame.wav-7889b4936e7b3c4f7cce6a849d3e36cc.sample"]
 
 [params]
 

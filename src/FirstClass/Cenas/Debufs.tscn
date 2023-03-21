@@ -1,67 +1,67 @@
 [gd_scene load_steps=77 format=2]
 
-[ext_resource path="res://Sprites/Bebidas/Bebidas3.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Bebidas/Bebidas6.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Bebidas/Bebidas1.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Bebidas/Bebidas11.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Bebidas/Bebidas5.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Bebidas/Bebidas4.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Bebidas/Bebidas13.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Bebidas/Bebidas14.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Bebidas/Bebidas10.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Bebidas/Bebidas9.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Bebidas/Bebidas15.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Bebidas/Bebidas7.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Bebidas/Bebidas2.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Bebidas/Bebidas8.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Bebidas/Bebidas12.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas16.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Celular/Celular3.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas1.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Celular/Celular4.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas5.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas7.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Celular/Celular5.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Celular/Celular7.png" type="Texture" id=23]
-[ext_resource path="res://Sprites/Celular/Celular8.png" type="Texture" id=24]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas10.png" type="Texture" id=25]
-[ext_resource path="res://Sprites/Celular/Celular6.png" type="Texture" id=26]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas15.png" type="Texture" id=27]
-[ext_resource path="res://Sprites/Celular/Celular9.png" type="Texture" id=28]
-[ext_resource path="res://Sprites/Celular/Celular11.png" type="Texture" id=29]
-[ext_resource path="res://Sprites/Celular/Celular15.png" type="Texture" id=30]
-[ext_resource path="res://Sprites/Soninho/Sprite-0002.png" type="Texture" id=31]
-[ext_resource path="res://Sprites/Soninho/Sprite-0003.png" type="Texture" id=32]
-[ext_resource path="res://Sprites/Soninho/Sprite-0005.png" type="Texture" id=33]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas11.png" type="Texture" id=34]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas12.png" type="Texture" id=35]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas2.png" type="Texture" id=36]
-[ext_resource path="res://Sprites/Soninho/Sprite-0007.png" type="Texture" id=37]
-[ext_resource path="res://Sprites/Soninho/Sprite-0008.png" type="Texture" id=38]
-[ext_resource path="res://Sprites/Soninho/Sprite-0010.png" type="Texture" id=39]
-[ext_resource path="res://Sprites/Soninho/Sprite-0004.png" type="Texture" id=40]
-[ext_resource path="res://Sprites/Celular/Celular2.png" type="Texture" id=41]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas4.png" type="Texture" id=42]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas3.png" type="Texture" id=43]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas6.png" type="Texture" id=44]
-[ext_resource path="res://Sprites/Celular/Celular13.png" type="Texture" id=45]
-[ext_resource path="res://Sprites/Celular/Celular12.png" type="Texture" id=46]
-[ext_resource path="res://Sprites/Celular/Celular1.png" type="Texture" id=47]
-[ext_resource path="res://Sprites/Celular/Celular10.png" type="Texture" id=48]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas14.png" type="Texture" id=49]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas13.png" type="Texture" id=50]
-[ext_resource path="res://Sprites/Soninho/Sprite-0006.png" type="Texture" id=51]
-[ext_resource path="res://Sprites/Soninho/Sprite-0009.png" type="Texture" id=52]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas9.png" type="Texture" id=53]
-[ext_resource path="res://Sprites/Celular/Celular14.png" type="Texture" id=54]
-[ext_resource path="res://Sprites/Soninho/Sprite-0011.png" type="Texture" id=55]
-[ext_resource path="res://Sprites/Soninho/Sprite-0001.png" type="Texture" id=56]
-[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas8.png" type="Texture" id=57]
-[ext_resource path="res://Sprites/Soninho/Sprite-0015.png" type="Texture" id=58]
-[ext_resource path="res://Sprites/Soninho/Sprite-0012.png" type="Texture" id=59]
-[ext_resource path="res://Sprites/Soninho/Sprite-0013.png" type="Texture" id=60]
-[ext_resource path="res://Sprites/Soninho/Sprite-0016.png" type="Texture" id=61]
-[ext_resource path="res://Sprites/Soninho/Sprite-0014.png" type="Texture" id=62]
+[ext_resource path="res://Sprites/Bebidas/Bebidas3.png" type="Texture2D" id=1]
+[ext_resource path="res://Sprites/Bebidas/Bebidas6.png" type="Texture2D" id=2]
+[ext_resource path="res://Sprites/Bebidas/Bebidas1.png" type="Texture2D" id=3]
+[ext_resource path="res://Sprites/Bebidas/Bebidas11.png" type="Texture2D" id=4]
+[ext_resource path="res://Sprites/Bebidas/Bebidas5.png" type="Texture2D" id=5]
+[ext_resource path="res://Sprites/Bebidas/Bebidas4.png" type="Texture2D" id=6]
+[ext_resource path="res://Sprites/Bebidas/Bebidas13.png" type="Texture2D" id=7]
+[ext_resource path="res://Sprites/Bebidas/Bebidas14.png" type="Texture2D" id=8]
+[ext_resource path="res://Sprites/Bebidas/Bebidas10.png" type="Texture2D" id=9]
+[ext_resource path="res://Sprites/Bebidas/Bebidas9.png" type="Texture2D" id=10]
+[ext_resource path="res://Sprites/Bebidas/Bebidas15.png" type="Texture2D" id=11]
+[ext_resource path="res://Sprites/Bebidas/Bebidas7.png" type="Texture2D" id=12]
+[ext_resource path="res://Sprites/Bebidas/Bebidas2.png" type="Texture2D" id=13]
+[ext_resource path="res://Sprites/Bebidas/Bebidas8.png" type="Texture2D" id=14]
+[ext_resource path="res://Sprites/Bebidas/Bebidas12.png" type="Texture2D" id=15]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas16.png" type="Texture2D" id=16]
+[ext_resource path="res://Sprites/Celular/Celular3.png" type="Texture2D" id=17]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas1.png" type="Texture2D" id=18]
+[ext_resource path="res://Sprites/Celular/Celular4.png" type="Texture2D" id=19]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas5.png" type="Texture2D" id=20]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas7.png" type="Texture2D" id=21]
+[ext_resource path="res://Sprites/Celular/Celular5.png" type="Texture2D" id=22]
+[ext_resource path="res://Sprites/Celular/Celular7.png" type="Texture2D" id=23]
+[ext_resource path="res://Sprites/Celular/Celular8.png" type="Texture2D" id=24]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas10.png" type="Texture2D" id=25]
+[ext_resource path="res://Sprites/Celular/Celular6.png" type="Texture2D" id=26]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas15.png" type="Texture2D" id=27]
+[ext_resource path="res://Sprites/Celular/Celular9.png" type="Texture2D" id=28]
+[ext_resource path="res://Sprites/Celular/Celular11.png" type="Texture2D" id=29]
+[ext_resource path="res://Sprites/Celular/Celular15.png" type="Texture2D" id=30]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0002.png" type="Texture2D" id=31]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0003.png" type="Texture2D" id=32]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0005.png" type="Texture2D" id=33]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas11.png" type="Texture2D" id=34]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas12.png" type="Texture2D" id=35]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas2.png" type="Texture2D" id=36]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0007.png" type="Texture2D" id=37]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0008.png" type="Texture2D" id=38]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0010.png" type="Texture2D" id=39]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0004.png" type="Texture2D" id=40]
+[ext_resource path="res://Sprites/Celular/Celular2.png" type="Texture2D" id=41]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas4.png" type="Texture2D" id=42]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas3.png" type="Texture2D" id=43]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas6.png" type="Texture2D" id=44]
+[ext_resource path="res://Sprites/Celular/Celular13.png" type="Texture2D" id=45]
+[ext_resource path="res://Sprites/Celular/Celular12.png" type="Texture2D" id=46]
+[ext_resource path="res://Sprites/Celular/Celular1.png" type="Texture2D" id=47]
+[ext_resource path="res://Sprites/Celular/Celular10.png" type="Texture2D" id=48]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas14.png" type="Texture2D" id=49]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas13.png" type="Texture2D" id=50]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0006.png" type="Texture2D" id=51]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0009.png" type="Texture2D" id=52]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas9.png" type="Texture2D" id=53]
+[ext_resource path="res://Sprites/Celular/Celular14.png" type="Texture2D" id=54]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0011.png" type="Texture2D" id=55]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0001.png" type="Texture2D" id=56]
+[ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas8.png" type="Texture2D" id=57]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0015.png" type="Texture2D" id=58]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0012.png" type="Texture2D" id=59]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0013.png" type="Texture2D" id=60]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0016.png" type="Texture2D" id=61]
+[ext_resource path="res://Sprites/Soninho/Sprite2D-0014.png" type="Texture2D" id=62]
 [ext_resource path="res://Cenas/Scripts/Debufs.gd" type="Script" id=63]
 
 [sub_resource type="SpriteFrames" id=9]
@@ -73,7 +73,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 13, 13 )
+size = Vector2( 13, 13 )
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
@@ -84,7 +84,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 12, 12 )
+size = Vector2( 12, 12 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
@@ -95,7 +95,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 13, 13 )
+size = Vector2( 13, 13 )
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
@@ -106,12 +106,12 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 13, 13 )
+size = Vector2( 13, 13 )
 
 [sub_resource type="Gradient" id=11]
-colors = PoolColorArray( 0.614522, 0.614522, 0.614522, 1, 1, 1, 1, 1 )
+colors = PackedColorArray( 0.614522, 0.614522, 0.614522, 1, 1, 1, 1, 1 )
 
-[sub_resource type="GradientTexture" id=12]
+[sub_resource type="GradientTexture2D" id=12]
 gradient = SubResource( 11 )
 width = 100
 
@@ -122,7 +122,7 @@ _data = [ Vector2( 0.011236, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 100 ), 809.212, 0.
 [sub_resource type="CurveTexture" id=14]
 curve = SubResource( 13 )
 
-[sub_resource type="ParticlesMaterial" id=15]
+[sub_resource type="ParticleProcessMaterial" id=15]
 emission_shape = 1
 emission_sphere_radius = 0.01
 flag_disable_z = true
@@ -146,7 +146,7 @@ script = ExtResource( 63 )
 [node name="Bebida" type="Area2D" parent="."]
 position = Vector2( 16, 16 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Bebida"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bebida"]
 frames = SubResource( 9 )
 frame = 6
 playing = true
@@ -157,7 +157,7 @@ shape = SubResource( 2 )
 [node name="Celular" type="Area2D" parent="."]
 position = Vector2( 16, 16 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Celular"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Celular"]
 frames = SubResource( 10 )
 frame = 5
 playing = true
@@ -168,7 +168,7 @@ shape = SubResource( 4 )
 [node name="Carga Pesada" type="Area2D" parent="."]
 position = Vector2( 16, 16 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Carga Pesada"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Carga Pesada"]
 frames = SubResource( 5 )
 frame = 4
 playing = true
@@ -179,7 +179,7 @@ shape = SubResource( 6 )
 [node name="Sono" type="Area2D" parent="."]
 position = Vector2( 16, 16 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Sono"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sono"]
 frames = SubResource( 7 )
 frame = 9
 playing = true
@@ -203,7 +203,7 @@ one_shot = true
 wait_time = 1.2
 one_shot = true
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2( 16, 16 )
 emitting = false
 amount = 150

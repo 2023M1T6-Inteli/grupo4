@@ -24,7 +24,7 @@ func debuff_sono_sound():
 	$Effects2.play()
 
 func debuff_bebida_sound():
-	$Effects2.stream = load("res://Sons/debuff_bebida .wav")
+	$Effects2.stream = load("res://Sons/debuff_bebida super.wav")
 	$Music.volume_db = -35
 	$Effects2.play()
 
@@ -34,7 +34,7 @@ func debuff_carga_pesada_sound():
 	$Effects1.play()
 
 func debuff_celular_sound():
-	$Effects1.stream = load("res://Sons/debuff_celular .wav")
+	$Effects1.stream = load("res://Sons/debuff_celular super.wav")
 	$Music.volume_db = -35
 	$Effects1.play()
 
