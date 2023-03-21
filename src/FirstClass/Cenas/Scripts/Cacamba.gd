@@ -35,3 +35,5 @@ func _on_Cacamba_do_Caminhao_body_entered(body):
 
 func _on_ExplosaoSFX_finished():
 	get_tree().change_scene("res://Cenas/tela_gameover.tscn")
+	Global.pontos_ranking.append(Global.points/12)
+	Global.salvar_dados()

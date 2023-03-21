@@ -7,6 +7,7 @@ func _ready():
 	$BalaoSono.playing = false
 	$BalaoSono.hide()
 	$Caminhar.play()
+	Global.carregar_dados()
 	
 func _process(delta):
 	$Path2D/PathFollow2D.offset += 1.5
@@ -30,8 +31,6 @@ func play_animation():
 		$Pensamento.play("Pensamento")
 	else:
 		pass
-
-
 
 func _on_Pensamento_animation_finished(anim_name):
 	get_tree().change_scene("res://Cenas/carregamento.tscn")
