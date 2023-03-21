@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Sprites/BordaDoMinimapa.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/Scripts/Minimap.gd" type="Script" id=2]
 [ext_resource path="res://Cenas/Mapa1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprites/bola.png" type="Texture" id=4]
+[ext_resource path="res://Cenas/Mapa2.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Environment" id=2]
 
@@ -56,6 +57,8 @@ shape = SubResource( 4 )
 [node name="Mapa1" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
 z_index = 1
 z_as_relative = false
+
+[node name="Mapa2" parent="ViewportContainer/Viewport" instance=ExtResource( 5 )]
 
 [node name="Borda" type="Sprite" parent="."]
 position = Vector2( 24.625, 21 )

@@ -186,24 +186,40 @@ var box5 = 0
 
 
 func _on_CheckBox_pressed():
-	box1 = 1
-	verificacao()
+	if box1 == 0:
+		box1 = 1
+		verificacao()
+	else:
+		box1 = 0
+	
 	
 func _on_CheckBox5_pressed():
-	box2 = 1
-	verificacao()
+	if box2 == 0:
+		box2 = 1
+		verificacao()
+	else:
+		box2 = 0
 	
 func _on_CheckBox4_pressed():
-	box3 = 1
-	verificacao()
+	if box3 == 0:
+		box3 = 1
+		verificacao()
+	else:
+		box3 = 0
 	
 func _on_CheckBox3_pressed():
-	box4 = 1
-	verificacao()
+	if box4 == 0:
+		box4 = 1
+		verificacao()
+	else:
+		box4 = 0
 	
 func _on_CheckBox2_pressed():
-	box5 = 1
-	verificacao()
+	if box5 == 0:
+		box5 = 1
+		verificacao()
+	else:
+		box5 = 0
 	
 func verificacao():
 	if box1 + box2 + box3 + box4 + box5 == 5:
@@ -347,7 +363,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 14
+frame = 9
 playing = true
 
 [node name="folha" type="Sprite" parent="."]

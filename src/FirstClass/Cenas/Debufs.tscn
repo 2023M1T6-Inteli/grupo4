@@ -148,7 +148,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bebida"]
 frames = SubResource( 9 )
-frame = 6
+frame = 13
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bebida"]
@@ -159,7 +159,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Celular"]
 frames = SubResource( 10 )
-frame = 5
+frame = 12
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Celular"]
@@ -170,7 +170,6 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Carga Pesada"]
 frames = SubResource( 5 )
-frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carga Pesada"]
@@ -181,7 +180,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Sono"]
 frames = SubResource( 7 )
-frame = 9
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sono"]
@@ -216,10 +215,10 @@ process_material = SubResource( 15 )
 wait_time = 0.1
 one_shot = true
 
-[connection signal="area_entered" from="Bebida" to="." method="_on_Bebida_area_entered"]
-[connection signal="area_entered" from="Celular" to="." method="_on_Celular_area_entered"]
-[connection signal="area_entered" from="Carga Pesada" to="." method="_on_Carga_Pesada_area_entered"]
-[connection signal="area_entered" from="Sono" to="." method="_on_Sono_area_entered"]
+[connection signal="body_entered" from="Bebida" to="." method="_on_Bebida_body_entered"]
+[connection signal="body_entered" from="Celular" to="." method="_on_Celular_body_entered"]
+[connection signal="body_entered" from="Carga Pesada" to="." method="_on_Carga_Pesada_body_entered"]
+[connection signal="body_entered" from="Sono" to="." method="_on_Sono_body_entered"]
 [connection signal="timeout" from="TimerBebida" to="." method="_on_TimerBebida_timeout"]
 [connection signal="timeout" from="TimerSono" to="." method="_on_TimerSono_timeout"]
 [connection signal="timeout" from="TimerCarga" to="." method="_on_TimerCarga_timeout"]
