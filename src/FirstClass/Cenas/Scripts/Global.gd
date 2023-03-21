@@ -19,7 +19,7 @@ var nome #variável responsável por guardar o nome do usuário
 var nomeInstrutor #variável responsável por guardar o nome do instritor
 var rostoInstrutor #variável responsável por guardar a animação do instrutor
 
-var lingua = "pt"
+var lingua = "esp"
 var mapa = 1
 
 var tempo = 0
