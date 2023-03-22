@@ -12,15 +12,18 @@ func _ready():
 
 #funções de seleção do mapa de acordo com botão pressionado pelo player
 func _on_BotaoMapa1_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	Global.mapa = 1
 	get_tree().change_scene("res://Cenas/Interacao1.tscn")
 
 
 func _on_BotaoMapa2_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	Global.mapa = 2
 	get_tree().change_scene("res://Cenas/Interacao1.tscn")
 	
 
 #voltar a cena de seleção de caminhões
 func _on_BotaoVoltar_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	get_tree().change_scene("res://Cenas/Caminhoes.tscn")

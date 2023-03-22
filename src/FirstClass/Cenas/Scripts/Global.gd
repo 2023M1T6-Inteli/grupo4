@@ -21,6 +21,7 @@ var rostoInstrutor #variável responsável por guardar a animação do instrutor
 
 var lingua = "pt" #variável que guarda a linguagem escolhida pelo jogador
 var mapa = 1 #variável que guarda o mapa escolhido pelo jogador
+var pausado = 0
 
 const ARQUIVO = "user://save.data"
 

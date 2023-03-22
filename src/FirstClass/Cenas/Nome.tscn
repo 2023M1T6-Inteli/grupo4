@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=8]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=9]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=10]
+[ext_resource path="res://Cenas/Transicao.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -29,6 +30,9 @@ font_data = ExtResource( 4 )
 
 [node name="nome" type="Node2D"]
 script = ExtResource( 5 )
+
+[node name="Transicao" parent="." instance=ExtResource( 11 )]
+layer = 0
 
 [node name="FundoTela1" type="Sprite" parent="."]
 position = Vector2( 640, 360 )
