@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/debuff_sono.wav-bd9cd18ef6b822dce4c37f4fb70cc05f.sample"
+
+[deps]
+
+source_file="res://Sons/debuff_sono.wav"
+dest_files=[ "res://.import/debuff_sono.wav-bd9cd18ef6b822dce4c37f4fb70cc05f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

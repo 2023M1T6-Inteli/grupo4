@@ -1,0 +1,295 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Cenas/Minimap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/Mapa1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/Mapa2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Timer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cenas/Scripts/ViewportContainer.gd" type="Script" id=5]
+[ext_resource path="res://EfeitosTela/CenasSono.tres" type="Animation" id=6]
+[ext_resource path="res://Cenas/Pontuacao.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/HUD Gasolina e dinheiro.png" type="Texture" id=8]
+[ext_resource path="res://Cenas/Gasolina.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=10]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=11]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=12]
+[ext_resource path="res://Cenas/Scripts/DialogosDebuffs.gd" type="Script" id=13]
+[ext_resource path="res://Cenas/Scripts/Game.gd" type="Script" id=14]
+[ext_resource path="res://Cenas/Debufs.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Cenas/CargaEntregue.tscn" type="PackedScene" id=16]
+
+[sub_resource type="StreamTexture" id=4]
+load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 25
+font_data = ExtResource( 11 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Bebida"
+length = 12.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/Distorcion")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3, 1.8, 10.5, 12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/Distorcion")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/Color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:material:shader_param/Opacity")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 14 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Timer" parent="CanvasLayer" instance=ExtResource( 4 )]
+position = Vector2( 32, 224 )
+z_index = 3
+z_as_relative = false
+
+[node name="Minimap" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = -1264.0
+margin_top = 0.0
+margin_right = -1214.0
+margin_bottom = 30.0
+rect_scale = Vector2( 4.04063, 6.14268 )
+
+[node name="Gasolina" parent="CanvasLayer" instance=ExtResource( 9 )]
+position = Vector2( -16, -16 )
+
+[node name="Pontuacao" parent="CanvasLayer" instance=ExtResource( 7 )]
+position = Vector2( 992, 128 )
+z_index = 1
+z_as_relative = false
+
+[node name="HudGasolina" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 1088, 94.875 )
+scale = Vector2( 5.73571, 4.525 )
+texture = ExtResource( 8 )
+
+[node name="DialogosDebufs" type="Node2D" parent="CanvasLayer"]
+script = ExtResource( 13 )
+
+[node name="caixa" type="Sprite" parent="CanvasLayer/DialogosDebufs"]
+position = Vector2( 2128, 688 )
+scale = Vector2( 6.88173, 4.45337 )
+texture = SubResource( 4 )
+offset = Vector2( -244.125, -13.5273 )
+region_enabled = true
+region_rect = Rect2( 161.379, 175.064, 93.3139, 31.6722 )
+
+[node name="Texto" type="RichTextLabel" parent="CanvasLayer/DialogosDebufs"]
+modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
+self_modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
+margin_left = 192.0
+margin_top = 592.0
+margin_right = 736.0
+margin_bottom = 672.0
+custom_fonts/mono_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
+
+[node name="caixaPersonagem" type="Sprite" parent="CanvasLayer/DialogosDebufs"]
+position = Vector2( 64, 448 )
+scale = Vector2( 5.54087, 5.28533 )
+texture = ExtResource( 10 )
+offset = Vector2( 9.12981, 33.9347 )
+region_enabled = true
+region_rect = Rect2( 196.997, 102.523, 39.001, 33.9941 )
+
+[node name="nomeIstritor" type="Sprite" parent="CanvasLayer/DialogosDebufs"]
+position = Vector2( 112, 688 )
+scale = Vector2( 1.65957, 1.44506 )
+texture = ExtResource( 10 )
+region_enabled = true
+region_rect = Rect2( 257.054, 178.961, 94.9988, 27.9619 )
+
+[node name="rosto" type="Sprite" parent="CanvasLayer/DialogosDebufs"]
+position = Vector2( 112, 608 )
+scale = Vector2( 1.54217, 1.45238 )
+
+[node name="instrutor" type="Label" parent="CanvasLayer/DialogosDebufs"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 48.0
+margin_top = 672.0
+margin_right = 174.0
+margin_bottom = 698.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+
+[node name="Timer" type="Timer" parent="CanvasLayer/DialogosDebufs"]
+wait_time = 6.0
+one_shot = true
+
+[node name="TimerLetras" type="Timer" parent="CanvasLayer/DialogosDebufs"]
+wait_time = 0.02
+
+[node name="CargaEntregue" parent="CanvasLayer" instance=ExtResource( 16 )]
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+script = ExtResource( 5 )
+
+[node name="AnimacaoBebida" type="AnimationPlayer" parent="ViewportContainer"]
+anims/Bebida = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="AnimacaoSono" type="AnimationPlayer" parent="ViewportContainer"]
+anims/CenasSono = ExtResource( 6 )
+anims/RESET = SubResource( 1 )
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1280, 720 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Mapa1" parent="ViewportContainer/Viewport" instance=ExtResource( 2 )]
+
+[node name="DebufsMapa1" type="Node2D" parent="ViewportContainer/Viewport"]
+
+[node name="Debufs2" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1136, 336 )
+
+[node name="Debufs3" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1248, 288 )
+
+[node name="Debufs4" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1952, 288 )
+
+[node name="Debufs5" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1856, 336 )
+
+[node name="Debufs6" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 2624, 816 )
+
+[node name="Debufs7" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 3456, 1584 )
+
+[node name="Debufs8" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 3136, 2336 )
+
+[node name="Debufs9" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 3088, 2416 )
+
+[node name="Debufs10" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 2304, 2032 )
+
+[node name="Debufs11" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1552, 2048 )
+
+[node name="Debufs12" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1136, 2480 )
+
+[node name="Debufs13" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 1424, 1584 )
+
+[node name="Debufs14" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 512, 1472 )
+
+[node name="Debufs15" parent="ViewportContainer/Viewport/DebufsMapa1" instance=ExtResource( 15 )]
+position = Vector2( 608, 1520 )
+
+[node name="Mapa2" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
+
+[node name="DebufsMapa2" type="Node2D" parent="ViewportContainer/Viewport"]
+
+[node name="Debufs" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 1304, 384 )
+
+[node name="Debufs2" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 1396, 446 )
+
+[node name="Debufs3" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 2135, 379 )
+
+[node name="Debufs4" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 2216, 441 )
+
+[node name="Debufs5" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 3460, 882 )
+
+[node name="Debufs6" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 3774, 2004 )
+
+[node name="Debufs7" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 2168, 2393 )
+
+[node name="Debufs8" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 2207, 2268 )
+
+[node name="Debufs9" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 1401, 2537 )
+
+[node name="Debufs10" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 1463, 3331 )
+
+[node name="Debufs11" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 1572, 3267 )
+
+[node name="Debufs12" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 480, 2997 )
+
+[node name="Debufs13" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 542, 2922 )
+
+[node name="Debufs14" parent="ViewportContainer/Viewport/DebufsMapa2" instance=ExtResource( 15 )]
+position = Vector2( 592, 1768 )
+
+[connection signal="timeout" from="CanvasLayer/DialogosDebufs/Timer" to="CanvasLayer/DialogosDebufs" method="_on_Timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/DialogosDebufs/TimerLetras" to="CanvasLayer/DialogosDebufs" method="_on_TimerLetras_timeout"]
