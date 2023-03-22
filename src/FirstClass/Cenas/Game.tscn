@@ -168,6 +168,7 @@ tracks/1/keys = {
 script = ExtResource( 14 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="Timer" parent="CanvasLayer" instance=ExtResource( 4 )]
 position = Vector2( 32, 224 )
