@@ -19,8 +19,8 @@ font_data = ExtResource( 1 )
 script = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 638, 372 )
-scale = Vector2( 6.64583, 6.44444 )
+position = Vector2( 640, 362 )
+scale = Vector2( 6.64583, 6.62963 )
 texture = ExtResource( 2 )
 
 [node name="Sprite3" type="Sprite" parent="."]
@@ -46,7 +46,8 @@ margin_bottom = 523.0
 rect_scale = Vector2( 3, 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Mapa Floresta"
+text = "Floresta"
+align = 1
 
 [node name="MapaFloresta" type="Sprite" parent="."]
 position = Vector2( 352, 314.675 )
@@ -76,7 +77,8 @@ margin_bottom = 510.0
 rect_scale = Vector2( 3, 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Mapa Sertão"
+text = "Velho Oeste"
+align = 1
 
 [node name="MapaSertao" type="Sprite" parent="."]
 position = Vector2( 950, 312 )

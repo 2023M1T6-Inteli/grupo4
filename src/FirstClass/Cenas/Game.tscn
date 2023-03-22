@@ -1,20 +1,21 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Cenas/Minimap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Mapa1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/Mapa2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/Timer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/Scripts/ViewportContainer.gd" type="Script" id=5]
-[ext_resource path="res://Efeitos tela/CenasSono.tres" type="Animation" id=6]
+[ext_resource path="res://EfeitosTela/CenasSono.tres" type="Animation" id=6]
 [ext_resource path="res://Cenas/Pontuacao.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Sprites/HUD Gasolina e dinheiro.png" type="Texture" id=8]
 [ext_resource path="res://Cenas/Gasolina.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=10]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=11]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=12]
-[ext_resource path="res://Cenas/Scripts/DialogosDebufs.gd" type="Script" id=13]
+[ext_resource path="res://Cenas/Scripts/DialogosDebuffs.gd" type="Script" id=13]
 [ext_resource path="res://Cenas/Scripts/Game.gd" type="Script" id=14]
 [ext_resource path="res://Cenas/Debufs.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Cenas/CargaEntregue.tscn" type="PackedScene" id=16]
 
 [sub_resource type="StreamTexture" id=4]
 load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
@@ -177,6 +178,8 @@ one_shot = true
 
 [node name="TimerLetras" type="Timer" parent="CanvasLayer/DialogosDebufs"]
 wait_time = 0.02
+
+[node name="CargaEntregue" parent="CanvasLayer" instance=ExtResource( 16 )]
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 margin_right = 1280.0

@@ -41,7 +41,7 @@
 [ext_resource path="res://Sprites/CaminhaoDeCloro/CLorocacamba8.png" type="Texture" id=39]
 [ext_resource path="res://Sprites/CaminhaoDeCloro/CLorocacamba14.png" type="Texture" id=40]
 [ext_resource path="res://Cenas/Scripts/Cacamba.gd" type="Script" id=41]
-[ext_resource path="res://Efeitos tela/EXPLOSAO.png" type="Texture" id=42]
+[ext_resource path="res://EfeitosTela/EXPLOSAO.png" type="Texture" id=42]
 [ext_resource path="res://Sons/explosionsfx.wav" type="AudioStream" id=43]
 
 [sub_resource type="SpriteFrames" id=1]

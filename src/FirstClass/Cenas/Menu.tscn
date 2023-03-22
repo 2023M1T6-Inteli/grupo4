@@ -1,0 +1,194 @@
+[gd_scene load_steps=57 format=2]
+
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/botao_verde_normal.png" type="Texture" id=2]
+[ext_resource path="res://Sons/hover.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sprites/botao_verde2.png" type="Texture" id=5]
+[ext_resource path="res://Telas/FundoTela2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/botao_verde1.png" type="BitMap" id=7]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/37.png" type="Texture" id=8]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/43.png" type="Texture" id=9]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/36.png" type="Texture" id=10]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/33.png" type="Texture" id=11]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/41.png" type="Texture" id=12]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/32.png" type="Texture" id=13]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/34.png" type="Texture" id=14]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/35.png" type="Texture" id=15]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/45.png" type="Texture" id=16]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/42.png" type="Texture" id=17]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/39.png" type="Texture" id=18]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/40.png" type="Texture" id=19]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/38.png" type="Texture" id=20]
+[ext_resource path="res://Cenas/Scripts/Menu.gd" type="Script" id=21]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues4.png" type="Texture" id=22]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues10.png" type="Texture" id=23]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues14.png" type="Texture" id=24]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol8.png" type="Texture" id=25]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol2.png" type="Texture" id=26]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol12.png" type="Texture" id=27]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol6.png" type="Texture" id=28]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues7.png" type="Texture" id=29]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues3.png" type="Texture" id=30]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues11.png" type="Texture" id=31]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues9.png" type="Texture" id=32]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues12.png" type="Texture" id=33]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues5.png" type="Texture" id=34]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol14.png" type="Texture" id=35]
+[ext_resource path="res://Assets2/Logo/Logo Ingles/44.png" type="Texture" id=36]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues6.png" type="Texture" id=37]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol3.png" type="Texture" id=38]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol4.png" type="Texture" id=39]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol7.png" type="Texture" id=40]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol13.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/som.png" type="Texture" id=42]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol5.png" type="Texture" id=43]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol10.png" type="Texture" id=44]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol11.png" type="Texture" id=45]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol9.png" type="Texture" id=46]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues2.png" type="Texture" id=47]
+[ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol1.png" type="Texture" id=48]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues1.png" type="Texture" id=49]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues8.png" type="Texture" id=50]
+[ext_resource path="res://Assets2/Logo/Logo Portugues/CaminhaoPortugues13.png" type="Texture" id=51]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 48 ), ExtResource( 26 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 28 ), ExtResource( 40 ), ExtResource( 25 ), ExtResource( 46 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 27 ), ExtResource( 41 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "LogoEspanhol",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 12 ), ExtResource( 17 ), ExtResource( 9 ), ExtResource( 36 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "LogoIngles",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ), ExtResource( 47 ), ExtResource( 30 ), ExtResource( 22 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 29 ), ExtResource( 50 ), ExtResource( 32 ), ExtResource( 23 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 51 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "LogoPortugues",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Fade In"
+length = 2.0
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+
+[sub_resource type="DynamicFont" id=5]
+size = 55
+font_data = ExtResource( 1 )
+
+[sub_resource type="GDScript" id=6]
+
+[node name="start" type="Node2D"]
+position = Vector2( -1, 0 )
+script = ExtResource( 21 )
+
+[node name="FundoTela1" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+scale = Vector2( 6.666, 6.666 )
+texture = ExtResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 656, 224 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 4 )
+animation = "LogoPortugues"
+frame = 8
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/Fade In" = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="BotaoJogar" type="TextureButton" parent="."]
+margin_left = 416.0
+margin_top = 256.0
+margin_right = 1082.0
+margin_bottom = 631.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 5 )
+texture_click_mask = ExtResource( 7 )
+
+[node name="JOGAR" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 560.0
+margin_top = 374.0
+margin_right = 1226.0
+margin_bottom = 450.0
+custom_fonts/font = SubResource( 5 )
+text = "Jogar"
+
+[node name="BotaoInstrucoes" type="TextureButton" parent="."]
+margin_left = 416.0
+margin_top = 368.0
+margin_right = 1082.0
+margin_bottom = 743.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 5 )
+texture_click_mask = ExtResource( 7 )
+
+[node name="INSTRUCOES" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 320.0
+margin_top = 475.0
+margin_right = 986.0
+margin_bottom = 551.0
+custom_fonts/font = SubResource( 5 )
+text = "Instruções"
+align = 1
+valign = 1
+
+[node name="SomConfirmar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+
+[node name="SomHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+
+[node name="BotaoVolume" type="TextureButton" parent="."]
+margin_left = 69.0
+margin_top = 58.0
+margin_right = 116.0
+margin_bottom = 97.0
+texture_normal = ExtResource( 42 )
+expand = true
+script = SubResource( 6 )
+
+[node name="BotaoIdioma" type="TextureButton" parent="."]
+margin_left = 416.0
+margin_top = 480.0
+margin_right = 1082.0
+margin_bottom = 855.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 5 )
+texture_click_mask = ExtResource( 7 )
+
+[node name="IDIOMAS" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 465.0
+margin_top = 596.0
+margin_right = 833.0
+margin_bottom = 672.0
+custom_fonts/font = SubResource( 5 )
+text = "Idiomas"
+align = 1
+
+[connection signal="mouse_entered" from="BotaoJogar" to="." method="_on_BotaoJogar_mouse_entered"]
+[connection signal="pressed" from="BotaoJogar" to="." method="_on_BotaoJogar_pressed"]
+[connection signal="mouse_entered" from="BotaoInstrucoes" to="." method="_on_BotaoInstrucoes_mouse_entered"]
+[connection signal="pressed" from="BotaoInstrucoes" to="." method="_on_BotaoInstrucoes_pressed"]
+[connection signal="pressed" from="BotaoVolume" to="." method="_on_BotaoVolume_pressed"]
+[connection signal="mouse_entered" from="BotaoIdioma" to="." method="_on_BotaoInstrucoes_mouse_entered"]
+[connection signal="pressed" from="BotaoIdioma" to="." method="_on_BotaoIdioma_pressed"]
+[connection signal="pressed" from="BotaoIdioma" to="." method="_on_BotaoInstrucoes_pressed"]
