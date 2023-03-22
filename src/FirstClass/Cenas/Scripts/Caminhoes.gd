@@ -12,6 +12,7 @@ func _ready():
 
 
 func confirmar():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()

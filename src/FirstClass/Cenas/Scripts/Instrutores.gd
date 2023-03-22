@@ -14,6 +14,7 @@ func som_hover():
 
 #mudança de cena e efeito sonoro
 func confirmar():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	hover = 1
 	if !$SomConfirmacao.playing:
 		$SomConfirmacao.play()

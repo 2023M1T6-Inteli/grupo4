@@ -22,6 +22,7 @@ func som_hover():
 
 #botão para jogar
 func _on_BotaoJogar_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	hover = 1
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 	$BotaoJogar.texture_normal = $BotaoJogar.texture_hover
@@ -34,6 +35,7 @@ func _on_BotaoJogar_pressed():
 	
 #botão para ir para as intruções do jogo
 func _on_BotaoInstrucoes_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	hover = 1
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 	$BotaoInstrucoes.texture_normal = $BotaoInstrucoes.texture_hover
@@ -52,8 +54,10 @@ func _on_BotaoInstrucoes_mouse_entered():
 	som_hover()
 
 func _on_BotaoVolume_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	get_tree().change_scene("res://Cenas/Volume.tscn")
 
 
 func _on_BotaoIdioma_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	get_tree().change_scene("res://Cenas/Idiomas.tscn")

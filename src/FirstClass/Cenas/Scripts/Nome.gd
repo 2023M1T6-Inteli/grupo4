@@ -1,4 +1,5 @@
 extends Node2D
+
 var alfabeto = [] #variável que ajudará a verificar se o jogador inseriu texto no LineEdit
 var caracteres_latinos = ["Ã", "Õ", "Ñ", "Á", "É", "Í", "Ó", "Ú", "Â", "Ê", "Ô", "Ç", "ã", "õ","ñ", "á", "é", "í", "ó", "ú", "â", "ê", "ô", "ç"]
 var hover = 0
@@ -39,6 +40,7 @@ func confirmar():
 
 #mudança de tela para prosseguir
 func _on_BotaoOk_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	var texto = $LineEdit.text
 	texto = texto.lstrip(" ")
 	texto = texto.rstrip(" ")
@@ -53,6 +55,7 @@ func _on_BotaoOk_pressed():
 
 #mudança de tela para voltar
 func _on_BotaoVoltar_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	if !$SomVoltar.playing:
 		$SomVoltar.play()
 		yield(get_tree().create_timer(0.35), "timeout")

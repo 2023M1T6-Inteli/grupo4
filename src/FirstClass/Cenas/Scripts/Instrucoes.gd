@@ -20,6 +20,7 @@ func _ready(): #tradução
 
 #botão para voltar para a cena anterior e efeito sonoro
 func _on_BotaoVoltar_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	hover = 1
 	if !$SomVoltar.playing:
 		$SomVoltar.play()
