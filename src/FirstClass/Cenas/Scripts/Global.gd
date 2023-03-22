@@ -22,4 +22,28 @@ var rostoInstrutor #variável responsável por guardar a animação do instrutor
 var lingua = "pt" #variável que guarda a linguagem escolhida pelo jogador
 var mapa = 1 #variável que guarda o mapa escolhido pelo jogador
 
+const ARQUIVO = "user://save.data"
 
+var pontos_ranking = []
+var nomes_ranking = []
+
+#função que salvará os dados do jogo
+func salvar_dados():
+	
+	#variável que armazena o arquivo onde os dados serão carregados
+	var arquivo = File.new()
+	var erro = arquivo.open(ARQUIVO, File.READ)
+
+	if not erro:
+		
+		#variável que armazena os dados que são resgatados do arquivo
+		var dados_salvos = arquivo.get_var()
+		pontos_ranking.append(dados_salvos["points"])
+		nomes_ranking.append(dados_salvos["nome"])
+		
+	else:
+		print("erro ao carregar dados")
+		
+	print(Global.pontos_ranking, Global.nomes_ranking)
+	
+	arquivo.close()

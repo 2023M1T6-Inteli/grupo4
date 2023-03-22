@@ -68,6 +68,7 @@ func _on_LineEdit_text_entered(new_text):
 	for letter in alfabeto:
 		if letter in new_text:
 			Global.nome = new_text
+			Global.nomes_ranking.append(Global.nome)
 			confirmar()
 		else:
 			pass

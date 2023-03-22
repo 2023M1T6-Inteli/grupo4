@@ -34,4 +34,6 @@ func _on_Cacamba_do_Caminhao_body_entered(body):
 
 #mudando de cena para o game over quando a explosão acaba
 func _on_ExplosaoSFX_finished():
+	Global.pontos_ranking.append(Global.points/12)
+	Global.salvar_dados()
 	get_tree().change_scene("res://Cenas/TelaGameOver.tscn")
