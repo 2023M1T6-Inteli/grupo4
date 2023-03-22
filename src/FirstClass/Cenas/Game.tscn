@@ -23,29 +23,6 @@
 [ext_resource path="res://Sprites/botao_verde2.png" type="Texture" id=21]
 [ext_resource path="res://EfeitosTela/Shaders_Transition.tres" type="Shader" id=22]
 
-[sub_resource type="StreamTexture" id=4]
-load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
-
-[sub_resource type="DynamicFont" id=5]
-size = 25
-font_data = ExtResource( 12 )
-
-[sub_resource type="DynamicFont" id=6]
-size = 25
-font_data = ExtResource( 11 )
-
-[sub_resource type="DynamicFont" id=7]
-size = 25
-font_data = ExtResource( 11 )
-
-[sub_resource type="DynamicFont" id=8]
-size = 64
-font_data = ExtResource( 11 )
-
-[sub_resource type="DynamicFont" id=9]
-size = 32
-font_data = ExtResource( 17 )
-
 [sub_resource type="ShaderMaterial" id=10]
 shader = ExtResource( 22 )
 shader_param/screen_width = 1920.0
@@ -104,6 +81,29 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
+
+[sub_resource type="StreamTexture" id=4]
+load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 25
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 64
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 32
+font_data = ExtResource( 17 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Bebida"
@@ -168,7 +168,19 @@ tracks/1/keys = {
 script = ExtResource( 14 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 0
+
+[node name="fill" type="ColorRect" parent="CanvasLayer"]
+material = SubResource( 10 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_scale = Vector2( 0.666, 0.666 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/fill"]
+autoplay = "transition"
+anims/Fora = SubResource( 11 )
+anims/RESET = SubResource( 12 )
+anims/transition = SubResource( 13 )
 
 [node name="Timer" parent="CanvasLayer" instance=ExtResource( 4 )]
 position = Vector2( 32, 224 )
@@ -351,19 +363,6 @@ align = 1
 valign = 1
 
 [node name="Cinzinha" type="Sprite" parent="CanvasLayer/Pause"]
-
-[node name="fill" type="ColorRect" parent="CanvasLayer"]
-material = SubResource( 10 )
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_scale = Vector2( 0.666, 0.666 )
-color = Color( 0, 0, 0, 1 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/fill"]
-autoplay = "transition"
-anims/Fora = SubResource( 11 )
-anims/RESET = SubResource( 12 )
-anims/transition = SubResource( 13 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 margin_right = 1280.0

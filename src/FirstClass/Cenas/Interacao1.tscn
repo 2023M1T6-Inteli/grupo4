@@ -379,7 +379,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 8
+frame = 15
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
