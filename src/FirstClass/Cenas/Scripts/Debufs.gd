@@ -14,12 +14,12 @@ func debuff_generator():
 	
 	if debufs == 1:
 		$Bebida.show()
-		$"Carga Pesada".hide()
+		$CargaPesada.hide()
 		$Celular.hide()
 		$Sono.hide()
 		
 		$Bebida/CollisionShape2D.set_deferred("disabled", false)
-		$"Carga Pesada/CollisionShape2D".set_deferred("disabled", true)
+		$CargaPesada/CollisionShape2D.set_deferred("disabled", true)
 		$Celular/CollisionShape2D.set_deferred("disabled", true)
 		$Sono/CollisionShape2D.set_deferred("disabled", true)
 		
@@ -30,12 +30,12 @@ func debuff_generator():
 	
 	elif debufs == 2:
 		$Bebida.hide()
-		$"Carga Pesada".show()
+		$CargaPesada.show()
 		$Celular.hide()
 		$Sono.hide()
 		
 		$Bebida/CollisionShape2D.set_deferred("disabled", true)
-		$"Carga Pesada/CollisionShape2D".set_deferred("disabled", false)
+		$CargaPesada/CollisionShape2D.set_deferred("disabled", false)
 		$Celular/CollisionShape2D.set_deferred("disabled", true)
 		$Sono/CollisionShape2D.set_deferred("disabled", true)
 		
@@ -44,12 +44,12 @@ func debuff_generator():
 	
 	elif debufs == 3:
 		$Bebida.hide()
-		$"Carga Pesada".hide()
+		$CargaPesada.hide()
 		$Celular.show()
 		$Sono.hide()
 		
 		$Bebida/CollisionShape2D.set_deferred("disabled", true)
-		$"Carga Pesada/CollisionShape2D".set_deferred("disabled", true)
+		$CargaPesada/CollisionShape2D.set_deferred("disabled", true)
 		$Celular/CollisionShape2D.set_deferred("disabled", false)
 		$Sono/CollisionShape2D.set_deferred("disabled", true)
 		
@@ -59,12 +59,12 @@ func debuff_generator():
 		
 	elif debufs == 4:
 		$Bebida.hide()
-		$"Carga Pesada".hide()
+		$CargaPesada.hide()
 		$Celular.hide()
 		$Sono.show()
 		
 		$Bebida/CollisionShape2D.set_deferred("disabled", true)
-		$"Carga Pesada/CollisionShape2D".set_deferred("disabled", true)
+		$CargaPesada/CollisionShape2D.set_deferred("disabled", true)
 		$Celular/CollisionShape2D.set_deferred("disabled", true)
 		$Sono/CollisionShape2D.set_deferred("disabled", false)
 		
@@ -112,7 +112,7 @@ func _on_Carga_Pesada_body_entered(body):
 		MusicController.debuff_carga_pesada_sound()
 		$TimerCarga.start()
 		$TimerNecessario.start()
-		sumir($"Carga Pesada")
+		sumir($CargaPesada)
 	
 	# Função responsável por aplicar as diferenças causadas pela Carga pesada ao jogador
 	
