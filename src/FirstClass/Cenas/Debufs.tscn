@@ -148,7 +148,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bebida"]
 frames = SubResource( 9 )
-frame = 6
+frame = 14
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bebida"]
@@ -159,21 +159,21 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Celular"]
 frames = SubResource( 10 )
-frame = 5
+frame = 13
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Celular"]
 shape = SubResource( 4 )
 
-[node name="Carga Pesada" type="Area2D" parent="."]
+[node name="CargaPesada" type="Area2D" parent="."]
 position = Vector2( 16, 16 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Carga Pesada"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CargaPesada"]
 frames = SubResource( 5 )
-frame = 12
+frame = 9
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carga Pesada"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CargaPesada"]
 shape = SubResource( 6 )
 
 [node name="Sono" type="Area2D" parent="."]
@@ -181,7 +181,7 @@ position = Vector2( 16, 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Sono"]
 frames = SubResource( 7 )
-frame = 1
+frame = 14
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sono"]
@@ -218,7 +218,7 @@ one_shot = true
 
 [connection signal="body_entered" from="Bebida" to="." method="_on_Bebida_body_entered"]
 [connection signal="body_entered" from="Celular" to="." method="_on_Celular_body_entered"]
-[connection signal="body_entered" from="Carga Pesada" to="." method="_on_Carga_Pesada_body_entered"]
+[connection signal="body_entered" from="CargaPesada" to="." method="_on_Carga_Pesada_body_entered"]
 [connection signal="body_entered" from="Sono" to="." method="_on_Sono_body_entered"]
 [connection signal="timeout" from="TimerBebida" to="." method="_on_TimerBebida_timeout"]
 [connection signal="timeout" from="TimerSono" to="." method="_on_TimerSono_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/botao_verde_normal.png" type="Texture" id=2]
@@ -41,7 +41,7 @@
 [ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol4.png" type="Texture" id=39]
 [ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol7.png" type="Texture" id=40]
 [ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol13.png" type="Texture" id=41]
-[ext_resource path="res://Sprites/som.png" type="Texture" id=42]
+[ext_resource path="res://Assets2/IconsUI/autofalante.png" type="Texture" id=42]
 [ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol5.png" type="Texture" id=43]
 [ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol10.png" type="Texture" id=44]
 [ext_resource path="res://Assets2/Logo/Logo Espanhol/CaminhaoEspanhol11.png" type="Texture" id=45]
@@ -82,8 +82,6 @@ length = 0.001
 size = 55
 font_data = ExtResource( 1 )
 
-[sub_resource type="GDScript" id=6]
-
 [node name="start" type="Node2D"]
 position = Vector2( -1, 0 )
 script = ExtResource( 21 )
@@ -101,7 +99,6 @@ position = Vector2( 656, 224 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 animation = "LogoPortugues"
-frame = 9
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -159,13 +156,12 @@ stream = ExtResource( 3 )
 volume_db = -10.0
 
 [node name="BotaoVolume" type="TextureButton" parent="."]
-margin_left = 69.0
-margin_top = 58.0
-margin_right = 116.0
+margin_left = 57.0
+margin_top = 32.0
+margin_right = 141.0
 margin_bottom = 97.0
 texture_normal = ExtResource( 42 )
 expand = true
-script = SubResource( 6 )
 
 [node name="BotaoIdioma" type="TextureButton" parent="."]
 margin_left = 416.0
@@ -192,6 +188,7 @@ align = 1
 [connection signal="pressed" from="BotaoJogar" to="." method="_on_BotaoJogar_pressed"]
 [connection signal="mouse_entered" from="BotaoInstrucoes" to="." method="_on_BotaoInstrucoes_mouse_entered"]
 [connection signal="pressed" from="BotaoInstrucoes" to="." method="_on_BotaoInstrucoes_pressed"]
+[connection signal="mouse_entered" from="BotaoVolume" to="." method="_on_BotaoVolume_mouse_entered"]
 [connection signal="pressed" from="BotaoVolume" to="." method="_on_BotaoVolume_pressed"]
-[connection signal="mouse_entered" from="BotaoIdioma" to="." method="_on_BotaoInstrucoes_mouse_entered"]
+[connection signal="mouse_entered" from="BotaoIdioma" to="." method="_on_BotaoIdioma_mouse_entered"]
 [connection signal="pressed" from="BotaoIdioma" to="." method="_on_BotaoIdioma_pressed"]

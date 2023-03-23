@@ -10,21 +10,20 @@
 [ext_resource path="res://Assets2/IconsUI/less.png" type="Texture" id=8]
 [ext_resource path="res://Assets2/IconsUI/plus.png" type="Texture" id=9]
 
-
 [node name="Volume" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="FundoTela1" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 637.5, 361.5 )
-scale = Vector2( 6.666, 6.666 )
+position = Vector2( 640, 360.018 )
+scale = Vector2( 6.666, 6.66633 )
 texture = ExtResource( 3 )
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
 margin_left = 24.0
-margin_top = 616.0
+margin_top = 16.0
 margin_right = 56.0
-margin_bottom = 648.0
+margin_bottom = 48.0
 rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 1 )

@@ -12,8 +12,8 @@ func _ready():
 		Global.gasolina = 105.0
 		
 	if Global.dificuldade == "Dificil":
-		$ProgressBar.max_value = 50.0
-		Global.gasolina = 50.0
+		$ProgressBar.max_value = 70.0
+		Global.gasolina = 70.0
 	
 func _process(delta):
 	$ProgressBar.value = Global.gasolina #Definindo o valor da barra de progresso para o valor atual da variável "gasolina"

@@ -17,7 +17,7 @@ func _ready():
 		Global.gasolina = 105.0
 		
 	if Global.dificuldade == "Dificil":
-		Global.gasolina = 50.0
+		Global.gasolina = 70.0
 	#defini o tempo para finalizar a gasolina em função da dificuldade
 	
 	$Pontos.text = "Parabéns " + str(Global.nome) + ", você fez " + str(Global.points / 12) + " reais!"

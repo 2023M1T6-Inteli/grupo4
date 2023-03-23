@@ -31,8 +31,8 @@ script = ExtResource( 1 )
 layer = 0
 
 [node name="fundo" type="Sprite" parent="."]
-position = Vector2( 640, 362 )
-scale = Vector2( 6.666, 6.666 )
+position = Vector2( 640, 360.982 )
+scale = Vector2( 6.666, 6.68485 )
 texture = ExtResource( 8 )
 
 [node name="restart" type="TextureButton" parent="."]
