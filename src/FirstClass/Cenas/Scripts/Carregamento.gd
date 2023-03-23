@@ -7,4 +7,4 @@ func _ready():
 	yield(get_tree().create_timer(4), "timeout") #tempo que a animação de entrada será executada
 	$AnimationPlayer.play("Fade out") #animação de saída
 	yield(get_tree().create_timer(2.5), "timeout") #tempo que a animação de saída será executada
-	get_tree().change_scene("res://Cenas/menu.tscn") #mudança de tela
+	get_tree().change_scene("res://Cenas/Menu.tscn") #mudança de tela

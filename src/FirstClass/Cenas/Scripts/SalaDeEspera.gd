@@ -8,7 +8,7 @@ func _ready():
 	$BalaoSono.hide()
 	$Caminhar.play()
 	#iniciando a animação de caminhar do personagem e escondendo elementos que aparecerão depois
-	Global.carregar_dados()
+	#Global.carregar_dados()
 	#carregando dados de pontuação para mostrar no ranking
 	
 func _process(delta):
