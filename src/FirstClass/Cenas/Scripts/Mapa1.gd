@@ -7,3 +7,4 @@ func _ready():
 		$Player/Camera2D.limit_top = 0
 		$Player/Camera2D.limit_right = 3770
 		$Player/Camera2D.limit_left = 0
+#configurações da câmera do mapa 1

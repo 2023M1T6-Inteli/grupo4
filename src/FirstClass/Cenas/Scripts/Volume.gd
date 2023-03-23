@@ -12,7 +12,7 @@ func _on_BotaoVoltar_pressed():
 	if !$SomVoltar.playing:
 		$SomVoltar.play()
 		yield(get_tree().create_timer(0.25), "timeout")
-		get_tree().change_scene("res://Cenas/menu.tscn")
+		get_tree().change_scene("res://Cenas/Menu.tscn")
 
 #altera o volume em décipeis de barramento de áudio
 func _on_HSlider_value_changed(value):
@@ -24,7 +24,7 @@ func _on_HSlider_value_changed(value):
 	else:
 		AudioServer.set_bus_mute(master_bus,false)
 
-
+#função de efeito sonoro
 func _on_BotaoVoltar_mouse_entered():
 	if hover==0:
 		$SomHover.play()

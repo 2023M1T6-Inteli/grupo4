@@ -1,20 +1,87 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Cenas/Minimap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Mapa1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/Mapa2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/Timer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/Scripts/ViewportContainer.gd" type="Script" id=5]
-[ext_resource path="res://Efeitos tela/CenasSono.tres" type="Animation" id=6]
+[ext_resource path="res://EfeitosTela/CenasSono.tres" type="Animation" id=6]
 [ext_resource path="res://Cenas/Pontuacao.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Sprites/HUD Gasolina e dinheiro.png" type="Texture" id=8]
 [ext_resource path="res://Cenas/Gasolina.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=10]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=11]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=12]
-[ext_resource path="res://Cenas/Scripts/DialogosDebufs.gd" type="Script" id=13]
+[ext_resource path="res://Cenas/Scripts/DialogosDebuffs.gd" type="Script" id=13]
 [ext_resource path="res://Cenas/Scripts/Game.gd" type="Script" id=14]
 [ext_resource path="res://Cenas/Debufs.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Cenas/CargaEntregue.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://Sprites/Cinza.png" type="Texture" id=18]
+[ext_resource path="res://Assets2/IconsUI/contorno.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/botao_verde_normal.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/botao_verde2.png" type="Texture" id=21]
+[ext_resource path="res://EfeitosTela/Shaders_Transition.tres" type="Shader" id=22]
+[ext_resource path="res://Cenas/AcabouGasolina.tscn" type="PackedScene" id=23]
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = ExtResource( 22 )
+shader_param/screen_width = 1920.0
+shader_param/screen_height = 1080.0
+shader_param/center = Vector2( 0.5, 0.5 )
+shader_param/player = Vector2( 0.5, 0.5 )
+shader_param/progress = 0.0
+shader_param/pixel_size = 15.0
+shader_param/circle_size = 1.5
+shader_param/curtains = 1.0
+shader_param/type = 0
+
+[sub_resource type="Animation" id=11]
+resource_name = "Fora"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "transition"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
 
 [sub_resource type="StreamTexture" id=4]
 load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.stex"
@@ -30,6 +97,18 @@ font_data = ExtResource( 11 )
 [sub_resource type="DynamicFont" id=7]
 size = 25
 font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 64
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 32
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 32
+font_data = ExtResource( 17 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Bebida"
@@ -94,6 +173,19 @@ tracks/1/keys = {
 script = ExtResource( 14 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="fill" type="ColorRect" parent="CanvasLayer"]
+material = SubResource( 10 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_scale = Vector2( 0.666, 0.666 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/fill"]
+autoplay = "transition"
+anims/Fora = SubResource( 11 )
+anims/RESET = SubResource( 12 )
+anims/transition = SubResource( 13 )
 
 [node name="Timer" parent="CanvasLayer" instance=ExtResource( 4 )]
 position = Vector2( 32, 224 )
@@ -177,6 +269,138 @@ one_shot = true
 
 [node name="TimerLetras" type="Timer" parent="CanvasLayer/DialogosDebufs"]
 wait_time = 0.02
+
+[node name="CargaEntregue" parent="CanvasLayer" instance=ExtResource( 16 )]
+
+[node name="AcabouGasolina" parent="CanvasLayer" instance=ExtResource( 23 )]
+
+[node name="Pause" type="Node2D" parent="CanvasLayer"]
+
+[node name="Cinza" type="Sprite" parent="CanvasLayer/Pause"]
+position = Vector2( 642, 359 )
+scale = Vector2( 0.666, 0.666 )
+texture = ExtResource( 18 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Pause"]
+margin_left = 440.0
+margin_top = 164.0
+margin_right = 509.0
+margin_bottom = 249.0
+rect_scale = Vector2( 6, 6 )
+texture = ExtResource( 19 )
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Pause" type="Label" parent="CanvasLayer/Pause"]
+margin_left = 545.0
+margin_top = 219.0
+margin_right = 745.0
+margin_bottom = 283.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Pause"
+align = 1
+valign = 1
+
+[node name="BotaoContinuar" type="TextureButton" parent="CanvasLayer/Pause"]
+pause_mode = 2
+margin_left = 480.0
+margin_top = 280.0
+margin_right = 1146.0
+margin_bottom = 408.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+expand = true
+stretch_mode = 3
+
+[node name="Continuar" type="Label" parent="CanvasLayer/Pause"]
+margin_left = 560.0
+margin_top = 304.0
+margin_right = 748.0
+margin_bottom = 336.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Continuar"
+align = 1
+
+[node name="BotaoRecomecar" type="TextureButton" parent="CanvasLayer/Pause"]
+pause_mode = 2
+margin_left = 480.0
+margin_top = 368.0
+margin_right = 1146.0
+margin_bottom = 503.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+expand = true
+stretch_mode = 3
+
+[node name="Recomecar" type="Label" parent="CanvasLayer/Pause"]
+margin_left = 552.0
+margin_top = 392.0
+margin_right = 740.0
+margin_bottom = 424.0
+rect_pivot_offset = Vector2( -680, -278 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Recomeçar"
+align = 1
+valign = 1
+
+[node name="BotaoMenu" type="TextureButton" parent="CanvasLayer/Pause"]
+pause_mode = 2
+margin_left = 480.0
+margin_top = 544.0
+margin_right = 1146.0
+margin_bottom = 663.0
+rect_min_size = Vector2( 2, 2 )
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+expand = true
+stretch_mode = 3
+
+[node name="Menu" type="Label" parent="CanvasLayer/Pause"]
+margin_left = 560.0
+margin_top = 568.0
+margin_right = 748.0
+margin_bottom = 600.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Menu"
+align = 1
+valign = 1
+
+[node name="Cinzinha" type="Sprite" parent="CanvasLayer/Pause"]
+
+[node name="BotaoDificuldade" type="TextureButton" parent="CanvasLayer/Pause"]
+pause_mode = 2
+margin_left = 488.0
+margin_top = 456.0
+margin_right = 1128.0
+margin_bottom = 584.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+expand = true
+stretch_mode = 3
+
+[node name="Dificuldade" type="Label" parent="CanvasLayer/Pause"]
+margin_left = 552.0
+margin_top = 480.0
+margin_right = 746.0
+margin_bottom = 512.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "Dificuldade"
+align = 1
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 margin_right = 1280.0
@@ -290,3 +514,7 @@ position = Vector2( 592, 1768 )
 
 [connection signal="timeout" from="CanvasLayer/DialogosDebufs/Timer" to="CanvasLayer/DialogosDebufs" method="_on_Timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/DialogosDebufs/TimerLetras" to="CanvasLayer/DialogosDebufs" method="_on_TimerLetras_timeout"]
+[connection signal="pressed" from="CanvasLayer/Pause/BotaoContinuar" to="." method="_on_BotaoContinuar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/BotaoRecomecar" to="." method="_on_BotaoRecomecar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/BotaoMenu" to="." method="_on_BotaoMenu_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/BotaoDificuldade" to="." method="_on_BotaoDificuldade_pressed"]

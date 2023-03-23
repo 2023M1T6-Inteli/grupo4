@@ -80,12 +80,12 @@ func sumir(node):
 
 func _on_Bebida_body_entered(body):
 	if body.name == "Player" or body.name == "Cacamba":
-		if get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderSono.tres"):
+		if get_parent().get_parent().get_parent().material == preload("res://EfeitosTela/ShaderSono.tres"):
 			sumir($Bebida)
-		elif get_parent().get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderBebida.tres"):
+		elif get_parent().get_parent().get_parent().get_parent().material == preload("res://EfeitosTela/ShaderBebida.tres"):
 			sumir($Bebida)
 		else:
-			get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderBebida.tres")
+			get_parent().get_parent().get_parent().material = load("res://EfeitosTela/ShaderBebida.tres")
 			MusicController.debuff_bebida_sound()
 			Global.qualDebuf = "Bebida"
 			$TimerBebida.start()
@@ -118,12 +118,12 @@ func _on_Carga_Pesada_body_entered(body):
 	
 func _on_Sono_body_entered(body):
 	if body.name == "Player" or body.name == "Cacamba":
-		if get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderBebida.tres"):
+		if get_parent().get_parent().get_parent().material == preload("res://EfeitosTela/ShaderBebida.tres"):
 			sumir($Sono)
-		elif get_parent().get_parent().get_parent().material == preload("res://Efeitos tela/ShaderSono.tres"):
+		elif get_parent().get_parent().get_parent().material == preload("res://EfeitosTela/ShaderSono.tres"):
 			sumir($Sono)
 		else:
-			get_parent().get_parent().get_parent().material = load("res://Efeitos tela/ShaderSono.tres")
+			get_parent().get_parent().get_parent().material = load("res://EfeitosTela/ShaderSono.tres")
 			MusicController.debuff_sono_sound()
 			Global.qualDebuf = "Sono"
 			$TimerSono.start()

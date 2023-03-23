@@ -2,23 +2,28 @@ extends Node2D
 
 func _ready():
 	if Global.lingua == "eng":
-		$Mapa1.text = "  Florest Map"
-		$Mapa2.text = " Desert Map"
+		$Mapa1.text = "Florest"
+		$Mapa2.text = "Old West"
 	if Global.lingua == "esp":
-		$Mapa1.text = "Mapa Bosque"
-		$Mapa2.text = "Mapa Desierto"
+		$Mapa1.text = "Bosque"
+		$Mapa2.text = "Viejo Oeste"
+#traduzindo o nome do mapa de acordo com a linguagem selecionada
 
 
+#funções de seleção do mapa de acordo com botão pressionado pelo player
 func _on_BotaoMapa1_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	Global.mapa = 1
-	get_tree().change_scene("res://Cenas/interacao1.tscn")
+	get_tree().change_scene("res://Cenas/Interacao1.tscn")
 
 
 func _on_BotaoMapa2_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	Global.mapa = 2
-	get_tree().change_scene("res://Cenas/interacao1.tscn")
+	get_tree().change_scene("res://Cenas/Interacao1.tscn")
 	
 
-
+#voltar a cena de seleção de caminhões
 func _on_BotaoVoltar_pressed():
-	get_tree().change_scene("res://Cenas/caminhoes.tscn")
+	$Transicao/fill/AnimationPlayer.play("Fora")
+	get_tree().change_scene("res://Cenas/Escolha.tscn")

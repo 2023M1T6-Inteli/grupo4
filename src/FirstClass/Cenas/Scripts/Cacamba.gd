@@ -14,6 +14,8 @@ func _ready():
 
 # Função que efetua atroca do sprite das cargas, possibilitando diferentes cargas para o jogo
 
+
+#função que controla efeitos sonoros, visuais e de jogabilidade que ocorrem quando o player colide com o cenário
 func _on_Cacamba_do_Caminhao_body_entered(body):
 	if body.name =="Player" or body.name =="Debufs":
 		pass
@@ -29,9 +31,9 @@ func _on_Cacamba_do_Caminhao_body_entered(body):
 		MusicController.debuffs1_sound_off()
 		MusicController.debuffs2_sound_off()
 
-# Função que permite a caçamba contar como parte do player e causar a derrota do jogador caso ela
-# colida com a parede
 
-
+#mudando de cena para o game over quando a explosão acaba
 func _on_ExplosaoSFX_finished():
-	get_tree().change_scene("res://Cenas/tela_gameover.tscn")
+#	Global.pontos_ranking.append(Global.points/12)
+#	Global.salvar_dados()
+	get_tree().change_scene("res://Cenas/TelaGameOver.tscn")
