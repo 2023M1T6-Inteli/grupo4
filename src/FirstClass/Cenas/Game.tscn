@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Cenas/Minimap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Mapa1.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Sprites/botao_verde_normal.png" type="Texture" id=20]
 [ext_resource path="res://Sprites/botao_verde2.png" type="Texture" id=21]
 [ext_resource path="res://EfeitosTela/Shaders_Transition.tres" type="Shader" id=22]
+[ext_resource path="res://Cenas/AcabouGasolina.tscn" type="PackedScene" id=23]
 
 [sub_resource type="ShaderMaterial" id=10]
 shader = ExtResource( 22 )
@@ -102,6 +103,10 @@ size = 64
 font_data = ExtResource( 11 )
 
 [sub_resource type="DynamicFont" id=9]
+size = 32
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=14]
 size = 32
 font_data = ExtResource( 17 )
 
@@ -267,6 +272,8 @@ wait_time = 0.02
 
 [node name="CargaEntregue" parent="CanvasLayer" instance=ExtResource( 16 )]
 
+[node name="AcabouGasolina" parent="CanvasLayer" instance=ExtResource( 23 )]
+
 [node name="Pause" type="Node2D" parent="CanvasLayer"]
 
 [node name="Cinza" type="Sprite" parent="CanvasLayer/Pause"]
@@ -301,9 +308,9 @@ valign = 1
 [node name="BotaoContinuar" type="TextureButton" parent="CanvasLayer/Pause"]
 pause_mode = 2
 margin_left = 480.0
-margin_top = 328.0
+margin_top = 280.0
 margin_right = 1146.0
-margin_bottom = 456.0
+margin_bottom = 408.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 20 )
 texture_hover = ExtResource( 21 )
@@ -312,9 +319,9 @@ stretch_mode = 3
 
 [node name="Continuar" type="Label" parent="CanvasLayer/Pause"]
 margin_left = 560.0
-margin_top = 352.0
+margin_top = 304.0
 margin_right = 748.0
-margin_bottom = 384.0
+margin_bottom = 336.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 9 )
@@ -324,9 +331,9 @@ align = 1
 [node name="BotaoRecomecar" type="TextureButton" parent="CanvasLayer/Pause"]
 pause_mode = 2
 margin_left = 480.0
-margin_top = 424.0
+margin_top = 368.0
 margin_right = 1146.0
-margin_bottom = 559.0
+margin_bottom = 503.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 20 )
 texture_hover = ExtResource( 21 )
@@ -334,10 +341,10 @@ expand = true
 stretch_mode = 3
 
 [node name="Recomecar" type="Label" parent="CanvasLayer/Pause"]
-margin_left = 555.0
-margin_top = 452.0
-margin_right = 743.0
-margin_bottom = 484.0
+margin_left = 552.0
+margin_top = 392.0
+margin_right = 740.0
+margin_bottom = 424.0
 rect_pivot_offset = Vector2( -680, -278 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
@@ -348,10 +355,10 @@ valign = 1
 
 [node name="BotaoMenu" type="TextureButton" parent="CanvasLayer/Pause"]
 pause_mode = 2
-margin_left = 488.0
-margin_top = 528.0
-margin_right = 1154.0
-margin_bottom = 647.0
+margin_left = 480.0
+margin_top = 544.0
+margin_right = 1146.0
+margin_bottom = 663.0
 rect_min_size = Vector2( 2, 2 )
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 20 )
@@ -361,9 +368,9 @@ stretch_mode = 3
 
 [node name="Menu" type="Label" parent="CanvasLayer/Pause"]
 margin_left = 560.0
-margin_top = 552.0
+margin_top = 568.0
 margin_right = 748.0
-margin_bottom = 584.0
+margin_bottom = 600.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 9 )
@@ -372,6 +379,28 @@ align = 1
 valign = 1
 
 [node name="Cinzinha" type="Sprite" parent="CanvasLayer/Pause"]
+
+[node name="BotaoDificuldade" type="TextureButton" parent="CanvasLayer/Pause"]
+pause_mode = 2
+margin_left = 488.0
+margin_top = 456.0
+margin_right = 1128.0
+margin_bottom = 584.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+expand = true
+stretch_mode = 3
+
+[node name="Dificuldade" type="Label" parent="CanvasLayer/Pause"]
+margin_left = 552.0
+margin_top = 480.0
+margin_right = 746.0
+margin_bottom = 512.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "Dificuldade"
+align = 1
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 margin_right = 1280.0
@@ -488,3 +517,4 @@ position = Vector2( 592, 1768 )
 [connection signal="pressed" from="CanvasLayer/Pause/BotaoContinuar" to="." method="_on_BotaoContinuar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/BotaoRecomecar" to="." method="_on_BotaoRecomecar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/BotaoMenu" to="." method="_on_BotaoMenu_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/BotaoDificuldade" to="." method="_on_BotaoDificuldade_pressed"]

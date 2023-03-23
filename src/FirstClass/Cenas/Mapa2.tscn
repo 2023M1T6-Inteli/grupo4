@@ -168,4 +168,6 @@ shape = SubResource( 2 )
 stream = ExtResource( 8 )
 
 [connection signal="body_entered" from="SegundoPonto" to="Chegada" method="_on_SegundoPonto_body_entered"]
+[connection signal="body_exited" from="SegundoPonto" to="Chegada" method="_on_SegundoPonto_body_exited"]
 [connection signal="body_entered" from="Chegada" to="Chegada" method="_on_Chegada_body_entered"]
+[connection signal="body_exited" from="Chegada" to="Chegada" method="_on_Chegada_body_exited"]

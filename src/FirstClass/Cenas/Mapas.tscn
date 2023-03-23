@@ -44,9 +44,9 @@ texture_click_mask = ExtResource( 3 )
 
 [node name="Mapa1" type="Label" parent="."]
 margin_left = 168.0
-margin_top = 507.0
+margin_top = 504.0
 margin_right = 291.0
-margin_bottom = 523.0
+margin_bottom = 520.0
 rect_scale = Vector2( 3, 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -74,10 +74,10 @@ texture_hover = ExtResource( 6 )
 texture_click_mask = ExtResource( 3 )
 
 [node name="Mapa2" type="Label" parent="."]
-margin_left = 780.0
-margin_top = 494.0
-margin_right = 890.0
-margin_bottom = 510.0
+margin_left = 792.0
+margin_top = 496.0
+margin_right = 902.0
+margin_bottom = 512.0
 rect_scale = Vector2( 3, 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
