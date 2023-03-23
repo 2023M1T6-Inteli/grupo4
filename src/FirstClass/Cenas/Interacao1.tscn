@@ -278,6 +278,7 @@ animations = [ {
 } ]
 
 [sub_resource type="DynamicFont" id=8]
+size = 35
 font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
@@ -376,20 +377,20 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 2
+frame = 5
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
-position = Vector2( 656, 376 )
-scale = Vector2( 13.7357, 11.8667 )
+position = Vector2( 640, 360 )
+scale = Vector2( 12.7012, 10.8084 )
 texture = ExtResource( 14 )
 
 [node name="Checklist" type="Label" parent="."]
-margin_left = 520.0
-margin_top = 32.0
-margin_right = 613.0
-margin_bottom = 48.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 488.0
+margin_top = 48.0
+margin_right = 696.0
+margin_bottom = 84.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -397,10 +398,9 @@ text = "CHECKLIST"
 
 [node name="Pneus_cheios" type="Label" parent="."]
 margin_left = 536.0
-margin_top = 120.0
-margin_right = 642.0
-margin_bottom = 136.0
-rect_scale = Vector2( 3, 3 )
+margin_top = 136.0
+margin_right = 770.0
+margin_bottom = 172.0
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -408,10 +408,9 @@ text = "Pneus cheios"
 
 [node name="Tanques_sem_vazamentos" type="Label" parent="."]
 margin_left = 536.0
-margin_top = 192.0
-margin_right = 649.0
-margin_bottom = 227.0
-rect_scale = Vector2( 3, 3 )
+margin_top = 200.0
+margin_right = 785.0
+margin_bottom = 275.0
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -423,7 +422,6 @@ margin_left = 536.0
 margin_top = 312.0
 margin_right = 643.0
 margin_bottom = 347.0
-rect_scale = Vector2( 3, 3 )
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -432,10 +430,9 @@ da carga"
 
 [node name="Extintor_de_incendio" type="Label" parent="."]
 margin_left = 536.0
-margin_top = 424.0
-margin_right = 641.0
-margin_bottom = 459.0
-rect_scale = Vector2( 3, 3 )
+margin_top = 432.0
+margin_right = 757.0
+margin_bottom = 507.0
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -444,10 +441,9 @@ Incêndio"
 
 [node name="Cinto" type="Label" parent="."]
 margin_left = 536.0
-margin_top = 552.0
-margin_right = 626.0
-margin_bottom = 587.0
-rect_scale = Vector2( 3, 3 )
+margin_top = 536.0
+margin_right = 734.0
+margin_bottom = 611.0
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -463,16 +459,16 @@ rect_scale = Vector2( 3, 3 )
 
 [node name="CheckBox2" type="CheckBox" parent="."]
 margin_left = 456.0
-margin_top = 552.0
+margin_top = 536.0
 margin_right = 480.0
-margin_bottom = 576.0
+margin_bottom = 560.0
 rect_scale = Vector2( 3, 3 )
 
 [node name="CheckBox3" type="CheckBox" parent="."]
 margin_left = 456.0
-margin_top = 408.0
+margin_top = 424.0
 margin_right = 480.0
-margin_bottom = 432.0
+margin_bottom = 448.0
 rect_scale = Vector2( 3, 3 )
 
 [node name="CheckBox4" type="CheckBox" parent="."]
