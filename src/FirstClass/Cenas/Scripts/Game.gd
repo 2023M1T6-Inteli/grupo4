@@ -100,6 +100,16 @@ func _on_BotaoMenu_pressed():
 
 
 func _on_BotaoDificuldade_pressed():
+	if Global.dificuldade == "Facil":
+		Global.gasolina = 115.0
+		
+	if Global.dificuldade == "Medio":
+		Global.gasolina = 105.0
+		
+	if Global.dificuldade == "Dificil":
+		Global.gasolina = 70.0
+	Global.permissao = false
+	Global.points = 0
 	get_tree().paused = false
 	MusicController.play_menu_music()
 	get_tree().change_scene("res://Cenas/EscolhaInGame.tscn")
