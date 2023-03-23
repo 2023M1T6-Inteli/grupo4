@@ -53,10 +53,10 @@ custom_fonts/font = SubResource( 1 )
 text = "Instruções"
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 10.0
-margin_top = 633.0
-margin_right = 42.0
-margin_bottom = 665.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 64.0
+margin_bottom = 64.0
 rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 8 )
