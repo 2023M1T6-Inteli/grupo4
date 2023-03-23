@@ -84,10 +84,10 @@ text = "Digite seu nome"
 align = 1
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 24.0
-margin_top = 616.0
-margin_right = 56.0
-margin_bottom = 648.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 64.0
+margin_bottom = 64.0
 rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 6 )

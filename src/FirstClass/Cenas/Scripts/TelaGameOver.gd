@@ -39,6 +39,7 @@ func som_hover():
 		$SomHover.play()
 
 func _on_menu_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 	$menu.texture_normal = $menu.texture_hover
 	$restart.texture_hover = null
@@ -55,6 +56,7 @@ func _on_menu_pressed():
 	#mudança de cena e efeito sonoro
 	
 func _on_restart_pressed():
+	$Transicao/fill/AnimationPlayer.play("Fora")
 	#alterando texturas dos botões para não serem interativas após um ser pressionado
 	$restart.texture_normal = $restart.texture_hover
 	$menu.texture_hover = null

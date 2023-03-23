@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Telas/FundoTela2.png" type="Texture" id=2]
@@ -12,6 +12,9 @@
 [ext_resource path="res://Assets2/IconsUI/contorno.png" type="Texture" id=10]
 [ext_resource path="res://Cenas/Scripts/Mapas.gd" type="Script" id=11]
 [ext_resource path="res://Cenas/Transicao.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=13]
+[ext_resource path="res://Sons/hover.wav" type="AudioStream" id=14]
+[ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -91,13 +94,28 @@ texture = ExtResource( 9 )
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
 margin_left = 32.0
-margin_top = 608.0
+margin_top = 32.0
 margin_right = 64.0
-margin_bottom = 640.0
+margin_bottom = 64.0
 rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 7 )
 
+[node name="SomConfirmar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -10.0
+
+[node name="SomHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -10.0
+
+[node name="SomVoltar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -13.0
+
+[connection signal="mouse_entered" from="BotaoMapa1" to="." method="_on_BotaoMapa1_mouse_entered"]
 [connection signal="pressed" from="BotaoMapa1" to="." method="_on_BotaoMapa1_pressed"]
+[connection signal="mouse_entered" from="BotaoMapa2" to="." method="_on_BotaoMapa2_mouse_entered"]
 [connection signal="pressed" from="BotaoMapa2" to="." method="_on_BotaoMapa2_pressed"]
+[connection signal="mouse_entered" from="BotaoVoltar" to="." method="_on_BotaoVoltar_mouse_entered"]
 [connection signal="pressed" from="BotaoVoltar" to="." method="_on_BotaoVoltar_pressed"]
