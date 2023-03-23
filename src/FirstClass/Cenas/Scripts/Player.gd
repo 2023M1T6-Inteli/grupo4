@@ -48,7 +48,13 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 		velocity = velocity.clamped(maxSpeed)
 	else:
 		directionY = 1
-		maxSpeed = 120
+		if Global.dificuldade == "Facil":
+			maxSpeed = 80
+		elif Global.dificuldade == "Medio":
+			maxSpeed = 120
+		elif Global.dificuldade == "Dificil":
+			maxSpeed = 170
+	#Define a velocidade máxima em função da dificuldade
 	
 	# As duas condicionais acima determinam que, se o jogador precionar a setinha para baixo,
 	# o caminhão inverterá seu movimento, começando a andar para trás (Dando ré), e que
@@ -57,10 +63,7 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	if Input.is_action_pressed("ui_up"):
 		velocity += Vector2.UP.rotated(rotation) * (acceleration * directionY)
 		velocity = velocity.clamped(maxSpeed)
-		if Global.pausado == 0:
-			Global.points += 1
-		else:
-			pass
+		Global.points += 1
 			
 	# A condicional acima determina que o objeto ganha velocidade de deslocamento quando a tecla "espaço"
 	# é pressionada, que a velocidade não pode ultrapassar o valor guardado na variável "max_speed" e aumenta a pontuação
@@ -118,19 +121,18 @@ func lose():
 
 
 func sounds(): # função que controla os sons relativos ao jogador e sua movimentação
-	if Global.pausado == 0:
-		if !$SomIdle.playing:
-			$SomIdle.play()
+	if !$SomIdle.playing:
+		$SomIdle.play()
 
-		if Input.is_action_just_pressed("ui_up"):
-			$SomAcelerando.play("acelerar")
-		if Input.is_action_just_released("ui_up") and Global.debuf2 == false:
-			$SomAcelerando.play("acelerar", -1, -2.5, true)
-		elif Input.is_action_just_released("ui_up") and Global.debuf2 == true:
-			$SomAcelerando.play("acelerar", -1, -1, true)
-		if Input.is_action_just_pressed("ui_down"):
-			$SomRe.play()
-		if Input.is_action_just_released("ui_down"):
-			$SomRe.stop()
+	if Input.is_action_just_pressed("ui_up"):
+		$SomAcelerando.play("acelerar")
+	if Input.is_action_just_released("ui_up") and Global.debuf2 == false:
+		$SomAcelerando.play("acelerar", -1, -2.5, true)
+	elif Input.is_action_just_released("ui_up") and Global.debuf2 == true:
+		$SomAcelerando.play("acelerar", -1, -1, true)
+	if Input.is_action_just_pressed("ui_down"):
+		$SomRe.play()
+	if Input.is_action_just_released("ui_down"):
+		$SomRe.stop()
 	else:
 		pass

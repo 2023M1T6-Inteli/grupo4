@@ -12,7 +12,8 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 22
-outline_size = 2
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [node name="Pontuacao" type="Node2D"]
@@ -33,6 +34,7 @@ margin_bottom = 71.0
 custom_colors/font_color = Color( 0.196078, 0.733333, 0.027451, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
+text = "+1000"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

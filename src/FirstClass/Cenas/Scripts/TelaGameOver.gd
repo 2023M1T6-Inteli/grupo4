@@ -6,9 +6,19 @@ var hover = 0
 func _ready():
 	Global.debuf = false
 	Global.debuf2 = false
-	Global.gasolina = 105
 	Global.permissao = false
 	#garantindo que os debuffs, a gasolina e a variável "permissao" são reiniciados
+	
+	
+	if Global.dificuldade == "Facil":
+		Global.gasolina = 115.0
+		
+	if Global.dificuldade == "Medio":
+		Global.gasolina = 105.0
+		
+	if Global.dificuldade == "Dificil":
+		Global.gasolina = 50.0
+	#defini o tempo para finalizar a gasolina em função da dificuldade
 	
 	$Pontos.text = "Parabéns " + str(Global.nome) + ", você fez " + str(Global.points / 12) + " reais!"
 	#mostrando os pontos com uma mensagem

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/TilesMaps/Chao.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/TilesMaps/Arvore.tres" type="TileSet" id=2]
@@ -17,12 +17,6 @@ extents = Vector2( 65.5, 5.5 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 71, 2.5 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 16, 80 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 10, 80 )
 
 [node name="Mapa1" type="Node2D"]
 script = ExtResource( 11 )
@@ -44,19 +38,6 @@ shape = SubResource( 1 )
 
 [node name="DinheiroSFX" type="AudioStreamPlayer" parent="Chegada"]
 stream = ExtResource( 10 )
-
-[node name="Metade2" type="Area2D" parent="."]
-position = Vector2( 2368, 320 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Metade2"]
-shape = SubResource( 3 )
-
-[node name="Metade1" type="Area2D" parent="."]
-position = Vector2( -240, 32 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Metade1"]
-position = Vector2( 1808, 2032 )
-shape = SubResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 400, 1232 )
@@ -194,5 +175,3 @@ tile_data = PoolIntArray( 1835276, 4, 0, 2949279, 4, 0, 2949333, 2, 0, 3080387, 
 
 [connection signal="body_entered" from="SegundoPonto" to="Chegada" method="_on_SegundoPonto_body_entered"]
 [connection signal="body_entered" from="Chegada" to="Chegada" method="_on_Chegada_body_entered"]
-[connection signal="body_entered" from="Metade2" to="Chegada" method="_on_Metade2_body_entered"]
-[connection signal="body_entered" from="Metade1" to="Chegada" method="_on_Metade1_body_entered"]

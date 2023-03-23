@@ -26,4 +26,4 @@ func _on_BotaoMapa2_pressed():
 #voltar a cena de seleção de caminhões
 func _on_BotaoVoltar_pressed():
 	$Transicao/fill/AnimationPlayer.play("Fora")
-	get_tree().change_scene("res://Cenas/Caminhoes.tscn")
+	get_tree().change_scene("res://Cenas/Escolha.tscn")
