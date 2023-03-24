@@ -179,7 +179,7 @@ material = SubResource( 10 )
 margin_right = 1920.0
 margin_bottom = 1080.0
 rect_scale = Vector2( 0.666, 0.666 )
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.74902, 0.913725, 1, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/fill"]
 autoplay = "transition"
@@ -367,9 +367,9 @@ expand = true
 stretch_mode = 3
 
 [node name="Menu" type="Label" parent="CanvasLayer/Pause"]
-margin_left = 560.0
+margin_left = 552.0
 margin_top = 568.0
-margin_right = 748.0
+margin_right = 740.0
 margin_bottom = 600.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )

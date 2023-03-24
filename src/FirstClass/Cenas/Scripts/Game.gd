@@ -4,6 +4,16 @@ func _ready():
 	$CanvasLayer/Pontuacao/Bonus.hide()
 	$CanvasLayer/Pause.hide()
 
+	if Global.lingua == "eng":
+		$CanvasLayer/Pause/Recomecar.text = "Restart"
+		$CanvasLayer/Pause/Continuar.text = "Continue"
+		$CanvasLayer/Pause/Dificuldade.text = "Difficulty"
+	
+	if Global.lingua == "esp":
+		$CanvasLayer/Pause/Recomecar.text = "Reanudar"
+		$CanvasLayer/Pause/Dificuldade.text = "Dificultad"
+
+
 	if Global.mapa == 1: #selecionando o Mapa 1 (Floresta)
 		$ViewportContainer/Viewport/Mapa1/Player/Camera2D.current = true
 		$ViewportContainer/Viewport/Mapa2/Player/Camera2D.current = false
@@ -32,6 +42,7 @@ func _process(delta):
 			Global.permissao = false
 			$CanvasLayer/Pontuacao/Bonus.show()
 			$CanvasLayer/Pontuacao/Timer.start()
+			
 
 		if get_node("CanvasLayer/Minimap/ViewportContainer/Viewport/Mapa1/Chegada").chegou2 == true and Global.permissao == false:
 			get_node("CanvasLayer/Minimap/ViewportContainer/Viewport/Mapa1/Chegada").chegou2 = false
@@ -39,7 +50,7 @@ func _process(delta):
 			$CanvasLayer/CargaEntregue/CargaAnimacao.play("Fade")
 		
 		if Global.gasolina == 0:
-			$CanvasLayer/Minimap/ViewportContainer/Viewport/Mapa1/Player.set_physics_process(false)
+			get_node("CanvasLayer/Minimap/ViewportContainer/Viewport/Mapa1/Player").set_physics_process(false)
 			$CanvasLayer/AcabouGasolina/AcabouAnimacao.play("FadeInOut")
 		
 		
@@ -56,7 +67,7 @@ func _process(delta):
 			$CanvasLayer/CargaEntregue/CargaAnimacao.play("Fade")
 	
 		if Global.gasolina == 0:
-			$CanvasLayer/Minimap/ViewportContainer/Viewport/Mapa2/Player.set_physics_process(false)
+			get_node("CanvasLayer/Minimap/ViewportContainer/Viewport/Mapa2/Player").set_physics_process(false)
 			$CanvasLayer/AcabouGasolina/AcabouAnimacao.play("FadeInOut")
 
 	if Input.is_action_just_pressed("esc"):
@@ -76,10 +87,9 @@ func _on_BotaoRecomecar_pressed():
 		Global.gasolina = 105.0
 		
 	if Global.dificuldade == "Dificil":
-		Global.gasolina = 50.0
-	
+		Global.gasolina = 70.0
+	Global.permissao = false
 	Global.points = 0
-	Global.gasolina
 	get_tree().reload_current_scene()
 	get_tree().paused = false
 
@@ -90,6 +100,16 @@ func _on_BotaoMenu_pressed():
 
 
 func _on_BotaoDificuldade_pressed():
+	if Global.dificuldade == "Facil":
+		Global.gasolina = 115.0
+		
+	if Global.dificuldade == "Medio":
+		Global.gasolina = 105.0
+		
+	if Global.dificuldade == "Dificil":
+		Global.gasolina = 70.0
+	Global.permissao = false
+	Global.points = 0
 	get_tree().paused = false
 	MusicController.play_menu_music()
 	get_tree().change_scene("res://Cenas/EscolhaInGame.tscn")

@@ -54,10 +54,20 @@ func _on_BotaoInstrucoes_mouse_entered():
 	som_hover()
 
 func _on_BotaoVolume_pressed():
-	$Transicao/fill/AnimationPlayer.play("Fora")
 	get_tree().change_scene("res://Cenas/Volume.tscn")
 
 
 func _on_BotaoIdioma_pressed():
 	$Transicao/fill/AnimationPlayer.play("Fora")
-	get_tree().change_scene("res://Cenas/Idiomas.tscn")
+	if !$SomConfirmar.playing:
+		$SomConfirmar.play()
+		yield(get_tree().create_timer(0.25), "timeout")
+		get_tree().change_scene("res://Cenas/Idiomas.tscn")
+
+
+func _on_BotaoVolume_mouse_entered():
+	som_hover()
+
+
+func _on_BotaoIdioma_mouse_entered():
+	som_hover()

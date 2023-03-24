@@ -99,7 +99,7 @@ margin_right = 964.0
 margin_bottom = 116.0
 custom_colors/font_color = Color( 0.196078, 0.733333, 0.027451, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Carga Entregue!
+text = "Carga entregue!
 Gasolina reabastecida!"
 align = 1
 autowrap = true

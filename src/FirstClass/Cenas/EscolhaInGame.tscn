@@ -33,7 +33,7 @@ scale = Vector2( 6.65874, 6.67887 )
 texture = ExtResource( 1 )
 offset = Vector2( 187, 31 )
 
-[node name="Botaofacil" type="TextureButton" parent="."]
+[node name="BotaoFacil" type="TextureButton" parent="."]
 margin_left = 192.0
 margin_top = 240.0
 margin_right = 858.0
@@ -44,7 +44,7 @@ texture_hover = ExtResource( 5 )
 expand = true
 stretch_mode = 3
 
-[node name="Botaomedio" type="TextureButton" parent="."]
+[node name="BotaoMedio" type="TextureButton" parent="."]
 margin_left = 512.0
 margin_top = 240.0
 margin_right = 1178.0
@@ -55,7 +55,7 @@ texture_hover = ExtResource( 5 )
 expand = true
 stretch_mode = 3
 
-[node name="Botaodificil" type="TextureButton" parent="."]
+[node name="BotaoDificil" type="TextureButton" parent="."]
 margin_left = 832.0
 margin_top = 240.0
 margin_right = 1498.0
@@ -78,9 +78,9 @@ align = 1
 valign = 1
 
 [node name="ldmedio" type="Label" parent="."]
-margin_left = 544.0
+margin_left = 520.0
 margin_top = 248.0
-margin_right = 756.0
+margin_right = 776.0
 margin_bottom = 336.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
@@ -110,6 +110,6 @@ text = "Dificuldade"
 align = 1
 valign = 1
 
-[connection signal="pressed" from="Botaofacil" to="." method="_on_Botaofacil_pressed"]
-[connection signal="pressed" from="Botaomedio" to="." method="_on_Botaomedio_pressed"]
-[connection signal="pressed" from="Botaodificil" to="." method="_on_Botaodificil_pressed"]
+[connection signal="pressed" from="BotaoFacil" to="." method="_on_BotaoFacil_pressed"]
+[connection signal="pressed" from="BotaoMedio" to="." method="_on_BotaoMedio_pressed"]
+[connection signal="pressed" from="BotaoDificil" to="." method="_on_BotaoDificil_pressed"]

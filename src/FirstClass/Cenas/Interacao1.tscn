@@ -31,8 +31,8 @@
 [sub_resource type="GDScript" id=4]
 script/source = "extends Node2D
 
-var texto = [\"Eai \" + str(Global.nome) + \", tudo beleza?\" + \" Sou \" + str(Global.nomeInstrutor) + \" e serei seu guia nessa jornada.\" + \" Fico feliz por ter me escolhido nesse momento de ajuda.\" , 
-\"Trabalho com cargas químicas há 15 anos, darei as devidas instruções para que nenhum acidente aconteça com você\", 
+var texto = [\"Eai \" + str(Global.nome) + \", tudo beleza?\" + \" Sou \" + str(Global.nomeInstrutor) + \" e serei guia nessa jornada.\" + \" Fico feliz por ter me escolhido nesse momento de ajuda.\" , 
+\"Trabalho com cargas químicas há 15 anos, darei as devidas instruções para que nenhum acidente aconteça com você.\", 
 \"Estou de olho, viu! Não faça nenhuma bobagem! Lembre-se também que sua gasolina é limitada. Chegue ao ponto de entrega antes que ela acabe.\",
 \"Aqui vão algumas instruções:\" + \" Proibido o uso do celular no volante, nada de bebidas, descanse bem para não cochilar no volante e confira o peso da carga.\" ,
 \"Aqui está a checklist, verifique todos os itens com atenção e bora para o trajeto!\",
@@ -59,7 +59,7 @@ func _ready():
 \"I'll keep an eye on you ok? Don't mess it up! Keep in mind that your gas is limited. Get to the delivery point before it runs out.\",
 \"Here are some instructions: using your cellphone while driving is prohibited, no drunk driving, rest well so you don't fall asleep and check the weight of your load.\",
 \"Here's the checklist, check all items and let's deliver this load!\",
-\"Those are the buttons used to play, good luck \"+str(Global.nome)+\"!\"]
+'Those are the buttons used to play, good luck! If you need to pause the game, use the \"esc\" key.']
 
 		$Pneus_cheios.text = \"Calibrated tires\"
 		$Tanques_sem_vazamentos.text = \"Load with \\nno leakings\"
@@ -73,7 +73,7 @@ func _ready():
 \"Estoy mirando, mira!  No hagas nada tonto! Además, no olvide que su nafta es limitado. Llegue al punto de entrega antes que se acabe.\",
 \"Aquí algunas indicaciones: Prohibido usar celular mientras se conduce, no tomar bebidas, descansar bien para no dormirse al volante y revisar el peso de la carga.\",
 \"Aquí está la lista de verificación, verifique todos los elementos cuidadosamente y vámonos!\",
-\"Estos son botones que se usan para jugar, buena suerte \"+str(Global.nome)+\"!\"]
+'Estos son botones que se usan para jugar, buena suerte! Si necessita parar el juego, utilice la tecla \"esc\".']
 
 		$Pneus_cheios.text = \"Llantas llenas\"
 		$Tanques_sem_vazamentos.text = \"Tanques \\nsin fugas\"
@@ -278,6 +278,7 @@ animations = [ {
 } ]
 
 [sub_resource type="DynamicFont" id=8]
+size = 35
 font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
@@ -376,20 +377,20 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 6
+frame = 5
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
-position = Vector2( 656, 376 )
-scale = Vector2( 13.7357, 11.8667 )
+position = Vector2( 640, 360 )
+scale = Vector2( 12.7012, 10.8084 )
 texture = ExtResource( 14 )
 
 [node name="Checklist" type="Label" parent="."]
-margin_left = 520.0
-margin_top = 32.0
-margin_right = 613.0
-margin_bottom = 48.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 488.0
+margin_top = 48.0
+margin_right = 696.0
+margin_bottom = 84.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -397,10 +398,9 @@ text = "CHECKLIST"
 
 [node name="Pneus_cheios" type="Label" parent="."]
 margin_left = 536.0
-margin_top = 120.0
-margin_right = 642.0
-margin_bottom = 136.0
-rect_scale = Vector2( 3, 3 )
+margin_top = 136.0
+margin_right = 770.0
+margin_bottom = 172.0
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -408,10 +408,9 @@ text = "Pneus cheios"
 
 [node name="Tanques_sem_vazamentos" type="Label" parent="."]
 margin_left = 536.0
-margin_top = 192.0
-margin_right = 649.0
-margin_bottom = 227.0
-rect_scale = Vector2( 3, 3 )
+margin_top = 200.0
+margin_right = 785.0
+margin_bottom = 275.0
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -423,7 +422,6 @@ margin_left = 536.0
 margin_top = 312.0
 margin_right = 643.0
 margin_bottom = 347.0
-rect_scale = Vector2( 3, 3 )
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -432,10 +430,9 @@ da carga"
 
 [node name="Extintor_de_incendio" type="Label" parent="."]
 margin_left = 536.0
-margin_top = 424.0
-margin_right = 641.0
-margin_bottom = 459.0
-rect_scale = Vector2( 3, 3 )
+margin_top = 432.0
+margin_right = 757.0
+margin_bottom = 507.0
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -444,10 +441,9 @@ Incêndio"
 
 [node name="Cinto" type="Label" parent="."]
 margin_left = 536.0
-margin_top = 552.0
-margin_right = 626.0
-margin_bottom = 587.0
-rect_scale = Vector2( 3, 3 )
+margin_top = 536.0
+margin_right = 734.0
+margin_bottom = 611.0
 custom_colors/font_color = Color( 0.294118, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0.239216, 0.2, 0.2, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -463,16 +459,16 @@ rect_scale = Vector2( 3, 3 )
 
 [node name="CheckBox2" type="CheckBox" parent="."]
 margin_left = 456.0
-margin_top = 552.0
+margin_top = 536.0
 margin_right = 480.0
-margin_bottom = 576.0
+margin_bottom = 560.0
 rect_scale = Vector2( 3, 3 )
 
 [node name="CheckBox3" type="CheckBox" parent="."]
 margin_left = 456.0
-margin_top = 408.0
+margin_top = 424.0
 margin_right = 480.0
-margin_bottom = 432.0
+margin_bottom = 448.0
 rect_scale = Vector2( 3, 3 )
 
 [node name="CheckBox4" type="CheckBox" parent="."]
@@ -495,8 +491,8 @@ scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 23 )
 
 [node name="UiDown" type="Sprite" parent="."]
-position = Vector2( 664, 408 )
-scale = Vector2( 2.5, 2.25 )
+position = Vector2( 664, 402 )
+scale = Vector2( 2.5, 2.375 )
 texture = ExtResource( 24 )
 
 [node name="UiRight" type="Sprite" parent="."]
