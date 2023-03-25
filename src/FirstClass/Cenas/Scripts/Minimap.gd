@@ -18,6 +18,7 @@ func _ready():
 
 
 func _physics_process(delta):
+	#função que atuliza a posição da representação do caminhão no minimapa a cada frame com um tween
 	if Global.mapa == 1:
 		var playerPosition = $ViewportContainer/Viewport/Mapa1/Player.position 
 		var cursorPosition = $ViewportContainer/Viewport/cursor.position
@@ -42,7 +43,7 @@ func _physics_process(delta):
 
 	
 	$ViewportContainer/Viewport/cursor/CollisionShape2D.set_disabled(true)
-	#Comando que faz a bolinha vermelha no minimapa, seguir o pesonagem pricipal e assim ser possível
+	#Comando que faz a bolinha vermelha no minimapa seguir o pesonagem pricipal e assim ser possível
 	# saber onde o caminhão esta no mapa.
 	
 	$ViewportContainer.material = null

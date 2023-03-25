@@ -9,6 +9,7 @@ func _ready():
 		$Mapa2.text = "Viejo Oeste"
 #traduzindo o nome do mapa de acordo com a linguagem selecionada
 
+#função de efeito sonoro
 func som_hover():
 	if hover == 0:
 		$SomHover.play()
@@ -43,7 +44,7 @@ func _on_BotaoVoltar_pressed():
 		yield(get_tree().create_timer(0.5), "timeout")
 		get_tree().change_scene("res://Cenas/Escolha.tscn")
 
-
+#funções de efeito sonoro
 func _on_BotaoVoltar_mouse_entered():
 	som_hover()
 

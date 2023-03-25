@@ -10,3 +10,4 @@ func _ready():
 
 func _on_AcabouAnimacao_animation_finished(anim_name):
 	get_tree().change_scene("res://Cenas/TelaGameOver.tscn")
+#mudando para a cena de game over
