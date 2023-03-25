@@ -2,6 +2,7 @@ extends Node2D
 
 var hover = 0
 
+#traduções
 func _ready():
 	if Global.lingua == "eng":
 		$Dificuldade.text = "Difficulty"
@@ -13,6 +14,7 @@ func _ready():
 		$Dificuldade.text = "Dificultad"
 		$ldmedio.text = "Normal"
 
+#funções abaixo redefinem a dificuldade do jogo
 func _on_BotaoFacil_pressed():
 	Global.dificuldade = "Facil"
 	MusicController.play_game_music()
