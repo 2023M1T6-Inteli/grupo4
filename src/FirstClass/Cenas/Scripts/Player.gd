@@ -11,7 +11,8 @@ var velocity = Vector2.ZERO # Variável de velocidade do objeto em relação aos
 var friction = 5.0  # Variável que guarda o valor da fricção do objeto com o chão (afeta a freagem).
 
 func _physics_process(delta): # Nessa função declaro as verificações executadas a cada frame pelo programa.
-	
+	if Global.dificuldade == "Dificil":
+		$Area2D2.gravity_distance_scale = 0.5
 	sounds() # executa a função "sounds"
 	
 	var directionX = 0 # Variável que guarda o valor da direção de rotação do objeto (1 = direita; -1 = esquerda;

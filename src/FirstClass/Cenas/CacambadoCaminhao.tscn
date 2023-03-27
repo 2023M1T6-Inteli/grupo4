@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Sprites/CaminhaoDeCloro/CLorocacamba10.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/CaminhaoDeCloro/CLorocacamba9.png" type="Texture" id=2]
@@ -41,6 +41,8 @@
 [ext_resource path="res://Sprites/CaminhaoDeCloro/CLorocacamba8.png" type="Texture" id=39]
 [ext_resource path="res://Sprites/CaminhaoDeCloro/CLorocacamba14.png" type="Texture" id=40]
 [ext_resource path="res://Cenas/Scripts/Cacamba.gd" type="Script" id=41]
+[ext_resource path="res://EfeitosTela/EXPLOSAO.png" type="Texture" id=42]
+[ext_resource path="res://Sons/explosionsfx.wav" type="AudioStream" id=43]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -63,18 +65,59 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 8.0
 
-[node name="CacambadoCaminhao" type="RigidBody2D"]
+[sub_resource type="CanvasItemMaterial" id=3]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0, 0.283871, 0.419355, 0.658065, 0.851613 )
+colors = PoolColorArray( 1, 0.976685, 0, 1, 1, 0.718872, 0, 1, 1, 0.36731, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+emission_shape = 1
+emission_sphere_radius = 29.34
+flag_disable_z = true
+gravity = Vector3( 0, -100, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 34.65
+scale = 0.5
+color_ramp = SubResource( 6 )
+anim_speed = 1.0
+
+[node name="Cacamba" type="RigidBody2D"]
 script = ExtResource( 41 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 17 )
 frames = SubResource( 1 )
 animation = "Cloro"
-frame = 2
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 16 )
 shape = SubResource( 2 )
 
+[node name="ExplosaoSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 43 )
+volume_db = -18.0
+
+[node name="Explosao" type="Particles2D" parent="."]
+material = SubResource( 3 )
+position = Vector2( 0, 17 )
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 0.76
+local_coords = false
+process_material = SubResource( 4 )
+texture = ExtResource( 42 )
+
 [connection signal="body_entered" from="." to="." method="_on_Cacamba_do_Caminhao_body_entered"]
+[connection signal="finished" from="ExplosaoSFX" to="." method="_on_ExplosaoSFX_finished"]

@@ -86,7 +86,7 @@ script = ExtResource( 2 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 2, 2 )
 frames = SubResource( 11 )
-frame = 12
+frame = 3
 playing = true
 
 [node name="Area2D2" type="Area2D" parent="."]
@@ -109,10 +109,6 @@ shape = SubResource( 4 )
 scale = Vector2( 3, 3 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
-limit_left = 0
-limit_top = 0
-limit_right = 3650
-limit_bottom = 2750
 
 [node name="SomIdle" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
