@@ -33,6 +33,7 @@ func confirmar():
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
+		$Transicao/fill/AnimationPlayer.play("Fora")
 		yield(get_tree().create_timer(0.45), "timeout")
 		get_tree().change_scene("res://Cenas/Instrutores.tscn")
 		#mudança para a tela de instrutores e efeito sonoro
@@ -40,7 +41,7 @@ func confirmar():
 
 #mudança de tela para prosseguir
 func _on_BotaoOk_pressed():
-	$Transicao/fill/AnimationPlayer.play("Fora")
+
 	var texto = $LineEdit.text
 	texto = texto.lstrip(" ")
 	texto = texto.rstrip(" ")

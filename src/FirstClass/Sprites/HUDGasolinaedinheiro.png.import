@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NicoBold-Regular.svg-b1969550f7431e972007dba18a898bc2.stex"
+path="res://.import/HUDGasolinaedinheiro.png-bd3bf6717a17a6b281dae7a2359e6af9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fonte/NicoBold/NicoBold-Regular.svg"
-dest_files=[ "res://.import/NicoBold-Regular.svg-b1969550f7431e972007dba18a898bc2.stex" ]
+source_file="res://Sprites/HUDGasolinaedinheiro.png"
+dest_files=[ "res://.import/HUDGasolinaedinheiro.png-bd3bf6717a17a6b281dae7a2359e6af9.stex" ]
 
 [params]
 

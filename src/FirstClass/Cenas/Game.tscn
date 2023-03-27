@@ -7,7 +7,7 @@
 [ext_resource path="res://Cenas/Scripts/ViewportContainer.gd" type="Script" id=5]
 [ext_resource path="res://EfeitosTela/CenasSono.tres" type="Animation" id=6]
 [ext_resource path="res://Cenas/Pontuacao.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Sprites/HUD Gasolina e dinheiro.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/HUDGasolinaedinheiro.png" type="Texture" id=8]
 [ext_resource path="res://Cenas/Gasolina.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=10]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=11]

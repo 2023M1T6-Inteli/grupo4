@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=5]
 [ext_resource path="res://Assets2/checklist/carta1.png" type="Texture" id=6]
 [ext_resource path="res://Assets2/checklist/carta2.png" type="Texture" id=7]
-[ext_resource path="res://Telas/FundoTela1.png" type="Texture" id=8]
 [ext_resource path="res://Assets2/checklist/carta3.png" type="Texture" id=9]
 [ext_resource path="res://Assets2/checklist/carta5.png" type="Texture" id=10]
 [ext_resource path="res://Assets2/checklist/carta6.png" type="Texture" id=11]
@@ -290,12 +289,10 @@ __meta__ = {
 [node name="Transicao" parent="." instance=ExtResource( 27 )]
 layer = 0
 
-[node name="FundoTela1" type="Sprite" parent="."]
-position = Vector2( 648, 360 )
-scale = Vector2( 2.03727, 2.75556 )
-texture = ExtResource( 8 )
-region_enabled = true
-region_rect = Rect2( 218, 142, 644, 270 )
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.74902, 0.913725, 1, 1 )
 
 [node name="caixa" type="Sprite" parent="."]
 position = Vector2( 640, 288 )
@@ -377,7 +374,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 5
+frame = 3
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
