@@ -28,14 +28,21 @@ script = ExtResource( 10 )
 layer = 0
 
 [node name="FundoTela" type="Sprite" parent="."]
-position = Vector2( 640, 360 )
-scale = Vector2( 6.666, 6.666 )
+position = Vector2( 640, 363.982 )
+scale = Vector2( 6.666, 6.74041 )
 texture = ExtResource( 4 )
 
-[node name="Placa" type="Sprite" parent="."]
-position = Vector2( 664, 384 )
-scale = Vector2( 85.6, 24 )
+[node name="Placa" type="NinePatchRect" parent="."]
+margin_left = -32.0
+margin_top = 176.0
+margin_right = 116.0
+margin_bottom = 222.0
+rect_scale = Vector2( 9, 9 )
 texture = ExtResource( 6 )
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
 
 [node name="faixaVerde" type="Sprite" parent="."]
 position = Vector2( 624, 80 )
@@ -67,8 +74,9 @@ custom_fonts/font = SubResource( 1 )
 text = "Cloro"
 
 [node name="BotaoCloro" type="TextureButton" parent="."]
+margin_left = 16.0
 margin_top = 256.0
-margin_right = 576.0
+margin_right = 592.0
 margin_bottom = 737.0
 rect_scale = Vector2( 0.7, 0.7 )
 texture_normal = ExtResource( 14 )
