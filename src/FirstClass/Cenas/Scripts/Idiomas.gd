@@ -45,7 +45,7 @@ func _on_BotaoVoltar_pressed():
 		yield(get_tree().create_timer(0.25), "timeout")
 		get_tree().change_scene("res://Cenas/Menu.tscn")
 
-
+#funções de efeito sonoro
 func _on_BotaoPt_mouse_entered():
 	som_hover()
 

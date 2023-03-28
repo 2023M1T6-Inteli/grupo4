@@ -1,5 +1,6 @@
 extends Area2D
 
+#variáveis de verificação para detectar se o caminhão chegou nos pontos
 var chegou = false
 var chegou2 = false
 
@@ -16,7 +17,7 @@ func _on_Chegada_body_entered(body):
 				Global.gasolina = 105.0
 		
 			if Global.dificuldade == "Dificil":
-				Global.gasolina = 50.0
+				Global.gasolina = 90.0
 
 
 	 # Função responsável por reconhecer uma voltada dada pelo player e atribuir um bônus a essa volta,
@@ -33,7 +34,7 @@ func _on_SegundoPonto_body_entered(body):
 				Global.gasolina = 105.0
 		
 			if Global.dificuldade == "Dificil":
-				Global.gasolina = 50.0
+				Global.gasolina = 90.0
 
 	
 	# Função responsável por resetar o valor da gasolina para o valor original na metade da pista.

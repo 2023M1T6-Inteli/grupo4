@@ -13,10 +13,12 @@ func _ready(): #botando traduções
 		$Dificuldade.text = "Dificultad"
 		$ldmedio.text = "Normal"
 
+#função de efeito sonoro
 func som_hover():
 	if hover == 0:
 		$SomHover.play()
 
+#função de efeito sonoro, mudança e transição de tela
 func confirmar():
 	$Transicao/fill/AnimationPlayer.play("Fora")
 	hover = 1
@@ -51,6 +53,7 @@ func _on_BotaoVoltar_pressed():
 		get_tree().change_scene("res://Cenas/Caminhoes.tscn")
 
 
+#funções de efeito sonoro
 func _on_Botaofacil_mouse_entered():
 	som_hover()
 

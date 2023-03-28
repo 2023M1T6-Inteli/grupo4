@@ -7,3 +7,4 @@ func _ready():
 		$TextoCarga.text = "Carga presentada!\nNafta abastecida!"
 	if Global.lingua == "eng":
 		$TextoCarga.text = "Cargo delivered!\nGasoline refueled!"
+	#traduções

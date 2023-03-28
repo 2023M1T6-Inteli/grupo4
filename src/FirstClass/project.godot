@@ -12,7 +12,6 @@ config_version=4
 
 config/name="MyTruck"
 run/main_scene="res://Cenas/SalaDeEspera.tscn"
-config/icon="res://Telas/CaminhaoBolado1.png"
 
 [autoload]
 

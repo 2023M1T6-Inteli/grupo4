@@ -744,7 +744,7 @@ texture = ExtResource( 15 )
 position = Vector2( 398.274, 62 )
 scale = Vector2( 0.696919, 0.65683 )
 frames = SubResource( 103 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="Plantinhas" type="TileMap" parent="."]
@@ -758,7 +758,7 @@ tile_data = PoolIntArray( 327830, 0, 0, 393286, 3, 0, 655450, 1, 0 )
 position = Vector2( 39, 29 )
 scale = Vector2( 0.625, 0.645833 )
 frames = SubResource( 73 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="Pensamento" type="AnimationPlayer" parent="."]
