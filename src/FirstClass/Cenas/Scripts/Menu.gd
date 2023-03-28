@@ -54,7 +54,11 @@ func _on_BotaoInstrucoes_mouse_entered():
 	som_hover()
 
 func _on_BotaoVolume_pressed():
-	get_tree().change_scene("res://Cenas/Volume.tscn")
+	$Transicao/fill/AnimationPlayer.play("Fora")
+	if !$SomConfirmar.playing:
+		$SomConfirmar.play()
+		yield(get_tree().create_timer(0.25), "timeout")
+		get_tree().change_scene("res://Cenas/Volume.tscn")
 
 #botão de idiomas
 func _on_BotaoIdioma_pressed():
