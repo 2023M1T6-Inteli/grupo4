@@ -28,10 +28,6 @@ outline_size = 5
 outline_color = Color( 0.603922, 0.603922, 0.603922, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 40
-font_data = ExtResource( 3 )
-
 [sub_resource type="DynamicFont" id=5]
 size = 52
 font_data = ExtResource( 2 )
@@ -40,6 +36,10 @@ font_data = ExtResource( 2 )
 size = 42
 outline_size = 3
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 3 )
 
 [node name="tela_gameover" type="Node2D"]
 script = ExtResource( 1 )
@@ -118,128 +118,6 @@ volume_db = -13.0
 [node name="SomHover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 volume_db = -13.0
-
-[node name="Pontos" type="Label" parent="."]
-margin_left = 714.0
-margin_top = 137.0
-margin_right = 1234.0
-margin_bottom = 241.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-autowrap = true
-clip_text = true
-
-[node name="nome1" type="Label" parent="."]
-margin_left = 112.0
-margin_top = 280.0
-margin_right = 440.0
-margin_bottom = 352.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-clip_text = true
-
-[node name="nome2" type="Label" parent="."]
-margin_left = 112.0
-margin_top = 352.0
-margin_right = 440.0
-margin_bottom = 424.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-clip_text = true
-
-[node name="nome3" type="Label" parent="."]
-margin_left = 112.0
-margin_top = 424.0
-margin_right = 440.0
-margin_bottom = 496.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-clip_text = true
-
-[node name="nome4" type="Label" parent="."]
-margin_left = 112.0
-margin_top = 496.0
-margin_right = 440.0
-margin_bottom = 568.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-clip_text = true
-
-[node name="nome5" type="Label" parent="."]
-margin_left = 112.0
-margin_top = 568.0
-margin_right = 440.0
-margin_bottom = 640.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-clip_text = true
-
-[node name="ponto1" type="Label" parent="."]
-margin_left = 440.0
-margin_top = 280.0
-margin_right = 584.0
-margin_bottom = 352.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-clip_text = true
-
-[node name="ponto2" type="Label" parent="."]
-margin_left = 440.0
-margin_top = 352.0
-margin_right = 584.0
-margin_bottom = 424.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-clip_text = true
-
-[node name="ponto3" type="Label" parent="."]
-margin_left = 440.0
-margin_top = 424.0
-margin_right = 584.0
-margin_bottom = 496.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-clip_text = true
-
-[node name="ponto4" type="Label" parent="."]
-margin_left = 440.0
-margin_top = 496.0
-margin_right = 584.0
-margin_bottom = 568.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-clip_text = true
-
-[node name="ponto5" type="Label" parent="."]
-margin_left = 440.0
-margin_top = 568.0
-margin_right = 584.0
-margin_bottom = 640.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-clip_text = true
 
 [node name="Contorno" type="NinePatchRect" parent="."]
 margin_left = 80.0
@@ -408,6 +286,138 @@ valign = 1
 position = Vector2( 348, 154 )
 scale = Vector2( 2.9, 2.9 )
 texture = ExtResource( 13 )
+
+[node name="Pontos" type="Label" parent="."]
+margin_left = 714.0
+margin_top = 137.0
+margin_right = 1234.0
+margin_bottom = 241.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="nome1" type="Label" parent="."]
+margin_left = 153.0
+margin_top = 280.0
+margin_right = 442.0
+margin_bottom = 352.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="nome2" type="Label" parent="."]
+margin_left = 153.0
+margin_top = 356.0
+margin_right = 443.0
+margin_bottom = 428.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="nome3" type="Label" parent="."]
+margin_left = 157.0
+margin_top = 428.0
+margin_right = 442.0
+margin_bottom = 500.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="nome4" type="Label" parent="."]
+margin_left = 158.0
+margin_top = 496.0
+margin_right = 447.0
+margin_bottom = 568.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="nome5" type="Label" parent="."]
+margin_left = 154.0
+margin_top = 573.0
+margin_right = 442.0
+margin_bottom = 645.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="ponto1" type="Label" parent="."]
+margin_left = 451.0
+margin_top = 278.0
+margin_right = 595.0
+margin_bottom = 350.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="ponto2" type="Label" parent="."]
+margin_left = 451.0
+margin_top = 352.0
+margin_right = 595.0
+margin_bottom = 424.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="ponto3" type="Label" parent="."]
+margin_left = 450.0
+margin_top = 423.0
+margin_right = 594.0
+margin_bottom = 495.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="ponto4" type="Label" parent="."]
+margin_left = 449.0
+margin_top = 494.0
+margin_right = 593.0
+margin_bottom = 566.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="ponto5" type="Label" parent="."]
+margin_left = 447.0
+margin_top = 568.0
+margin_right = 591.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
 
 [connection signal="mouse_entered" from="restart" to="." method="_on_restart_mouse_entered"]
 [connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
