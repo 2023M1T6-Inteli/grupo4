@@ -30,8 +30,8 @@ script = ExtResource( 18 )
 layer = 0
 
 [node name="FundoTela1" type="Sprite" parent="."]
-position = Vector2( 234.959, 176 )
-scale = Vector2( 6.66667, 6.666 )
+position = Vector2( 234.959, 175.766 )
+scale = Vector2( 6.66667, 6.65707 )
 texture = ExtResource( 4 )
 offset = Vector2( 60.7561, 27.7528 )
 
