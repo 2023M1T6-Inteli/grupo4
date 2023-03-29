@@ -3,6 +3,8 @@ extends Node
 onready var loading_scene = preload("res://Cenas/LoadingScreen.tscn")
 
 func load_scene(current_scene, next_scene):
+	#parando a música
+	MusicController.stop_music()
 	
 	#adicionando a cena de carregamento 
 	var loading_scene_instance = loading_scene.instance()
