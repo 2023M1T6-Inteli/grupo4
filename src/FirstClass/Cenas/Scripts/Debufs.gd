@@ -73,6 +73,7 @@ func debuff_generator():
 
 func sumir(node):
 	node.hide()
+	node.get_node("CollisionShape2D").set_deferred("disabled", true)
 	$Particles2D.emitting = true
 	yield(get_tree().create_timer(5.0), "timeout")
 	debuff_generator()
