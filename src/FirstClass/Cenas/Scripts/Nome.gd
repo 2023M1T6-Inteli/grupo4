@@ -20,7 +20,7 @@ func _ready():
 		alfabeto.append(char(ord("a") + i))
 	alfabeto.append_array(caracteres_latinos) #incluindo caracteres latinos na lista
 
-	$LineEdit.max_length = 20
+	$LineEdit.max_length = 25
 
 
 #função de efeito sonoro

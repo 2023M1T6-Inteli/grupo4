@@ -62,11 +62,12 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 	# se o botão deixar de ser precionado o caminhãovolta ao movimento normal.
 	
 	if Input.is_action_pressed("ui_up"):
-		velocity += Vector2.UP.rotated(rotation) * (acceleration * directionY)
-		velocity = velocity.clamped(maxSpeed)
-		Global.points += 1
+		if !Input.is_action_pressed("ui_down"):
+			velocity += Vector2.UP.rotated(rotation) * (acceleration * directionY)
+			velocity = velocity.clamped(maxSpeed)
+			Global.points += 1
 			
-	# A condicional acima determina que o objeto ganha velocidade de deslocamento quando a tecla "espaço"
+	# A condicional acima determina que o objeto ganha velocidade de deslocamento quando a seta para cima
 	# é pressionada, que a velocidade não pode ultrapassar o valor guardado na variável "max_speed" e aumenta a pontuação
 		
 		if Global.debuf2 == true:

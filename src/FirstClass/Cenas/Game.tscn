@@ -293,7 +293,7 @@ wait_time = 0.02
 [node name="Pause" type="Node2D" parent="CanvasLayer"]
 
 [node name="Cinza" type="Sprite" parent="CanvasLayer/Pause"]
-position = Vector2( 648, 353 )
+position = Vector2( 640, 360 )
 scale = Vector2( 0.666, 0.666 )
 texture = ExtResource( 18 )
 
@@ -393,8 +393,6 @@ custom_fonts/font = SubResource( 9 )
 text = "Menu"
 align = 1
 valign = 1
-
-[node name="Cinzinha" type="Sprite" parent="CanvasLayer/Pause"]
 
 [node name="BotaoDificuldade" type="TextureButton" parent="CanvasLayer/Pause"]
 pause_mode = 2
