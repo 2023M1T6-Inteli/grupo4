@@ -1,6 +1,6 @@
 extends Node2D
 var textoBebida = "Não beba enquanto dirige! Seus reflexos e coordenação pioram quando embriagado."
-var textoSono = "Você não está com muito sono? É melhor não continuar dirigindo dessa forma."
+var textoSono = "Você não está com muito sono? Talvez seja melhor parar de dirigir e descansar."
 var textoCelular = "Não fique no celular enquanto dirige! Olhos sempre na estrada!"
 var textoCarga = "Cuidado meu amigo! O seu caminhão está sobrecarregado! Sua direção e freio estão péssimos!"
 # Textos que apareceram dependendo de qual debif ele pegar
@@ -92,10 +92,10 @@ func _ready():
 		textoCelular = "Don't be on your cellphone while you drive! Keep your eyes on the road!"
 		textoCarga = "Be careful my friend! Your truck is overloaded! Your driving and turns are terrible!"
 	elif Global.lingua == "esp":
-		textoBebida = "Não beba enquanto dirige! Seus reflexos e coordenação pioram quando embriagado."
-		textoSono = "Você não está com muito sono? É melhor não continuar dirigindo dessa forma."
-		textoCelular = "Não fique no celular enquanto dirige! Olhos sempre na estrada!"
-		textoCarga = "Cuidado meu amigo! O seu caminhão está sobrecarregado! Sua direção e freio estão péssimos!"
+		textoBebida = "¡No beba mientras conduce! Tus reflejos y coordinacion empeoram cuando estas intoxicado."
+		textoSono = "No tienes mucho sueño? Tal vez sea mejor dejar de conducir y descansar."
+		textoCelular = "¡No te quedes al telefono mietras conduces Ojos en el camino!"
+		textoCarga = "¡Ten cuidado amigo! ¡Tu camion esta sobrecarregado! ¡Tu direccion y frenos son terribles!"
 	_escolherInstrutor()
 	$caixa.hide()
 	$instrutor.hide()
