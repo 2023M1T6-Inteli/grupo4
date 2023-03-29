@@ -160,8 +160,7 @@ func _process(delta):
 			else:
 				#mudando para a cena de Game ao chegar ao último elemento e pressionar \"Enter\"
 				if Input.is_action_just_pressed(\"ui_accept\"):
-					MusicController.play_game_music()
-					get_tree().change_scene(\"res://Cenas/Game.tscn\")
+					LoadingScreen.load_scene(self, \"res://Cenas/Game.tscn\")
 					
 		if Input.is_action_just_pressed(\"ui_accept\"):
 			$Texto.visible_characters = $Texto.get_total_character_count() #mostrando texto inteiro ao pressionar \"Enter\"
@@ -382,6 +381,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
+frame = 7
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
