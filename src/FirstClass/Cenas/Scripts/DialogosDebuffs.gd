@@ -1,8 +1,8 @@
 extends Node2D
-var textoBebida = "Você está bebado?! Assim vai acabar colocando a sua vida e a de outros em risco!!"
-var textoSono = "Saiu de casa sem descansar?! Você sabia que essa é uma das principais causas de acidentes?!  "
-var textoCelular = "Ei Saia do celular! Assim você vai perder o controle do caminhão!!"
-var textoCarga = "Cuidado meu amigo!! O seu caminhão está sobrecarregado! Sua direção e freio Estão péssimos!!"
+var textoBebida = "Não beba enquanto dirige! Seus reflexos e coordenação pioram quando embriagado."
+var textoSono = "Você não está com muito sono? Talvez seja melhor parar de dirigir e descansar."
+var textoCelular = "Não fique no celular enquanto dirige! Olhos sempre na estrada!"
+var textoCarga = "Cuidado meu amigo! O seu caminhão está sobrecarregado! Sua direção e freio estão péssimos!"
 # Textos que apareceram dependendo de qual debif ele pegar
 
 func _escolherInstrutor():
@@ -87,15 +87,15 @@ func _on_TimerLetras_timeout():
 
 func _ready():
 	if Global.lingua == "eng":
-		textoBebida = "Are you drinking?! You are putting people's lives in danger that way!!"
-		textoSono = "Left home without resting?! Did you know that's one of the main accident causes?!"
-		textoCelular = "Hey get off the phone! You'll lose the truck's control that way!!"
-		textoCarga = "Careful my friend! Your truck is overloaded! Your brakes and turns are terrible!"
+		textoBebida = "Don't drink while you drive! Your reflexes become worse when you're drunk."
+		textoSono = "Aren't you too tired? It's better that you stop driving and take a rest."
+		textoCelular = "Don't be on your cellphone while you drive! Keep your eyes on the road!"
+		textoCarga = "Be careful my friend! Your truck is overloaded! Your driving and turns are terrible!"
 	elif Global.lingua == "esp":
-		textoBebida = "Estás borracho?! Asi terminaras poniendo en riesgo tu vida y la de los demás!"
-		textoSono = "Salir de casa sin descansar? Esta es una de las principales causas de accidentes!"
-		textoCelular = "Oye bata tu telefono asi vas a perder el control del camion!!"
-		textoCarga = "Cuidado  amigo!! Tu camion esta sobrecargado! Tu direccion y freno son terribles!!"
+		textoBebida = "¡No beba mientras conduce! Tus reflejos y coordinacion empeoram cuando estas intoxicado."
+		textoSono = "No tienes mucho sueño? Tal vez sea mejor dejar de conducir y descansar."
+		textoCelular = "¡No te quedes al telefono mietras conduces Ojos en el camino!"
+		textoCarga = "¡Ten cuidado amigo! ¡Tu camion esta sobrecarregado! ¡Tu direccion y frenos son terribles!"
 	_escolherInstrutor()
 	$caixa.hide()
 	$instrutor.hide()
