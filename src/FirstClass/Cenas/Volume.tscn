@@ -29,8 +29,8 @@ script = ExtResource( 4 )
 
 [node name="FundoTela1" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 635, 357 )
-scale = Vector2( 6.666, 6.83317 )
+position = Vector2( 640, 360 )
+scale = Vector2( 6.66667, 6.66667 )
 texture = ExtResource( 3 )
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]

@@ -28,8 +28,8 @@ script = ExtResource( 10 )
 layer = 0
 
 [node name="FundoTela" type="Sprite" parent="."]
-position = Vector2( 640, 363.982 )
-scale = Vector2( 6.666, 6.74041 )
+position = Vector2( 640, 360 )
+scale = Vector2( 6.666, 6.66667 )
 texture = ExtResource( 4 )
 
 [node name="Placa" type="NinePatchRect" parent="."]

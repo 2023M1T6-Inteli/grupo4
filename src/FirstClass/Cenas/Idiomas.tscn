@@ -23,8 +23,8 @@ script = ExtResource( 6 )
 layer = 0
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 638, 360 )
-scale = Vector2( 6.64583, 6.66666 )
+position = Vector2( 640, 360 )
+scale = Vector2( 6.66666, 6.66666 )
 texture = ExtResource( 2 )
 
 [node name="BotaoPt" type="TextureButton" parent="."]
