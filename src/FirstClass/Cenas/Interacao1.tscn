@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Monospaced.woff" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=5]
 [ext_resource path="res://Assets2/checklist/carta1.png" type="Texture" id=6]
 [ext_resource path="res://Assets2/checklist/carta2.png" type="Texture" id=7]
+[ext_resource path="res://Assets2/Icones/checkbox_hover.png" type="Texture" id=8]
 [ext_resource path="res://Assets2/checklist/carta3.png" type="Texture" id=9]
 [ext_resource path="res://Assets2/checklist/carta5.png" type="Texture" id=10]
 [ext_resource path="res://Assets2/checklist/carta6.png" type="Texture" id=11]
@@ -26,6 +27,8 @@
 [ext_resource path="res://Assets2/IconsUI/ui_right.png" type="Texture" id=25]
 [ext_resource path="res://Assets2/IconsUI/ui_left.png" type="Texture" id=26]
 [ext_resource path="res://Cenas/Transicao.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Assets2/Icones/checked_checkbox.png" type="Texture" id=28]
+[ext_resource path="res://Assets2/Icones/checkbox.png" type="Texture" id=29]
 
 [sub_resource type="GDScript" id=4]
 script/source = "extends Node2D
@@ -177,6 +180,7 @@ func _on_checklist_animation_finished():
 	$Peso_correto.show()
 	$Extintor_de_incendio.show()
 	$Cinto.show()
+	
 	$CheckBox.show()
 	$CheckBox2.show()
 	$CheckBox3.show()
@@ -192,7 +196,7 @@ var box4 = 0
 var box5 = 0
 
 #funções que utilizam as variáveis acima para verificar as checkbox marcadas
-func _on_CheckBox_pressed():
+func _on_CheckBox_toggled(button_pressed):
 	if box1 == 0:
 		box1 = 1
 		verificacao()
@@ -200,28 +204,28 @@ func _on_CheckBox_pressed():
 		box1 = 0
 	
 	
-func _on_CheckBox5_pressed():
+func _on_CheckBox5_toggled(button_pressed):
 	if box2 == 0:
 		box2 = 1
 		verificacao()
 	else:
 		box2 = 0
 	
-func _on_CheckBox4_pressed():
+func _on_CheckBox4_toggled(button_pressed):
 	if box3 == 0:
 		box3 = 1
 		verificacao()
 	else:
 		box3 = 0
 	
-func _on_CheckBox3_pressed():
+func _on_CheckBox3_toggled(button_pressed):
 	if box4 == 0:
 		box4 = 1
 		verificacao()
 	else:
 		box4 = 0
 	
-func _on_CheckBox2_pressed():
+func _on_CheckBox2_toggled(button_pressed):
 	if box5 == 0:
 		box5 = 1
 		verificacao()
@@ -251,6 +255,10 @@ func verificacao():
 
 		
 	
+
+
+
+
 "
 
 [sub_resource type="StreamTexture" id=6]
@@ -374,7 +382,6 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 3
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
@@ -447,40 +454,65 @@ custom_fonts/font = SubResource( 8 )
 text = "Cinto de 
 Segurança"
 
-[node name="CheckBox" type="CheckBox" parent="."]
-margin_left = 456.0
-margin_top = 112.0
-margin_right = 480.0
-margin_bottom = 136.0
-rect_scale = Vector2( 3, 3 )
+[node name="CheckBox" type="TextureButton" parent="."]
+margin_left = 473.0
+margin_top = 123.0
+margin_right = 501.0
+margin_bottom = 152.0
+rect_scale = Vector2( 2, 2 )
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 28 )
+texture_hover = ExtResource( 8 )
 
-[node name="CheckBox2" type="CheckBox" parent="."]
-margin_left = 456.0
-margin_top = 536.0
-margin_right = 480.0
-margin_bottom = 560.0
-rect_scale = Vector2( 3, 3 )
+[node name="CheckBox2" type="TextureButton" parent="."]
+margin_left = 472.0
+margin_top = 206.0
+margin_right = 500.0
+margin_bottom = 235.0
+rect_scale = Vector2( 2, 2 )
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 28 )
+texture_hover = ExtResource( 8 )
 
-[node name="CheckBox3" type="CheckBox" parent="."]
-margin_left = 456.0
-margin_top = 424.0
-margin_right = 480.0
-margin_bottom = 448.0
-rect_scale = Vector2( 3, 3 )
+[node name="CheckBox3" type="TextureButton" parent="."]
+margin_left = 471.0
+margin_top = 322.0
+margin_right = 499.0
+margin_bottom = 351.0
+rect_scale = Vector2( 2, 2 )
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 28 )
+texture_hover = ExtResource( 8 )
 
-[node name="CheckBox4" type="CheckBox" parent="."]
-margin_left = 456.0
-margin_top = 304.0
-margin_right = 480.0
-margin_bottom = 328.0
-rect_scale = Vector2( 3, 3 )
+[node name="CheckBox4" type="TextureButton" parent="."]
+margin_left = 471.0
+margin_top = 432.0
+margin_right = 499.0
+margin_bottom = 461.0
+rect_scale = Vector2( 2, 2 )
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 28 )
+texture_hover = ExtResource( 8 )
 
-[node name="CheckBox5" type="CheckBox" parent="."]
-margin_left = 456.0
-margin_top = 192.0
-margin_right = 480.0
-margin_bottom = 216.0
-rect_scale = Vector2( 3, 3 )
+[node name="CheckBox5" type="TextureButton" parent="."]
+margin_left = 470.0
+margin_top = 539.0
+margin_right = 498.0
+margin_bottom = 568.0
+rect_scale = Vector2( 2, 2 )
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 28 )
+texture_hover = ExtResource( 8 )
 
 [node name="UiUp" type="Sprite" parent="."]
 position = Vector2( 664, 320 )
@@ -503,8 +535,8 @@ scale = Vector2( 2.75, 2.5 )
 texture = ExtResource( 26 )
 
 [connection signal="animation_finished" from="checklist" to="." method="_on_checklist_animation_finished"]
-[connection signal="pressed" from="CheckBox" to="." method="_on_CheckBox_pressed"]
-[connection signal="pressed" from="CheckBox2" to="." method="_on_CheckBox2_pressed"]
-[connection signal="pressed" from="CheckBox3" to="." method="_on_CheckBox3_pressed"]
-[connection signal="pressed" from="CheckBox4" to="." method="_on_CheckBox4_pressed"]
-[connection signal="pressed" from="CheckBox5" to="." method="_on_CheckBox5_pressed"]
+[connection signal="toggled" from="CheckBox" to="." method="_on_CheckBox_toggled"]
+[connection signal="toggled" from="CheckBox2" to="." method="_on_CheckBox2_toggled"]
+[connection signal="toggled" from="CheckBox3" to="." method="_on_CheckBox3_toggled"]
+[connection signal="toggled" from="CheckBox4" to="." method="_on_CheckBox4_toggled"]
+[connection signal="toggled" from="CheckBox5" to="." method="_on_CheckBox5_toggled"]
