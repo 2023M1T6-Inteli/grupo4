@@ -17,6 +17,7 @@ run/main_scene="res://Cenas/SalaDeEspera.tscn"
 
 Global="*res://Cenas/Scripts/Global.gd"
 MusicController="*res://Cenas/MusicController.tscn"
+LoadingScreen="*res://Cenas/Scripts/LoadingScreen.gd"
 
 [display]
 

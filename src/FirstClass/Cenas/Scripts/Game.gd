@@ -2,6 +2,7 @@ extends Node2D
 
 #traduzindo caso necessário, escondendo o pause e configurando o cenário de acordo com o mapa escolhido
 func _ready():
+	MusicController.play_game_music()
 	$CanvasLayer/Pontuacao/Bonus.hide()
 	$CanvasLayer/Pause.hide()
 
@@ -95,7 +96,7 @@ func _on_BotaoRecomecar_pressed():
 		Global.gasolina = 90.0
 	Global.permissao = false
 	Global.points = 0
-	get_tree().reload_current_scene()
+	LoadingScreen.load_scene(self, "res://Cenas/Game.tscn")
 	get_tree().paused = false
 
 #retornando ao menu
@@ -112,6 +113,7 @@ func _on_BotaoMenu_pressed():
 	Global.points = 0
 	get_tree().paused = false
 	MusicController.play_menu_music()
+	self.queue_free()
 	get_tree().change_scene("res://Cenas/Menu.tscn")
 
 #leva à cena de mudar a dificuldade
@@ -128,4 +130,5 @@ func _on_BotaoDificuldade_pressed():
 	Global.points = 0
 	get_tree().paused = false
 	MusicController.play_menu_music()
+	self.queue_free()
 	get_tree().change_scene("res://Cenas/EscolhaInGame.tscn")

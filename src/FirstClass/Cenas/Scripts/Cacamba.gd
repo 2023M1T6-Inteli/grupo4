@@ -37,3 +37,4 @@ func _on_ExplosaoSFX_finished():
 #	Global.pontos_ranking.append(Global.points/12)
 #	Global.salvar_dados()
 	get_tree().change_scene("res://Cenas/TelaGameOver.tscn")
+	find_parent("Game").queue_free()
