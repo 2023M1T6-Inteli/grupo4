@@ -20,7 +20,11 @@
 <br><br>
 <br><br>
 <p align="center">
-<img src="https://cdn.discordapp.com/attachments/1057797408244912201/1077398116845752381/mytruck_gif.gif" alt="My Truck" border="0">
+
+<img src="https://user-images.githubusercontent.com/123915903/228932851-9db971a2-09e5-434a-9ed8-ff5edbcda5b2.gif" alt="My Truck" border="0">
+<img src="https://user-images.githubusercontent.com/123915903/228929437-23408968-17bc-44bb-b0e1-4bdd63a311b9.gif" alt="My Truck" border="0">
+<img src="https://user-images.githubusercontent.com/123915903/228932949-121d5ebc-0fa4-4573-9a2c-db51f685e4fa.gif" alt="My Truck" border="0">
+
   My Truck by ORION
 </p>
 
@@ -37,47 +41,45 @@ Quanto maior o percurso percorrido pelo jogador, mais ele aumenta sua pontuaçã
 
 
 ## 🛠 Estrutura de pastas
+```bash
 
--Raiz<br>
-|<br>
-|-->docs<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|GDD.docx ou Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-  &emsp;|-->Assets<br>
-    &emsp;&emsp;|-->TilesMaps<br>
-  &emsp;|-->Assets2<br>
-    &emsp;&emsp;|-->caixas de dialogo<br>
-    &emsp;&emsp;|-->cursor<br>
-    &emsp;&emsp;|-->face<br>
-    &emsp;&emsp;|-->Icones<br>
-    &emsp;&emsp;|-->IconsUI<br>
-    &emsp;&emsp;|-->Logo<br>
-    &emsp;&emsp;|-->sprites_personagens<br>
-  &emsp;|-->Cenas<br>
-    &emsp;&emsp;|-->Scripts<br>
-  &emsp;|-->Efeitos tela<br>
-  &emsp;|-->Fonte<br>
-    &emsp;&emsp;|-->NicoBold<br>
-  &emsp;|-->Sons<br>
-  &emsp;|-->Sprites<br>
-    &emsp;&emsp;|-->Bebidas<br>
-    &emsp;&emsp;|-->CabecadoCaminhao<br>
-    &emsp;&emsp;|-->CaixaPesada<br>
-    &emsp;&emsp;|-->CaminhaoPVC<br>
-    &emsp;&emsp;|-->CaminhaoSoda<br>
-    &emsp;&emsp;|-->CaminhaoDeCloro<br>
-    &emsp;&emsp;|-->Celular<br>
-    &emsp;&emsp;|-->Soninho<br>
-  &emsp;|-->Telas<br>
-  
-|readme.md<br>
+├── docs
+├── documentos
+│   └── antigos
+├── imagens
+└── src
+    └── FirstClass
+        ├── Assets
+        │   └── TilesMaps
+        ├── Assets2
+        │   ├── Icones
+        │   ├── IconsUI
+        │   ├── Logo
+        │   │   ├── Logo Espanhol
+        │   │   ├── Logo Ingles
+        │   │   └── Logo Portugues
+        │   ├── caixas de dialogo
+        │   ├── checklist
+        │   ├── cursor
+        │   ├── face
+        │   └── sprite_personagens
+        ├── Cenas
+        │   └── Scripts
+        ├── EfeitosTela
+        ├── Fonte
+        │   └── NicoBold
+        ├── Sons
+        ├── Sprites
+        │   ├── Bebidas
+        │   ├── CabecadoCaminhao
+        │   ├── CaixaPesada
+        │   ├── CaminhaoDeCloro
+        │   ├── CaminhaoPVC
+        │   ├── CaminhaoSoda
+        │   ├── Celular
+        │   └── Soninho
+        └── Telas
+```
 
 A pasta raiz contem dois arquivos que devem ser alterados:
 
