@@ -21,9 +21,8 @@
 <br><br>
 <p align="center">
 
-<img src="https://user-images.githubusercontent.com/123915903/228932851-9db971a2-09e5-434a-9ed8-ff5edbcda5b2.gif" alt="My Truck" border="0">
-<img src="https://user-images.githubusercontent.com/123915903/228929437-23408968-17bc-44bb-b0e1-4bdd63a311b9.gif" alt="My Truck" border="0">
-<img src="https://user-images.githubusercontent.com/123915903/228932949-121d5ebc-0fa4-4573-9a2c-db51f685e4fa.gif" alt="My Truck" border="0">
+<img src="https://user-images.githubusercontent.com/123915903/228932851-9db971a2-09e5-434a-9ed8-ff5edbcda5b2.gif" alt="My Truck" border="0" height="400" width="600" >
+
 
   My Truck by ORION
 </p>
