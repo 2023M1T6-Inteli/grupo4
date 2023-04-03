@@ -10,10 +10,12 @@ func _ready():
 		$CanvasLayer/Pause/Recomecar.text = "Restart"
 		$CanvasLayer/Pause/Continuar.text = "Continue"
 		$CanvasLayer/Pause/Dificuldade.text = "Difficulty"
+		$CanvasLayer/Gas.text = "Gasoline"
 	
 	if Global.lingua == "esp":
 		$CanvasLayer/Pause/Recomecar.text = "Reanudar"
 		$CanvasLayer/Pause/Dificuldade.text = "Dificultad"
+		$CanvasLayer/Gas.text = "Nafta"
 
 
 	if Global.mapa == 1: #selecionando o Mapa 1 (Floresta)
