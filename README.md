@@ -12,7 +12,29 @@
 
 ## 💫 ORION
 
-## Integrantes: <a href="https://github.com/BrenoSantoS2">Breno Santos</a>, <a href="https://github.com/eduardoferrari135">Eduardo Ferrari</a>, <a href="https://github.com/KayVasconcelos">Kaylane Vasconcelos</a>, <a href="https://github.com/lucasnn718">Lucas Nogueira</a>, <a href="https://github.com/pedroauler12">Pedro Auler</a>, <a href="https://github.com/rafaelarojas">Rafaela Rojas</a>, <a href="https://github.com/raulszpak">Raul Szpak</a>
+## Integrantes
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><a href="https://www.linkedin.com/in/breno-santos-0843131b8/"><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b>Breno Santos</b></sub></a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/eduardo-ferrari-aaa39b265/"><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b> Eduardo Ferrari</b></sub></a></td>
+      <td align="center"><a href=""><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b>Lucas Nunes</b></sub></a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/kaylanevasconcelos/"><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b>Kaylane Vasconcelos</b></sub></a></td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
+    <td align="center"><a href=""><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b>Pedro Auler</b></sub></a></td>
+      <td align="center"><a href=""><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b>Rafaela Rojas</b></sub></a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/raul-rezende-szpak-642079186/"><img style="border-radius: 50%;" src="" height="100px;" width="100px;" alt=""/><br><sub><b>Raul Szpak</b></sub></a></td>
+    </tr>
+  </table>
+</div>
+
 
 ## Descrição
 
@@ -20,7 +42,10 @@
 <br><br>
 <br><br>
 <p align="center">
-<img src="https://cdn.discordapp.com/attachments/1057797408244912201/1077398116845752381/mytruck_gif.gif" alt="My Truck" border="0">
+
+<img src="https://user-images.githubusercontent.com/123915903/228932851-9db971a2-09e5-434a-9ed8-ff5edbcda5b2.gif" alt="My Truck" border="0" height="400" width="600" >
+
+
   My Truck by ORION
 </p>
 
@@ -37,47 +62,45 @@ Quanto maior o percurso percorrido pelo jogador, mais ele aumenta sua pontuaçã
 
 
 ## 🛠 Estrutura de pastas
+```bash
 
--Raiz<br>
-|<br>
-|-->docs<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|GDD.docx ou Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-  &emsp;|-->Assets<br>
-    &emsp;&emsp;|-->TilesMaps<br>
-  &emsp;|-->Assets2<br>
-    &emsp;&emsp;|-->caixas de dialogo<br>
-    &emsp;&emsp;|-->cursor<br>
-    &emsp;&emsp;|-->face<br>
-    &emsp;&emsp;|-->Icones<br>
-    &emsp;&emsp;|-->IconsUI<br>
-    &emsp;&emsp;|-->Logo<br>
-    &emsp;&emsp;|-->sprites_personagens<br>
-  &emsp;|-->Cenas<br>
-    &emsp;&emsp;|-->Scripts<br>
-  &emsp;|-->Efeitos tela<br>
-  &emsp;|-->Fonte<br>
-    &emsp;&emsp;|-->NicoBold<br>
-  &emsp;|-->Sons<br>
-  &emsp;|-->Sprites<br>
-    &emsp;&emsp;|-->Bebidas<br>
-    &emsp;&emsp;|-->CabecadoCaminhao<br>
-    &emsp;&emsp;|-->CaixaPesada<br>
-    &emsp;&emsp;|-->CaminhaoPVC<br>
-    &emsp;&emsp;|-->CaminhaoSoda<br>
-    &emsp;&emsp;|-->CaminhaoDeCloro<br>
-    &emsp;&emsp;|-->Celular<br>
-    &emsp;&emsp;|-->Soninho<br>
-  &emsp;|-->Telas<br>
-  
-|readme.md<br>
+├── docs
+├── documentos
+│   └── antigos
+├── imagens
+└── src
+    └── FirstClass
+        ├── Assets
+        │   └── TilesMaps
+        ├── Assets2
+        │   ├── Icones
+        │   ├── IconsUI
+        │   ├── Logo
+        │   │   ├── Logo Espanhol
+        │   │   ├── Logo Ingles
+        │   │   └── Logo Portugues
+        │   ├── caixas de dialogo
+        │   ├── checklist
+        │   ├── cursor
+        │   ├── face
+        │   └── sprite_personagens
+        ├── Cenas
+        │   └── Scripts
+        ├── EfeitosTela
+        ├── Fonte
+        │   └── NicoBold
+        ├── Sons
+        ├── Sprites
+        │   ├── Bebidas
+        │   ├── CabecadoCaminhao
+        │   ├── CaixaPesada
+        │   ├── CaminhaoDeCloro
+        │   ├── CaminhaoPVC
+        │   ├── CaminhaoSoda
+        │   ├── Celular
+        │   └── Soninho
+        └── Telas
+```
 
 A pasta raiz contem dois arquivos que devem ser alterados:
 
@@ -95,11 +118,6 @@ Há também 4 pastas que seguem da seguinte forma:
 <b>src</b>: Nesta pasta irá todo o código fonte do jogo/sistema, pronto para para ser baixado e modificado.
 
 ## 🛠 Instalação
-
-<b>Android:</b>
-
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
 
 <b>Windows:</b>
 
@@ -123,10 +141,9 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🗃 Histórico de lançamentos
 
-A cada atualização os detalhes devem ser lançados aqui.
-* 0.3.5 - 09/06/2023
+* 0.3.5 - 09/03/2023
     * Implementação da tela de volume do jogo  
-* 0.3.4 - 08/06/2023
+* 0.3.4 - 08/03/2023
     *  tela. de interação 
     *  cursor
     *  tela de nome
@@ -137,7 +154,7 @@ A cada atualização os detalhes devem ser lançados aqui.
     *  debufs vermelhos
     *  adaptação do sistema de gasolina com mais um ponto de recarga
     *  correção da gasolina
-* 0.3.3 - 07/06/2023
+* 0.3.3 - 07/03/2023
     * adição de uma logo nova
     * adição da trilha sonora
     * correção de bugs
@@ -211,26 +228,22 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://creativecommons.org/share-your-work/>
-4. <https://freesound.org/>
-5. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
-6.  <https://www.unipar.com/relatorio-de-sustentabilidade/>
-7.  <https://www.poolpiscina.com/ozonio-para-piscinas-tudo-sobre-tratamento-de-piscina-com-ozonio/#:~:text=O%20oz%C3%B4nio%20%C3%A9%20100%20vezes>
-8.  <https://www.unipar.com/fornecedores/>
-9.  <https://panozon.com.br/>
-10.  <https://www.embrapa.br/>
-11.   <https://www.greenpeace.org/usa/toxics/pvc-free/>
-12.   <https://www.todamateria.com.br/cloro/>
-13.   <https://pvc.org.br/o-que-e-pvc/>
-14.   <https://brasil.pochteca.net/soda-caustica-o-que-e-e-para-que-serve/#:~:text=A%20soda%20c>
-15.   <https://drive.google.com/file/d/1B7MPDZ41hglwQ6CKfPET6oZP7vwGz9uk/view?usp=sharing>
-16.   <https://youtu.be/WMkQdbAmBzM>
-17.   <https://itch.io>
-18.   <https://www.mordorintelligence.com/pt/industry-reports/caustic-soda-market>
-19.   <https://www.bnamericas.com/pt/noticias/argentina-apresenta-plano-nacional-de-obras-publicas>‌
-20.   <https://exame.com/negocios/dow-chemical-anuncia-fusao-com-olin-no-setor-do-cloro/>
-21.   <https://www.abcam.org.br/index.php/pt/>
-22.   <https://investnews.com.br/financas/unipar-e-taesa-estao-entre-as-maiores-pagadoras-de-dividendos-em-5-anos/>
-23.   https://acervodigital.ufpr.br/bitstream/handle/1884/57956/Luiz%20Antonio%20Distefano%20de%20Oliveira%20Junior.pdf;jsessionid=BCFCE2A38A8BA7B0871846669DCC5B6C?sequence=1
+
+1.  <https://www.unipar.com/relatorio-de-sustentabilidade/>
+2.  <https://www.poolpiscina.com/ozonio-para-piscinas-tudo-sobre-tratamento-de-piscina-com-ozonio/#:~:text=O%20oz%C3%B4nio%20%C3%A9%20100%20vezes>
+3.  <https://www.unipar.com/fornecedores/>
+4.  <https://panozon.com.br/>
+5.  <https://www.embrapa.br/>
+6.   <https://www.greenpeace.org/usa/toxics/pvc-free/>
+7.   <https://www.todamateria.com.br/cloro/>
+8.   <https://pvc.org.br/o-que-e-pvc/>
+9.   <https://brasil.pochteca.net/soda-caustica-o-que-e-e-para-que-serve/#:~:text=A%20soda%20c>
+10.   <https://drive.google.com/file/d/1B7MPDZ41hglwQ6CKfPET6oZP7vwGz9uk/view?usp=sharing>
+11.   <https://youtu.be/WMkQdbAmBzM>
+12.   <https://itch.io>
+13.   <https://www.mordorintelligence.com/pt/industry-reports/caustic-soda-market>
+14.   <https://www.bnamericas.com/pt/noticias/argentina-apresenta-plano-nacional-de-obras-publicas>‌
+15.   <https://exame.com/negocios/dow-chemical-anuncia-fusao-com-olin-no-setor-do-cloro/>
+16.   <https://www.abcam.org.br/index.php/pt/>
+17.   <https://investnews.com.br/financas/unipar-e-taesa-estao-entre-as-maiores-pagadoras-de-dividendos-em-5-anos/>
+18.   https://acervodigital.ufpr.br/bitstream/handle/1884/57956/Luiz%20Antonio%20Distefano%20de%20Oliveira%20Junior.pdf;jsessionid=BCFCE2A38A8BA7B0871846669DCC5B6C?sequence=1
