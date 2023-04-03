@@ -12,7 +12,29 @@
 
 ## 💫 ORION
 
-## Integrantes: <a href="https://github.com/BrenoSantoS2">Breno Santos</a>, <a href="https://github.com/eduardoferrari135">Eduardo Ferrari</a>, <a href="https://github.com/KayVasconcelos">Kaylane Vasconcelos</a>, <a href="https://github.com/lucasnn718">Lucas Nogueira</a>, <a href="https://github.com/pedroauler12">Pedro Auler</a>, <a href="https://github.com/rafaelarojas">Rafaela Rojas</a>, <a href="https://github.com/raulszpak">Raul Szpak</a>
+## Integrantes
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><a href="https://www.linkedin.com/in/breno-santos-0843131b8/"><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b>Breno Santos</b></sub></a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/eduardo-ferrari-aaa39b265/"><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b> Eduardo Ferrari</b></sub></a></td>
+      <td align="center"><a href=""><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b>Lucas Nunes</b></sub></a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/kaylanevasconcelos/"><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b>Kaylane Vasconcelos</b></sub></a></td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
+    <td align="center"><a href=""><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b>Pedro Auler</b></sub></a></td>
+      <td align="center"><a href=""><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br><sub><b>Rafaela Rojas</b></sub></a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/raul-rezende-szpak-642079186/"><img style="border-radius: 50%;" src="" height="100px;" width="100px;" alt=""/><br><sub><b>Raul Szpak</b></sub></a></td>
+    </tr>
+  </table>
+</div>
+
 
 ## Descrição
 
