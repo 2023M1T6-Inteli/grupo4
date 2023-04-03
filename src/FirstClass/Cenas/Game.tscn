@@ -216,7 +216,7 @@ position = Vector2( 1088, 94.875 )
 scale = Vector2( 5.73571, 4.525 )
 texture = ExtResource( 8 )
 
-[node name="Gasolina_texto" type="Label" parent="CanvasLayer"]
+[node name="Gas" type="Label" parent="CanvasLayer"]
 margin_left = 998.0
 margin_top = 81.0
 margin_right = 1072.0
