@@ -8,8 +8,6 @@ func _ready():
 	$BalaoSono.hide()
 	$Caminhar.play()
 	#iniciando a animação de caminhar do personagem e escondendo elementos que aparecerão depois
-	#Global.carregar_dados()
-	#carregando dados de pontuação para mostrar no ranking
 	
 func _process(delta):
 	$Path2D/PathFollow2D.offset += 1.5
@@ -36,7 +34,6 @@ func play_animation():
 		#continua a animação quando o personagem para de caminhar
 	else:
 		pass
-
 
 #muda de cena quando a animação termina
 func _on_Pensamento_animation_finished(anim_name):

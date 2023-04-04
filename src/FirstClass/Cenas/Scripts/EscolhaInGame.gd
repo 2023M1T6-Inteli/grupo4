@@ -29,3 +29,4 @@ func _on_BotaoDificil_pressed():
 	LoadingScreen.load_scene(self, "res://Cenas/Game.tscn")
 
 #Os botões salvam a dificuldade em uma variavel global
+
