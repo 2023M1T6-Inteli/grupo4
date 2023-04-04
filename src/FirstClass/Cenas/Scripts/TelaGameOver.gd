@@ -3,10 +3,10 @@ extends Node2D
 var hover = 0
 #guarda o valor que define se o efeito sonoro de hover deve tocar ou não
 
-var aux = 0
+var podeAtualizar = true #permite a atualização do ranking
 
 func _ready():
-	
+
 	Global.debuf = false
 	Global.debuf2 = false
 	Global.permissao = false
@@ -20,7 +20,7 @@ func _ready():
 		
 	if Global.dificuldade == "Dificil":
 		Global.gasolina = 90.0
-	#defini o tempo para finalizar a gasolina em função da dificuldade
+	#definindo o tempo para finalizar a gasolina em função da dificuldade
 	
 	$Pontos.text = "Parabéns " + str(Global.nome) + ", você fez " + str(Global.points / 12) + " reais!"
 	#mostrando os pontos com uma mensagem
@@ -36,6 +36,8 @@ func _ready():
 		$RESTART.text = "Reanudar"
 		$TextoCreditos.text = "Creditos"
 		$Pontos.text = "Felicitaciones " + str(Global.nome) + ", has conseguido " + str(Global.points/12)+ " pesos!"
+	#traduções
+	
 	MusicController.debuffs1_sound_off()
 	MusicController.debuffs2_sound_off()
 	MusicController.play_game_over_music()
@@ -59,6 +61,7 @@ func _on_menu_pressed():
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
 		yield(get_tree().create_timer(0.25), "timeout")
+		podeAtualizar = true
 		MusicController.play_menu_music()
 		get_tree().change_scene("res://Cenas/Menu.tscn")
 	#mudança de cena e efeito sonoro
@@ -75,9 +78,8 @@ func _on_restart_pressed():
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
-		yield(get_tree().create_timer(0.25), "timeout")
-		MusicController.play_game_music()
-		get_tree().change_scene("res://Cenas/Game.tscn")
+		podeAtualizar = true
+		LoadingScreen.load_scene(self, "res://Cenas/Game.tscn")
 #mudança de cena e efeito sonoro
 
 
@@ -91,8 +93,7 @@ func _on_Creditos_pressed():
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
 		yield(get_tree().create_timer(0.25), "timeout")
-		MusicController.play_menu_music()
-		get_tree().change_scene("res://Cenas/Menu.tscn")
+		get_tree().change_scene("res://Cenas/Creditos.tscn")
 
 #funções de efeito sonoro
 func _on_restart_mouse_entered():
@@ -106,9 +107,10 @@ func _on_Creditos_mouse_entered():
 
 #função que ordena as pontuações e nomes em ordem descrescente
 func ordenacaoDoRanking():
+	Global.salvar_dados()
 	Global.listaPontos.insert(0, Global.points/12)
 	Global.listaNomes.insert(0, Global.nome)
-	print("ordenando")
+
 	if len(Global.listaPontos) > 1:
 		for i in range(1, len(Global.listaPontos)): #iterando os elementos da lista
 			var elem = Global.listaPontos[i] #elemento atual
@@ -124,10 +126,10 @@ func ordenacaoDoRanking():
 	if len(Global.listaPontos) == 6:
 		Global.listaPontos.remove(-1)
 		Global.listaNomes.remove(-1)
-
+	mostrarRanking()
 #função que preenche as labels com seus respectivos dados
 func mostrarRanking():
-	print("mostrando")
+
 	var tamanho = len(Global.listaPontos)
 	
 	#se o tamanho da lista for menor ou igual á 1 os dados do 1° lugar são mostrados
@@ -153,6 +155,9 @@ func mostrarRanking():
 		
 #Quando o botão atualizar é pressionado as pontuações são ordenadas, o ranking é mostrado e os dados são salvos
 func _on_Atualizar_pressed():
-	ordenacaoDoRanking()
-	mostrarRanking()
-	Global.salvar_dados()
+	if podeAtualizar == true:
+		ordenacaoDoRanking()
+		Global.salvar_dados()
+		podeAtualizar = false
+	else:
+		pass

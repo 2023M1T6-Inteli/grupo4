@@ -37,7 +37,7 @@ var palavra
 
 #Função que salvará os dados do jogo
 func salvar_dados():
-	print("salvando")
+
 	#Variável que armazena o arquivo que guardará os dados
 	var arquivo = File.new()
 	#Variável que guardará um valor caso tenha erro ao abrir o arquivo
@@ -55,15 +55,12 @@ func salvar_dados():
 #Função que carrega os dados para o jogo	
 func carregar_dados():
 	
-	print("carregando")
+
 	#Variável que armazena o arquivo onde os dados serão carregados
 	var arquivo = File.new()
 	#Variável que guardará um valor caso tenha erro ao abrir o arquivo
 	arquivo.open(ARQUIVO, File.READ)
 	dados_salvos = arquivo.get_as_text()
 	palavra = dados_salvos.split(" ")
-	
-	print("dados completos", dados_salvos)
-	print("dados partidos", palavra)
 	
 	arquivo.close()
