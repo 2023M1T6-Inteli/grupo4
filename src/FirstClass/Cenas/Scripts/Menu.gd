@@ -18,7 +18,6 @@ func _ready():
 func som_hover():
 	if hover == 0:
 		$SomHover.play()
-		
 
 #botão para jogar
 func _on_BotaoJogar_pressed():
@@ -72,6 +71,11 @@ func _on_BotaoIdioma_pressed():
 func _on_BotaoVolume_mouse_entered():
 	som_hover()
 
-
 func _on_BotaoIdioma_mouse_entered():
 	som_hover()
+
+func _on_salvar_pressed():
+	Global.salvar_dados()
+
+func _on_carregar_pressed():
+	Global.carregar_dados()

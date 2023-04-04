@@ -744,7 +744,7 @@ texture = ExtResource( 15 )
 position = Vector2( 398.274, 62 )
 scale = Vector2( 0.696919, 0.65683 )
 frames = SubResource( 103 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="Plantinhas" type="TileMap" parent="."]
