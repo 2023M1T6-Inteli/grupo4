@@ -1,0 +1,1 @@
+[lucas] [34] [lucas, lucas] [42, 34] [lucas, lucas, lucas] [42, 34, 14] [lucas, lucas, lucas, kay] [42, 34, 14, 10] [lucas, lucas, lucas, kay, kay] [42, 34, 14, 10, 10] [lucas, lucas, kay, lucas, kay, kay] [42, 34, 20, 14, 10, 10] 
