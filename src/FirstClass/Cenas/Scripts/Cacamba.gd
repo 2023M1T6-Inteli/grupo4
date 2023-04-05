@@ -26,7 +26,8 @@ func _on_Cacamba_do_Caminhao_body_entered(body):
 		get_parent().get_node("Player").get_node("SomIdle").stop()
 		$Explosao.emitting = true
 		$AnimatedSprite.modulate = "413a3a"
-		$ExplosaoSFX.play()
+		if $ExplosaoSFX.playing == false:
+			$ExplosaoSFX.play()
 		MusicController.stop_music()
 		MusicController.debuffs1_sound_off()
 		MusicController.debuffs2_sound_off()
@@ -34,5 +35,9 @@ func _on_Cacamba_do_Caminhao_body_entered(body):
 
 #mudando de cena para o game over quando a explosão acaba
 func _on_ExplosaoSFX_finished():
-	get_tree().change_scene("res://Cenas/TelaGameOver.tscn")
-	find_parent("Game").queue_free()
+	if Global.podeAtualizar == 1:
+		get_tree().change_scene("res://Cenas/TelaGameOver.tscn")
+		find_parent("Game").queue_free()
+		Global.podeAtualizar = 2
+	else:
+		pass

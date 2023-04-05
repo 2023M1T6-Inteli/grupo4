@@ -3,8 +3,6 @@ extends Node2D
 var hover = 0
 #guarda o valor que define se o efeito sonoro de hover deve tocar ou não
 
-var podeAtualizar = true #permite a atualização do ranking
-
 func _ready():
 
 	Global.debuf = false
@@ -43,6 +41,12 @@ func _ready():
 	MusicController.play_game_over_music()
 	#tocando a música certa
 	
+	if Global.podeAtualizar == 3:
+		mostrarRanking()
+
+	ordenacaoDoRanking()
+		
+
 func som_hover():
 	if hover == 0:
 		$SomHover.play()
@@ -60,8 +64,8 @@ func _on_menu_pressed():
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
+		Global.podeAtualizar = 1
 		yield(get_tree().create_timer(0.25), "timeout")
-		podeAtualizar = true
 		MusicController.play_menu_music()
 		get_tree().change_scene("res://Cenas/Menu.tscn")
 	#mudança de cena e efeito sonoro
@@ -78,7 +82,7 @@ func _on_restart_pressed():
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
-		podeAtualizar = true
+		Global.podeAtualizar = 1
 		LoadingScreen.load_scene(self, "res://Cenas/Game.tscn")
 #mudança de cena e efeito sonoro
 
@@ -92,6 +96,7 @@ func _on_Creditos_pressed():
 	hover = 1
 	if !$SomConfirmar.playing:
 		$SomConfirmar.play()
+		Global.podeAtualizar = 3
 		yield(get_tree().create_timer(0.25), "timeout")
 		get_tree().change_scene("res://Cenas/Creditos.tscn")
 
@@ -107,26 +112,30 @@ func _on_Creditos_mouse_entered():
 
 #função que ordena as pontuações e nomes em ordem descrescente
 func ordenacaoDoRanking():
-	Global.salvar_dados()
-	Global.listaPontos.insert(0, Global.points/12)
-	Global.listaNomes.insert(0, Global.nome)
+	if Global.podeAtualizar == 2:
+		Global.salvar_dados()
+		Global.listaPontos.insert(0, Global.points/12)
+		Global.listaNomes.insert(0, Global.nome)
 
-	if len(Global.listaPontos) > 1:
-		for i in range(1, len(Global.listaPontos)): #iterando os elementos da lista
-			var elem = Global.listaPontos[i] #elemento atual
-			var n = Global.listaNomes[i]
-			var a = i #criando uma variável secundária para poder trabalhar com o valor de i sem problemas
-			while a>0 and elem > Global.listaPontos[a-1]: #verificando se o elemento atual é menor que seu antecessor
-				Global.listaPontos[a] = Global.listaPontos[a-1] #se for, igualo o elemento a seu antecessor
-				Global.listaNomes[a] = Global.listaNomes[a-1]
-				a -=1 #diminuo o valor de a para verficar o elemento anterior e prosseguir com o loop
-			Global.listaPontos[a] = elem #trocando a posição do elemento iterado no loop "for"
-			Global.listaNomes[a] = n
+		if len(Global.listaPontos) > 1:
+			for i in range(1, len(Global.listaPontos)): #iterando os elementos da lista
+				var elem = Global.listaPontos[i] #elemento atual
+				var n = Global.listaNomes[i]
+				var a = i #criando uma variável secundária para poder trabalhar com o valor de i sem problemas
+				while a>0 and elem > Global.listaPontos[a-1]: #verificando se o elemento atual é menor que seu antecessor
+					Global.listaPontos[a] = Global.listaPontos[a-1] #se for, igualo o elemento a seu antecessor
+					Global.listaNomes[a] = Global.listaNomes[a-1]
+					a -=1 #diminuo o valor de a para verficar o elemento anterior e prosseguir com o loop
+				Global.listaPontos[a] = elem #trocando a posição do elemento iterado no loop "for"
+				Global.listaNomes[a] = n
 
-	if len(Global.listaPontos) == 6:
-		Global.listaPontos.remove(-1)
-		Global.listaNomes.remove(-1)
-	mostrarRanking()
+		if len(Global.listaPontos) == 6:
+			Global.listaPontos.remove(-1)
+			Global.listaNomes.remove(-1)
+		mostrarRanking()
+
+	else:
+		pass
 #função que preenche as labels com seus respectivos dados
 func mostrarRanking():
 
@@ -154,10 +163,4 @@ func mostrarRanking():
 		$ponto5.text = str(Global.listaPontos[4])
 		
 #Quando o botão atualizar é pressionado as pontuações são ordenadas, o ranking é mostrado e os dados são salvos
-func _on_Atualizar_pressed():
-	if podeAtualizar == true:
-		ordenacaoDoRanking()
-		Global.salvar_dados()
-		podeAtualizar = false
-	else:
-		pass
+
