@@ -14,6 +14,7 @@
 [ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=12]
 
 [sub_resource type="DynamicFont" id=1]
+size = 46
 font_data = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D"]
@@ -58,34 +59,37 @@ texture_hover = ExtResource( 1 )
 texture_click_mask = ExtResource( 3 )
 
 [node name="Portugues" type="Label" parent="."]
-margin_left = 515.0
-margin_top = 205.0
-margin_right = 602.0
-margin_bottom = 221.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 400.0
+margin_top = 184.0
+margin_right = 888.0
+margin_bottom = 280.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Português"
+align = 1
+valign = 1
 
 [node name="English" type="Label" parent="."]
-margin_left = 557.0
-margin_top = 477.0
-margin_right = 616.0
-margin_bottom = 493.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 408.0
+margin_top = 456.0
+margin_right = 888.0
+margin_bottom = 552.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "English"
+align = 1
+valign = 1
 
 [node name="Espanol" type="Label" parent="."]
-margin_left = 546.0
-margin_top = 341.0
-margin_right = 611.0
-margin_bottom = 357.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 408.0
+margin_top = 312.0
+margin_right = 888.0
+margin_bottom = 416.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Español"
+align = 1
+valign = 1
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
 margin_right = 48.0

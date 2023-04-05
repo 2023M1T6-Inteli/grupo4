@@ -3,7 +3,6 @@ extends Node
 #essa cena controla a maior parte dos efeitos sonoros e a trilha sonora dentro do jogo
 
 var menuMusic = preload("res://Sons/MusicaMenu.wav")
-var gameMusic = preload("res://Sons/MusicaGame.wav")
 var gameOverMusic = preload("res://Sons/MusicaGameOver.wav")
 var bebidaSound = preload("res://Sons/debuff_bebida .wav")
 var cargaSound = preload("res://Sons/debuff_carga_pesada.wav")
@@ -14,19 +13,11 @@ func play_menu_music():
 
 	$Music.stream = menuMusic
 	$Music.play()
-	
-
-func play_game_music():
-	
-	$Music.stream = gameMusic
-	$Music.play()
-
 
 func play_game_over_music():
 	
 	$Music.stream = gameOverMusic
 	$Music.play()
-
 
 func debuff_sono_sound():
 	$Effects2.stream = sonoSound

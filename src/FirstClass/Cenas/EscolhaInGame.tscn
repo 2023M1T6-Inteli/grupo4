@@ -32,8 +32,8 @@ font_data = ExtResource( 3 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -606.666, 152.296 )
-scale = Vector2( 6.66666, 6.67887 )
+position = Vector2( -606.8, 153.3 )
+scale = Vector2( 6.667, 6.667 )
 texture = ExtResource( 1 )
 offset = Vector2( 187, 31 )
 

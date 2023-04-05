@@ -275,6 +275,7 @@ size = 40
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=5]
+size = 37
 font_data = ExtResource( 3 )
 
 [sub_resource type="SpriteFrames" id=7]
@@ -350,7 +351,7 @@ wait_time = 0.1
 modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
 self_modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
 margin_left = 120.0
-margin_top = 136.0
+margin_top = 144.0
 margin_right = 1160.0
 margin_bottom = 368.0
 custom_fonts/mono_font = SubResource( 1 )
@@ -363,11 +364,10 @@ scale = Vector2( 2.5, 2.5 )
 [node name="instrutor" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 80.0
+margin_left = 72.0
 margin_top = 592.0
-margin_right = 163.0
-margin_bottom = 608.0
-rect_scale = Vector2( 2.5, 2.5 )
+margin_right = 296.0
+margin_bottom = 632.0
 custom_fonts/font = SubResource( 5 )
 align = 1
 valign = 1

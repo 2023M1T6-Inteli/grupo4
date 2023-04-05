@@ -2,7 +2,7 @@ extends Node2D
 
 #traduzindo caso necessário, escondendo o pause e configurando o cenário de acordo com o mapa escolhido
 func _ready():
-	MusicController.play_game_music()
+	$GameMusic.play()
 	$CanvasLayer/Pontuacao/Bonus.hide()
 	$CanvasLayer/Pause.hide()
 
