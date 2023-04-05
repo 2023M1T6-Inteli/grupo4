@@ -8,8 +8,8 @@
 [ext_resource path="res://Cenas/Transicao.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=7]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=8]
-[ext_resource path="res://Assets2/IconsUI/seta_left_verde.png" type="Texture" id=9]
-[ext_resource path="res://Assets2/IconsUI/seta_left_verde_sombra.png" type="Texture" id=10]
+[ext_resource path="res://Assets2/Icones/seta1.png" type="Texture" id=9]
+[ext_resource path="res://Assets2/Icones/seta2.png" type="Texture" id=10]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=11]
 [ext_resource path="res://Sprites/Hoverdificil.png" type="Texture" id=12]
 [ext_resource path="res://Assets2/IconsUI/contorno.png" type="Texture" id=13]
@@ -51,6 +51,7 @@ texture = ExtResource( 1 )
 offset = Vector2( 187, 31 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+modulate = Color( 1, 0.979688, 0.949219, 1 )
 margin_left = 112.0
 margin_top = 176.0
 margin_right = 221.0
@@ -133,7 +134,7 @@ margin_left = 384.0
 margin_top = 42.0
 margin_right = 898.0
 margin_bottom = 162.0
-custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color = Color( 0.952941, 0.898039, 0.760784, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Dificuldade"
 align = 1
@@ -152,11 +153,11 @@ stream = ExtResource( 11 )
 volume_db = -13.0
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 32.0
-margin_top = 32.0
-margin_right = 64.0
-margin_bottom = 64.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 23.0
+margin_top = 5.0
+margin_right = 47.0
+margin_bottom = 41.0
+rect_scale = Vector2( 4, 4 )
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 10 )
 
