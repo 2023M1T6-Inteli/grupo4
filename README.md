@@ -83,10 +83,10 @@ Quanto maior o percurso percorrido pelo jogador, mais ele aumenta sua pontuaçã
         │   ├── Icones
         │   ├── IconsUI
         │   ├── Logo
-        │   │   ├── Logo Espanhol
-        │   │   ├── Logo Ingles
-        │   │   └── Logo Portugues
-        │   ├── caixas de dialogo
+        │   │   ├── LogoEspanhol
+        │   │   ├── LogoIngles
+        │   │   └── LogoPortugues
+        │   ├── caixasdedialogo
         │   ├── checklist
         │   ├── cursor
         │   ├── face
