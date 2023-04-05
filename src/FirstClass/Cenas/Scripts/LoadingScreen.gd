@@ -10,6 +10,11 @@ func load_scene(current_scene, next_scene):
 	var loading_scene_instance = loading_scene.instance()
 	get_tree().get_root().call_deferred("add_child", loading_scene_instance)
 	
+	var texto = loading_scene_instance.get_node("Label")
+	if Global.lingua == "eng":
+		texto.text = "Loading..."
+	if Global.lingua == "esp":
+		texto.text = "Cargando..."
 	#carregando a cena desejada
 	var loader = ResourceLoader.load_interactive(next_scene)
 	

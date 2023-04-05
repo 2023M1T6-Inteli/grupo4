@@ -1,7 +1,12 @@
 extends Node2D
 
-
-
+func _ready():
+	if Global.lingua == "eng":
+		$Creditos.text = "Credits"
+		$ObrigadoPorJogar.text = "Thanks for playing!"
+	if Global.lingua == "esp":
+		$Creditos.text = "Creditos"
+		$ObrigadoPorJogar.text = "Gracias por jugar!"
 
 
 func _on_BotaoVoltar_pressed():

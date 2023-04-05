@@ -24,13 +24,14 @@ func _ready():
 	#mostrando os pontos com uma mensagem
 	
 	if Global.lingua == "eng":
-		$OVER.text = "GAME OVER"
+		$GameOver.text = "GAME OVER"
 		$RESTART.text = "Restart"
 		$TextoCreditos.text = "Credits"
 		$Pontos.text = "Congratulations " + str(Global.nome) + ", you made " + str(Global.points/12)+" dollars!"
 	
 	if Global.lingua == "esp":
-		$OVER.text = "FIN DEL JUEGO"
+		$GameOver.text = "FIN DEL JUEGO"
+		$GameOver.rect_position.x = 650
 		$RESTART.text = "Reanudar"
 		$TextoCreditos.text = "Creditos"
 		$Pontos.text = "Felicitaciones " + str(Global.nome) + ", has conseguido " + str(Global.points/12)+ " pesos!"
@@ -38,9 +39,10 @@ func _ready():
 	
 	MusicController.debuffs1_sound_off()
 	MusicController.debuffs2_sound_off()
-	MusicController.play_game_over_music()
-	#tocando a música certa
-	
+	if MusicController.get_node("Music").stream != MusicController.gameOverMusic:
+		MusicController.play_game_over_music()
+		#tocando a música certa
+		
 	if Global.podeAtualizar == 3:
 		mostrarRanking()
 

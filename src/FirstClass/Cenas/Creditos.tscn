@@ -37,7 +37,7 @@ margin_right = 898.0
 margin_bottom = 162.0
 custom_colors/font_color = Color( 0.952941, 0.898039, 0.760784, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Creditos"
+text = "Créditos"
 align = 1
 valign = 1
 
