@@ -24,7 +24,7 @@ var mapa = 1 #variável que guarda o mapa escolhido pelo jogador
 
 var podeAtualizar = 1 #permite a atualização do ranking
 
-const ARQUIVO = "res://user_new.txt" #caminho do arquivo que será salvo contendo informações do ranking
+const ARQUIVO = "user://user_new.txt" #caminho do arquivo que será salvo contendo informações do ranking
 
 #var listaNomes =  ["","","","",""]
 var listaNomes =  []
