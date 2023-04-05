@@ -19,6 +19,7 @@
 [ext_resource path="res://Cenas/Transicao.tscn" type="PackedScene" id=17]
 
 [sub_resource type="DynamicFont" id=1]
+size = 50
 font_data = ExtResource( 1 )
 
 [node name="caminhoes" type="Node2D"]
@@ -29,7 +30,7 @@ layer = 0
 
 [node name="FundoTela" type="Sprite" parent="."]
 position = Vector2( 640, 360 )
-scale = Vector2( 6.666, 6.66667 )
+scale = Vector2( 6.667, 6.667 )
 texture = ExtResource( 4 )
 
 [node name="Placa" type="NinePatchRect" parent="."]
@@ -54,24 +55,26 @@ region_rect = Rect2( 156.472, 174.166, 99.2349, 33.3595 )
 [node name="ESCOLHA" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 276.0
+margin_left = 264.0
 margin_top = 53.0
-margin_right = 458.0
-margin_bottom = 69.0
-rect_scale = Vector2( 4, 4 )
+margin_right = 1024.0
+margin_bottom = 112.0
 custom_fonts/font = SubResource( 1 )
 text = "Escolha seu caminhão"
+align = 1
+valign = 1
 
 [node name="CLORO" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 112.0
+margin_left = 128.0
 margin_top = 208.0
-margin_right = 157.0
-margin_bottom = 224.0
-rect_scale = Vector2( 4, 4 )
+margin_right = 352.0
+margin_bottom = 272.0
 custom_fonts/font = SubResource( 1 )
 text = "Cloro"
+align = 1
+valign = 1
 
 [node name="BotaoCloro" type="TextureButton" parent="."]
 margin_left = 16.0
@@ -86,13 +89,14 @@ expand = true
 [node name="SODA" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 560.0
+margin_left = 552.0
 margin_top = 208.0
-margin_right = 602.0
-margin_bottom = 224.0
-rect_scale = Vector2( 4, 4 )
+margin_right = 768.0
+margin_bottom = 272.0
 custom_fonts/font = SubResource( 1 )
 text = "Soda"
+align = 1
+valign = 1
 
 [node name="BotaoSoda" type="TextureButton" parent="."]
 margin_left = 432.0
@@ -107,13 +111,14 @@ expand = true
 [node name="PVC" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 992.0
+margin_left = 984.0
 margin_top = 208.0
-margin_right = 1028.0
-margin_bottom = 224.0
-rect_scale = Vector2( 4, 4 )
+margin_right = 1200.0
+margin_bottom = 280.0
 custom_fonts/font = SubResource( 1 )
 text = "PVC"
+align = 1
+valign = 1
 
 [node name="BotaoPvc" type="TextureButton" parent="."]
 margin_left = 864.0

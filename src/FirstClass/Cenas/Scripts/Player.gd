@@ -108,6 +108,7 @@ func _physics_process(delta): # Nessa função declaro as verificações executa
 
 #função que controla efeitos sonoros, visuais e de jogabilidade que ocorrem quando o player colide com o cenário
 func lose():
+	find_parent("Game").get_node("GameMusic").playing = false
 	Global.debuf = false
 	Global.debuf2 = false
 	get_parent().get_node("Cacamba").get_node("Explosao").emitting = true

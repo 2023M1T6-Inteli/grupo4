@@ -90,8 +90,8 @@ script = ExtResource( 21 )
 layer = 0
 
 [node name="FundoTela1" type="Sprite" parent="."]
-position = Vector2( 640, 360 )
-scale = Vector2( 6.666, 6.666 )
+position = Vector2( 640.5, 360 )
+scale = Vector2( 6.667, 6.667 )
 texture = ExtResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -99,7 +99,7 @@ position = Vector2( 656, 224 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 animation = "LogoPortugues"
-frame = 1
+frame = 10
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

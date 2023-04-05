@@ -19,7 +19,7 @@ script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 640, 360 )
-scale = Vector2( 6.666, 6.666 )
+scale = Vector2( 6.667, 6.667 )
 texture = ExtResource( 1 )
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]

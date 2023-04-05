@@ -20,6 +20,8 @@ func _on_Cacamba_do_Caminhao_body_entered(body):
 	if body.name =="Player" or body.name =="Debufs":
 		pass
 	else:
+		find_parent("Game").get_node("GameMusic").playing = false
+		print(find_parent("Game").get_node("GameMusic").playing)
 		get_parent().get_node("Player").modulate = "413a3a"
 		get_parent().get_node("Player").set_physics_process(false)
 		get_parent().get_node("Player").get_node("SomRe").stop()
@@ -28,7 +30,6 @@ func _on_Cacamba_do_Caminhao_body_entered(body):
 		$AnimatedSprite.modulate = "413a3a"
 		if $ExplosaoSFX.playing == false:
 			$ExplosaoSFX.play()
-		MusicController.stop_music()
 		MusicController.debuffs1_sound_off()
 		MusicController.debuffs2_sound_off()
 

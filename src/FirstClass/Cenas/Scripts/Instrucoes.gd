@@ -6,17 +6,17 @@ func _ready(): #tradução
 	if Global.lingua == "eng":
 		$INSTRUCOES.text = "Instructions"
 		$BOTOES.text = "Buttons that will be use:"
-		$BEBIDAS.text = "        Drunk driving \n Drinking while driving will \n blur the player's image"
-		$CELULAR.text = "        Cellphone use \n Driving while using the \n cellphone will make the \n driver lose control of \n           his truck"
-		$CARGAS.text = "         Excessive weight \n Too much weight on the \n truck will make it harder to \n                   turn"
-		$SONO.text = "           Sleepiness \n Rest is essential. Tiredness \n  will cause your eyes to \n     close involuntarily"
+		$BEBIDAS.text = "Drunk driving\nDrinking while driving will blur the player's image"
+		$CELULAR.text = "Cellphone use\nDriving while using the cellphone will make the driver lose control of his truck"
+		$CARGAS.text = "Excessive weight\nToo much weight on the truck will make it harder to turn"
+		$SONO.text = "Sleepiness\nRest is essential. Tiredness will cause your eyes to close involuntarily"
 	if Global.lingua == "esp":
 		$INSTRUCOES.text = "Instrucciones"
 		$BOTOES.text = "Botones que se utilizaran:"
-		$BEBIDAS.text = "     Consumo de alcohol \n Al Consumir bebidas la \nvision del jugador se vuelve \n               borrasa"
-		$CELULAR.text = "             Celular \n El uso del celular hace que \n   el conductor pierda el \n              control"
-		$CARGAS.text = "      Cargas excesivas \n   Las cargas excesivas \nhacen que el amion patine \n             en la via"
-		$SONO.text = "               Sueno \nEl descanso es fundamental. \n  El sueno provoca el cierre \n   involuntario de los ojos"
+		$BEBIDAS.text = "Consumo de alcohol\nAl consumir bebidas la vision del jugador se vuelve borrasa"
+		$CELULAR.text = "Celular\nEl uso del celular hace que el conductor pierda el control"
+		$CARGAS.text = "Cargas excesivas\nLas cargas excesivas hacen que el amion patine en la via"
+		$SONO.text = "Sueno\nEl descanso es fundamental. El sueno provoca el cierre involuntario de los ojos"
 
 #botão para voltar para a cena anterior e efeito sonoro
 func _on_BotaoVoltar_pressed():

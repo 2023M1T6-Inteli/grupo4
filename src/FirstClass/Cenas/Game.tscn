@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Cenas/Minimap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Mapa1.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Sprites/botao_verde2.png" type="Texture" id=21]
 [ext_resource path="res://EfeitosTela/Shaders_Transition.tres" type="Shader" id=22]
 [ext_resource path="res://Cenas/AcabouGasolina.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Sons/MusicaGame.wav" type="AudioStream" id=24]
 
 [sub_resource type="ShaderMaterial" id=10]
 shader = ExtResource( 22 )
@@ -175,6 +176,10 @@ tracks/1/keys = {
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 14 )
+
+[node name="GameMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+volume_db = -17.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

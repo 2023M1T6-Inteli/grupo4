@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Telas/FundoTela2.png" type="Texture" id=1]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=2]
@@ -17,12 +17,18 @@
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=15]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=16]
 [ext_resource path="res://Cenas/Transicao.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.ttf" type="DynamicFontData" id=18]
 
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 2 )
+[sub_resource type="DynamicFont" id=3]
+size = 46
+font_data = ExtResource( 18 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
 font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
@@ -65,15 +71,15 @@ region_enabled = true
 region_rect = Rect2( 155, 176, 103, 32 )
 
 [node name="INSTRUCOES" type="Label" parent="."]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 474.0
+margin_left = 392.0
 margin_top = 52.0
-margin_right = 561.0
-margin_bottom = 68.0
-rect_scale = Vector2( 4, 4 )
-custom_fonts/font = SubResource( 1 )
+margin_right = 896.0
+margin_bottom = 120.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Instruções"
+align = 1
+valign = 1
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
 margin_right = 48.0
@@ -105,13 +111,14 @@ texture = ExtResource( 10 )
 [node name="BOTOES" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 197.0
-margin_top = 488.0
-margin_right = 1114.0
-margin_bottom = 541.0
+margin_left = 192.0
+margin_top = 496.0
+margin_right = 1109.0
+margin_bottom = 549.0
 custom_fonts/font = SubResource( 2 )
 text = "Botões que serão utilizados:"
 align = 1
+valign = 1
 
 [node name="Celular1" type="Sprite" parent="."]
 position = Vector2( 698, 230 )
@@ -122,14 +129,15 @@ texture = ExtResource( 7 )
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 261.0
-margin_top = 191.0
-margin_right = 527.0
-margin_bottom = 245.0
-rect_scale = Vector2( 1.5, 1.5 )
+margin_top = 184.0
+margin_right = 616.0
+margin_bottom = 280.0
 custom_fonts/font = SubResource( 1 )
-text = "     Consumo de bebidas
-Ao consumir bebidas a visão
-do jogador ficam embaçada"
+text = "Consumo de bebidas
+Ao consumir bebidas a visão do jogador ficam embaçada"
+align = 1
+valign = 1
+autowrap = true
 
 [node name="CaixasPesadas1" type="Sprite" parent="."]
 position = Vector2( 179, 376 )
@@ -141,13 +149,14 @@ modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 262.0
 margin_top = 340.0
-margin_right = 528.0
-margin_bottom = 394.0
-rect_scale = Vector2( 1.5, 1.5 )
+margin_right = 616.0
+margin_bottom = 432.0
 custom_fonts/font = SubResource( 1 )
-text = "      Cargas excessivas
-cargas em excesso fazem o
-caminhão derrapar na pista"
+text = "Cargas excessivas
+cargas em excesso fazem o caminhão derrapar na pista"
+align = 1
+valign = 1
+autowrap = true
 
 [node name="Bebidas1" type="Sprite" parent="."]
 position = Vector2( 179, 238 )
@@ -157,16 +166,16 @@ texture = ExtResource( 4 )
 [node name="CELULAR" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 795.0
+margin_left = 768.0
 margin_top = 176.0
-margin_right = 1061.0
-margin_bottom = 249.0
-rect_scale = Vector2( 1.5, 1.5 )
+margin_right = 1160.0
+margin_bottom = 285.0
 custom_fonts/font = SubResource( 1 )
-text = "           Uso do celular
-usar o celular faz com que o
-motorista perca o controle 
-            do caminhão"
+text = "Uso do celular
+usar o celular faz com que o motorista perca o controle do caminhão"
+align = 1
+valign = 1
+autowrap = true
 
 [node name="sono" type="Sprite" parent="."]
 position = Vector2( 693, 385 )
@@ -176,16 +185,16 @@ texture = ExtResource( 6 )
 [node name="SONO" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 793.0
+margin_left = 768.0
 margin_top = 340.0
-margin_right = 1059.0
-margin_bottom = 413.0
-rect_scale = Vector2( 1.4, 1.4 )
+margin_right = 1168.0
+margin_bottom = 441.0
 custom_fonts/font = SubResource( 1 )
-text = "         Falta de descanso
-O descanso é essencial. O sono
-ocasiona fechamento dos olhos 
-       involuntariamente"
+text = "Falta de descanso
+O descanso é essencial. O sono ocasiona fechamento dos olhos involuntariamente"
+align = 1
+valign = 1
+autowrap = true
 
 [node name="SomVoltar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )

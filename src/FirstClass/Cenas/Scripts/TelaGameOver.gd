@@ -39,7 +39,7 @@ func _ready():
 	
 	MusicController.debuffs1_sound_off()
 	MusicController.debuffs2_sound_off()
-	if MusicController.get_node("Music").stream != MusicController.gameOverMusic:
+	if MusicController.get_node("Music").stream != MusicController.gameOverMusic or MusicController.get_node("Music").playing == false:
 		MusicController.play_game_over_music()
 		#tocando a música certa
 		
