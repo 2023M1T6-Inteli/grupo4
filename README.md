@@ -134,8 +134,20 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🗃 Histórico de lançamentos
 
+* 0.3.9 - 20/03/2023
+    * Tradução em inglês e espanhol
+    * Implementação do mapa 'Velho oeste'
+* 0.3.8 - 15/03/2023
+    * Dialogo e logo comentados
+* 0.3.7 - 14/03/2023
+    * Dialogo debuffs e logo
+    * Tradução para inglês
+* 0.3.6 - 10/03/2023
+    * Correção oficial bugs de exportação 
+    * Adição de comentários no código
 * 0.3.5 - 09/03/2023
-    * Implementação da tela de volume do jogo  
+    * Implementação da tela de volume do jogo 
+    * Tela de interação inicial
 * 0.3.4 - 08/03/2023
     *  tela. de interação 
     *  cursor
