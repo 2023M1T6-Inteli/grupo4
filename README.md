@@ -36,7 +36,7 @@
 <br><br>
 <p align="center">
 
-<img src="https://user-images.githubusercontent.com/123915903/228932851-9db971a2-09e5-434a-9ed8-ff5edbcda5b2.gif" alt="My Truck" border="0" height="400" width="600" >
+<img src="https://user-images.githubusercontent.com/123915903/228932851-9db971a2-09e5-434a-9ed8-ff5edbcda5b2.gif" align="center" alt="My Truck" border="0" height="400" width="600" >
 
 
   My Truck by ORION
@@ -46,7 +46,7 @@
 <br><br>
 O projeto parte de princípios similares ao da conscientização subliminar. Pode se dizer que o conceito de conscientização subliminar é a ideia de que podemos ser influenciados por estímulos que estão abaixo do nosso nível de consciência (DISTEFANO DE OLIVEIRA JUNIOR, Luiz Antônio, Comunicação Subliminar nas Estratégias de Marketing, 2004). Isso significa que, mesmo que não estejamos conscientes desses estímulos, eles ainda podem afetar nossas crenças, atitudes e comportamentos. Por isso, foi optado por uma jogabilidade agradável, sem interrupções, que busca engajar e desafiar os players de modo que aquelas boas práticas sejam transmitidas via vários estímulos por meio do jogo.
 
-<img src="https://user-images.githubusercontent.com/85657433/230107198-de8085b3-7301-43d0-8eae-af59a8ef39ab.mp4" alt="My Truck" border="0" align="center" height="350" width="550" >
+<img align="center" src="https://user-images.githubusercontent.com/85657433/230164277-6a2a653f-fec9-4d52-bd1a-cb91828a93ac.gif" alt="My Truck" border="0" height="400" width="600" >
 
 O jogo simula o trajeto de um caminhão em uma estrada, com vista de cima, estilo autorama. O jogador controla o automóvel, e quanto mais longe sem bater nas barreiras da pista, maior a pontuação. Ao mesmo tempo, ele precisa desviar dos “Debuffs”, que prejudicam o desempenho da direção de alguma forma por um tempo determinado e, assim, criam um desafio para o jogador.
 
