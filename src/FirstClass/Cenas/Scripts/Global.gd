@@ -22,7 +22,9 @@ var rostoInstrutor #variável responsável por guardar a animação do instrutor
 var lingua = "pt" #variável que guarda a linguagem escolhida pelo jogador
 var mapa = 1 #variável que guarda o mapa escolhido pelo jogador
 
-const ARQUIVO = "res://user_new.txt"
+var podeAtualizar = 1 #permite a atualização do ranking
+
+const ARQUIVO = "res://user_new.txt" #caminho do arquivo que será salvo contendo informações do ranking
 
 #var listaNomes =  ["","","","",""]
 var listaNomes =  []
@@ -42,9 +44,6 @@ func salvar_dados():
 	var arquivo = File.new()
 	#Variável que guardará um valor caso tenha erro ao abrir o arquivo
 	arquivo.open(ARQUIVO, File.WRITE)
-	
-	print(listaNomes)
-	print(listaPontos)
 	
 	salvamentoDados += str(listaNomes," ",str(listaPontos)," ")
 		

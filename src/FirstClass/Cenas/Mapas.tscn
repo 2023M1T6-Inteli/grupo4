@@ -26,8 +26,8 @@ script = ExtResource( 11 )
 layer = 0
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 640, 362 )
-scale = Vector2( 6.64583, 6.62963 )
+position = Vector2( 639, 360 )
+scale = Vector2( 6.65625, 6.66667 )
 texture = ExtResource( 2 )
 
 [node name="Sprite3" type="Sprite" parent="."]

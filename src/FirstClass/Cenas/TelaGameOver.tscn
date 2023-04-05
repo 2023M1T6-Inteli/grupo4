@@ -29,7 +29,7 @@ outline_color = Color( 0.603922, 0.603922, 0.603922, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 35
+size = 52
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=6]
@@ -142,17 +142,6 @@ texture_hover = ExtResource( 7 )
 expand = true
 stretch_mode = 3
 
-[node name="Atualizar" type="TextureButton" parent="."]
-margin_left = 768.0
-margin_top = 584.0
-margin_right = 1378.0
-margin_bottom = 722.0
-rect_scale = Vector2( 0.7, 0.7 )
-texture_normal = ExtResource( 4 )
-texture_hover = ExtResource( 7 )
-expand = true
-stretch_mode = 3
-
 [node name="TextoCreditos" type="Label" parent="."]
 margin_left = 768.0
 margin_top = 496.0
@@ -161,17 +150,6 @@ margin_bottom = 584.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
 text = "Créditos"
-align = 1
-valign = 1
-
-[node name="TextoAtualizar" type="Label" parent="."]
-margin_left = 768.0
-margin_top = 600.0
-margin_right = 1208.0
-margin_bottom = 688.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 5 )
-text = "Atualizar Ranking"
 align = 1
 valign = 1
 
@@ -447,5 +425,3 @@ clip_text = true
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
 [connection signal="mouse_entered" from="Creditos" to="." method="_on_Creditos_mouse_entered"]
 [connection signal="pressed" from="Creditos" to="." method="_on_Creditos_pressed"]
-[connection signal="mouse_entered" from="Atualizar" to="." method="_on_Creditos_mouse_entered"]
-[connection signal="pressed" from="Atualizar" to="." method="_on_Atualizar_pressed"]
