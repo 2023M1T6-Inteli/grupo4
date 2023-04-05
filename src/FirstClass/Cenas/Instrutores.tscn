@@ -10,8 +10,8 @@
 [ext_resource path="res://Assets2/face/NinaRindo.png" type="Texture" id=8]
 [ext_resource path="res://Assets2/face/GinaRindo.png" type="Texture" id=9]
 [ext_resource path="res://Assets2/face/GinaSorrindo.png" type="Texture" id=10]
-[ext_resource path="res://Assets2/IconsUI/seta_left_verde.png" type="Texture" id=11]
-[ext_resource path="res://Assets2/IconsUI/seta_left_verde_sombra.png" type="Texture" id=12]
+[ext_resource path="res://Assets2/Icones/seta1.png" type="Texture" id=11]
+[ext_resource path="res://Assets2/Icones/seta2.png" type="Texture" id=12]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=13]
 [ext_resource path="res://Assets2/face/SeuJorgeRindo.png" type="Texture" id=14]
 [ext_resource path="res://Assets2/face/NinaSorrindo.png" type="Texture" id=15]
@@ -168,11 +168,11 @@ custom_fonts/font = SubResource( 1 )
 text = "Nina"
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 32.0
-margin_top = 32.0
-margin_right = 64.0
-margin_bottom = 64.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 29.0
+margin_top = 7.0
+margin_right = 53.0
+margin_bottom = 43.0
+rect_scale = Vector2( 4, 4 )
 texture_normal = ExtResource( 11 )
 texture_hover = ExtResource( 12 )
 

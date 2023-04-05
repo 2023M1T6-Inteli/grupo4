@@ -99,7 +99,7 @@ position = Vector2( 656, 224 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 animation = "LogoPortugues"
-frame = 12
+frame = 10
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
