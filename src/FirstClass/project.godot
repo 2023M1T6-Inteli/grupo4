@@ -12,6 +12,8 @@ config_version=4
 
 config/name="MyTruck"
 run/main_scene="res://Cenas/SalaDeEspera.tscn"
+config/icon="res://Assets2/Icones/Icone.png"
+config/windows_native_icon="res://Assets2/Icones/Icone.ico"
 
 [autoload]
 
