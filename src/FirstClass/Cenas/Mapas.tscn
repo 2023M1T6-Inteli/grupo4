@@ -4,9 +4,9 @@
 [ext_resource path="res://Telas/FundoTela2.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/botao_verde1.png" type="BitMap" id=3]
 [ext_resource path="res://Sprites/botao_verde_normal.png" type="Texture" id=4]
-[ext_resource path="res://Assets2/IconsUI/seta_left_verde.png" type="Texture" id=5]
+[ext_resource path="res://Assets2/Icones/SetaNova2.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/botao_verde2.png" type="Texture" id=6]
-[ext_resource path="res://Assets2/IconsUI/seta_left_verde_sombra.png" type="Texture" id=7]
+[ext_resource path="res://Assets2/Icones/Setanova.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/MapaFloresta.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/MapaSertao.png" type="Texture" id=9]
 [ext_resource path="res://Assets2/IconsUI/contorno.png" type="Texture" id=10]
@@ -93,13 +93,11 @@ scale = Vector2( 0.45, 0.372093 )
 texture = ExtResource( 9 )
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 32.0
-margin_top = 32.0
-margin_right = 64.0
-margin_bottom = 64.0
-rect_scale = Vector2( 3, 3 )
-texture_normal = ExtResource( 5 )
-texture_hover = ExtResource( 7 )
+margin_right = 48.0
+margin_bottom = 32.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 5 )
 
 [node name="SomConfirmar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )

@@ -6,8 +6,8 @@
 [ext_resource path="res://Sprites/botao_verde_normal.png" type="Texture" id=4]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://Cenas/Scripts/Idiomas.gd" type="Script" id=6]
-[ext_resource path="res://Assets2/Icones/seta1.png" type="Texture" id=7]
-[ext_resource path="res://Assets2/Icones/seta2.png" type="Texture" id=8]
+[ext_resource path="res://Assets2/Icones/SetaNova2.png" type="Texture" id=7]
+[ext_resource path="res://Assets2/Icones/Setanova.png" type="Texture" id=8]
 [ext_resource path="res://Cenas/Transicao.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=10]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=11]
@@ -88,13 +88,12 @@ custom_fonts/font = SubResource( 1 )
 text = "Español"
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 32.0
-margin_top = 8.0
-margin_right = 56.0
-margin_bottom = 44.0
+margin_right = 48.0
+margin_bottom = 32.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 7 )
-texture_hover = ExtResource( 8 )
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 7 )
+stretch_mode = 5
 
 [node name="SomConfirmar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )

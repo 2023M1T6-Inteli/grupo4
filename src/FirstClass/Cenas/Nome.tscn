@@ -5,8 +5,8 @@
 [ext_resource path="res://Telas/FundoTela2.png" type="Texture" id=3]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://Cenas/Scripts/Nome.gd" type="Script" id=5]
-[ext_resource path="res://Assets2/Icones/seta1.png" type="Texture" id=6]
-[ext_resource path="res://Assets2/Icones/seta2.png" type="Texture" id=7]
+[ext_resource path="res://Assets2/Icones/SetaNova2.png" type="Texture" id=6]
+[ext_resource path="res://Assets2/Icones/Setanova.png" type="Texture" id=7]
 [ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=8]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=9]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=10]
@@ -84,13 +84,11 @@ text = "Digite seu nome"
 align = 1
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 32.0
-margin_top = 32.0
-margin_right = 56.0
-margin_bottom = 68.0
+margin_right = 48.0
+margin_bottom = 32.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 6 )
-texture_hover = ExtResource( 7 )
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
 
 [node name="SomConfirmar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )

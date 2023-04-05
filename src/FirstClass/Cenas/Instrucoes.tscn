@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Telas/FundoTela2.png" type="Texture" id=1]
 [ext_resource path="res://Fonte/NicoBold/NicoBold-Regular.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://Assets2/Icones/seta1.png" type="Texture" id=3]
+[ext_resource path="res://Assets2/Icones/SetaNova2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Bebidas/Bebidas1.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/CaixaPesada/CaixasPesadas1.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Soninho/Sprite-0001.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Celular/Celular1.png" type="Texture" id=7]
-[ext_resource path="res://Assets2/Icones/seta2.png" type="Texture" id=8]
+[ext_resource path="res://Assets2/Icones/Setanova.png" type="Texture" id=8]
 [ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=9]
 [ext_resource path="res://Assets2/IconsUI/ui_left.png" type="Texture" id=10]
 [ext_resource path="res://Assets2/IconsUI/ui_down.png" type="Texture" id=11]
@@ -76,13 +76,11 @@ custom_fonts/font = SubResource( 1 )
 text = "Instruções"
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 12.0
-margin_top = -2.0
-margin_right = 36.0
-margin_bottom = 34.0
+margin_right = 48.0
+margin_bottom = 32.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 3 )
-texture_hover = ExtResource( 8 )
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 3 )
 
 [node name="UiUp" type="Sprite" parent="."]
 position = Vector2( 645, 579 )

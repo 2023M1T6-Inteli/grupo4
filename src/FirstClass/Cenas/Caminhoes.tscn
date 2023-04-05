@@ -6,8 +6,8 @@
 [ext_resource path="res://Telas/FundoTela2.png" type="Texture" id=4]
 [ext_resource path="res://Assets2/Icones/icones_gerais.png" type="Texture" id=5]
 [ext_resource path="res://Assets2/IconsUI/contorno.png" type="Texture" id=6]
-[ext_resource path="res://Assets2/Icones/seta1.png" type="Texture" id=7]
-[ext_resource path="res://Assets2/Icones/seta2.png" type="Texture" id=8]
+[ext_resource path="res://Assets2/Icones/SetaNova2.png" type="Texture" id=7]
+[ext_resource path="res://Assets2/Icones/Setanova.png" type="Texture" id=8]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=9]
 [ext_resource path="res://Cenas/Scripts/Caminhoes.gd" type="Script" id=10]
 [ext_resource path="res://Assets2/face/CaminhaoSodaSelecao.png" type="Texture" id=11]
@@ -126,13 +126,12 @@ texture_hover = ExtResource( 16 )
 expand = true
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 28.0
-margin_top = 2.0
-margin_right = 52.0
-margin_bottom = 38.0
+margin_right = 48.0
+margin_bottom = 32.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 7 )
-texture_hover = ExtResource( 8 )
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 7 )
+stretch_mode = 5
 
 [node name="SomConfirmar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

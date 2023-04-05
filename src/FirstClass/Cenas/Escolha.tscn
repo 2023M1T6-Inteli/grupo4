@@ -8,8 +8,8 @@
 [ext_resource path="res://Cenas/Transicao.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Sons/confirmacao.wav" type="AudioStream" id=7]
 [ext_resource path="res://Sons/hover.wav" type="AudioStream" id=8]
-[ext_resource path="res://Assets2/Icones/seta1.png" type="Texture" id=9]
-[ext_resource path="res://Assets2/Icones/seta2.png" type="Texture" id=10]
+[ext_resource path="res://Assets2/Icones/SetaNova2.png" type="Texture" id=9]
+[ext_resource path="res://Assets2/Icones/Setanova.png" type="Texture" id=10]
 [ext_resource path="res://Sons/voltar.wav" type="AudioStream" id=11]
 [ext_resource path="res://Sprites/Hoverdificil.png" type="Texture" id=12]
 [ext_resource path="res://Assets2/IconsUI/contorno.png" type="Texture" id=13]
@@ -153,13 +153,12 @@ stream = ExtResource( 11 )
 volume_db = -13.0
 
 [node name="BotaoVoltar" type="TextureButton" parent="."]
-margin_left = 23.0
-margin_top = 5.0
-margin_right = 47.0
-margin_bottom = 41.0
+margin_right = 48.0
+margin_bottom = 32.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 9 )
+stretch_mode = 5
 
 [connection signal="mouse_entered" from="Botaofacil" to="." method="_on_Botaofacil_mouse_entered"]
 [connection signal="pressed" from="Botaofacil" to="." method="_on_Botaofacil_pressed"]
