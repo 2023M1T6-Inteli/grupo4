@@ -171,7 +171,7 @@ margin_right = 816.0
 margin_bottom = 280.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 6 )
-text = "R$"
+text = "$"
 align = 1
 valign = 1
 

@@ -267,9 +267,11 @@ load_path = "res://.import/icones_gerais.png-d51175e23bfcfd8b05f3d856cbe330ca.st
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=1]
+size = 40
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 40
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=5]
@@ -349,9 +351,8 @@ modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
 self_modulate = Color( 0.247059, 0.156863, 0.196078, 1 )
 margin_left = 120.0
 margin_top = 136.0
-margin_right = 475.0
-margin_bottom = 226.0
-rect_scale = Vector2( 3, 3 )
+margin_right = 1160.0
+margin_bottom = 368.0
 custom_fonts/mono_font = SubResource( 1 )
 custom_fonts/normal_font = SubResource( 2 )
 
@@ -381,7 +382,7 @@ margin_bottom = 584.0
 position = Vector2( 632, 368 )
 scale = Vector2( 7.60938, 6.96667 )
 frames = SubResource( 7 )
-frame = 13
+frame = 14
 playing = true
 
 [node name="folha" type="Sprite" parent="."]
