@@ -39,7 +39,7 @@
 <img src="https://user-images.githubusercontent.com/123915903/228932851-9db971a2-09e5-434a-9ed8-ff5edbcda5b2.gif" align="center" alt="My Truck" border="0" height="400" width="600" >
 
 
-  My Truck by ORION
+                                                              My Truck by ORION
 </p>
 
 
@@ -48,7 +48,7 @@ O projeto parte de princípios similares ao da conscientização subliminar. Pod
 
 <p align="center">
 
-<img src="https://user-images.githubusercontent.com/85657433/230164277-6a2a653f-fec9-4d52-bd1a-cb91828a93ac.gif" align="center" alt="My Truck" border="0" height="400" width="600" >
+<img src="https://user-images.githubusercontent.com/85657433/230164277-6a2a653f-fec9-4d52-bd1a-cb91828a93ac.gif" align="center" alt="My Truck" border="0" height="350" width="600" >
 
 </p>
 
@@ -57,7 +57,7 @@ O jogo simula o trajeto de um caminhão em uma estrada, com vista de cima, estil
 
 <p align="center">
 
-<img src="https://user-images.githubusercontent.com/85657433/230167070-53f072f2-a27b-4481-80ff-fccc01038dc7.gif" align="center" alt="My Truck" border="0" height="400" width="600" >
+<img src="https://user-images.githubusercontent.com/85657433/230167070-53f072f2-a27b-4481-80ff-fccc01038dc7.gif" align="center" alt="My Truck" border="0" height="350" width="600" >
 
 
 </p>
