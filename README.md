@@ -39,7 +39,7 @@
 <img src="https://user-images.githubusercontent.com/123915903/228932851-9db971a2-09e5-434a-9ed8-ff5edbcda5b2.gif" align="center" alt="My Truck" border="0" height="400" width="600" >
 
 
-                                                              My Truck by ORION
+                                                 My Truck by ORION
 </p>
 
 
