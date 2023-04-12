@@ -11,7 +11,7 @@ func _on_Chegada_body_entered(body):
 			$DinheiroSFX.play()
 			Global.points += 12000
 			if Global.dificuldade == "Facil":
-				Global.gasolina = 115.0
+				Global.gasolina = 145.0
 		
 			if Global.dificuldade == "Medio":
 				Global.gasolina = 105.0
@@ -28,7 +28,7 @@ func _on_SegundoPonto_body_entered(body):
 		chegou2 = true
 		if Global.permissao == false:
 			if Global.dificuldade == "Facil":
-				Global.gasolina = 115.0
+				Global.gasolina = 145.0
 		
 			if Global.dificuldade == "Medio":
 				Global.gasolina = 105.0
