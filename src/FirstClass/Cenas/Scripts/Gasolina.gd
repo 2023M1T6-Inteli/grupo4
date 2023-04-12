@@ -5,8 +5,8 @@ func _ready():
 	
 	#definindo a gasolina total de acordo com a dificuldade
 	if Global.dificuldade == "Facil":
-		$ProgressBar.max_value = 115.0
-		Global.gasolina = 115.0
+		$ProgressBar.max_value = 145.0
+		Global.gasolina = 145.0
 		
 	if Global.dificuldade == "Medio":
 		$ProgressBar.max_value = 105.0

@@ -11,7 +11,7 @@ func _ready():
 	#garantindo que os debuffs, a gasolina e a variável "permissao" são reiniciados
 	
 	if Global.dificuldade == "Facil":
-		Global.gasolina = 115.0
+		Global.gasolina = 145.0
 		
 	if Global.dificuldade == "Medio":
 		Global.gasolina = 105.0

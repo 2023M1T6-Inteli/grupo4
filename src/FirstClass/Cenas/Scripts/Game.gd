@@ -89,7 +89,7 @@ func _on_BotaoContinuar_pressed():
 #recomeçando o jogo
 func _on_BotaoRecomecar_pressed():
 	if Global.dificuldade == "Facil":
-		Global.gasolina = 115.0
+		Global.gasolina = 145.0
 		
 	if Global.dificuldade == "Medio":
 		Global.gasolina = 105.0
@@ -104,7 +104,7 @@ func _on_BotaoRecomecar_pressed():
 #retornando ao menu
 func _on_BotaoMenu_pressed():
 	if Global.dificuldade == "Facil":
-		Global.gasolina = 115.0
+		Global.gasolina = 145.0
 		
 	if Global.dificuldade == "Medio":
 		Global.gasolina = 105.0
@@ -121,7 +121,7 @@ func _on_BotaoMenu_pressed():
 #leva à cena de mudar a dificuldade
 func _on_BotaoDificuldade_pressed():
 	if Global.dificuldade == "Facil":
-		Global.gasolina = 115.0
+		Global.gasolina = 145.0
 		
 	if Global.dificuldade == "Medio":
 		Global.gasolina = 105.0
