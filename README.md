@@ -73,6 +73,7 @@ Quanto maior o percurso percorrido pelo jogador, mais ele aumenta sua pontuaçã
 
 ├── docs
 ├── documentos
+├── videos
 ├── imagens
 └── src
     └── FirstClass
