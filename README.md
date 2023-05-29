@@ -73,40 +73,40 @@ Quanto maior o percurso percorrido pelo jogador, mais ele aumenta sua pontuaçã
 
 ├── docs
 ├── documentos
-├── videos
 ├── imagens
 └── src
-    └── FirstClass
-        ├── Assets
-        │   └── TilesMaps
-        ├── Assets2
-        │   ├── Icones
-        │   ├── IconsUI
-        │   ├── Logo
-        │   │   ├── LogoEspanhol
-        │   │   ├── LogoIngles
-        │   │   └── LogoPortugues
-        │   ├── caixasdedialogo
-        │   ├── checklist
-        │   ├── cursor
-        │   ├── face
-        │   └── sprite_personagens
-        ├── Cenas
-        │   └── Scripts
-        ├── EfeitosTela
-        ├── Fonte
-        │   └── NicoBold
-        ├── Sons
-        ├── Sprites
-        │   ├── Bebidas
-        │   ├── CabecadoCaminhao
-        │   ├── CaixaPesada
-        │   ├── CaminhaoDeCloro
-        │   ├── CaminhaoPVC
-        │   ├── CaminhaoSoda
-        │   ├── Celular
-        │   └── Soninho
-        └── Telas
+│   └── FirstClass
+│       ├── Assets
+│       │   └── TilesMaps
+│       ├── Assets2
+│       │   ├── Icones
+│       │   ├── IconsUI
+│       │   ├── Logo
+│       │   │   ├── LogoEspanhol
+│       │   │   ├── LogoIngles
+│       │   │   └── LogoPortugues
+│       │   ├── caixasdedialogo
+│       │   ├── checklist
+│       │   ├── cursor
+│       │   ├── face
+│       │   └── sprite_personagens
+│       ├── Cenas
+│       │   └── Scripts
+│       ├── EfeitosTela
+│       ├── Fonte
+│       │   └── NicoBold
+│       ├── Sons
+│       ├── Sprites
+│       │   ├── Bebidas
+│       │   ├── CabecadoCaminhao
+│       │   ├── CaixaPesada
+│       │   ├── CaminhaoDeCloro
+│       │   ├── CaminhaoPVC
+│       │   ├── CaminhaoSoda
+│       │   ├── Celular
+│       │   └── Soninho
+│       └── Telas
+├── videos
 ```
 
 A pasta raiz contem dois arquivos que devem ser alterados:
