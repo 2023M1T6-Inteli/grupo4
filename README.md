@@ -1,7 +1,7 @@
 # Inteli - Instituto de Tecnologia e Liderança 
 
 <p align="center">
-<a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+<a href= "https://www.inteli.edu.br/"><img src="https://s3.amazonaws.com/gupy5/production/companies/26702/career/63484/images/2022-04-28_16-56_logo.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=77cb4b&height=120&section=header"/>
@@ -67,6 +67,9 @@ Os “Debuffs” são representações de hábitos que o motorista deve ao máxi
 Quanto maior o percurso percorrido pelo jogador, mais ele aumenta sua pontuação no jogo (representada por dinheiro) e, consequentemente, melhor rankeado ele fica em relação aos outros jogadores, tornando o jogo uma modalidade de competição.
 <br><br>
 
+## 🎮 Jogue agora
+
+Para acessar o jogo diretamente do seu navegador entre no seguinte link: [Orion](https://2023m1t6-inteli.github.io/grupo4/)
 
 ## 🛠 Estrutura de pastas
 ```bash
